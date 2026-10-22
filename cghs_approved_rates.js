@@ -1,0 +1,15581 @@
+/* CGHS Non-NABL Z-Tier / Z-City (Phulera, Rajasthan) Approved Rate Master Schedule
+   Extracted from Official CGHS Rate List (Tier-III / General Ward / Non-NABH / Non-NABL)
+   Total Approved Procedures: 2,594
+*/
+(function(root) {
+  var rates = [
+  {
+    "code": "CN001",
+    "name": "Consultation OPD",
+    "category": "Consultation",
+    "rate": 350.0
+  },
+  {
+    "code": "CN002",
+    "name": "Consultation for Inpatients",
+    "category": "Consultation",
+    "rate": 350.0
+  },
+  {
+    "code": "CN003",
+    "name": "Consultation OPD- Super speciality/Psychiatry",
+    "category": "Consultation",
+    "rate": 700.0
+  },
+  {
+    "code": "LB001",
+    "name": "Urine Routine- pH, Specific Gravity, Sugar, Protein and Microscopy",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB002",
+    "name": "Urine Microalbumin",
+    "category": "Laboratory Investigation",
+    "rate": 165.0
+  },
+  {
+    "code": "LB003",
+    "name": "Stool Routine and Microscopy",
+    "category": "Laboratory Investigation",
+    "rate": 54.0
+  },
+  {
+    "code": "LB004",
+    "name": "Stool for Occult Blood",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB005",
+    "name": "Post Coital Smear Examination",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB006",
+    "name": "Semen Analysis (Automated/Manual)",
+    "category": "Laboratory Investigation",
+    "rate": 170.0
+  },
+  {
+    "code": "LB007",
+    "name": "Haemoglobin (Hb)",
+    "category": "Laboratory Investigation",
+    "rate": 34.0
+  },
+  {
+    "code": "LB008",
+    "name": "Total Leucocytic Count (TLC)",
+    "category": "Laboratory Investigation",
+    "rate": 34.0
+  },
+  {
+    "code": "LB009",
+    "name": "Differential Leucocytic Count (DLC)",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB010",
+    "name": "Erythrocyte Sedimentation Rate (ESR)",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB011",
+    "name": "Total Red Cell count with MCV,MCH,MCHC,DRW",
+    "category": "Laboratory Investigation",
+    "rate": 34.0
+  },
+  {
+    "code": "LB012",
+    "name": "Complete Haemogram/CBC, Hb,RBC Count and Indices,TLC, DLC, Platelet, ESR, Peripheral Smear Examination)",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB013",
+    "name": "Platelet Count",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB014",
+    "name": "Reticulocyte Count",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB015",
+    "name": "Absolute Eosinophil Count (AEC)",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB016",
+    "name": "Packed Cell Volume (PCV)",
+    "category": "Laboratory Investigation",
+    "rate": 34.0
+  },
+  {
+    "code": "LB017",
+    "name": "Peripheral Smear Examination",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB018",
+    "name": "Smear for Malaria/Filaria Parasite",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB019",
+    "name": "Bleeding Time",
+    "category": "Laboratory Investigation",
+    "rate": 34.0
+  },
+  {
+    "code": "LB020",
+    "name": "Clotting Time",
+    "category": "Laboratory Investigation",
+    "rate": 34.0
+  },
+  {
+    "code": "LB021",
+    "name": "Osmotic Fragility Test",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB022",
+    "name": "Bone Marrow Smear Examination",
+    "category": "Laboratory Investigation",
+    "rate": 238.0
+  },
+  {
+    "code": "LB023",
+    "name": "Bone Marrow Smear Examination with Iron Stain",
+    "category": "Laboratory Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "LB024",
+    "name": "Bone Marrow Smear Examination and Cytochemistry",
+    "category": "Laboratory Investigation",
+    "rate": 8160.0
+  },
+  {
+    "code": "LB025",
+    "name": "Activated Partial Thromboplastin Time (APTT)",
+    "category": "Laboratory Investigation",
+    "rate": 197.0
+  },
+  {
+    "code": "LB026",
+    "name": "Rapid Test for Malaria (Card Test)/QBC Malaria Test",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB027",
+    "name": "Bleeding Disorder Panel- PT, APTT, Thrombin Time Fibrinogen, D-Dimer/ Fibrinogen Degradation Products (FDP)",
+    "category": "Laboratory Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "LB028",
+    "name": "Factor Assays-Factor VIII",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB029",
+    "name": "Factor Assays-Factor IX",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB030",
+    "name": "Platelet Function Tests",
+    "category": "Laboratory Investigation",
+    "rate": 860.0
+  },
+  {
+    "code": "LB031",
+    "name": "Tests for Hypercoagulable States- Protein C, Protein S, Antithrombin",
+    "category": "Laboratory Investigation",
+    "rate": 2298.0
+  },
+  {
+    "code": "LB032",
+    "name": "Tests for Lupus Anticoagulant",
+    "category": "Laboratory Investigation",
+    "rate": 884.0
+  },
+  {
+    "code": "LB033",
+    "name": "Tests for Antiphospholipid Antibody IgG, IgM (for Cardiolipin and B2 Glycoprotein 1)",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB034",
+    "name": "Thalassemia Studies (Red Cell Indices and Hb HPLC)",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB035",
+    "name": "Tests for Sickling / Hb HPLC)",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB036",
+    "name": "Blood Group & Rh Type",
+    "category": "Laboratory Investigation",
+    "rate": 61.0
+  },
+  {
+    "code": "LB037",
+    "name": "Cross Match",
+    "category": "Laboratory Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "LB038",
+    "name": "Coomb-s Test - Direct",
+    "category": "Laboratory Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "LB039",
+    "name": "Coomb-s Test - Indirect",
+    "category": "Laboratory Investigation",
+    "rate": 170.0
+  },
+  {
+    "code": "LB040",
+    "name": "3 Cell Panel- Antibody Screening for Pregnant Female",
+    "category": "Laboratory Investigation",
+    "rate": 714.0
+  },
+  {
+    "code": "LB041",
+    "name": "11 Cells Panel for Antibody Identification",
+    "category": "Laboratory Investigation",
+    "rate": 1554.0
+  },
+  {
+    "code": "LB042",
+    "name": "Hepatitis B Surface Antigen (HBsAg)",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB043",
+    "name": "Hepatitis C Virus (HCV)",
+    "category": "Laboratory Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "LB044",
+    "name": "Human Immunodeficiency Virus- HIV I and II",
+    "category": "Laboratory Investigation",
+    "rate": 262.0
+  },
+  {
+    "code": "LB045",
+    "name": "Venereal Disease Research Laboratory Test (VDRL)",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB046",
+    "name": "Rh Antibody Titre",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB047",
+    "name": "Platelet Concentrate Test",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB048",
+    "name": "Routine - H & E",
+    "category": "Laboratory Investigation",
+    "rate": 371.0
+  },
+  {
+    "code": "LB049",
+    "name": "Special Stain",
+    "category": "Laboratory Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "LB050",
+    "name": "Histopathology Examination (HPE) - Frozen Section",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB051",
+    "name": "Histopathology Examination (HPE) - Paraffin Section",
+    "category": "Laboratory Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "LB052",
+    "name": "Pap Smear",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB053",
+    "name": "Body Fluid for Malignant cells",
+    "category": "Laboratory Investigation",
+    "rate": 238.0
+  },
+  {
+    "code": "LB054",
+    "name": "Paroxysmal Nocturnal Haemoglobinuria (PNH) Panel- CD55, CD59",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB055",
+    "name": "Blood Glucose Random / Blood Glucose Fasting /Blood Glucose PP",
+    "category": "Laboratory Investigation",
+    "rate": 27.0
+  },
+  {
+    "code": "LB056",
+    "name": "24 Hrs Urine for Proteins, Sodium, Creatinine",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB057",
+    "name": "Blood Urea Nitrogen (BUN) / Urea",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB058",
+    "name": "Serum Creatinine",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB059",
+    "name": "Urine Bile Pigment and Salt",
+    "category": "Laboratory Investigation",
+    "rate": 48.0
+  },
+  {
+    "code": "LB060",
+    "name": "Urine Urobilinogen",
+    "category": "Laboratory Investigation",
+    "rate": 48.0
+  },
+  {
+    "code": "LB061",
+    "name": "Urine Ketones",
+    "category": "Laboratory Investigation",
+    "rate": 48.0
+  },
+  {
+    "code": "LB062",
+    "name": "Urine Occult Blood",
+    "category": "Laboratory Investigation",
+    "rate": 48.0
+  },
+  {
+    "code": "LB063",
+    "name": "Urine Total Proteins",
+    "category": "Laboratory Investigation",
+    "rate": 48.0
+  },
+  {
+    "code": "LB064",
+    "name": "Rheumatoid Factor / Rh Factor Test",
+    "category": "Laboratory Investigation",
+    "rate": 510.0
+  },
+  {
+    "code": "LB065",
+    "name": "Bence Jones Protein",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB066",
+    "name": "Serum Uric Acid",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB067",
+    "name": "Serum Bilirubin total & direct",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB068",
+    "name": "Serum Iron",
+    "category": "Laboratory Investigation",
+    "rate": 170.0
+  },
+  {
+    "code": "LB069",
+    "name": "C-Reactive Protein (CRP)",
+    "category": "Laboratory Investigation",
+    "rate": 170.0
+  },
+  {
+    "code": "LB070",
+    "name": "C-Reactive Protein (CRP) Quantitative",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB071",
+    "name": "Body Fluid (CSF/Ascitic Fluid etc.) Sugar, Protein etc.",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB072",
+    "name": "Albumin",
+    "category": "Laboratory Investigation",
+    "rate": 34.0
+  },
+  {
+    "code": "LB073",
+    "name": "Creatinine Clearance",
+    "category": "Laboratory Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "LB074",
+    "name": "Serum Cholesterol",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB075",
+    "name": "Total Iron Binding Capacity (TIBC)",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB076",
+    "name": "Glucose (Fasting & PP)",
+    "category": "Laboratory Investigation",
+    "rate": 54.0
+  },
+  {
+    "code": "LB077",
+    "name": "Serum Calcium -Total",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB078",
+    "name": "Serum Calcium - Ionic",
+    "category": "Laboratory Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "LB079",
+    "name": "Serum Phosphorus",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB080",
+    "name": "Total Protein Albumin/Globulin Ratio (A/G Ratio)",
+    "category": "Laboratory Investigation",
+    "rate": 48.0
+  },
+  {
+    "code": "LB081",
+    "name": "Immunoglobulin G (IgG)",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB082",
+    "name": "Immunoglobulin M(IgM)",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB083",
+    "name": "Immunoglobulin A(IgA)",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB084",
+    "name": "Antinuclear Antibody (ANA)",
+    "category": "Laboratory Investigation",
+    "rate": 445.0
+  },
+  {
+    "code": "LB085",
+    "name": "Anti-double stranded DNA (anti-dsDNA)",
+    "category": "Laboratory Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "LB086",
+    "name": "Serum Glutamic Pyruvic Transaminase (SGPT) / Alanine Aminotransferase (ALT)",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB087",
+    "name": "Serum Glutamic Oxaloacetic Transaminase (SGOT) /Aspartate Aminotransferase (AST)",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB088",
+    "name": "Serum Amylase",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB089",
+    "name": "Serum Lipase",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB090",
+    "name": "Serum Lactate",
+    "category": "Laboratory Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "LB091",
+    "name": "Serum Magnesium",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB092",
+    "name": "Serum Sodium",
+    "category": "Laboratory Investigation",
+    "rate": 82.0
+  },
+  {
+    "code": "LB093",
+    "name": "Serum Potassium",
+    "category": "Laboratory Investigation",
+    "rate": 82.0
+  },
+  {
+    "code": "LB094",
+    "name": "Chloride",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB095",
+    "name": "Serum Bicarbonate",
+    "category": "Laboratory Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "LB096",
+    "name": "Serum Ammonia",
+    "category": "Laboratory Investigation",
+    "rate": 456.0
+  },
+  {
+    "code": "LB097",
+    "name": "Anaemia Profile (Hb, Serum Iron, TIBC, Ferritin, Transferrin Saturation,Stool Occult Blood, CBC, Reticulocyte Count)",
+    "category": "Laboratory Investigation",
+    "rate": 898.0
+  },
+  {
+    "code": "LB098",
+    "name": "Serum Testosterone",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB099",
+    "name": "Imprint Smear from Endoscopy",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB100",
+    "name": "Triglycerides",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB101",
+    "name": "Glucose Tolerance Test (GTT)",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB102",
+    "name": "Triple Marker Test (AFP,HCG,UE3)",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB103",
+    "name": "Creatine Phosphokinase (CPK)/Creatine Kinase (CK)",
+    "category": "Laboratory Investigation",
+    "rate": 156.0
+  },
+  {
+    "code": "LB104",
+    "name": "Foetal Haemoglobin (HbF)",
+    "category": "Laboratory Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "LB105",
+    "name": "Prothrombin Time (PT)/ International normalized ratio (INR)",
+    "category": "Laboratory Investigation",
+    "rate": 170.0
+  },
+  {
+    "code": "LB106",
+    "name": "Lactate dehydrogenase (LDH)",
+    "category": "Laboratory Investigation",
+    "rate": 150.0
+  },
+  {
+    "code": "LB107",
+    "name": "Alkaline Phosphatase",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB108",
+    "name": "Acid Phosphatase",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB109",
+    "name": "CPK MB/CK MB",
+    "category": "Laboratory Investigation",
+    "rate": 245.0
+  },
+  {
+    "code": "LB110",
+    "name": "CK MB Mass/CPK MB Mass",
+    "category": "Laboratory Investigation",
+    "rate": 245.0
+  },
+  {
+    "code": "LB111",
+    "name": "Troponin I",
+    "category": "Laboratory Investigation",
+    "rate": 476.0
+  },
+  {
+    "code": "LB112",
+    "name": "Troponin T",
+    "category": "Laboratory Investigation",
+    "rate": 476.0
+  },
+  {
+    "code": "LB113",
+    "name": "Glucose-6-Phosphate Dehydrogenase (G6PD)",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB114",
+    "name": "Lithium",
+    "category": "Laboratory Investigation",
+    "rate": 238.0
+  },
+  {
+    "code": "LB115",
+    "name": "Dilantin (Phenytoin)",
+    "category": "Laboratory Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "LB116",
+    "name": "Carbamazepine.",
+    "category": "Laboratory Investigation",
+    "rate": 476.0
+  },
+  {
+    "code": "LB117",
+    "name": "Cyclosporine",
+    "category": "Laboratory Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "LB118",
+    "name": "Valproic acid.",
+    "category": "Laboratory Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "LB119",
+    "name": "Blood gas analysis / Arterial Blood Gas (ABG)",
+    "category": "Laboratory Investigation",
+    "rate": 381.0
+  },
+  {
+    "code": "LB120",
+    "name": "Blood gas analysis / Arterial Blood Gas (ABG) with electrolytes",
+    "category": "Laboratory Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "LB121",
+    "name": "Urine Pregnancy Test(UPT)",
+    "category": "Laboratory Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "LB122",
+    "name": "Glycosylated Haemoglobin (HbA1c)",
+    "category": "Laboratory Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "LB123",
+    "name": "Kidney Function Test (KFT)- (Sr.Creatinine,Blood Urea,BUN,Sr.Uric Acid,Sr.Sodium,Sr.Potassium,Urine R/E)",
+    "category": "Laboratory Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "LB124",
+    "name": "Liver Function Test (LFT)",
+    "category": "Laboratory Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "LB125",
+    "name": "Lipid Profile (Total cholesterol ,Triglycerides, LDL, HDL,VLDL)",
+    "category": "Laboratory Investigation",
+    "rate": 333.0
+  },
+  {
+    "code": "LB126",
+    "name": "Serum Ferritin",
+    "category": "Laboratory Investigation",
+    "rate": 238.0
+  },
+  {
+    "code": "LB127",
+    "name": "Vitamin B12 Assay.",
+    "category": "Laboratory Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "LB128",
+    "name": "Folic Acid Assay.",
+    "category": "Laboratory Investigation",
+    "rate": 442.0
+  },
+  {
+    "code": "LB129",
+    "name": "Extended Lipid Profile. (Total cholesterol, LDL,HDL, Triglycerides Apo A1, Apo B,Lp (a) )",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB130",
+    "name": "Apolipoprotein A1 (ApoA1)",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB131",
+    "name": "Apolipoprotein B (Apo B)",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB132",
+    "name": "Lipoprotein A / Lp A",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB133",
+    "name": "CD 3,4 and 8 Counts",
+    "category": "Laboratory Investigation",
+    "rate": 843.0
+  },
+  {
+    "code": "LB134",
+    "name": "CD 3,4 and 8 Percentage",
+    "category": "Laboratory Investigation",
+    "rate": 1027.0
+  },
+  {
+    "code": "LB135",
+    "name": "Low Density Lipoprotein (LDL)",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB136",
+    "name": "Homocysteine",
+    "category": "Laboratory Investigation",
+    "rate": 442.0
+  },
+  {
+    "code": "LB137",
+    "name": "Serum Electrophoresis",
+    "category": "Laboratory Investigation",
+    "rate": 476.0
+  },
+  {
+    "code": "LB138",
+    "name": "Fibrinogen",
+    "category": "Laboratory Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "LB139",
+    "name": "Gamma-Glutamyl Transpeptidase (GGTP)",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB140",
+    "name": "Fructosamine",
+    "category": "Laboratory Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "LB141",
+    "name": "Beta 2 microglobulin (B2M) /_2 microglobulin",
+    "category": "Laboratory Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "LB142",
+    "name": "Prostate Specific Antigen (PSA)- Total",
+    "category": "Laboratory Investigation",
+    "rate": 323.0
+  },
+  {
+    "code": "LB143",
+    "name": "Prostate-Specific Antigen (PSA) - Free",
+    "category": "Laboratory Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "LB144",
+    "name": "Alpha Fetoprotein (AFP)",
+    "category": "Laboratory Investigation",
+    "rate": 374.0
+  },
+  {
+    "code": "LB145",
+    "name": "Human Chorionic Gonadotropin (HCG)/ Beta HCG",
+    "category": "Laboratory Investigation",
+    "rate": 306.0
+  },
+  {
+    "code": "LB146",
+    "name": "Cancer Antigen 125 (CA 125)",
+    "category": "Laboratory Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "LB147",
+    "name": "Cancer Antigen 19.9 (CA 19.9)",
+    "category": "Laboratory Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "LB148",
+    "name": "Cancer Antigen 15.3 (CA 15.3)",
+    "category": "Laboratory Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "LB149",
+    "name": "Vanillylmandelic Acid (VMA)",
+    "category": "Laboratory Investigation",
+    "rate": 1088.0
+  },
+  {
+    "code": "LB150",
+    "name": "Calcitonin",
+    "category": "Laboratory Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "LB151",
+    "name": "Carcinoembryonic Antigen (CEA)",
+    "category": "Laboratory Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "LB152",
+    "name": "Direct Immunofluorescence (Skin and Kidney Disease etc)",
+    "category": "Laboratory Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "LB153",
+    "name": "Indirect (anti ds DNA Anti Smith ANCA)",
+    "category": "Laboratory Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "LB154",
+    "name": "Calcidiol / 25-hydroxycholecalciferol / Vitamin D3 assay (Vit D3)",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB155",
+    "name": "Serum Protein electrophoresis with immunofixation electrophoresis (IFE)",
+    "category": "Laboratory Investigation",
+    "rate": 476.0
+  },
+  {
+    "code": "LB156",
+    "name": "Anti-Cyclic Citrullinated Peptide (Anti CCP)",
+    "category": "Laboratory Investigation",
+    "rate": 612.0
+  },
+  {
+    "code": "LB157",
+    "name": "Anti-tissue Transglutaminase antibody (Anti TTG Antibody) / Tissue Transglutaminase IgA (tTg-IgA)",
+    "category": "Laboratory Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "LB158",
+    "name": "Serum Erythropoietin",
+    "category": "Laboratory Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "LB159",
+    "name": "Adrenocorticotropic Hormone (ACTH)",
+    "category": "Laboratory Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "LB160",
+    "name": "T3, T4, TSH -Thyroid Function Test (TFT)",
+    "category": "Laboratory Investigation",
+    "rate": 306.0
+  },
+  {
+    "code": "LB161",
+    "name": "Thyroid stimulating hormone (TSH)",
+    "category": "Laboratory Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "LB162",
+    "name": "Luteinizing hormone (LH)",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB163",
+    "name": "Follicle stimulating hormone (FSH)",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB164",
+    "name": "Prolactin",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB165",
+    "name": "Cortisol",
+    "category": "Laboratory Investigation",
+    "rate": 374.0
+  },
+  {
+    "code": "LB166",
+    "name": "PTH(Parathormone)",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB167",
+    "name": "C-Peptide (Connecting Peptide)",
+    "category": "Laboratory Investigation",
+    "rate": 510.0
+  },
+  {
+    "code": "LB168",
+    "name": "Insulin",
+    "category": "Laboratory Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "LB169",
+    "name": "Progesterone",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB170",
+    "name": "17 Hydroxyprogesterone (17 OH Progesterone)",
+    "category": "Laboratory Investigation",
+    "rate": 510.0
+  },
+  {
+    "code": "LB171",
+    "name": "Dehydroepiandrosterone sulfate (DHEAS)",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB172",
+    "name": "Androstenedione",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB173",
+    "name": "Growth Hormone",
+    "category": "Laboratory Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "LB174",
+    "name": "Thyroid peroxidase antibody (TPO)",
+    "category": "Laboratory Investigation",
+    "rate": 476.0
+  },
+  {
+    "code": "LB175",
+    "name": "Thyroglobulin.",
+    "category": "Laboratory Investigation",
+    "rate": 476.0
+  },
+  {
+    "code": "LB176",
+    "name": "Hydatid Serology",
+    "category": "Laboratory Investigation",
+    "rate": 558.0
+  },
+  {
+    "code": "LB177",
+    "name": "Anti Sperm Antibodies.",
+    "category": "Laboratory Investigation",
+    "rate": 612.0
+  },
+  {
+    "code": "LB178",
+    "name": "Hepatitis B Virus (HBV) DNA Qualitative",
+    "category": "Laboratory Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "LB179",
+    "name": "Hepatitis B Virus (HBV) DNA Quantitative.",
+    "category": "Laboratory Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "LB180",
+    "name": "Hepatitis C Virus (HCV) RNA Qualitative.",
+    "category": "Laboratory Investigation",
+    "rate": 2040.0
+  },
+  {
+    "code": "LB181",
+    "name": "Human papillomavirus (HPV) Serology",
+    "category": "Laboratory Investigation",
+    "rate": 1088.0
+  },
+  {
+    "code": "LB182",
+    "name": "Rota Virus serology",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB183",
+    "name": "Mantoux Test",
+    "category": "Laboratory Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "LB184",
+    "name": "ADA( Adenosine deaminase)",
+    "category": "Laboratory Investigation",
+    "rate": 442.0
+  },
+  {
+    "code": "LB185",
+    "name": "GeneXpert Test (Tuberculosis)",
+    "category": "Laboratory Investigation",
+    "rate": 704.0
+  },
+  {
+    "code": "LB186",
+    "name": "QuantiFERON TB Gold",
+    "category": "Laboratory Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "LB187",
+    "name": "PCR for Tuberculosis (TB)",
+    "category": "Laboratory Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "LB188",
+    "name": "PCR for Human immunodeficiency virus (HIV)",
+    "category": "Laboratory Investigation",
+    "rate": 1224.0
+  },
+  {
+    "code": "LB189",
+    "name": "Chlamydia antigen",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB190",
+    "name": "Chlamydia antibody",
+    "category": "Laboratory Investigation",
+    "rate": 578.0
+  },
+  {
+    "code": "LB191",
+    "name": "Brucella serology",
+    "category": "Laboratory Investigation",
+    "rate": 306.0
+  },
+  {
+    "code": "LB192",
+    "name": "Influenza A serology",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB193",
+    "name": "Acetylcholine receptor (AChR) antibody titre",
+    "category": "Laboratory Investigation",
+    "rate": 3060.0
+  },
+  {
+    "code": "LB194",
+    "name": "Anti muscle specific receptor tyrosine kinase (Anti MuSK) antibody titre",
+    "category": "Laboratory Investigation",
+    "rate": 4556.0
+  },
+  {
+    "code": "LB195",
+    "name": "Serum Copper",
+    "category": "Laboratory Investigation",
+    "rate": 442.0
+  },
+  {
+    "code": "LB196",
+    "name": "Serum Ceruloplasmin",
+    "category": "Laboratory Investigation",
+    "rate": 442.0
+  },
+  {
+    "code": "LB197",
+    "name": "Urinary copper",
+    "category": "Laboratory Investigation",
+    "rate": 571.0
+  },
+  {
+    "code": "LB198",
+    "name": "Serum phenobarbitone level",
+    "category": "Laboratory Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "LB199",
+    "name": "Coagulation profile",
+    "category": "Laboratory Investigation",
+    "rate": 510.0
+  },
+  {
+    "code": "LB200",
+    "name": "D-Dimer",
+    "category": "Laboratory Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "LB201",
+    "name": "CSF/Any Body Fluid for Basic studies including cell count, protein, sugar, gram stain, India Ink preparation and smear for AFB",
+    "category": "Laboratory Investigation",
+    "rate": 238.0
+  },
+  {
+    "code": "LB202",
+    "name": "PCR for Herpes simplex",
+    "category": "Laboratory Investigation",
+    "rate": 952.0
+  },
+  {
+    "code": "LB203",
+    "name": "Bacterial culture and sensitivity - Aerobic",
+    "category": "Laboratory Investigation",
+    "rate": 313.0
+  },
+  {
+    "code": "LB204",
+    "name": "Bacterial culture and sensitivity - Anaerobic",
+    "category": "Laboratory Investigation",
+    "rate": 476.0
+  },
+  {
+    "code": "LB205",
+    "name": "Mycobacterial culture and sensitivity",
+    "category": "Laboratory Investigation",
+    "rate": 374.0
+  },
+  {
+    "code": "LB206",
+    "name": "Fungal culture",
+    "category": "Laboratory Investigation",
+    "rate": 337.0
+  },
+  {
+    "code": "LB207",
+    "name": "Anti measles antibody titre (with serum antibody titre)",
+    "category": "Laboratory Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "LB208",
+    "name": "Viral culture",
+    "category": "Laboratory Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "LB209",
+    "name": "Antibody titre (Herpes simplex, cytomegalovirus, flavivirus, zoster varicella virus)",
+    "category": "Laboratory Investigation",
+    "rate": 1428.0
+  },
+  {
+    "code": "LB210",
+    "name": "Oligoclonal bands (OCBs)",
+    "category": "Laboratory Investigation",
+    "rate": 1530.0
+  },
+  {
+    "code": "LB211",
+    "name": "Myelin basic protein (MBP)",
+    "category": "Laboratory Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "LB212",
+    "name": "Cryptococcal antigen",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB213",
+    "name": "D Xylose test",
+    "category": "Laboratory Investigation",
+    "rate": 748.0
+  },
+  {
+    "code": "LB214",
+    "name": "Faecal / Faecal fat test/ faecal chymotrypsin/ faecal elastase",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB215",
+    "name": "H pylori serology for Coeliac disease /Celiac disease",
+    "category": "Laboratory Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "LB216",
+    "name": "HBV genotyping",
+    "category": "Laboratory Investigation",
+    "rate": 1955.0
+  },
+  {
+    "code": "LB217",
+    "name": "HCV genotyping",
+    "category": "Laboratory Investigation",
+    "rate": 3812.0
+  },
+  {
+    "code": "LB218",
+    "name": "Urinary Vanillylmandelic Acid (VMA)",
+    "category": "Laboratory Investigation",
+    "rate": 1486.0
+  },
+  {
+    "code": "LB219",
+    "name": "Urinary metanephrine/Normetanephrine",
+    "category": "Laboratory Investigation",
+    "rate": 1972.0
+  },
+  {
+    "code": "LB220",
+    "name": "Urinary free catecholamine",
+    "category": "Laboratory Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "LB221",
+    "name": "Serum aldosterone",
+    "category": "Laboratory Investigation",
+    "rate": 1224.0
+  },
+  {
+    "code": "LB222",
+    "name": "24 Hr urinary aldosterone",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB223",
+    "name": "Plasma renin activity",
+    "category": "Laboratory Investigation",
+    "rate": 1088.0
+  },
+  {
+    "code": "LB224",
+    "name": "Serum aldosterone/renin ratio",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB225",
+    "name": "Osmolality urine",
+    "category": "Laboratory Investigation",
+    "rate": 306.0
+  },
+  {
+    "code": "LB226",
+    "name": "Osmolality serum",
+    "category": "Laboratory Investigation",
+    "rate": 306.0
+  },
+  {
+    "code": "LB227",
+    "name": "Urinary sodium",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB228",
+    "name": "Urinary Chloride",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB229",
+    "name": "Urinary potassium",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB230",
+    "name": "Urinary calcium",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB231",
+    "name": "Thyroid binding globulin",
+    "category": "Laboratory Investigation",
+    "rate": 748.0
+  },
+  {
+    "code": "LB232",
+    "name": "24-hour urinary free cortisol",
+    "category": "Laboratory Investigation",
+    "rate": 510.0
+  },
+  {
+    "code": "LB233",
+    "name": "Islet cell antibody",
+    "category": "Laboratory Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "LB234",
+    "name": "Glutamic Acid Decarboxylase Autoantibodies test (GAD antibodies)",
+    "category": "Laboratory Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "LB235",
+    "name": "Insulin associated antibody",
+    "category": "Laboratory Investigation",
+    "rate": 666.0
+  },
+  {
+    "code": "LB236",
+    "name": "Insulin-like growth factor-1 (IGF-1)",
+    "category": "Laboratory Investigation",
+    "rate": 1496.0
+  },
+  {
+    "code": "LB237",
+    "name": "Insulin-like growth factor binding protein 3 (IGF- BP3)",
+    "category": "Laboratory Investigation",
+    "rate": 1564.0
+  },
+  {
+    "code": "LB238",
+    "name": "Sex hormone binding globulin",
+    "category": "Laboratory Investigation",
+    "rate": 1047.0
+  },
+  {
+    "code": "LB239",
+    "name": "Estradiol (E2)",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB240",
+    "name": "Thyroglobulin antibody",
+    "category": "Laboratory Investigation",
+    "rate": 476.0
+  },
+  {
+    "code": "LB241",
+    "name": "Kappa Lambda Light Chains, Free, Serum/ Serum free light chains (SFLC)",
+    "category": "Laboratory Investigation",
+    "rate": 2737.0
+  },
+  {
+    "code": "LB242",
+    "name": "Serum IgE Level",
+    "category": "Laboratory Investigation",
+    "rate": 258.0
+  },
+  {
+    "code": "LB243",
+    "name": "N-terminal pro BNP (NT-pro BNP / Brain natriuretic peptide (BNP)",
+    "category": "Laboratory Investigation",
+    "rate": 1408.0
+  },
+  {
+    "code": "LB244",
+    "name": "HCV RNA Quantitative",
+    "category": "Laboratory Investigation",
+    "rate": 1255.0
+  },
+  {
+    "code": "LB245",
+    "name": "Tacrolimus Level",
+    "category": "Laboratory Investigation",
+    "rate": 1799.0
+  },
+  {
+    "code": "LB246",
+    "name": "Protein Creatinine Ratio (PCR), Urine / Albumin Creatinine Ratio (ACR), Urine",
+    "category": "Laboratory Investigation",
+    "rate": 103.0
+  },
+  {
+    "code": "LB247",
+    "name": "HLA B27 (PCR)",
+    "category": "Laboratory Investigation",
+    "rate": 391.0
+  },
+  {
+    "code": "LB248",
+    "name": "Procalcitonin",
+    "category": "Laboratory Investigation",
+    "rate": 1408.0
+  },
+  {
+    "code": "LB249",
+    "name": "TORCH Test",
+    "category": "Laboratory Investigation",
+    "rate": 876.0
+  },
+  {
+    "code": "LB250",
+    "name": "Anti -Smooth Muscle Antibody Test (ASMA)",
+    "category": "Laboratory Investigation",
+    "rate": 993.0
+  },
+  {
+    "code": "LB251",
+    "name": "C ANCA-IFA",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB252",
+    "name": "P ANCA-IFA",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB253",
+    "name": "Angiotensin converting enzyme (ACE)",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB254",
+    "name": "Extractable Nuclear Antigens (ENA) - Quantitative",
+    "category": "Laboratory Investigation",
+    "rate": 3128.0
+  },
+  {
+    "code": "LB255",
+    "name": "Chromogranin A",
+    "category": "Laboratory Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "LB256",
+    "name": "Faecal calprotectin",
+    "category": "Laboratory Investigation",
+    "rate": 1856.0
+  },
+  {
+    "code": "LB257",
+    "name": "C3-COMPLEMENT",
+    "category": "Laboratory Investigation",
+    "rate": 442.0
+  },
+  {
+    "code": "LB258",
+    "name": "C4-COMPLEMENT",
+    "category": "Laboratory Investigation",
+    "rate": 442.0
+  },
+  {
+    "code": "LB259",
+    "name": "H1N1 (RT-PCR)",
+    "category": "Laboratory Investigation",
+    "rate": 737.0
+  },
+  {
+    "code": "LB260",
+    "name": "Anti HEV IgM",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB261",
+    "name": "Anti HAV IgM",
+    "category": "Laboratory Investigation",
+    "rate": 510.0
+  },
+  {
+    "code": "LB262",
+    "name": "HBsAg Quantitative",
+    "category": "Laboratory Investigation",
+    "rate": 442.0
+  },
+  {
+    "code": "LB263",
+    "name": "Typhidot IgM",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB264",
+    "name": "Hepatitis B Core Antibody (HBcAb) Level (Hepatitis B Core IgM Antibody)",
+    "category": "Laboratory Investigation",
+    "rate": 326.0
+  },
+  {
+    "code": "LB265",
+    "name": "Hepatitis B surface antibody (anti HBs)",
+    "category": "Laboratory Investigation",
+    "rate": 442.0
+  },
+  {
+    "code": "LB266",
+    "name": "Free Triiodothyronine (FT3)",
+    "category": "Laboratory Investigation",
+    "rate": 85.0
+  },
+  {
+    "code": "LB267",
+    "name": "Free Thyroxine (FT4)",
+    "category": "Laboratory Investigation",
+    "rate": 85.0
+  },
+  {
+    "code": "LB268",
+    "name": "Widal Test",
+    "category": "Laboratory Investigation",
+    "rate": 48.0
+  },
+  {
+    "code": "LB269",
+    "name": "Dengue NS1 Ag",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB270",
+    "name": "Dengue IgM and Ig G",
+    "category": "Laboratory Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "LB271",
+    "name": "Interleukin 6 (IL 6)",
+    "category": "Laboratory Investigation",
+    "rate": 1088.0
+  },
+  {
+    "code": "LB272",
+    "name": "Covid Antibody Test",
+    "category": "Laboratory Investigation",
+    "rate": 476.0
+  },
+  {
+    "code": "LB273",
+    "name": "Cryoglobulins",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB274",
+    "name": "Cytogenetics",
+    "category": "Laboratory Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "LB275",
+    "name": "Plasma Free Normetanephrine",
+    "category": "Laboratory Investigation",
+    "rate": 1564.0
+  },
+  {
+    "code": "LB276",
+    "name": "Plasma Metanephrines",
+    "category": "Laboratory Investigation",
+    "rate": 1564.0
+  },
+  {
+    "code": "LB277",
+    "name": "PLA2 receptor antibody quantitative",
+    "category": "Laboratory Investigation",
+    "rate": 2856.0
+  },
+  {
+    "code": "LB278",
+    "name": "Allergic Bronchopulmonary Aspergillosis (ABPA) Panel",
+    "category": "Laboratory Investigation",
+    "rate": 1972.0
+  },
+  {
+    "code": "LB279",
+    "name": "Allergy Food Screening Panel",
+    "category": "Laboratory Investigation",
+    "rate": 4080.0
+  },
+  {
+    "code": "LB280",
+    "name": "AMA (Anti Mitochondrial Antibody)",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB281",
+    "name": "AMH (Anti- Mullerian Hormone)",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB282",
+    "name": "ANA BLOT",
+    "category": "Laboratory Investigation",
+    "rate": 2040.0
+  },
+  {
+    "code": "LB283",
+    "name": "ANA Profile",
+    "category": "Laboratory Investigation",
+    "rate": 2040.0
+  },
+  {
+    "code": "LB284",
+    "name": "Anti GBM (Glomerular Basement Membrane) Antibody",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB285",
+    "name": "Anti LKM (Liver Kidney Microsome) Ab",
+    "category": "Laboratory Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "LB286",
+    "name": "Anti Parietal Cell Antibodies",
+    "category": "Laboratory Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "LB287",
+    "name": "Anti Intrinsic Factor Antibodies",
+    "category": "Laboratory Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "LB288",
+    "name": "ASO Titre /ASLO Titre",
+    "category": "Laboratory Investigation",
+    "rate": 367.0
+  },
+  {
+    "code": "LB289",
+    "name": "Aspergillus Fumigatus Specific IgE",
+    "category": "Laboratory Investigation",
+    "rate": 1054.0
+  },
+  {
+    "code": "LB290",
+    "name": "Autoimmune Encephalitis Panel",
+    "category": "Laboratory Investigation",
+    "rate": 11560.0
+  },
+  {
+    "code": "LB291",
+    "name": "Autoimmune Hepatitis Profile",
+    "category": "Laboratory Investigation",
+    "rate": 2013.0
+  },
+  {
+    "code": "LB292",
+    "name": "Beta-D-Glucan Assay",
+    "category": "Laboratory Investigation",
+    "rate": 10200.0
+  },
+  {
+    "code": "LB293",
+    "name": "C1 Esterase inhibitor (Quantitative )",
+    "category": "Laboratory Investigation",
+    "rate": 1632.0
+  },
+  {
+    "code": "LB294",
+    "name": "CMV Quantitative (Viral load) Test",
+    "category": "Laboratory Investigation",
+    "rate": 1564.0
+  },
+  {
+    "code": "LB295",
+    "name": "Double Marker (Beta-hCG,PAPP-A)",
+    "category": "Laboratory Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "LB296",
+    "name": "Quadruple test (AFP,HCG,UE3,Inhibin A)",
+    "category": "Laboratory Investigation",
+    "rate": 1632.0
+  },
+  {
+    "code": "LB297",
+    "name": "HBeAb (Hepatitis B envelope Antibody)",
+    "category": "Laboratory Investigation",
+    "rate": 245.0
+  },
+  {
+    "code": "LB298",
+    "name": "HBeAg (Hepatitis B envelope Antigen)",
+    "category": "Laboratory Investigation",
+    "rate": 245.0
+  },
+  {
+    "code": "LB299",
+    "name": "HIAA 24 Hours Urinary",
+    "category": "Laboratory Investigation",
+    "rate": 1564.0
+  },
+  {
+    "code": "LB300",
+    "name": "HIV Viral Load by PCR",
+    "category": "Laboratory Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "LB301",
+    "name": "HSV 1 & 2 IgG",
+    "category": "Laboratory Investigation",
+    "rate": 558.0
+  },
+  {
+    "code": "LB302",
+    "name": "Hypersensitive Pneumonitis Panel",
+    "category": "Laboratory Investigation",
+    "rate": 4896.0
+  },
+  {
+    "code": "LB303",
+    "name": "IgG4",
+    "category": "Laboratory Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "LB304",
+    "name": "Inhibin A",
+    "category": "Laboratory Investigation",
+    "rate": 612.0
+  },
+  {
+    "code": "LB305",
+    "name": "Inhibin B",
+    "category": "Laboratory Investigation",
+    "rate": 1292.0
+  },
+  {
+    "code": "LB306",
+    "name": "Scrub Typhus IgM",
+    "category": "Laboratory Investigation",
+    "rate": 1088.0
+  },
+  {
+    "code": "LB307",
+    "name": "Interferon Gamma Release Assay (IGRA)",
+    "category": "Laboratory Investigation",
+    "rate": 2040.0
+  },
+  {
+    "code": "LB308",
+    "name": "KOH Mount",
+    "category": "Laboratory Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "LB309",
+    "name": "Serum AMA M2 (IFA Method)",
+    "category": "Laboratory Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "LB310",
+    "name": "Serum Gastrin",
+    "category": "Laboratory Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "LB311",
+    "name": "Serum Haptoglobin Levels",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB312",
+    "name": "Skin Prick Test for Allergy",
+    "category": "Laboratory Investigation",
+    "rate": 1224.0
+  },
+  {
+    "code": "LB313",
+    "name": "Myositis Profile (Up to 16 Antigens)",
+    "category": "Laboratory Investigation",
+    "rate": 5440.0
+  },
+  {
+    "code": "LB314",
+    "name": "Paraneoplastic Panel",
+    "category": "Laboratory Investigation",
+    "rate": 6800.0
+  },
+  {
+    "code": "LB315",
+    "name": "TSH Receptor Antibody",
+    "category": "Laboratory Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "LB316",
+    "name": "Anti-Nuclear Antibodies - IFA",
+    "category": "Laboratory Investigation",
+    "rate": 1088.0
+  },
+  {
+    "code": "LB317",
+    "name": "Autoimmune Liver Diseases Profile",
+    "category": "Laboratory Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "LB318",
+    "name": "Citrate Urine 24 Hour",
+    "category": "Laboratory Investigation",
+    "rate": 782.0
+  },
+  {
+    "code": "LB319",
+    "name": "Comprehensive Allergy Panel",
+    "category": "Laboratory Investigation",
+    "rate": 4760.0
+  },
+  {
+    "code": "LB320",
+    "name": "Comprehensive Myeloma Protein Panel",
+    "category": "Laboratory Investigation",
+    "rate": 4760.0
+  },
+  {
+    "code": "LB321",
+    "name": "DCP (DES Gamma-Carboxy- Prothrombin)",
+    "category": "Laboratory Investigation",
+    "rate": 2278.0
+  },
+  {
+    "code": "LB322",
+    "name": "Desmoglein (DSG) 1 And 3 Antibody",
+    "category": "Laboratory Investigation",
+    "rate": 3672.0
+  },
+  {
+    "code": "LB323",
+    "name": "Galactomannan",
+    "category": "Laboratory Investigation",
+    "rate": 2115.0
+  },
+  {
+    "code": "LB324",
+    "name": "SCL 70 Antibody",
+    "category": "Laboratory Investigation",
+    "rate": 1142.0
+  },
+  {
+    "code": "LB325",
+    "name": "Serum Chromogranin A",
+    "category": "Laboratory Investigation",
+    "rate": 2584.0
+  },
+  {
+    "code": "LB326",
+    "name": "SSA- Antibody Ro Serum Test",
+    "category": "Laboratory Investigation",
+    "rate": 986.0
+  },
+  {
+    "code": "LB327",
+    "name": "SSB- Antibody La Serum Test",
+    "category": "Laboratory Investigation",
+    "rate": 986.0
+  },
+  {
+    "code": "LB328",
+    "name": "Stool for Clostridium difficile Toxin",
+    "category": "Laboratory Investigation",
+    "rate": 1931.0
+  },
+  {
+    "code": "LB329",
+    "name": "TPHA",
+    "category": "Laboratory Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "LB330",
+    "name": "UGT1A1 Gene Analysis",
+    "category": "Laboratory Investigation",
+    "rate": 4080.0
+  },
+  {
+    "code": "LB331",
+    "name": "Urine For Myoglobin",
+    "category": "Laboratory Investigation",
+    "rate": 374.0
+  },
+  {
+    "code": "LB332",
+    "name": "Leptospira Ig M",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB333",
+    "name": "Chikungunya Ig M",
+    "category": "Laboratory Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "LB334",
+    "name": "Weil Felix Agglutination Test",
+    "category": "Laboratory Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "LB335",
+    "name": "Continuous Glucose Monitoring for 2 Weeks",
+    "category": "Laboratory Investigation",
+    "rate": 2720.0
+  },
+  {
+    "code": "RI001",
+    "name": "2D echocardiography",
+    "category": "Radiological Investigation",
+    "rate": 1003.0
+  },
+  {
+    "code": "RI002",
+    "name": "Fetal Echo",
+    "category": "Radiological Investigation",
+    "rate": 1088.0
+  },
+  {
+    "code": "RI003",
+    "name": "2D Transoesophageal Echocardiography (TEE)",
+    "category": "Radiological Investigation",
+    "rate": 1122.0
+  },
+  {
+    "code": "RI004",
+    "name": "3D Transoesophageal Echocardiography (TEE)",
+    "category": "Radiological Investigation",
+    "rate": 1122.0
+  },
+  {
+    "code": "RI005",
+    "name": "Stress Echo- exercise",
+    "category": "Radiological Investigation",
+    "rate": 1632.0
+  },
+  {
+    "code": "RI006",
+    "name": "Stress Echo- pharmacological / D Stress Echo",
+    "category": "Radiological Investigation",
+    "rate": 2040.0
+  },
+  {
+    "code": "RI007",
+    "name": "Stress Myocardial Perfusion Imaging (MPI)- exercise",
+    "category": "Radiological Investigation",
+    "rate": 6256.0
+  },
+  {
+    "code": "RI008",
+    "name": "Stress Myocardial Perfusion Imaging (MPI) - pharmacological",
+    "category": "Radiological Investigation",
+    "rate": 6256.0
+  },
+  {
+    "code": "RI009",
+    "name": "CT Coronary Angiography including Calcium Score Test",
+    "category": "Radiological Investigation",
+    "rate": 6256.0
+  },
+  {
+    "code": "RI010",
+    "name": "Cardiac CT scan",
+    "category": "Radiological Investigation",
+    "rate": 4420.0
+  },
+  {
+    "code": "RI011",
+    "name": "MRI Cardiac",
+    "category": "Radiological Investigation",
+    "rate": 5440.0
+  },
+  {
+    "code": "RI012",
+    "name": "Stress Cardiac MRI",
+    "category": "Radiological Investigation",
+    "rate": 6256.0
+  },
+  {
+    "code": "RI013",
+    "name": "Cardiac PET",
+    "category": "Radiological Investigation",
+    "rate": 6256.0
+  },
+  {
+    "code": "RI014",
+    "name": "USG Transvaginal sonography (TVS for Follicular monitoring /aspiration) /TVS for follicular monitoring/pelvic pathology/ET measurement",
+    "category": "Radiological Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "RI015",
+    "name": "Growth scan (including BPP, AFI, Doppler)",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI016",
+    "name": "1st trimester scan-dating scan/NT scan/Early pregnancy scan",
+    "category": "Radiological Investigation",
+    "rate": 476.0
+  },
+  {
+    "code": "RI017",
+    "name": "USG Colour Doppler Pregnancy / Fetal Doppler/Umbilical Doppler/Uterine Vessel Doppler",
+    "category": "Radiological Investigation",
+    "rate": 1139.0
+  },
+  {
+    "code": "RI018",
+    "name": "Biophysical score / Biophysical profile test (BPP test)",
+    "category": "Radiological Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "RI019",
+    "name": "USG Obstetrics for Anomalies scan",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI020",
+    "name": "USG Whole Abdomen Including Pelvis and post Void urine",
+    "category": "Radiological Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "RI021",
+    "name": "Pelvic USG (gynae, infertility, prostate , KUB with post- void residual (PVR) etc ).",
+    "category": "Radiological Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "RI022",
+    "name": "USG Small parts (scrotum, thyroid, parathyroid etc)",
+    "category": "Radiological Investigation",
+    "rate": 524.0
+  },
+  {
+    "code": "RI023",
+    "name": "USG Large Parts (Joints/Chest,...etc)",
+    "category": "Radiological Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "RI024",
+    "name": "USG Neonatal spine",
+    "category": "Radiological Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "RI025",
+    "name": "USG Breast including relevant Lymph nodes- Bilateral/Unilateral",
+    "category": "Radiological Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "RI026",
+    "name": "USG Hysterosalpingography (HSG)",
+    "category": "Radiological Investigation",
+    "rate": 1632.0
+  },
+  {
+    "code": "RI027",
+    "name": "Fibroscan Liver",
+    "category": "Radiological Investigation",
+    "rate": 782.0
+  },
+  {
+    "code": "RI028",
+    "name": "Carotid Doppler Bilateral",
+    "category": "Radiological Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "RI029",
+    "name": "Arterial Colour Doppler Bilateral",
+    "category": "Radiological Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "RI030",
+    "name": "Venous Colour Doppler Bilateral",
+    "category": "Radiological Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "RI031",
+    "name": "Colour Doppler, renal arteries/any other organ",
+    "category": "Radiological Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "RI032",
+    "name": "X Ray Abdomen AP Supine or Erect (One film)",
+    "category": "Radiological Investigation",
+    "rate": 170.0
+  },
+  {
+    "code": "RI033",
+    "name": "X Ray Abdomen Lateral view (one film)",
+    "category": "Radiological Investigation",
+    "rate": 143.0
+  },
+  {
+    "code": "RI034",
+    "name": "X Ray Chest PA /AP/ Oblique view (one film)",
+    "category": "Radiological Investigation",
+    "rate": 156.0
+  },
+  {
+    "code": "RI035",
+    "name": "X Ray Chest Lateral (one film)",
+    "category": "Radiological Investigation",
+    "rate": 156.0
+  },
+  {
+    "code": "RI036",
+    "name": "X Ray Mastoids: Towne view, oblique views (3 films)",
+    "category": "Radiological Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "RI037",
+    "name": "X Ray Extremities (Hand/Leg/Feet/Finger/Toe) bones & Joints (Hip/ Knee/Ankle / shoulder/ Wrist / fingers/Toes, etc) AP & Lateral views (standing or weight bearing)(Two films)",
+    "category": "Radiological Investigation",
+    "rate": 258.0
+  },
+  {
+    "code": "RI038",
+    "name": "X Ray Pelvis AP (one film)",
+    "category": "Radiological Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "RI039",
+    "name": "X Ray Temporomandibular (TM) Joints (one film)",
+    "category": "Radiological Investigation",
+    "rate": 170.0
+  },
+  {
+    "code": "RI040",
+    "name": "X Ray Abdomen & Pelvis for KUB",
+    "category": "Radiological Investigation",
+    "rate": 160.0
+  },
+  {
+    "code": "RI041",
+    "name": "X Ray Skull AP & Lateral (2 films)/ Extra oral radiographs - All skull views, TMJ, Lateral oblique [Dental]",
+    "category": "Radiological Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "RI042",
+    "name": "X Ray Spine AP & Lateral (2 films)",
+    "category": "Radiological Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "RI043",
+    "name": "X Ray Paranasal sinuses (PNS) view (1 film)",
+    "category": "Radiological Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "RI044",
+    "name": "Barium Swallow",
+    "category": "Radiological Investigation",
+    "rate": 816.0
+  },
+  {
+    "code": "RI045",
+    "name": "Barium Upper GI study",
+    "category": "Radiological Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "RI046",
+    "name": "Barium Upper GI study (Double contrast)",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI047",
+    "name": "Barium Meal follow through",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI048",
+    "name": "Barium Enema (Single contrast/double contrast)",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI049",
+    "name": "Small bowel enteroclysis",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI050",
+    "name": "General:Fistulography / Sinography/Sialography/Dacrocystography/ T-Tube cholangiogram/Nephrostogram",
+    "category": "Radiological Investigation",
+    "rate": 864.0
+  },
+  {
+    "code": "RI051",
+    "name": "Intravenous Pyelography (IVP)",
+    "category": "Radiological Investigation",
+    "rate": 1122.0
+  },
+  {
+    "code": "RI052",
+    "name": "Micturating Cystourethrography (MCU)",
+    "category": "Radiological Investigation",
+    "rate": 762.0
+  },
+  {
+    "code": "RI053",
+    "name": "Retrograde Urethrography (RGU)",
+    "category": "Radiological Investigation",
+    "rate": 762.0
+  },
+  {
+    "code": "RI054",
+    "name": "Contrast Hystero-Salpingography (HSG)",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI055",
+    "name": "X ray Arthrography",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI056",
+    "name": "Ortho Scanogram",
+    "category": "Radiological Investigation",
+    "rate": 1149.0
+  },
+  {
+    "code": "RI057",
+    "name": "Cephalography",
+    "category": "Radiological Investigation",
+    "rate": 238.0
+  },
+  {
+    "code": "RI058",
+    "name": "Myelography",
+    "category": "Radiological Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "RI059",
+    "name": "Diagnostic Digital Subtraction Angiography (DSA) cerebral vessels",
+    "category": "Radiological Investigation",
+    "rate": 9112.0
+  },
+  {
+    "code": "RI060",
+    "name": "X Ray Mammography - Bilateral/Unilateral",
+    "category": "Radiological Investigation",
+    "rate": 935.0
+  },
+  {
+    "code": "RI061",
+    "name": "MRI Mammography",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI062",
+    "name": "CT Scan Head/ Brain-Without Contrast / NCCT Head/Brain",
+    "category": "Radiological Investigation",
+    "rate": 704.0
+  },
+  {
+    "code": "RI063",
+    "name": "CT Scan Head / Brain- with Contrast -including CT angiography",
+    "category": "Radiological Investigation",
+    "rate": 1496.0
+  },
+  {
+    "code": "RI064",
+    "name": "CT Scan Chest - without contrast (for lungs)",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI065",
+    "name": "High Resolution computed Tomography (HRCT Chest)",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI066",
+    "name": "Contrast Enhanced Computed Tomograpy (CECT) Chest (Including CD)",
+    "category": "Radiological Investigation",
+    "rate": 1955.0
+  },
+  {
+    "code": "RI067",
+    "name": "CT Scan Lower Abdomen (incl. Pelvis) With Contrast/ CT KUB with Contrast",
+    "category": "Radiological Investigation",
+    "rate": 3060.0
+  },
+  {
+    "code": "RI068",
+    "name": "CT Scan Lower Abdomen (Incl. Pelvis) Without Contrast / CT KUB without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI069",
+    "name": "CT Scan Whole Abdomen Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2346.0
+  },
+  {
+    "code": "RI070",
+    "name": "CT Scan Whole Abdomen With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 3519.0
+  },
+  {
+    "code": "RI071",
+    "name": "Triple Phase CT abdomen",
+    "category": "Radiological Investigation",
+    "rate": 3519.0
+  },
+  {
+    "code": "RI072",
+    "name": "CT Urography",
+    "category": "Radiological Investigation",
+    "rate": 3060.0
+  },
+  {
+    "code": "RI073",
+    "name": "CT Scan Angiography Chest",
+    "category": "Radiological Investigation",
+    "rate": 3519.0
+  },
+  {
+    "code": "RI074",
+    "name": "CT Scan Angiography Abdomen",
+    "category": "Radiological Investigation",
+    "rate": 3519.0
+  },
+  {
+    "code": "RI075",
+    "name": "CT Angiography Entire Aorta ( CT Aortogram)",
+    "category": "Radiological Investigation",
+    "rate": 6800.0
+  },
+  {
+    "code": "RI076",
+    "name": "CT Scan Enteroclysis",
+    "category": "Radiological Investigation",
+    "rate": 4692.0
+  },
+  {
+    "code": "RI077",
+    "name": "CT Scan Neck - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "RI078",
+    "name": "CT Scan Neck - With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI079",
+    "name": "CT Angio-Neck Vessels",
+    "category": "Radiological Investigation",
+    "rate": 4080.0
+  },
+  {
+    "code": "RI080",
+    "name": "CT Scan Orbits - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 1496.0
+  },
+  {
+    "code": "RI081",
+    "name": "CT Scan Orbits - With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2176.0
+  },
+  {
+    "code": "RI082",
+    "name": "CT Scan of Para Nasal Sinuses (CT PNS)- Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 1564.0
+  },
+  {
+    "code": "RI083",
+    "name": "CT Scan of Para Nasal Sinuses (CT PNS)- With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2244.0
+  },
+  {
+    "code": "RI084",
+    "name": "CT Scan Spine (Cervical, Dorsal, Lumbar,Sacral)-without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 1904.0
+  },
+  {
+    "code": "RI085",
+    "name": "CT Scan Temporal bone - without contrast",
+    "category": "Radiological Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "RI086",
+    "name": "CT Scan / Cone Beam CT (CBCT) Dental",
+    "category": "Radiological Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "RI087",
+    "name": "CT Scan Limbs -Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 1904.0
+  },
+  {
+    "code": "RI088",
+    "name": "CT Scan Limbs -With Contrast including CT angiography",
+    "category": "Radiological Investigation",
+    "rate": 3944.0
+  },
+  {
+    "code": "RI089",
+    "name": "MRI Head / Brain - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 1870.0
+  },
+  {
+    "code": "RI090",
+    "name": "MRI Head / Brain- With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI091",
+    "name": "MRI Orbits - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 1272.0
+  },
+  {
+    "code": "RI092",
+    "name": "MRI Orbits - With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI093",
+    "name": "MRI Nasopharynx and PNS - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI094",
+    "name": "MRI Nasopharynx and PNS - With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI095",
+    "name": "MR for Salivary Glands with Sialography/Maxillofacial MRI",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI096",
+    "name": "MRI Neck - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI097",
+    "name": "MRI Neck- with contrast",
+    "category": "Radiological Investigation",
+    "rate": 3910.0
+  },
+  {
+    "code": "RI098",
+    "name": "MRI Shoulder - Without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI099",
+    "name": "MRI Shoulder - With contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI100",
+    "name": "MRI shoulder both Joints - Without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2720.0
+  },
+  {
+    "code": "RI101",
+    "name": "MRI Shoulder both joints - With contrast",
+    "category": "Radiological Investigation",
+    "rate": 4080.0
+  },
+  {
+    "code": "RI102",
+    "name": "MRI Wrist Single joint - Without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2244.0
+  },
+  {
+    "code": "RI103",
+    "name": "MRI Wrist Single joint - With contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI104",
+    "name": "MRI Wrist both joints - Without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2720.0
+  },
+  {
+    "code": "RI105",
+    "name": "MRI Wrist Both joints - With contrast",
+    "category": "Radiological Investigation",
+    "rate": 3910.0
+  },
+  {
+    "code": "RI106",
+    "name": "MRI knee Single joint - Without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2040.0
+  },
+  {
+    "code": "RI107",
+    "name": "MRI knee Single joint - With contrast",
+    "category": "Radiological Investigation",
+    "rate": 3910.0
+  },
+  {
+    "code": "RI108",
+    "name": "MRI knee both joints - Without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2720.0
+  },
+  {
+    "code": "RI109",
+    "name": "MRI knee both joints - With contrast",
+    "category": "Radiological Investigation",
+    "rate": 3910.0
+  },
+  {
+    "code": "RI110",
+    "name": "MRI Ankle Single joint - Without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI111",
+    "name": "MRI Ankle single joint - With contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI112",
+    "name": "MRI Ankle both joints - With contrast",
+    "category": "Radiological Investigation",
+    "rate": 4420.0
+  },
+  {
+    "code": "RI113",
+    "name": "MRI Ankle both joints - Without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI114",
+    "name": "MRI Hip - With contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI115",
+    "name": "MRI Hip - without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI116",
+    "name": "MRI Pelvis - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI117",
+    "name": "MRI Pelvis - with contrast",
+    "category": "Radiological Investigation",
+    "rate": 3910.0
+  },
+  {
+    "code": "RI118",
+    "name": "MRI Extremities - With contrast",
+    "category": "Radiological Investigation",
+    "rate": 3910.0
+  },
+  {
+    "code": "RI119",
+    "name": "MRI Extremities - Without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI120",
+    "name": "MRI Temporomandibular - B/L - With contrast / MRI TMJ (Double Joint) with contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI121",
+    "name": "MRI Temporomandibular - B/L - Without contrast / MRI -TMJ(Double Joint) without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI122",
+    "name": "MR Temporal Bone/ Inner ear with contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI123",
+    "name": "MRI Temporal Bone/ Inner ear without contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI124",
+    "name": "MRI Abdomen - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI125",
+    "name": "MRI Abdomen - With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 3910.0
+  },
+  {
+    "code": "RI126",
+    "name": "MRI-Prostate (Multi-parametric) (Including CD)",
+    "category": "Radiological Investigation",
+    "rate": 4692.0
+  },
+  {
+    "code": "RI127",
+    "name": "MRI Breast - With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI128",
+    "name": "MRI Breast - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI129",
+    "name": "MRI whole Spine Screening- Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI130",
+    "name": "MRI Chest - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI131",
+    "name": "MRI Chest - With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI132",
+    "name": "MRI Whole spine - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2992.0
+  },
+  {
+    "code": "RI133",
+    "name": "MRI Cervical/ Cervico Dorsal Spine - With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI134",
+    "name": "MRI Dorsal/ Dorso Lumbar Spine/Cervical/ Cervico Dorsal Spine - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI135",
+    "name": "MRI Dorsal/ Dorso Lumbar Spine - With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI136",
+    "name": "MRI Lumbar/ Lumbo-Sacral Spine - Without Contrast",
+    "category": "Radiological Investigation",
+    "rate": 2380.0
+  },
+  {
+    "code": "RI137",
+    "name": "MRI Lumbar/ Lumbo-Sacral Spine - With Contrast",
+    "category": "Radiological Investigation",
+    "rate": 3910.0
+  },
+  {
+    "code": "RI138",
+    "name": "Whole body MRI (For oncological workup)",
+    "category": "Radiological Investigation",
+    "rate": 6256.0
+  },
+  {
+    "code": "RI139",
+    "name": "MR cholecysto-pancreatography (MRCP)",
+    "category": "Radiological Investigation",
+    "rate": 5780.0
+  },
+  {
+    "code": "RI140",
+    "name": "MRI Angiography - with contrast",
+    "category": "Radiological Investigation",
+    "rate": 3910.0
+  },
+  {
+    "code": "RI141",
+    "name": "MR Enteroclysis",
+    "category": "Radiological Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "RI142",
+    "name": "MRI DEFECOGRAPHY",
+    "category": "Radiological Investigation",
+    "rate": 4760.0
+  },
+  {
+    "code": "RI143",
+    "name": "MRI FISTULOGRAM",
+    "category": "Radiological Investigation",
+    "rate": 3060.0
+  },
+  {
+    "code": "RI144",
+    "name": "MRI SPECTROSCOPY",
+    "category": "Radiological Investigation",
+    "rate": 2040.0
+  },
+  {
+    "code": "RI145",
+    "name": "Dexa Scan Bone Densitometry - Two sites",
+    "category": "Radiological Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "RI146",
+    "name": "Dexa Scan Bone Densitometry - Three sites (Spine, Hip &extremity)",
+    "category": "Radiological Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "RI147",
+    "name": "Dexa Scan Bone Densitometry Whole body",
+    "category": "Radiological Investigation",
+    "rate": 2040.0
+  },
+  {
+    "code": "PI001",
+    "name": "Pulmonary Function Test (PFT) / (Spirometry with Diffusing Capacity of the Lungs for Carbon monoxide (DLCO)",
+    "category": "Pulmonology Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "PI002",
+    "name": "Lung Ventilation & Perfusion Scan (V/Q Scan)",
+    "category": "Pulmonology Investigation",
+    "rate": 4080.0
+  },
+  {
+    "code": "PI003",
+    "name": "Lung Perfusion Scan",
+    "category": "Pulmonology Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "PI004",
+    "name": "6 Minute Walk Test",
+    "category": "Pulmonology Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "PI005",
+    "name": "FeNO Breathing Test",
+    "category": "Pulmonology Investigation",
+    "rate": 490.0
+  },
+  {
+    "code": "PP001",
+    "name": "Endo bronchial Ultrasound (EBUS) -Trans bronchial needle aspiration (TBNA) -Excluding the cost of Needle",
+    "category": "Pulmonology Procedure",
+    "rate": 13600.0
+  },
+  {
+    "code": "PP002",
+    "name": "Video Bronchoscopy with BAL",
+    "category": "Pulmonology Procedure",
+    "rate": 7480.0
+  },
+  {
+    "code": "NM001",
+    "name": "Whole Body Bone Scan with SPECT.",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "NM002",
+    "name": "Three phase whole body Bone Scan",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 4080.0
+  },
+  {
+    "code": "NM003",
+    "name": "Brain Perfusion SPECT Scan with Technetium 99m radiopharmaceuticals.",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 9112.0
+  },
+  {
+    "code": "NM004",
+    "name": "Radionuclide Cisternography for CSF leak",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 4624.0
+  },
+  {
+    "code": "NM005",
+    "name": "Renal Cortical Scintigraphy with Technetium 99m Dimercaptosuccinic acid (DMSA)/DTPA",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 2720.0
+  },
+  {
+    "code": "NM006",
+    "name": "Dynamic Renography.",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 2720.0
+  },
+  {
+    "code": "NM007",
+    "name": "Dynamic Renography with Diuretic.",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 2720.0
+  },
+  {
+    "code": "NM008",
+    "name": "Dynamic Renography with Captopril",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 4624.0
+  },
+  {
+    "code": "NM009",
+    "name": "Testicular Scan with Technetium 99m Pertechnetate",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 1156.0
+  },
+  {
+    "code": "NM010",
+    "name": "Thyroid Uptake measurements with 131-Iodine.",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "NM011",
+    "name": "Thyroid Scan with Technetium 99m Pertechnetate",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 1292.0
+  },
+  {
+    "code": "NM012",
+    "name": "Iodine-131 Whole Body Scan",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 9112.0
+  },
+  {
+    "code": "NM013",
+    "name": "Whole Body Scan with MIBG",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 9112.0
+  },
+  {
+    "code": "NM014",
+    "name": "Parathyroid Scan",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 4974.0
+  },
+  {
+    "code": "NM015",
+    "name": "Scintimammography.",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 4080.0
+  },
+  {
+    "code": "NM016",
+    "name": "Indium labelled octreotide Scan",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 48960.0
+  },
+  {
+    "code": "NM017",
+    "name": "FDG Whole body PET CT Scan",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 9775.0
+  },
+  {
+    "code": "NM018",
+    "name": "Brain / Heart FDG PET CT Scan",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 9775.0
+  },
+  {
+    "code": "NM019",
+    "name": "Gallium-68 Peptide PET / CT imaging for Neuroendocrine Tumour",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 9775.0
+  },
+  {
+    "code": "NM020",
+    "name": "PSMA PET CT Scan",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 10200.0
+  },
+  {
+    "code": "NM021",
+    "name": "F-DOPA PET-CT scan",
+    "category": "Nuclear Medicine Investigation",
+    "rate": 10200.0
+  },
+  {
+    "code": "BY001",
+    "name": "Skin Biopsy",
+    "category": "Biopsies",
+    "rate": 850.0
+  },
+  {
+    "code": "BY002",
+    "name": "Punch/Wedge biopsy",
+    "category": "Biopsies",
+    "rate": 2040.0
+  },
+  {
+    "code": "BY003",
+    "name": "Excision Biopsy of Ulcers",
+    "category": "Biopsies",
+    "rate": 3400.0
+  },
+  {
+    "code": "BY004",
+    "name": "Excision Biopsy of Superficial Lumps",
+    "category": "Biopsies",
+    "rate": 6256.0
+  },
+  {
+    "code": "BY005",
+    "name": "Incision Biopsy of Growths/Ulcers",
+    "category": "Biopsies",
+    "rate": 3400.0
+  },
+  {
+    "code": "BY006",
+    "name": "Bone Marrow Aspiration and Biopsy",
+    "category": "Biopsies",
+    "rate": 5780.0
+  },
+  {
+    "code": "BY007",
+    "name": "Scalene Node Biopsy",
+    "category": "Biopsies",
+    "rate": 6256.0
+  },
+  {
+    "code": "BY008",
+    "name": "Liver Biopsy",
+    "category": "Biopsies",
+    "rate": 5780.0
+  },
+  {
+    "code": "BY009",
+    "name": "Muscle Biopsy",
+    "category": "Biopsies",
+    "rate": 1700.0
+  },
+  {
+    "code": "BY010",
+    "name": "Trucut Needle Biopsy- (excluding the cost of Needle/Biopsy Gun if used)",
+    "category": "Biopsies",
+    "rate": 2618.0
+  },
+  {
+    "code": "RP001",
+    "name": "USG Guided Intervention- Diagnostic",
+    "category": "Interventional Radiological Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "RP002",
+    "name": "USG Guided Intervention -Therapeutic",
+    "category": "Interventional Radiological Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "RP003",
+    "name": "USG Guided Intervention - Specialized Procedures excluding cost of Catheter or biopsy gun",
+    "category": "Interventional Radiological Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "RP004",
+    "name": "CT Guided biopsy including all the consumables",
+    "category": "Interventional Radiology Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "RP005",
+    "name": "CT Guided Intervention -Percutaneous catheter drainage/tube placement excluding the cost of tube /catheter",
+    "category": "Interventional Radiological Procedure",
+    "rate": 2380.0
+  },
+  {
+    "code": "RP006",
+    "name": "Percutaneous transhepatic cholangiography (PTC)",
+    "category": "Interventional Radiological Procedure",
+    "rate": 1224.0
+  },
+  {
+    "code": "RP007",
+    "name": "Transarterial Chemoembolization (TACE)",
+    "category": "Interventional Radiological Procedure",
+    "rate": 36040.0
+  },
+  {
+    "code": "CA001",
+    "name": "A, B, DR Molecular Typing PCR - SSP",
+    "category": "Oncology Investigations",
+    "rate": 7014.0
+  },
+  {
+    "code": "CA002",
+    "name": "ABL Kinase Domain Mutation for Chronic Myeloid leukemia (TKI Resistance, Imatinib Resistance",
+    "category": "Oncology Investigations",
+    "rate": 5508.0
+  },
+  {
+    "code": "CA003",
+    "name": "ABL Kinase Domain Mutation for Ph Positive Acute Lymphoblastic leukemia (TKI Resistance, I",
+    "category": "Oncology Investigations",
+    "rate": 5508.0
+  },
+  {
+    "code": "CA004",
+    "name": "Acute Leukemia karyotyping",
+    "category": "Oncology Investigations",
+    "rate": 3771.0
+  },
+  {
+    "code": "CA005",
+    "name": "Acute Leukemia mutation detection (per gene)ASXL1 /c-KIT/DNMT3A/ IDH1 and IDH2 /K RAS and N RAS mutation detection",
+    "category": "Oncology Investigations",
+    "rate": 3665.0
+  },
+  {
+    "code": "CA006",
+    "name": "Acute Leukemia RUNX1 mutation detection",
+    "category": "Oncology Investigations",
+    "rate": 3665.0
+  },
+  {
+    "code": "CA007",
+    "name": "Acute Leukemia TET2 mutation detection",
+    "category": "Oncology Investigations",
+    "rate": 15654.0
+  },
+  {
+    "code": "CA008",
+    "name": "Acute Leukemia TP53 mutation detection",
+    "category": "Oncology Investigations",
+    "rate": 15654.0
+  },
+  {
+    "code": "CA009",
+    "name": "Acute Lymphoblastic leukemia karyotyping",
+    "category": "Oncology Investigations",
+    "rate": 3771.0
+  },
+  {
+    "code": "CA010",
+    "name": "Acute Lymphoblastic Leukemia Mutation Detection",
+    "category": "Oncology Investigations",
+    "rate": 7507.0
+  },
+  {
+    "code": "CA011",
+    "name": "Acute Lymphoblastic Leukemia Transcript Identification",
+    "category": "Oncology Investigations",
+    "rate": 2054.0
+  },
+  {
+    "code": "CA012",
+    "name": "Acute Myeloid Leukemia (AML) Panel",
+    "category": "Oncology Investigations",
+    "rate": 9092.0
+  },
+  {
+    "code": "CA013",
+    "name": "ALK -1",
+    "category": "Oncology Investigations",
+    "rate": 3189.0
+  },
+  {
+    "code": "CA014",
+    "name": "ALK rearrangement: 2p23",
+    "category": "Oncology Investigations",
+    "rate": 3189.0
+  },
+  {
+    "code": "CA015",
+    "name": "B-cell Acute Lymphoblastic Leukemia (B-ALL) Panel",
+    "category": "Oncology Investigations",
+    "rate": 7868.0
+  },
+  {
+    "code": "CA016",
+    "name": "BCL3 rearrangement 19q13.3 / BCL6 rearrangement: 3q27",
+    "category": "Oncology Investigations",
+    "rate": 2370.0
+  },
+  {
+    "code": "CA017",
+    "name": "BCOR alteration",
+    "category": "Oncology Investigations",
+    "rate": 4114.0
+  },
+  {
+    "code": "CA018",
+    "name": "BCR/ABL (Ph) duplication, trisomy 8, trisomy 21, TP53 deletion",
+    "category": "Oncology Investigations",
+    "rate": 4145.0
+  },
+  {
+    "code": "CA019",
+    "name": "BCR/ABL Ph: t(9;22)",
+    "category": "Oncology Investigations",
+    "rate": 2370.0
+  },
+  {
+    "code": "CA020",
+    "name": "BCR-ABL by PCR-Quantitative",
+    "category": "Oncology Investigations",
+    "rate": 2720.0
+  },
+  {
+    "code": "CA021",
+    "name": "BRAF",
+    "category": "Oncology Investigations",
+    "rate": 6120.0
+  },
+  {
+    "code": "CA022",
+    "name": "BRCA1 & BRCA2",
+    "category": "Oncology Investigations",
+    "rate": 13600.0
+  },
+  {
+    "code": "CA023",
+    "name": "C3d Single Allele Antibody for HLA Class I (C3dLSA Class I) /C3d Single Allele Antibody for HLA Class II (C3dLSA Class II)",
+    "category": "Oncology Investigations",
+    "rate": 11900.0
+  },
+  {
+    "code": "CA024",
+    "name": "CAN ASSIST",
+    "category": "Oncology Investigations",
+    "rate": 34000.0
+  },
+  {
+    "code": "CA025",
+    "name": "CCND1/IgH: t(11;14)",
+    "category": "Oncology Investigations",
+    "rate": 3189.0
+  },
+  {
+    "code": "CA026",
+    "name": "CD 19 and CD 20",
+    "category": "Oncology Investigations",
+    "rate": 1020.0
+  },
+  {
+    "code": "CA027",
+    "name": "Cell line karyotyping",
+    "category": "Oncology Investigations",
+    "rate": 7548.0
+  },
+  {
+    "code": "CA028",
+    "name": "Chimerism Analysis",
+    "category": "Oncology Investigations",
+    "rate": 1047.0
+  },
+  {
+    "code": "CA029",
+    "name": "Chromosomal breakage (fragility) studies in Fanconi's Anemia/Aplastic Anemia",
+    "category": "Oncology Investigations",
+    "rate": 3771.0
+  },
+  {
+    "code": "CA030",
+    "name": "Chronic Lymphocytic Leukemia (CLL) Panel",
+    "category": "Oncology Investigations",
+    "rate": 7868.0
+  },
+  {
+    "code": "CA031",
+    "name": "Chronic Lymphocytic Leukemia Comprehensive Mutation Profile (IGVH Gene Mutation & Usage, T",
+    "category": "Oncology Investigations",
+    "rate": 22658.0
+  },
+  {
+    "code": "CA032",
+    "name": "Chronic Lymphocytic Leukemia IGVH Mutation Detection",
+    "category": "Oncology Investigations",
+    "rate": 4318.0
+  },
+  {
+    "code": "CA033",
+    "name": "Chronic Lymphoproliferative disorder IGVH Mutation Detection",
+    "category": "Oncology Investigations",
+    "rate": 4318.0
+  },
+  {
+    "code": "CA034",
+    "name": "Chronic Lymphoproliferative disorder NOTCH1 mutation / NOTCH2 mutation",
+    "category": "Oncology Investigations",
+    "rate": 3665.0
+  },
+  {
+    "code": "CA035",
+    "name": "Chronic Lymphoproliferative disorder SF3B1 mutation",
+    "category": "Oncology Investigations",
+    "rate": 3665.0
+  },
+  {
+    "code": "CA036",
+    "name": "Chronic Lymphoproliferative disorder TP53 mutation",
+    "category": "Oncology Investigations",
+    "rate": 15654.0
+  },
+  {
+    "code": "CA037",
+    "name": "CLINICAL EXOME SEQUENCING",
+    "category": "Oncology Investigations",
+    "rate": 10200.0
+  },
+  {
+    "code": "CA038",
+    "name": "CLL PANEL FISH",
+    "category": "Oncology Investigations",
+    "rate": 6800.0
+  },
+  {
+    "code": "CA039",
+    "name": "CML Blast Crisis karyotyping",
+    "category": "Oncology Investigations",
+    "rate": 3771.0
+  },
+  {
+    "code": "CA040",
+    "name": "Combined High Sensitivity JAK2 V617F and Exon12 Mutation Detection",
+    "category": "Oncology Investigations",
+    "rate": 4644.0
+  },
+  {
+    "code": "CA041",
+    "name": "Comprehensive Molecular Testing",
+    "category": "Oncology Investigations",
+    "rate": 13138.0
+  },
+  {
+    "code": "CA042",
+    "name": "Comprehensive Next Generation sequencing assay for Hematolymphoid malignancies",
+    "category": "Oncology Investigations",
+    "rate": 18360.0
+  },
+  {
+    "code": "CA043",
+    "name": "Constitutional karyotyping",
+    "category": "Oncology Investigations",
+    "rate": 3771.0
+  },
+  {
+    "code": "CA044",
+    "name": "Custom Sequencing Assay",
+    "category": "Oncology Investigations",
+    "rate": 7507.0
+  },
+  {
+    "code": "CA045",
+    "name": "DICER1 Mutation",
+    "category": "Oncology Investigations",
+    "rate": 2638.0
+  },
+  {
+    "code": "CA046",
+    "name": "Donor Specific Antibodies (DSA)",
+    "category": "Oncology Investigations",
+    "rate": 5440.0
+  },
+  {
+    "code": "CA047",
+    "name": "EGFR Mutation DETECTION",
+    "category": "Oncology Investigations",
+    "rate": 6460.0
+  },
+  {
+    "code": "CA048",
+    "name": "EGFR Resistance Mutation (T790m Mutation Analysis)",
+    "category": "Oncology Investigations",
+    "rate": 5440.0
+  },
+  {
+    "code": "CA049",
+    "name": "ER PR Her2 Neu",
+    "category": "Oncology Investigations",
+    "rate": 2142.0
+  },
+  {
+    "code": "CA050",
+    "name": "ER/PR/Her2neu, Ki67",
+    "category": "Oncology Investigations",
+    "rate": 3400.0
+  },
+  {
+    "code": "CA051",
+    "name": "Extended Immune subset for Post Allogenic Stem Cell Transplant Monitoring",
+    "category": "Oncology Investigations",
+    "rate": 3400.0
+  },
+  {
+    "code": "CA052",
+    "name": "Factor V Leiden Mutation Detection",
+    "category": "Oncology Investigations",
+    "rate": 4488.0
+  },
+  {
+    "code": "CA053",
+    "name": "FISH for 1p33/TAL1 deletion",
+    "category": "Oncology Investigations",
+    "rate": 3386.0
+  },
+  {
+    "code": "CA054",
+    "name": "FISH FOR HER2 Neu",
+    "category": "Oncology Investigations",
+    "rate": 6800.0
+  },
+  {
+    "code": "CA055",
+    "name": "FISH for t(10;11)(p12;q14)/MLLT10(AF10)/PICALM",
+    "category": "Oncology Investigations",
+    "rate": 3386.0
+  },
+  {
+    "code": "CA056",
+    "name": "FISH for t(11;19)(q23;p13.1)/KMT2A/ELL",
+    "category": "Oncology Investigations",
+    "rate": 3386.0
+  },
+  {
+    "code": "CA057",
+    "name": "FISH for t(5;11)(q35;p15.5) NUP98/NSD1",
+    "category": "Oncology Investigations",
+    "rate": 3386.0
+  },
+  {
+    "code": "CA058",
+    "name": "FISH for t(6;14)(p21;q32) IGH/CCND3",
+    "category": "Oncology Investigations",
+    "rate": 3386.0
+  },
+  {
+    "code": "CA059",
+    "name": "FISH on Bone marrow Smear( 1 marker)",
+    "category": "Oncology Investigations",
+    "rate": 2370.0
+  },
+  {
+    "code": "CA060",
+    "name": "FISH on bone marrow smear( 2 markers)",
+    "category": "Oncology Investigations",
+    "rate": 3723.0
+  },
+  {
+    "code": "CA061",
+    "name": "FISH on FFPE - Block /Slide (2 markers)",
+    "category": "Oncology Investigations",
+    "rate": 3237.0
+  },
+  {
+    "code": "CA062",
+    "name": "FISH PANEL FOR MYELOMA",
+    "category": "Oncology Investigations",
+    "rate": 9520.0
+  },
+  {
+    "code": "CA063",
+    "name": "FISH Test for C19MC amplification",
+    "category": "Oncology Investigations",
+    "rate": 8670.0
+  },
+  {
+    "code": "CA064",
+    "name": "FISH test for CDKN2A",
+    "category": "Oncology Investigations",
+    "rate": 5066.0
+  },
+  {
+    "code": "CA065",
+    "name": "FISH test for CEN 10 loss - on Tissue",
+    "category": "Oncology Investigations",
+    "rate": 2822.0
+  },
+  {
+    "code": "CA066",
+    "name": "FISH test for ETV6 break-apart analysis - On Tissue",
+    "category": "Oncology Investigations",
+    "rate": 4740.0
+  },
+  {
+    "code": "CA067",
+    "name": "FISH test for MAML2 break-apart analysis - On Tissue",
+    "category": "Oncology Investigations",
+    "rate": 4869.0
+  },
+  {
+    "code": "CA068",
+    "name": "Fluorescent PCR + fragment length analysis per Amplicon",
+    "category": "Oncology Investigations",
+    "rate": 238.0
+  },
+  {
+    "code": "CA069",
+    "name": "GeneCORE Somatic 161 Gene Panel (NGS)",
+    "category": "Oncology Investigations",
+    "rate": 20400.0
+  },
+  {
+    "code": "CA070",
+    "name": "Hairy Cell Leukemia Mutation (BRAF V600E) Detection",
+    "category": "Oncology Investigations",
+    "rate": 2373.0
+  },
+  {
+    "code": "CA071",
+    "name": "Hematolymphoid Malignancy At Diagnosis- Cancer Cytogenetics Testing",
+    "category": "Oncology Investigations",
+    "rate": 11638.0
+  },
+  {
+    "code": "CA072",
+    "name": "Hematolymphoid Malignancy Follow-up- Cancer Cytogenetics Testing",
+    "category": "Oncology Investigations",
+    "rate": 10200.0
+  },
+  {
+    "code": "CA073",
+    "name": "Hereditary Cancer Panel",
+    "category": "Oncology Investigations",
+    "rate": 8160.0
+  },
+  {
+    "code": "CA074",
+    "name": "High Sensitivity JAK2 Mutation Detection (V617F)",
+    "category": "Oncology Investigations",
+    "rate": 3135.0
+  },
+  {
+    "code": "CA075",
+    "name": "Histone Mutation Detection Assay",
+    "category": "Oncology Investigations",
+    "rate": 6307.0
+  },
+  {
+    "code": "CA076",
+    "name": "HLA C, DQB Molecular Typing PCR - SSP",
+    "category": "Oncology Investigations",
+    "rate": 5012.0
+  },
+  {
+    "code": "CA077",
+    "name": "HLA Disease Association Next Generation Sequencing HLA-A/B/DRB1/G",
+    "category": "Oncology Investigations",
+    "rate": 3196.0
+  },
+  {
+    "code": "CA078",
+    "name": "HLA Disease Association Sequence based Typing HLA A/B/DRB1",
+    "category": "Oncology Investigations",
+    "rate": 3264.0
+  },
+  {
+    "code": "CA079",
+    "name": "HLA Drug Hypersensitivity Next Generation Sequencing HLA-A/B/DRB1 HLA-A/B/DRB1/G",
+    "category": "Oncology Investigations",
+    "rate": 3196.0
+  },
+  {
+    "code": "CA080",
+    "name": "HLA Drug Hypersensitivity Typing HLA-A/B/DRB1",
+    "category": "Oncology Investigations",
+    "rate": 3264.0
+  },
+  {
+    "code": "CA081",
+    "name": "HLA Loss Chimerism",
+    "category": "Oncology Investigations",
+    "rate": 8160.0
+  },
+  {
+    "code": "CA082",
+    "name": "HLA-A, B, C, DRB1, DQB1, DPB1 (Sequence Based Typing - SBT)",
+    "category": "Oncology Investigations",
+    "rate": 10200.0
+  },
+  {
+    "code": "CA083",
+    "name": "HLA-A, B, DRB1 (Sequence Based Typing - SBT)",
+    "category": "Oncology Investigations",
+    "rate": 6800.0
+  },
+  {
+    "code": "CA084",
+    "name": "HLA-A, B, DRB1(Sequence Specific Oligonucleotide - SSO)",
+    "category": "Oncology Investigations",
+    "rate": 5304.0
+  },
+  {
+    "code": "CA085",
+    "name": "HLA-C, DQB1(Sequence Specific Oligonucleotide - SSO)",
+    "category": "Oncology Investigations",
+    "rate": 3536.0
+  },
+  {
+    "code": "CA086",
+    "name": "HRR Gene Test",
+    "category": "Oncology Investigations",
+    "rate": 21080.0
+  },
+  {
+    "code": "CA087",
+    "name": "IGH Characterization IGH/CCND1:t(11;14), IGH/BCL2:t(14;18),BCL6(3q27), MYC(8q24) (4markers",
+    "category": "Oncology Investigations",
+    "rate": 3604.0
+  },
+  {
+    "code": "CA088",
+    "name": "IgH/BCL2 :t(14;18)",
+    "category": "Oncology Investigations",
+    "rate": 3189.0
+  },
+  {
+    "code": "CA089",
+    "name": "IGHV Gene Mutation",
+    "category": "Oncology Investigations",
+    "rate": 5100.0
+  },
+  {
+    "code": "CA090",
+    "name": "Interphase FISH test for Chr. 1 copy number variations",
+    "category": "Oncology Investigations",
+    "rate": 7276.0
+  },
+  {
+    "code": "CA091",
+    "name": "IRFA/DUSP22 gene rearrangement by FISH",
+    "category": "Oncology Investigations",
+    "rate": 10594.0
+  },
+  {
+    "code": "CA092",
+    "name": "JAK2 Exon 12 Mutation Detection",
+    "category": "Oncology Investigations",
+    "rate": 3135.0
+  },
+  {
+    "code": "CA093",
+    "name": "JAK2V617 MUTATION, WITH REFLEX TO JAK2 EX-12,CALR EX-9 MUTATION AND MPL W515, S505 MUTATION",
+    "category": "Oncology Investigations",
+    "rate": 7820.0
+  },
+  {
+    "code": "CA094",
+    "name": "KI67",
+    "category": "Oncology Investigations",
+    "rate": 884.0
+  },
+  {
+    "code": "CA095",
+    "name": "KIR Typing",
+    "category": "Oncology Investigations",
+    "rate": 3944.0
+  },
+  {
+    "code": "CA096",
+    "name": "KMT2A Characterization for AML",
+    "category": "Oncology Investigations",
+    "rate": 5369.0
+  },
+  {
+    "code": "CA097",
+    "name": "KMT2A Characterization for B-ALL",
+    "category": "Oncology Investigations",
+    "rate": 4145.0
+  },
+  {
+    "code": "CA098",
+    "name": "KRAS + NRAS + BRAF + Mutation Profile",
+    "category": "Oncology Investigations",
+    "rate": 9384.0
+  },
+  {
+    "code": "CA099",
+    "name": "Lineage specific Chimerism - B Cell, T Cell and NK Cells",
+    "category": "Oncology Investigations",
+    "rate": 4896.0
+  },
+  {
+    "code": "CA100",
+    "name": "Liquid Biopsy (Onco)",
+    "category": "Oncology Investigations",
+    "rate": 20400.0
+  },
+  {
+    "code": "CA101",
+    "name": "Lung Basic Panel By NGS",
+    "category": "Oncology Investigations",
+    "rate": 20400.0
+  },
+  {
+    "code": "CA102",
+    "name": "Lymphoma Panel",
+    "category": "Oncology Investigations",
+    "rate": 4740.0
+  },
+  {
+    "code": "CA103",
+    "name": "Lymphoplasmacytic Leukemia / Waldenstroms Macroglobulinemia Mutation (MYD88 L265P) Detection",
+    "category": "Oncology Investigations",
+    "rate": 2373.0
+  },
+  {
+    "code": "CA104",
+    "name": "MDS Panel",
+    "category": "Oncology Investigations",
+    "rate": 4740.0
+  },
+  {
+    "code": "CA105",
+    "name": "MECOM (EVI1) rearrangement: inv(3)(q21.3q26.2)/t(3;3)",
+    "category": "Oncology Investigations",
+    "rate": 3189.0
+  },
+  {
+    "code": "CA106",
+    "name": "MGMT PCR",
+    "category": "Oncology Investigations",
+    "rate": 5535.0
+  },
+  {
+    "code": "CA107",
+    "name": "Miscellaneous Profile I(1 marker)",
+    "category": "Oncology Investigations",
+    "rate": 2370.0
+  },
+  {
+    "code": "CA108",
+    "name": "Miscellaneous profile II(2 markers)",
+    "category": "Oncology Investigations",
+    "rate": 3723.0
+  },
+  {
+    "code": "CA109",
+    "name": "MLPA per gene",
+    "category": "Oncology Investigations",
+    "rate": 2720.0
+  },
+  {
+    "code": "CA110",
+    "name": "Monosomy 5/deletion 5q",
+    "category": "Oncology Investigations",
+    "rate": 2370.0
+  },
+  {
+    "code": "CA111",
+    "name": "Monosomy 7/deletion 7q",
+    "category": "Oncology Investigations",
+    "rate": 2370.0
+  },
+  {
+    "code": "CA112",
+    "name": "MPN (Myelo Proliferative Neoplasm)PANEL",
+    "category": "Oncology Investigations",
+    "rate": 8160.0
+  },
+  {
+    "code": "CA113",
+    "name": "MSI ( Micro Satellite Instability) and MMR (Mis Match Repair)",
+    "category": "Oncology Investigations",
+    "rate": 4420.0
+  },
+  {
+    "code": "CA114",
+    "name": "Multigene NGS Germline Panel",
+    "category": "Oncology Investigations",
+    "rate": 12240.0
+  },
+  {
+    "code": "CA115",
+    "name": "Multiple Myeloma (MM) Panel",
+    "category": "Oncology Investigations",
+    "rate": 10112.0
+  },
+  {
+    "code": "CA116",
+    "name": "Multiple Myeloma High Risk Markers (4 Markers)",
+    "category": "Oncology Investigations",
+    "rate": 3604.0
+  },
+  {
+    "code": "CA117",
+    "name": "Multiple Myeloma Screening Panel",
+    "category": "Oncology Investigations",
+    "rate": 5440.0
+  },
+  {
+    "code": "CA118",
+    "name": "MYD88 L265 Mutation Detection Test",
+    "category": "Oncology Investigations",
+    "rate": 4597.0
+  },
+  {
+    "code": "CA119",
+    "name": "Myelodysplastic Syndromes karyotyping",
+    "category": "Oncology Investigations",
+    "rate": 3771.0
+  },
+  {
+    "code": "CA120",
+    "name": "Next generation RNA sequencing assay for Chimeric Trancript in Hematolymphod malignancies",
+    "category": "Oncology Investigations",
+    "rate": 11560.0
+  },
+  {
+    "code": "CA121",
+    "name": "Next Generation sequencing assay for Minimal residual disease(MRD) for NPM mutated AML",
+    "category": "Oncology Investigations",
+    "rate": 18360.0
+  },
+  {
+    "code": "CA122",
+    "name": "NGS HLA Typing",
+    "category": "Oncology Investigations",
+    "rate": 6800.0
+  },
+  {
+    "code": "CA123",
+    "name": "NGS Platform-extended Panel >50 gene",
+    "category": "Oncology Investigations",
+    "rate": 24480.0
+  },
+  {
+    "code": "CA124",
+    "name": "NGS Platform-limited Panel(10 Genes)",
+    "category": "Oncology Investigations",
+    "rate": 12240.0
+  },
+  {
+    "code": "CA125",
+    "name": "NRAS (Neuroblastoma RAS ) Gene",
+    "category": "Oncology Investigations",
+    "rate": 2380.0
+  },
+  {
+    "code": "CA126",
+    "name": "Panel Reactive Antibodies (PRA) class I",
+    "category": "Oncology Investigations",
+    "rate": 2040.0
+  },
+  {
+    "code": "CA127",
+    "name": "Panel Reactive Antibodies (PRA) class II",
+    "category": "Oncology Investigations",
+    "rate": 2040.0
+  },
+  {
+    "code": "CA128",
+    "name": "PCR + Sanger Sequencing per Amplicon",
+    "category": "Oncology Investigations",
+    "rate": 578.0
+  },
+  {
+    "code": "CA129",
+    "name": "PDGFRA (4q12), PDGFRB (5q33), FGFR1 (8p11.2) rearrangement",
+    "category": "Oncology Investigations",
+    "rate": 4145.0
+  },
+  {
+    "code": "CA130",
+    "name": "PDGFRA rearrangement: 4q12",
+    "category": "Oncology Investigations",
+    "rate": 3189.0
+  },
+  {
+    "code": "CA131",
+    "name": "PDGFRB rearrangement: 5q33",
+    "category": "Oncology Investigations",
+    "rate": 3189.0
+  },
+  {
+    "code": "CA132",
+    "name": "PDL 1",
+    "category": "Oncology Investigations",
+    "rate": 3400.0
+  },
+  {
+    "code": "CA133",
+    "name": "PDL-1-28-8 (FDA Approved)",
+    "category": "Oncology Investigations",
+    "rate": 5100.0
+  },
+  {
+    "code": "CA134",
+    "name": "Ph: t(9;22) karyotyping",
+    "category": "Oncology Investigations",
+    "rate": 2689.0
+  },
+  {
+    "code": "CA135",
+    "name": "Ph-like ALL Panel (4 Markers)",
+    "category": "Oncology Investigations",
+    "rate": 3604.0
+  },
+  {
+    "code": "CA136",
+    "name": "PIK3CA GENE MUTATION",
+    "category": "Oncology Investigations",
+    "rate": 3672.0
+  },
+  {
+    "code": "CA137",
+    "name": "PIK3CA Mutation Testing",
+    "category": "Oncology Investigations",
+    "rate": 3876.0
+  },
+  {
+    "code": "CA138",
+    "name": "Ploidy analysis",
+    "category": "Oncology Investigations",
+    "rate": 2689.0
+  },
+  {
+    "code": "CA139",
+    "name": "PML-RARA t(15;17), variants",
+    "category": "Oncology Investigations",
+    "rate": 3560.0
+  },
+  {
+    "code": "CA140",
+    "name": "PRA Screen",
+    "category": "Oncology Investigations",
+    "rate": 2040.0
+  },
+  {
+    "code": "CA141",
+    "name": "PTPRT: Deletion 20q",
+    "category": "Oncology Investigations",
+    "rate": 3189.0
+  },
+  {
+    "code": "CA142",
+    "name": "RARA Variant - ZBTB16 / RARA : t(11;17) (1 marker)",
+    "category": "Oncology Investigations",
+    "rate": 2060.0
+  },
+  {
+    "code": "CA143",
+    "name": "RHOA Mutation Detection Assay",
+    "category": "Oncology Investigations",
+    "rate": 4740.0
+  },
+  {
+    "code": "CA144",
+    "name": "ROS 1",
+    "category": "Oncology Investigations",
+    "rate": 6610.0
+  },
+  {
+    "code": "CA145",
+    "name": "RQ PCR based assay for MRD monitoring of Acute Leukaemia",
+    "category": "Oncology Investigations",
+    "rate": 6460.0
+  },
+  {
+    "code": "CA146",
+    "name": "RQ-PCR BCR-ABL (P210)",
+    "category": "Oncology Investigations",
+    "rate": 7453.0
+  },
+  {
+    "code": "CA147",
+    "name": "RQ-PCR PML-RARA",
+    "category": "Oncology Investigations",
+    "rate": 7453.0
+  },
+  {
+    "code": "CA148",
+    "name": "RT-PCR Multiplex, Acute Leukaemia Panel",
+    "category": "Oncology Investigations",
+    "rate": 4964.0
+  },
+  {
+    "code": "CA149",
+    "name": "RT-PCR Multiplex, BCR-ABL (P190, P210)",
+    "category": "Oncology Investigations",
+    "rate": 4318.0
+  },
+  {
+    "code": "CA150",
+    "name": "RT-PCR Nested, IGH Chain Gene Rearrangement /TCR Gene Rearrangement",
+    "category": "Oncology Investigations",
+    "rate": 3135.0
+  },
+  {
+    "code": "CA151",
+    "name": "Single Antigen Class I",
+    "category": "Oncology Investigations",
+    "rate": 8840.0
+  },
+  {
+    "code": "CA152",
+    "name": "Single Antigen Class II",
+    "category": "Oncology Investigations",
+    "rate": 8840.0
+  },
+  {
+    "code": "CA153",
+    "name": "Slide / Images for Second Opinion- Cancer Cytogenetics",
+    "category": "Oncology Investigations",
+    "rate": 626.0
+  },
+  {
+    "code": "CA154",
+    "name": "STR Panel studies",
+    "category": "Oncology Investigations",
+    "rate": 3026.0
+  },
+  {
+    "code": "CA155",
+    "name": "Surface Marker Complete Panel",
+    "category": "Oncology Investigations",
+    "rate": 8272.0
+  },
+  {
+    "code": "CA156",
+    "name": "Surface Marker Individual",
+    "category": "Oncology Investigations",
+    "rate": 1292.0
+  },
+  {
+    "code": "CA157",
+    "name": "t(1;22) and Trisomy 21 in Acute Megakaryoblastic Leukemia (AML -M7) (2 Markers)",
+    "category": "Oncology Investigations",
+    "rate": 3237.0
+  },
+  {
+    "code": "CA158",
+    "name": "T-cell Acute Lymphoblastic Leukemia (T-ALL) Panel",
+    "category": "Oncology Investigations",
+    "rate": 10316.0
+  },
+  {
+    "code": "CA159",
+    "name": "TCR-A rearrangement: 14q11",
+    "category": "Oncology Investigations",
+    "rate": 3189.0
+  },
+  {
+    "code": "CA160",
+    "name": "TERT Promoter Mutation Assay",
+    "category": "Oncology Investigations",
+    "rate": 3947.0
+  },
+  {
+    "code": "CA161",
+    "name": "TFE-3 FISH",
+    "category": "Oncology Investigations",
+    "rate": 8214.0
+  },
+  {
+    "code": "CA162",
+    "name": "TPMT (Thiopurine Methyl Transferase) Genotyping",
+    "category": "Oncology Investigations",
+    "rate": 3468.0
+  },
+  {
+    "code": "CA163",
+    "name": "Trisomy 12",
+    "category": "Oncology Investigations",
+    "rate": 1649.0
+  },
+  {
+    "code": "CA164",
+    "name": "Trisomy 21",
+    "category": "Oncology Investigations",
+    "rate": 1649.0
+  },
+  {
+    "code": "CA165",
+    "name": "Trisomy 4, 10 & 17",
+    "category": "Oncology Investigations",
+    "rate": 2370.0
+  },
+  {
+    "code": "CA166",
+    "name": "Trisomy 8",
+    "category": "Oncology Investigations",
+    "rate": 1649.0
+  },
+  {
+    "code": "CA167",
+    "name": "V Beta Repertoire Analysis by Flow Cytometry for T-Cell Clonality",
+    "category": "Oncology Investigations",
+    "rate": 8272.0
+  },
+  {
+    "code": "CA168",
+    "name": "XX/XY (Chimerism Studies) in Sex mismatch Bone Marrow Transplantation (BMT)",
+    "category": "Oncology Investigations",
+    "rate": 1649.0
+  },
+  {
+    "code": "CT001",
+    "name": "Single drug Chemotherapy",
+    "category": "Chemotherapy",
+    "rate": 1156.0
+  },
+  {
+    "code": "CT002",
+    "name": "Multiple drugs Chemotherapy/Targeted therapy/Immunotherapy",
+    "category": "Chemotherapy",
+    "rate": 1564.0
+  },
+  {
+    "code": "CT003",
+    "name": "Neoadjuvant Chemotherapy",
+    "category": "Chemotherapy",
+    "rate": 1836.0
+  },
+  {
+    "code": "CT004",
+    "name": "Adjuvant Chemotherapy",
+    "category": "Chemotherapy",
+    "rate": 1496.0
+  },
+  {
+    "code": "CT005",
+    "name": "Concurrent-chemoradiation",
+    "category": "Chemotherapy",
+    "rate": 1292.0
+  },
+  {
+    "code": "CT006",
+    "name": "Intravesical Instillation of BCG excluding the cost of BCG",
+    "category": "Chemotherapy",
+    "rate": 2040.0
+  },
+  {
+    "code": "RT001",
+    "name": "Level 1- Brachytherapy (Eye Plaque or SIVA or CVS per insertion or application)",
+    "category": "Radiotherapy",
+    "rate": 4760.0
+  },
+  {
+    "code": "RT002",
+    "name": "Level 2- Brachytherapy (Simple ICA with Xray based 2D planning, ILRT, Endobilliary BCT)",
+    "category": "Radiotherapy",
+    "rate": 6800.0
+  },
+  {
+    "code": "RT003",
+    "name": "Level 3- Brachytherapy(Surface Mould, Radical Interstitial BCT, Intraoperative Template or interstitial brachytherapy catheter insertion)",
+    "category": "Radiotherapy",
+    "rate": 17000.0
+  },
+  {
+    "code": "RT004",
+    "name": "Level 4- Brachytherapy (ICA with CT based Planning)",
+    "category": "Radiotherapy",
+    "rate": 20400.0
+  },
+  {
+    "code": "RT005",
+    "name": "Level 5- Brachytherapy (Complex ICA with interstitial with CT or MR based planning)",
+    "category": "Radiotherapy",
+    "rate": 27200.0
+  },
+  {
+    "code": "RT006",
+    "name": "Level 1- Radiation Therapy (1-10 fractions on Cobalt)",
+    "category": "Radiotherapy",
+    "rate": 10200.0
+  },
+  {
+    "code": "RT007",
+    "name": "Level 2- Radiation Therapy(More than 10 fractions on Cobalt OR Upto 10 fractions on LA clinical (without CT or TPS planning) without IGRT OR Hemibody palliative RT (1-2 fractions weekly))",
+    "category": "Radiotherapy",
+    "rate": 19040.0
+  },
+  {
+    "code": "RT008",
+    "name": "Level 3- Radiation Therapy (LA 3D with conventional fractionation of 2-5 Gy OR Weekly hypofractionation of >5 Gy with 3D CRT plan in 1-2 fractions. No IGRT allowed.)",
+    "category": "Radiotherapy",
+    "rate": 34000.0
+  },
+  {
+    "code": "RT009",
+    "name": "Level 4- Radiation therapy (LA 3D with IGRT conventional fractionation of 2- 5 Gy OR Weekly hypofractionation >5 Gy with 3D CRT plan in 1-2 fractions. with IGRT)",
+    "category": "Radiotherapy",
+    "rate": 42840.0
+  },
+  {
+    "code": "RT010",
+    "name": "Level 5- Radiation Therapy (LA IMRT/ Rapid Arc/VMAT with < 5Gy per fraction and <10 IGRT (CBCT or MVCT or EPID) OR Cobalt Radical with LA boost including electron boost OR TSET OR TBI)",
+    "category": "Radiotherapy",
+    "rate": 102000.0
+  },
+  {
+    "code": "RT011",
+    "name": "Level 6- Radiation Therapy (LA 4D/DE or DIBH with 3D CRT/ IMRT/ Rapid Arc/VMAT with >10 IGRT (CBCT or MVCT or EPID) OR LA IMRT/ Rapid Arc/VMAT with <5Gy per fraction and >10 IGRT (CBCT or MVCT or EPID) OR Adaptive RT OR CSI OR Multisite treatment outside one FOV or one plan OR SBRT OR SRS OR SRT (per fraction dose >5Gy))",
+    "category": "Radiotherapy",
+    "rate": 122400.0
+  },
+  {
+    "code": "IT001",
+    "name": "Radiosynovectomy with Yttrium",
+    "category": "Radio-Isotope Therapy",
+    "rate": 17000.0
+  },
+  {
+    "code": "IT002",
+    "name": "131-Iodine Therapy 51-100mCi",
+    "category": "Radio-Isotope Therapy",
+    "rate": 9738.0
+  },
+  {
+    "code": "IT003",
+    "name": "131-Iodine Therapy >100mCi",
+    "category": "Radio-Isotope Therapy",
+    "rate": 13447.0
+  },
+  {
+    "code": "IT004",
+    "name": "Samarium-153 therapy for metastatic bone pain palliation",
+    "category": "Radio-Isotope Therapy",
+    "rate": 13634.0
+  },
+  {
+    "code": "IT005",
+    "name": "131-Iodine Therapy <15mCi",
+    "category": "Radio-Isotope Therapy",
+    "rate": 5039.0
+  },
+  {
+    "code": "IT006",
+    "name": "131-Iodine Therapy 15-50mCi",
+    "category": "Radio-Isotope Therapy",
+    "rate": 7589.0
+  },
+  {
+    "code": "IT007",
+    "name": "Phosphorus-32 therapy for metastatic bone pain palliation",
+    "category": "Radio-Isotope Therapy",
+    "rate": 9632.0
+  },
+  {
+    "code": "PT001",
+    "name": "Cervical Traction (per session)",
+    "category": "Physiotherapy",
+    "rate": 204.0
+  },
+  {
+    "code": "PT002",
+    "name": "Lumbar Traction (per session)",
+    "category": "Physiotherapy",
+    "rate": 204.0
+  },
+  {
+    "code": "PT003",
+    "name": "Exercises /Post Natal Exercises/Prenatal Exercises/Therapeutic Exercises/Orthopaedic Rehabilitation (Joint Replacement/Post Surgery)/Hand Rehab (per session)",
+    "category": "Physiotherapy",
+    "rate": 204.0
+  },
+  {
+    "code": "PT004",
+    "name": "Chest Physiotherapy/ Breathing Exercise &Postural Drainage per Session/Post Covid Rehabilitation /Pulmonary Rehabilitation/Cardiac Rehabilitation (per session)",
+    "category": "Physiotherapy",
+    "rate": 204.0
+  },
+  {
+    "code": "PT005",
+    "name": "Ultra Sonic Therapy /Short Wave Diathermy / Microwave/ Long Wave Diathermy /Infrared/IFT) (per session)",
+    "category": "Physiotherapy",
+    "rate": 204.0
+  },
+  {
+    "code": "PT006",
+    "name": "Electrical Muscle Stimulation/Cryotherapy/TENS (per session)",
+    "category": "Physiotherapy",
+    "rate": 272.0
+  },
+  {
+    "code": "PT007",
+    "name": "Hot Pack/ Cold Pack/Wax Bath/Moist Heat (per session)",
+    "category": "Physiotherapy",
+    "rate": 204.0
+  },
+  {
+    "code": "PT008",
+    "name": "Shock Wave Therapy/Matrix Rhythm Therapy/Laser/PEMF -Pulse Electro Magnetic Therapy (per session)",
+    "category": "Physiotherapy",
+    "rate": 272.0
+  },
+  {
+    "code": "PT009",
+    "name": "Gait Assessment (per session)",
+    "category": "Physiotherapy",
+    "rate": 408.0
+  },
+  {
+    "code": "PT010",
+    "name": "Gait Training (per session)",
+    "category": "Physiotherapy",
+    "rate": 204.0
+  },
+  {
+    "code": "PT011",
+    "name": "Tilt Training/Neuro-Rehab Basic (per session)",
+    "category": "Physiotherapy",
+    "rate": 204.0
+  },
+  {
+    "code": "PT012",
+    "name": "Neuro Rehabilitation Advanced (per session)",
+    "category": "Physiotherapy",
+    "rate": 544.0
+  },
+  {
+    "code": "PT013",
+    "name": "Paediatric Rehabilitation (per session)",
+    "category": "Physiotherapy",
+    "rate": 204.0
+  },
+  {
+    "code": "BT001",
+    "name": "Speech Therapy per session of at least 40 minutes",
+    "category": "Behavioural Therapy",
+    "rate": 272.0
+  },
+  {
+    "code": "BT002",
+    "name": "Occupational Therapy per session of at least 40 minutes",
+    "category": "Behavioural therapy",
+    "rate": 272.0
+  },
+  {
+    "code": "BT003",
+    "name": "Applied Behaviour Analysis based behaviour therapy (ABA based Behaviour therapy) per session of at least 40 minutes",
+    "category": "Behavioural therapy",
+    "rate": 272.0
+  },
+  {
+    "code": "BT004",
+    "name": "Special education per session of at least 40 minutes",
+    "category": "Behavioural therapy",
+    "rate": 272.0
+  },
+  {
+    "code": "BT005",
+    "name": "Biofeedback per session",
+    "category": "Behavioural therapy",
+    "rate": 2040.0
+  },
+  {
+    "code": "DI001",
+    "name": "Intraoral Periapical (IOPA) Radiograph X-ray/RVG(Single Film)",
+    "category": "Dental Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "DI002",
+    "name": "Intraoral Occlusal/Bite Wing X-Ray",
+    "category": "Dental Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "DI003",
+    "name": "Digital OPG with X ray film/ CD",
+    "category": "Dental Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "DI004",
+    "name": "Biopsy of Oral tissue- Soft",
+    "category": "Dental Biopsy",
+    "rate": 816.0
+  },
+  {
+    "code": "DI005",
+    "name": "Biopsy of Oral tissue - Hard (bone, tooth)",
+    "category": "Dental Biopsy",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP001",
+    "name": "Abscess - Drainage-Dental",
+    "category": "Dental Procedure",
+    "rate": 1020.0
+  },
+  {
+    "code": "DP002",
+    "name": "Scaling",
+    "category": "Dental Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "DP003",
+    "name": "Curettage and Root Planning - Per Tooth",
+    "category": "Dental Procedure",
+    "rate": 238.0
+  },
+  {
+    "code": "DP004",
+    "name": "Curettage and Root Planning - Per Arch",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP005",
+    "name": "Gingivoplasty - Per Quadrant",
+    "category": "Dental Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "DP006",
+    "name": "Gingivectomy - Per Quadrant",
+    "category": "Dental Procedure",
+    "rate": 816.0
+  },
+  {
+    "code": "DP007",
+    "name": "Flap Surgery- Per Tooth",
+    "category": "Dental Procedure",
+    "rate": 306.0
+  },
+  {
+    "code": "DP008",
+    "name": "Flap Surgery- Per Quadrant",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP009",
+    "name": "Flap Surgery and Bone Graft per quadrant",
+    "category": "Dental Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "DP010",
+    "name": "Extraction - Normal Tooth",
+    "category": "Dental Procedure",
+    "rate": 272.0
+  },
+  {
+    "code": "DP011",
+    "name": "Complicated Extraction per tooth under LA",
+    "category": "Dental Procedure",
+    "rate": 544.0
+  },
+  {
+    "code": "DP012",
+    "name": "Extraction Impacted - Soft tissue/ 3rd Molar/wisdom tooth extraction",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP013",
+    "name": "Multiple Extraction and Treatment Procedures for Special Children, Patients with Systemic Diseases, Patient with Special Needs Which Requires Admission and Treatment Under GA",
+    "category": "Dental Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "DP014",
+    "name": "Extraction - Orthodontic Extraction",
+    "category": "Dental Procedure",
+    "rate": 510.0
+  },
+  {
+    "code": "DP015",
+    "name": "Operculectomy- Pericoronal flap excision",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP016",
+    "name": "Extraction Impacted - Bony",
+    "category": "Dental Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "DP017",
+    "name": "Alveoloplasty - Per Tooth",
+    "category": "Dental Procedure",
+    "rate": 204.0
+  },
+  {
+    "code": "DP018",
+    "name": "Alveoloplasty - Per Quadrant",
+    "category": "Dental Procedure",
+    "rate": 816.0
+  },
+  {
+    "code": "DP019",
+    "name": "Frenectomy",
+    "category": "Dental Procedure",
+    "rate": 1700.0
+  },
+  {
+    "code": "DP020",
+    "name": "Excision of hyperplastic tissue - per arch",
+    "category": "Dental Procedure",
+    "rate": 816.0
+  },
+  {
+    "code": "DP021",
+    "name": "Surgical Augmentation/Alveolectomy per Arch",
+    "category": "Dental Procedure",
+    "rate": 2380.0
+  },
+  {
+    "code": "DP022",
+    "name": "Bone replacement graft for ridge preservation - per site",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP023",
+    "name": "Minor oral surgery, cyst, granuloma, residual infection, mucocele, epulis under LA",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP024",
+    "name": "Application of Desensitizing Medicament",
+    "category": "Dental Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "DP025",
+    "name": "Fluoride Application for Children",
+    "category": "Dental Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "DP026",
+    "name": "Temporary restoration",
+    "category": "Dental Procedure",
+    "rate": 102.0
+  },
+  {
+    "code": "DP027",
+    "name": "Glass ionomer Cement Restoration",
+    "category": "Dental Procedure",
+    "rate": 408.0
+  },
+  {
+    "code": "DP028",
+    "name": "Composite - Occlusal Pit/Class I",
+    "category": "Dental Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "DP029",
+    "name": "Composite -Class I with buccal extension/Class II Class III/Class IV/Class VI/Diastema Closure/MOD",
+    "category": "Dental Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "DP030",
+    "name": "RCT-Single Rooted tooth",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP031",
+    "name": "RCT Multiple root and/ canal tooth",
+    "category": "Dental Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "DP032",
+    "name": "Re-RCT - Anterior",
+    "category": "Dental Procedure",
+    "rate": 1700.0
+  },
+  {
+    "code": "DP033",
+    "name": "Re-RCT - Posterior",
+    "category": "Dental Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "DP034",
+    "name": "Medication -intracanal medicament (only lesion cases)",
+    "category": "Dental Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "DP035",
+    "name": "Apicectomy-Single tooth",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP036",
+    "name": "Apicectomy-Multiple tooth",
+    "category": "Dental Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "DP037",
+    "name": "Apexification with any bio-compatible material",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP038",
+    "name": "Root end resection and Retro grade filling",
+    "category": "Dental Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "DP039",
+    "name": "Surgical - Apicectomy/ Periapical surgery without bone grafting",
+    "category": "Dental Procedure",
+    "rate": 476.0
+  },
+  {
+    "code": "DP040",
+    "name": "Tissue Conditioning, Maxillary/Mandibular",
+    "category": "Dental Procedure",
+    "rate": 204.0
+  },
+  {
+    "code": "DP041",
+    "name": "Core build-up/ Post and Core - Custom made /Inlay/onlay",
+    "category": "Dental Procedure",
+    "rate": 1020.0
+  },
+  {
+    "code": "DP042",
+    "name": "Crown lengthening - Per Tooth",
+    "category": "Dental Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "DP043",
+    "name": "Crown - PMMA Crown",
+    "category": "Dental Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "DP044",
+    "name": "Crown - All Metal-Nickel Free",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP045",
+    "name": "Crown - Metal with Ceramic Facing",
+    "category": "Dental Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "DP046",
+    "name": "Crown - Recementation",
+    "category": "Dental Procedure",
+    "rate": 408.0
+  },
+  {
+    "code": "DP047",
+    "name": "Crown - Removal",
+    "category": "Dental Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "DP048",
+    "name": "Odontoplasty /Enameloplasty",
+    "category": "Dental Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "DP049",
+    "name": "Pulpectomy (Anterior Tooth)",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP050",
+    "name": "Pulpectomy (Posterior Tooth)",
+    "category": "Dental Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "DP051",
+    "name": "Pulpotomy",
+    "category": "Dental Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "DP052",
+    "name": "Veneer - Ceramic paediatric",
+    "category": "Dental Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "DP053",
+    "name": "Interceptive Orthodontic Treatment of the Primary Dentition/Transition Dentition",
+    "category": "Dental Procedure",
+    "rate": 4760.0
+  },
+  {
+    "code": "DP054",
+    "name": "Limited Orthodontic Treatment of the Primary Dentition",
+    "category": "Dental Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "DP055",
+    "name": "Occlusion Analysis/Adjustment/Occlusal Equilibration",
+    "category": "Dental Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "DP056",
+    "name": "Tooth Splinting -General",
+    "category": "Dental Procedure",
+    "rate": 1020.0
+  },
+  {
+    "code": "DP057",
+    "name": "Splinting - Periodontally weak teeth",
+    "category": "Dental Procedure",
+    "rate": 1224.0
+  },
+  {
+    "code": "DP058",
+    "name": "Night Guard",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP059",
+    "name": "Bridge/ Fixed Partial denture (per missing/ extracted tooth) metal crown",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP060",
+    "name": "Bridge/ Fixed Partial denture (per missing/ extracted tooth) metal crown with Ceramic facing",
+    "category": "Dental Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "DP061",
+    "name": "Removable Partial Denture - Flexible Per Arch",
+    "category": "Dental Procedure",
+    "rate": 5100.0
+  },
+  {
+    "code": "DP062",
+    "name": "Removable Partial Denture - Cast Metal Up to 3 Teeth",
+    "category": "Dental Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "DP063",
+    "name": "Removable Partial Denture - Cast Metal (additional Per tooth)",
+    "category": "Dental Procedure",
+    "rate": 204.0
+  },
+  {
+    "code": "DP064",
+    "name": "Removable Partial Denture - Acrylic Up to 3 teeth",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP065",
+    "name": "Removable Partial Denture - Tooth Addition (per tooth)",
+    "category": "Dental Procedure",
+    "rate": 204.0
+  },
+  {
+    "code": "DP066",
+    "name": "Add Clasp to existing Partial Denture",
+    "category": "Dental Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "DP067",
+    "name": "Add Tooth to existing Partial Denture",
+    "category": "Dental Procedure",
+    "rate": 272.0
+  },
+  {
+    "code": "DP068",
+    "name": "Tooth Supported Overdenture Per Arch",
+    "category": "Dental Procedure",
+    "rate": 5100.0
+  },
+  {
+    "code": "DP069",
+    "name": "Complete Denture - Per Arch",
+    "category": "Dental Procedure",
+    "rate": 6800.0
+  },
+  {
+    "code": "DP070",
+    "name": "Removable orthodontic appliance / Post Orthodontic R O A -per arch",
+    "category": "Dental Procedure",
+    "rate": 1700.0
+  },
+  {
+    "code": "DP071",
+    "name": "Fixed orthodontic per arch",
+    "category": "Dental Procedure",
+    "rate": 10200.0
+  },
+  {
+    "code": "DP072",
+    "name": "Space Maintainers - Fixed",
+    "category": "Dental Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "DP073",
+    "name": "Minor Treatment to Control Habits-Removable Appliance Therapy",
+    "category": "Dental Procedure",
+    "rate": 1700.0
+  },
+  {
+    "code": "DP074",
+    "name": "Minor Treatment to Control Habits-Fixed Appliance Therapy",
+    "category": "Dental Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "DP075",
+    "name": "Functional orthodontic appliance",
+    "category": "Dental Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "DP076",
+    "name": "Feeding appliance for Cleft Palate",
+    "category": "Dental Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "DP077",
+    "name": "Expansion plate",
+    "category": "Dental Procedure",
+    "rate": 4420.0
+  },
+  {
+    "code": "DP078",
+    "name": "Maxillofacial Prosthesis -Sal/auricular/orbital/Nasal/Palatal/facial lost/ Speech Aid",
+    "category": "Dental Procedure",
+    "rate": 4760.0
+  },
+  {
+    "code": "DP079",
+    "name": "Obturator Prosthesis - Surgical/Definitive/Modification",
+    "category": "Dental Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "DP080",
+    "name": "Removal of - Lateral Exostosis/Torus Mandibularis/Torus Palatines/Surgical reduction of Osseous Tuberosity",
+    "category": "Dental Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "DP081",
+    "name": "Sialolithotomy/Sialodocotomy/ Closure of Salivary Fistula",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP082",
+    "name": "Excision of Salivary gland",
+    "category": "Dental Procedure",
+    "rate": 10200.0
+  },
+  {
+    "code": "DP083",
+    "name": "Release of fibrous bands & grafting in (OSMF) treatment under GA",
+    "category": "Dental Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "DP084",
+    "name": "Facial Space Abscess",
+    "category": "Dental Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "DP085",
+    "name": "Partial Ostectomy / sequestrectomy for removal of non-vital bone",
+    "category": "Dental Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "DP086",
+    "name": "Alveolus - Closed Reduction stabilization of Teeth",
+    "category": "Dental Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "DP087",
+    "name": "Alveolus - Open Reduction stabilization of Teeth",
+    "category": "Dental Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "DP088",
+    "name": "Arch bar fixation",
+    "category": "Dental Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "DP089",
+    "name": "Oroantral Fistula closure",
+    "category": "Dental Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "DP090",
+    "name": "Osseous, Oste periosteal, or Cartilage graft of the Mandible or Maxilla - autogenous or non-autogenous bone graft",
+    "category": "Dental Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "DP091",
+    "name": "Osteoplasty - for Orthognathic deformities/ Mandibular Rami/ Body of Mandible",
+    "category": "Dental Procedure",
+    "rate": 19380.0
+  },
+  {
+    "code": "DP092",
+    "name": "Maxilla - Closed Reduction",
+    "category": "Dental Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "DP093",
+    "name": "Maxilla - Open Reduction",
+    "category": "Dental Procedure",
+    "rate": 6800.0
+  },
+  {
+    "code": "DP094",
+    "name": "Mandible - Closed Reduction",
+    "category": "Dental Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "DP095",
+    "name": "Mandible - Open Reduction",
+    "category": "Dental Procedure",
+    "rate": 6800.0
+  },
+  {
+    "code": "DP096",
+    "name": "Cyst of Maxilla/mandible by enucleation/excision/marsupialization upto 4 cms under LA",
+    "category": "Dental Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "DP097",
+    "name": "Cyst of Maxilla/mandible by enucleation/excision/marsupialization more than 4 cms under LA",
+    "category": "Dental Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "DP098",
+    "name": "Cyst of Maxilla/mandible by enucleation/excision/marsupialization more than 4 cms under GA and admission",
+    "category": "Dental Procedure",
+    "rate": 16150.0
+  },
+  {
+    "code": "DP099",
+    "name": "Temporomandibular(TM) joint ankylosis- under GA/Open /Closed Reduction",
+    "category": "Dental Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "DP100",
+    "name": "Segmental / Hemi Mandibulectomy with graft",
+    "category": "Dental Procedure",
+    "rate": 16150.0
+  },
+  {
+    "code": "DP101",
+    "name": "Segmental /Hemi Mandibulectomy without graft",
+    "category": "Dental Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "DP102",
+    "name": "Sub-Total mandibulectomy with graft",
+    "category": "Dental Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "DP103",
+    "name": "Sub-Total mandibulectomy without graft",
+    "category": "Dental Procedure",
+    "rate": 19380.0
+  },
+  {
+    "code": "DP104",
+    "name": "Maxillectomy/Mandibulectomy- Total with graft",
+    "category": "Dental Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "DP105",
+    "name": "Maxillectomy/Mandibulectomy- Total without graft",
+    "category": "Dental Procedure",
+    "rate": 19380.0
+  },
+  {
+    "code": "DP106",
+    "name": "Maxillectomy- partial with graft",
+    "category": "Dental Procedure",
+    "rate": 16150.0
+  },
+  {
+    "code": "DP107",
+    "name": "Maxillectomy- partial without graft",
+    "category": "Dental Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "DP108",
+    "name": "Malar and/or Zygomatic arch - Closed Reduction",
+    "category": "Dental Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "DP109",
+    "name": "Malar and/or Zygomatic arch - Open Reduction",
+    "category": "Dental Procedure",
+    "rate": 6800.0
+  },
+  {
+    "code": "DP110",
+    "name": "Distraction osteogenesis of mandible or maxilla under GA",
+    "category": "Dental Procedure",
+    "rate": 19380.0
+  },
+  {
+    "code": "DP111",
+    "name": "Facial bones - Complicated Reduction with fixation",
+    "category": "Dental Procedure",
+    "rate": 29070.0
+  },
+  {
+    "code": "OI001",
+    "name": "Refraction with auto refraction - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "OI002",
+    "name": "Indirect Ophthalmoscopy (Fundoscopy) - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "OI003",
+    "name": "Orthoptic check-up- with synoptophore- Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "OI004",
+    "name": "Lees- charting or Hess- charting- Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "OI005",
+    "name": "Perimetry (Visual Field Testing) -Goldman- Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "OI006",
+    "name": "Perimetry /Humphrey Visual Field (HVF ) test- Automated- Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 544.0
+  },
+  {
+    "code": "OI007",
+    "name": "Fluorescein angiography for fundus or iris- Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "OI008",
+    "name": "Indocyanine green angiography - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "OI009",
+    "name": "Ultrasound A- Scan/optical biometry[lenstar, IOL master] - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "OI010",
+    "name": "Ultrasound B- Scan - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "OI011",
+    "name": "Fundus Photo Test /disc photo for glaucoma- Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 340.0
+  },
+  {
+    "code": "OI012",
+    "name": "Corneal endothelial cell count with specular microscopy- Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "OI013",
+    "name": "Corneal topography /pentacam- Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "OI014",
+    "name": "Corneal pachymetry (corneal thickness)/ CCT - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 360.0
+  },
+  {
+    "code": "OI015",
+    "name": "OCT (Optical Coherence Tomography) /Ocular OCT Angiography - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 1428.0
+  },
+  {
+    "code": "OI016",
+    "name": "UBM- Ultrasound bio microscopy- Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "OI017",
+    "name": "Non Contact tonometry (NCT) - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "OI018",
+    "name": "IOP measurement with Schiotz - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 68.0
+  },
+  {
+    "code": "OI019",
+    "name": "IOP measurement with applanation tonometry - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "OI020",
+    "name": "Diurnal variation of IOP - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "OI021",
+    "name": "90 D lens examination/Three mirror examination for retina - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 102.0
+  },
+  {
+    "code": "OI022",
+    "name": "Gonioscopy- Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "OI023",
+    "name": "EOG- Electrooculogram - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 1408.0
+  },
+  {
+    "code": "OI024",
+    "name": "ERG- Electroretinogram- Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 1224.0
+  },
+  {
+    "code": "OI025",
+    "name": "VEP- visually evoked potential - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 1224.0
+  },
+  {
+    "code": "OI026",
+    "name": "X Ray orbit -Bilateral",
+    "category": "Ophthalmology Investigation",
+    "rate": 238.0
+  },
+  {
+    "code": "OI027",
+    "name": "Dacryocystography - Bilateral",
+    "category": "Ophthalmology Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "OI028",
+    "name": "Orbital Angiographical Studies - Bilateral",
+    "category": "Ophthalmology Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "OI029",
+    "name": "Neostigmine test - Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "OI030",
+    "name": "Lipi View One Eye",
+    "category": "Ophthalmology Investigation",
+    "rate": 612.0
+  },
+  {
+    "code": "OI031",
+    "name": "Lipi View Both Eyes",
+    "category": "Ophthalmology Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "OI032",
+    "name": "Schirmer Test",
+    "category": "Ophthalmology Investigation",
+    "rate": 204.0
+  },
+  {
+    "code": "OI033",
+    "name": "Vitreous biopsy per eye",
+    "category": "Ophthalmology Biopsy",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP001",
+    "name": "Subconjunctival/sub-tenon-s injections in one eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "OP002",
+    "name": "Subconjunctival/sub-tenon-s injections in both eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 544.0
+  },
+  {
+    "code": "OP003",
+    "name": "Pterygium surgery with auto conjunctival graft per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "OP004",
+    "name": "Conjunctival Peritomy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 1020.0
+  },
+  {
+    "code": "OP005",
+    "name": "Conjunctival wound repair or exploration following blunt trauma per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OP006",
+    "name": "Removal of corneal foreign body",
+    "category": "Ophthalmology Procedure",
+    "rate": 272.0
+  },
+  {
+    "code": "OP007",
+    "name": "Cauterization of ulcer/subconjunctival injection in one eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "OP008",
+    "name": "Cauterization of ulcer/subconjunctival injection in both eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 544.0
+  },
+  {
+    "code": "OP009",
+    "name": "Corneal grafting-Penetrating keratoplasty per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP010",
+    "name": "Bandage contact lenses for corneal perforation/PED per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "OP011",
+    "name": "Scleral grafting or conjunctival flap for corneal perforation per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OP012",
+    "name": "Keratoconus correction with therapeutic contact lenses - Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OP013",
+    "name": "Ultraviolet (UV) radiation for cross-linking for keratoconus /C3R/KXL - Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 13600.0
+  },
+  {
+    "code": "OP014",
+    "name": "EDTA for band shaped keratopathy - Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "OP015",
+    "name": "Arcuate keratotomy for astigmatism /Limbal Relaxing Incision - Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 4624.0
+  },
+  {
+    "code": "OP016",
+    "name": "Re-suturing (Primary suturing) of corneal wound per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP017",
+    "name": "Penetrating keratoplasty with glaucoma surgery per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OP018",
+    "name": "Penetrating keratoplasty with vitrectomy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OP019",
+    "name": "Penetrating keratoplasty with IOL implantation per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OP020",
+    "name": "DALK- Deep anterior lamellar keratoplasty per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OP021",
+    "name": "Keratoprosthesis stage I and II per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OP022",
+    "name": "DSAEK Descemet-s stripping automated endothelial keratoplasty/DMEK-Descemet membrane endothelial keratoplasty per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OP023",
+    "name": "ALTK- Automated lamellar therapeutic keratoplasty per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OP024",
+    "name": "Bleb repair with conjunctival autograft per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 9690.0
+  },
+  {
+    "code": "OP025",
+    "name": "Bleb compression sutures per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 4760.0
+  },
+  {
+    "code": "OP026",
+    "name": "Bleb needling with MMC/5-FU per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5440.0
+  },
+  {
+    "code": "OP027",
+    "name": "Probing and Syringing of lacrimal sac- in one eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "OP028",
+    "name": "Probing and Syringing of lacrimal sac- in both eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 1020.0
+  },
+  {
+    "code": "OP029",
+    "name": "Dacryocystorhinostomy-Plain",
+    "category": "Ophthalmology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OP030",
+    "name": "Dacryocystorhinostomy-Plain with intubation and/or with lacrimal implants excluding the cost of implant per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP031",
+    "name": "Dacryocystorhinostomy-conjunctival with implant excluding the cost of implant per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP032",
+    "name": "Canaliculoplasty per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3597.0
+  },
+  {
+    "code": "OP033",
+    "name": "Dacryocystectomy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "OP034",
+    "name": "Punctal plugs for dry eyes - Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 306.0
+  },
+  {
+    "code": "OP035",
+    "name": "Chalazion incision and curettage in one eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "OP036",
+    "name": "Chalazion incision and curettage in both eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "OP037",
+    "name": "Ptosis surgery with Fasanella-Servat procedure /Ptosis surgery with LPS resection one lid Ptosis surgery with Sling surgery one lid",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP038",
+    "name": "Ectropion surgery- one lid",
+    "category": "Ophthalmology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OP039",
+    "name": "Ectropion surgery- both lids",
+    "category": "Ophthalmology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "OP040",
+    "name": "Epicanthus correction - Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 5491.0
+  },
+  {
+    "code": "OP041",
+    "name": "Cantholysis and canthotomy- Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 2380.0
+  },
+  {
+    "code": "OP042",
+    "name": "Entropion surgery- one lid",
+    "category": "Ophthalmology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OP043",
+    "name": "Entropion surgery- both lids",
+    "category": "Ophthalmology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "OP044",
+    "name": "Tarsorrhaphy- Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "OP045",
+    "name": "Suturing of lid lacerations- Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP046",
+    "name": "Lid retraction repair per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OP047",
+    "name": "Concretions removal- Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "OP048",
+    "name": "Bucket handle procedure for lid tumours per eye (for non-malignant conditions)",
+    "category": "Ophthalmology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OP049",
+    "name": "Eyelid reconstruction with flap one eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP050",
+    "name": "Eyelid reconstruction with flap both eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 16150.0
+  },
+  {
+    "code": "OP051",
+    "name": "Cheek rotation flap for lid tumours per eye (for non-malignant conditions)",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP052",
+    "name": "Orbitotomy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "OP053",
+    "name": "Enucleation per eye(for non-malignant conditions)",
+    "category": "Ophthalmology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OP054",
+    "name": "Enucleation with orbital implants and artificial (Cost of implants included) per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP055",
+    "name": "Evisceration per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "OP056",
+    "name": "Evisceration with orbital implants and artificial (Cost of implants included) prosthesis per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP057",
+    "name": "Telecanthus correction- Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OP058",
+    "name": "Orbital decompression /with incision or excision biopsy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OP059",
+    "name": "Exenteration per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP060",
+    "name": "Exenteration with skin grafting per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OP061",
+    "name": "Fracture orbital repair per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OP062",
+    "name": "Retinal laser procedures -green laser for PRP,retinal tears, ROP,endolaser per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 2380.0
+  },
+  {
+    "code": "OP063",
+    "name": "Retinal detachment surgery (RDS) per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "OP064",
+    "name": "Retinal detachment surgery (RDS) with scleral buckling per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OP065",
+    "name": "Buckle removal per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OP066",
+    "name": "Silicone oil removal per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "OP067",
+    "name": "Anterior retinal cryopexy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP068",
+    "name": "Squint correction for one eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "OP069",
+    "name": "Squint correction for both eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 13600.0
+  },
+  {
+    "code": "OP070",
+    "name": "Trabeculectomy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP071",
+    "name": "Trabeculotomy /kahook dual blade goniotomy excluding blade cost per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP072",
+    "name": "Trabeculectomy with Trabeculotomy- Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OP073",
+    "name": "Microincisional trabeculectomy(MIT) per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 16150.0
+  },
+  {
+    "code": "OP074",
+    "name": "Surgical posterior capsulotomy one eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 6800.0
+  },
+  {
+    "code": "OP075",
+    "name": "Goniotomy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP076",
+    "name": "Glaucoma surgery with Glaucoma valves (Cost of Valve extra) per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP077",
+    "name": "Cost of the Glaucoma valve/Glaucoma Ahmed valve per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 15000.0
+  },
+  {
+    "code": "OP078",
+    "name": "AC wash per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP079",
+    "name": "Endocyclophotocoagulation per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12240.0
+  },
+  {
+    "code": "OP080",
+    "name": "Cyclocryotherapy /Trans scleral cyclophotocoagulation TSCPC per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP081",
+    "name": "YAG Laser iridotomy / Hyaloidotomy/Laser suture lysis post trabeculectomy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP082",
+    "name": "YAG Laser capsulotomy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP083",
+    "name": "ALT-Argon laser trabeculoplasty per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP084",
+    "name": "TTT- Transpupillary thermal therapy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OP085",
+    "name": "PTK- Phototherapeutic keratectomy /PRK for keratoconus per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "OP086",
+    "name": "Argon/diode laser for retinal detachment per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OP087",
+    "name": "Intralase application for keratoconus /CAIRS Corneal allogenic intrastromal ring segments per eye excluding the cost of the rings",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP088",
+    "name": "Vitrectomy- pars plana including Fluid air exchange (per eye)",
+    "category": "Ophthalmology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OP089",
+    "name": "Vitrectomy +membrane peeling +fluid air exchange+endolaser+ gas/silicon oil tamponade per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 25840.0
+  },
+  {
+    "code": "OP090",
+    "name": "Macular hole surgery- Vitrectomy +membrane peeling + ILM peeling+ fluid air exchange+endolaser+ gas/silicon oil tamponade per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 26486.0
+  },
+  {
+    "code": "OP091",
+    "name": "Vitrectomy +phaco fragmentation/ IOL drop +/- secondary IOL per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 16150.0
+  },
+  {
+    "code": "OP092",
+    "name": "Anterior vitrectomy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5440.0
+  },
+  {
+    "code": "OP093",
+    "name": "Membranectomy one eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 8160.0
+  },
+  {
+    "code": "OP094",
+    "name": "Membranectomy both eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 10200.0
+  },
+  {
+    "code": "OP095",
+    "name": "Intravitreal injections of antibiotics excluding the cost of the antibiotic per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP096",
+    "name": "Intravitreal Injection of drugs (Ranibizumab/ Aflibercept etc) excluding the cost of the drug per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP097",
+    "name": "Intravitreal Insertion of Drug Implant excluding cost of the Drug Implant (Ozurdex,...etc)  per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "OP098",
+    "name": "Extracapsular cataract extraction (ECCE) with IOL excluding the cost of IOL per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OP099",
+    "name": "Small Incision Cataract Surgery (SICS) with IOL excluding the cost of IOL per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OP100",
+    "name": "Phaco with foldable IOL (silicone and acrylic)/PMMA IOL / MICS surgery excluding the cost of IOL per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 10982.0
+  },
+  {
+    "code": "OP101",
+    "name": "Pars plana lensectomy with/without IOL excluding the cost of IOL per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 10982.0
+  },
+  {
+    "code": "OP102",
+    "name": "Secondary IOL implantation- AC IOL PC IOL or scleral fixated IOL  excluding the cost of IOL per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP103",
+    "name": "Cataract extraction with IOL with capsular tension rings (Cionni-s ring)(cost of the ring included) excluding the cost of IOL per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OP104",
+    "name": "Paediatric cataract surgery +parsplana capsulotomy + anterior vitrectomy excluding the cost of IOL - one eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP105",
+    "name": "Paediatric cataract surgery +parsplana capsulotomy + anterior vitrectomy  excluding the cost of IOL - Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 16150.0
+  },
+  {
+    "code": "OP106",
+    "name": "IOL exchange [excluding IOL cost] per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 6800.0
+  },
+  {
+    "code": "OP107",
+    "name": "IOL reposition per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "OP108",
+    "name": "IOL explantation per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5440.0
+  },
+  {
+    "code": "OP109",
+    "name": "Iridodialysis repair or pupillary reconstruction /Cyclodialysis repair per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "OP110",
+    "name": "Iris cyst removal /synechiolysis/surgical iridectomy per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP111",
+    "name": "Lid Abscess incision and Drainage per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP112",
+    "name": "Orbital Abscess incision and Drainage per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OP113",
+    "name": "Excision Biopsy of lid, conjunctiva, cornea per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "OP114",
+    "name": "Paracentesis (eye) per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP115",
+    "name": "Scleral graft for scleral melting or perforation per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OP116",
+    "name": "Amniotic membrane grafting /symblepharon release with AMG per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OP117",
+    "name": "Intraocular foreign body removal per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OP118",
+    "name": "Electrolysis (eye) - Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "OP119",
+    "name": "Perforating injury repair (eye) per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OP120",
+    "name": "Botulinum injection for blepharospasm or squint /epiphora/entropion/lid retraction (excluding cost of drug) per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP121",
+    "name": "C3F8 GAS Injection intravitreal for descemetopexy/retinopexy/pneumatopexy (per eye)",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP122",
+    "name": "Silicone Oil injection (per eye)",
+    "category": "Ophthalmology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OP123",
+    "name": "Epiretinal Membrane (ERM) Peeling (per eye)",
+    "category": "Ophthalmology Procedure",
+    "rate": 4760.0
+  },
+  {
+    "code": "OP124",
+    "name": "Epiretinal Membrane (ERM) Removal (per eye)",
+    "category": "Ophthalmology Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "OP125",
+    "name": "Internal limiting membrane (ILM) peeling (per eye)",
+    "category": "Ophthalmology Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "OP126",
+    "name": "Punctoplasty (per eye)",
+    "category": "Ophthalmology Procedure",
+    "rate": 4420.0
+  },
+  {
+    "code": "OP127",
+    "name": "Punctal plug(Collagen/silicone) per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "OP128",
+    "name": "Laser Trabeculoplasty Gonioplasty - Both Eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 10880.0
+  },
+  {
+    "code": "OP129",
+    "name": "Eye laser pulse therapy /Lipiflow/IPL [Intense pulse light] per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 2380.0
+  },
+  {
+    "code": "OP130",
+    "name": "Malyugin Ring /pupil dilator/iris expander per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 6800.0
+  },
+  {
+    "code": "OP131",
+    "name": "Globe exploration per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 6460.0
+  },
+  {
+    "code": "OP132",
+    "name": "Scleral Fixation Tissue glue /fibrin glue per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 5712.0
+  },
+  {
+    "code": "OP133",
+    "name": "PFCL Injection Per Eye Including Cost of The Drug",
+    "category": "Ophthalmology Procedure",
+    "rate": 1856.0
+  },
+  {
+    "code": "OP134",
+    "name": "Methylprednisolone Injection IV Infusion per day Excluding the cost of the drug",
+    "category": "Ophthalmology Procedure",
+    "rate": 1700.0
+  },
+  {
+    "code": "OP135",
+    "name": "Retinoblastoma[RB] EUA both eyes",
+    "category": "Ophthalmology Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "OP136",
+    "name": "RB intravitreal/intravenous/subtenons chemotherapy affected eye excluding the cost of the chemotherapy drug",
+    "category": "Ophthalmology Procedure",
+    "rate": 2380.0
+  },
+  {
+    "code": "OP137",
+    "name": "RB TTT/ Cryotherapy affected eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 3060.0
+  },
+  {
+    "code": "OP138",
+    "name": "Plaque brachytherapy-surface affected eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 10200.0
+  },
+  {
+    "code": "OP139",
+    "name": "Plaque brachytherapy-intraocular affected eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 13600.0
+  },
+  {
+    "code": "OP140",
+    "name": "Simple limbal stem cell transplant SLET per eye",
+    "category": "Ophthalmology Procedure",
+    "rate": 13600.0
+  },
+  {
+    "code": "OP141",
+    "name": "Mucous membrane grafting MMG one eyelid",
+    "category": "Ophthalmology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OP142",
+    "name": "Mucous membrane grafting MMG two eyelids",
+    "category": "Ophthalmology Procedure",
+    "rate": 16150.0
+  },
+  {
+    "code": "OP143",
+    "name": "iStent Inject per eye including the cost of consumables and implant",
+    "category": "Ophthalmology Procedure",
+    "rate": 51680.0
+  },
+  {
+    "code": "OP144",
+    "name": "Orthoptic exercises per session",
+    "category": "Ophthalmology Physiotherapy",
+    "rate": 170.0
+  },
+  {
+    "code": "OP145",
+    "name": "Pleoptic exercises per session",
+    "category": "Ophthalmology Physiotherapy",
+    "rate": 170.0
+  },
+  {
+    "code": "EI001",
+    "name": "Impedance with stapedial reflex / Impedance Audiometry",
+    "category": "ENT Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "EI002",
+    "name": "Pure Tone Audiogram / Pure Tone Audiometry / PTA",
+    "category": "ENT Investigation",
+    "rate": 306.0
+  },
+  {
+    "code": "EI003",
+    "name": "Short Increment Sensitivity Index (SISI) Tone Decay",
+    "category": "ENT Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "EI004",
+    "name": "Speech Assessment",
+    "category": "ENT Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "EI005",
+    "name": "Speech Discrimination Score",
+    "category": "ENT Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "EI006",
+    "name": "Multiple hearing assessment test to Adults",
+    "category": "ENT Investigation",
+    "rate": 272.0
+  },
+  {
+    "code": "EI007",
+    "name": "BERA (Brain stem evoked response audiometry)",
+    "category": "ENT Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "EI008",
+    "name": "OAE (Otoacoustic Emission Test)",
+    "category": "ENT Investigation",
+    "rate": 857.0
+  },
+  {
+    "code": "EI009",
+    "name": "Hearing Aid Trail",
+    "category": "ENT Investigation",
+    "rate": 136.0
+  },
+  {
+    "code": "EI010",
+    "name": "Vestibular Evoked Myogenic Potential (VEMP)",
+    "category": "ENT Investigation",
+    "rate": 1870.0
+  },
+  {
+    "code": "EI011",
+    "name": "Cold Calorie Test for Vestibular function",
+    "category": "ENT Investigation",
+    "rate": 408.0
+  },
+  {
+    "code": "EI012",
+    "name": "Electronystagmography (ENG)",
+    "category": "ENT Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "EI013",
+    "name": "Videonystagmography(VNG)",
+    "category": "ENT Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "EI014",
+    "name": "Video Laryngoscopy",
+    "category": "ENT investigation",
+    "rate": 4080.0
+  },
+  {
+    "code": "EI015",
+    "name": "Videostroboscopy",
+    "category": "ENT Investigation",
+    "rate": 3740.0
+  },
+  {
+    "code": "EI016",
+    "name": "Fibreoptic examination of Larynx (FOL) under LA",
+    "category": "ENT Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "EI017",
+    "name": "Fibro optic Nasal Endoscopy",
+    "category": "ENT Investigation",
+    "rate": 1564.0
+  },
+  {
+    "code": "EP001",
+    "name": "Removal of foreign body From Nose",
+    "category": "ENT Procedure",
+    "rate": 476.0
+  },
+  {
+    "code": "EP002",
+    "name": "Removal of foreign body From Ear/otoscopy diagnostic or therapeutic",
+    "category": "ENT Procedure",
+    "rate": 476.0
+  },
+  {
+    "code": "EP003",
+    "name": "Syringing (Ear)",
+    "category": "ENT Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "EP004",
+    "name": "Polyp removal under LA (Larynx)",
+    "category": "ENT Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "EP005",
+    "name": "Polyp removal under GA (Larynx)",
+    "category": "ENT Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "EP006",
+    "name": "Peritonsillar abscess Drainage under LA",
+    "category": "ENT Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "EP007",
+    "name": "Myringoplasty",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP008",
+    "name": "Stapedectomy",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP009",
+    "name": "Myringotomy with Grommet Insertion",
+    "category": "ENT Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "EP010",
+    "name": "Tympanotomy",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP011",
+    "name": "Tympanoplasty",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP012",
+    "name": "Mastoidectomy",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP013",
+    "name": "Otoplasty",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP014",
+    "name": "Labyrinthectomy",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP015",
+    "name": "Skull Base Surgery",
+    "category": "ENT Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "EP016",
+    "name": "Facial Nerve Decompression",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP017",
+    "name": "Septoplasty",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP018",
+    "name": "Submucous Resection",
+    "category": "ENT Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "EP019",
+    "name": "Septo-Rhinoplasty",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP020",
+    "name": "Rhinoplasty- Non-cosmetic",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP021",
+    "name": "Fracture Reduction of Nasal Bone",
+    "category": "ENT Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "EP022",
+    "name": "Intra Nasal Diathermy",
+    "category": "ENT Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "EP023",
+    "name": "Turbinectomy",
+    "category": "ENT Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "EP024",
+    "name": "Endoscopic Dacryocystorhinostomy (DCR)",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP025",
+    "name": "Endoscopic Surgery (ENT)",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP026",
+    "name": "Septal Perforation Repair",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP027",
+    "name": "Antrum Puncture",
+    "category": "ENT Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "EP028",
+    "name": "Lateral Rhinotomy",
+    "category": "ENT Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "EP029",
+    "name": "Cranio-Facial resection",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP030",
+    "name": "Angiofibroma Excision",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP031",
+    "name": "Endoscopic Hypophysectomy",
+    "category": "ENT Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "EP032",
+    "name": "Endoscopic Optic Nerve Decompression",
+    "category": "ENT Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "EP033",
+    "name": "Tonsillectomy",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP034",
+    "name": "Uvulo-palatoplasty",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP035",
+    "name": "Functional Endoscopic Sinus Surgery (FESS) for Antrochoanal polyp",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP036",
+    "name": "Functional Endoscopic Sinus Surgery (FESS) for Ethmoidal polyp",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP037",
+    "name": "Polyp removal ear",
+    "category": "ENT Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "EP038",
+    "name": "Polyp removal Nose (Septal polyp)",
+    "category": "ENT Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "EP039",
+    "name": "Mastoidectomy plus Ossiculoplasty including TORP (Total Ossicular Replacement Prosthesis) or PORP (Partial Ossicular Replacement Prosthesis)",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP040",
+    "name": "Endolymphatic sac decompression",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP041",
+    "name": "Diagnostic endoscopy under GA",
+    "category": "ENT Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "EP042",
+    "name": "Young's operation for Atrophic rhinitis",
+    "category": "ENT Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "EP043",
+    "name": "Vidian neurectomy for vasomotor Rhinitis",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP044",
+    "name": "Nasal Packing-anterior",
+    "category": "ENT Procedure",
+    "rate": 1700.0
+  },
+  {
+    "code": "EP045",
+    "name": "Nasal Packing-Posterior",
+    "category": "ENT Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "EP046",
+    "name": "Ranula Excision",
+    "category": "ENT Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "EP047",
+    "name": "Tongue Tie excision",
+    "category": "ENT Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "EP048",
+    "name": "Sub Mandibular Duct Lithotomy",
+    "category": "ENT Procedure",
+    "rate": 4624.0
+  },
+  {
+    "code": "EP049",
+    "name": "Adenoidectomy",
+    "category": "ENT Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "EP050",
+    "name": "Palatopharyngoplasty",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP051",
+    "name": "Pharyngoplasty",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP052",
+    "name": "Styloidectomy",
+    "category": "ENT Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "EP053",
+    "name": "Direct Laryngoscopy including Biopsy under GA",
+    "category": "ENT Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "EP054",
+    "name": "Oesophagoscopy with foreign body removal from Oesophagus",
+    "category": "ENT Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "EP055",
+    "name": "Bronchoscopy with foreign body (FB) removal",
+    "category": "ENT Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "EP056",
+    "name": "Ear Lobe Repair one side",
+    "category": "ENT Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "EP057",
+    "name": "Excision of Pinna for non-cancerous Growth/Injuries - Skin Only",
+    "category": "ENT Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "EP058",
+    "name": "Excision of Pinna for non-cancerous/ Injuries - Skin and Cartilage",
+    "category": "ENT Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "EP059",
+    "name": "Partial Amputation of Pinna",
+    "category": "ENT Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "EP060",
+    "name": "Total Amputation of Pinna",
+    "category": "ENT Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "EP061",
+    "name": "Total Amputation & Excision of External Auditory Meatus",
+    "category": "ENT Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "EP062",
+    "name": "Excision of Cystic Hygroma",
+    "category": "ENT Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "EP063",
+    "name": "Excision of Cystic Hygroma Extensive",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP064",
+    "name": "Excision of Branchial Cyst",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP065",
+    "name": "Excision of Branchial Sinus",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP066",
+    "name": "Excision of Pharyngeal Diverticulum",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP067",
+    "name": "Excision of Carotid Body / Carotid Body Tumours",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP068",
+    "name": "Operation for Cervical Rib",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP069",
+    "name": "Estlander Operation (Estlander flap in plastic surgery of lips)",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP070",
+    "name": "Abbe Operation (Abbe flap in plastic surgery of lips)",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP071",
+    "name": "Cheek Advancement",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP072",
+    "name": "Excision of the Maxilla",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP073",
+    "name": "Excision of mandible-segmental",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP074",
+    "name": "Parotidectomy - Superficial",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP075",
+    "name": "Parotidectomy - Total",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP076",
+    "name": "Repair of Parotid Duct",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP077",
+    "name": "Removal of Submandibular Salivary gland",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP078",
+    "name": "Hemithyroidectomy",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP079",
+    "name": "Partial Thyroidectomy (lobectomy)",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP080",
+    "name": "Subtotal Thyroidectomy",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP081",
+    "name": "Total Thyroidectomy",
+    "category": "ENT Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "EP082",
+    "name": "Resection Enucleation of thyroid Adenoma",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP083",
+    "name": "Excision of Lingual Thyroid",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP084",
+    "name": "Excision of Thyroglossal Cyst/Duct/Fistula",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP085",
+    "name": "Laryngectomy",
+    "category": "ENT Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "EP086",
+    "name": "Hyoid Suspension",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP087",
+    "name": "Genioplasty",
+    "category": "ENT Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "EP088",
+    "name": "Phonosurgery",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP089",
+    "name": "Microlaryngeal Surgery",
+    "category": "ENT Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "EP090",
+    "name": "Laryngofissure",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP091",
+    "name": "Tracheal Stenosis Excision",
+    "category": "ENT Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "EP092",
+    "name": "Tracheostomy",
+    "category": "ENT Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "CC001",
+    "name": "ICU/CCU/PICU/MICU/HDU (For all categories of ward entitlement, inclusive of Room Rent)",
+    "category": "Critical Care",
+    "rate": 5400.0
+  },
+  {
+    "code": "CC002",
+    "name": "Compressed Air / Piped Oxygen per hour",
+    "category": "Critical Care",
+    "rate": 68.0
+  },
+  {
+    "code": "CC003",
+    "name": "Ventilator charges (Per day) inclusive of associated disposables",
+    "category": "Critical Care",
+    "rate": 2040.0
+  },
+  {
+    "code": "CC004",
+    "name": "Non invasive Ventilator charges (Per day)( inclusive of associated disposables)",
+    "category": "Critical Care",
+    "rate": 408.0
+  },
+  {
+    "code": "CC005",
+    "name": "Pneupac Ventilator in Nursery (Per day)",
+    "category": "Critical Care",
+    "rate": 1768.0
+  },
+  {
+    "code": "CC006",
+    "name": "Incubator charges (Per day)",
+    "category": "Critical Care",
+    "rate": 1020.0
+  },
+  {
+    "code": "CC007",
+    "name": "Neonatal ICU charges (Per day) inclusive of incubator",
+    "category": "Critical Care",
+    "rate": 5400.0
+  },
+  {
+    "code": "CC008",
+    "name": "Exchange Transfusion",
+    "category": "Critical Care",
+    "rate": 2380.0
+  },
+  {
+    "code": "CC009",
+    "name": "Phototherapy per session (up to 6 Hours)",
+    "category": "Critical Care",
+    "rate": 272.0
+  },
+  {
+    "code": "CC010",
+    "name": "Resuscitation/CPR/Intubation",
+    "category": "Critical Care",
+    "rate": 1020.0
+  },
+  {
+    "code": "CC011",
+    "name": "PICC line (peripherally inserted Central Cannulisation)",
+    "category": "Critical Care",
+    "rate": 3400.0
+  },
+  {
+    "code": "CC012",
+    "name": "Nebulization Per Session",
+    "category": "Critical Care",
+    "rate": 34.0
+  },
+  {
+    "code": "CC013",
+    "name": "PICC Line Removal",
+    "category": "Critical Care",
+    "rate": 680.0
+  },
+  {
+    "code": "CC014",
+    "name": "Ryles Tube Insertion",
+    "category": "Critical Care",
+    "rate": 612.0
+  },
+  {
+    "code": "BC001",
+    "name": "Blood Component Charges - Whole Blood per Unit",
+    "category": "Blood Component Charges",
+    "rate": 1550.0
+  },
+  {
+    "code": "BC002",
+    "name": "Blood Component Charges - Packed Red Cell per Unit",
+    "category": "Blood Component Charges",
+    "rate": 1550.0
+  },
+  {
+    "code": "BC003",
+    "name": "Blood Component Charges - Fresh Frozen Plasma",
+    "category": "Blood Component Charges",
+    "rate": 400.0
+  },
+  {
+    "code": "BC004",
+    "name": "Platelet Concentrate- Random Donor Platelet (RDP)",
+    "category": "Blood Component Charges",
+    "rate": 400.0
+  },
+  {
+    "code": "BC005",
+    "name": "Blood Component Charges - Cryoprecipitate",
+    "category": "Blood Component Charges",
+    "rate": 250.0
+  },
+  {
+    "code": "BC006",
+    "name": "Platelet Concentrate - Single Donor Platelet (SDP)- Apheresis per unit",
+    "category": "Blood Component Charges",
+    "rate": 11000.0
+  },
+  {
+    "code": "GP001",
+    "name": "Dressings of wounds",
+    "category": "General Procedure",
+    "rate": 204.0
+  },
+  {
+    "code": "GP002",
+    "name": "Aspiration Pleural Effusion - Diagnostic",
+    "category": "General Procedure",
+    "rate": 476.0
+  },
+  {
+    "code": "GP003",
+    "name": "Aspiration Pleural Effusion - Therapeutic",
+    "category": "General Procedure",
+    "rate": 476.0
+  },
+  {
+    "code": "GP004",
+    "name": "Abdominal / Peritoneal Aspiration - Diagnostic/Ascitic tapping / Paracentesis -Diagnostic",
+    "category": "General Procedure",
+    "rate": 476.0
+  },
+  {
+    "code": "GP005",
+    "name": "Abdominal / Peritoneal Aspiration - Therapeutic/Ascitic tapping / Paracentesis - Therapeutic",
+    "category": "General Procedure",
+    "rate": 510.0
+  },
+  {
+    "code": "GP006",
+    "name": "Removal of Sutures (All)",
+    "category": "General Procedure",
+    "rate": 136.0
+  },
+  {
+    "code": "GP007",
+    "name": "Venesection",
+    "category": "General Procedure",
+    "rate": 476.0
+  },
+  {
+    "code": "GP008",
+    "name": "Sternal puncture",
+    "category": "General Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "GP009",
+    "name": "Urinary bladder Catheterisation",
+    "category": "General Procedure",
+    "rate": 476.0
+  },
+  {
+    "code": "GP010",
+    "name": "Incision & Drainage under local Anaesthesia (Large)",
+    "category": "General Procedure",
+    "rate": 1564.0
+  },
+  {
+    "code": "GP011",
+    "name": "Intercostal Drainage",
+    "category": "General Procedure",
+    "rate": 2380.0
+  },
+  {
+    "code": "GP012",
+    "name": "Drainage of abscess with anaesthesia",
+    "category": "General Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "GP013",
+    "name": "Excision of lumps under anaesthesia",
+    "category": "General Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "HN001",
+    "name": "Temporal Bone Subtotal Resection",
+    "category": "Head and Neck Surgery",
+    "rate": 27778.0
+  },
+  {
+    "code": "HN002",
+    "name": "Benign Tumour Excisions of Head and Neck",
+    "category": "Head and Neck Surgery",
+    "rate": 17765.0
+  },
+  {
+    "code": "SK001",
+    "name": "Excision of Moles",
+    "category": "Skin Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "SK002",
+    "name": "Excision of Warts",
+    "category": "Skin Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "SK003",
+    "name": "Excision of Molluscum Contagiosum",
+    "category": "Skin Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "SK004",
+    "name": "Excision of Venereal Warts",
+    "category": "Skin Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "SK005",
+    "name": "Excision of Corns",
+    "category": "Skin Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "SK006",
+    "name": "Intradermal (ID) Injection Keloid (Intralesional Injection) including the cost of the drug",
+    "category": "Skin Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "SK007",
+    "name": "Chemical Cautery (s)/Cryotherapy",
+    "category": "Skin Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "CI001",
+    "name": "Electrocardiogram (ECG)",
+    "category": "Cardiology Investigation",
+    "rate": 119.0
+  },
+  {
+    "code": "CI002",
+    "name": "Treadmill Test (TMT)",
+    "category": "Cardiology Investigation",
+    "rate": 762.0
+  },
+  {
+    "code": "CI003",
+    "name": "Holter analysis per day",
+    "category": "Cardiology Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "CI004",
+    "name": "Ambulatory BP monitoring per day",
+    "category": "Cardiology Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "CI005",
+    "name": "Head Up Tilt Test (HUTT)",
+    "category": "Cardiology Investigation",
+    "rate": 6256.0
+  },
+  {
+    "code": "CI006",
+    "name": "External Loop/event recording -first day Rs.1500",
+    "category": "Cardiology Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "CI007",
+    "name": "External Loop/event recording - subsequent Days 1000/day (Maximum up to 6 days)",
+    "category": "Cardiology Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "CI008",
+    "name": "Diagnostic Electrophysiological studies conventional (Including catheter)",
+    "category": "Cardiology Investigation",
+    "rate": 49368.0
+  },
+  {
+    "code": "CI009",
+    "name": "Stress Thallium / Myocardial Perfusion Scintigraphy",
+    "category": "Cardiology Investigation",
+    "rate": 9112.0
+  },
+  {
+    "code": "CI010",
+    "name": "Rest Thallium / Myocardial Perfusion Scintigraphy",
+    "category": "Cardiology Investigation",
+    "rate": 6528.0
+  },
+  {
+    "code": "CI011",
+    "name": "Venography",
+    "category": "Cardiology Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "CI012",
+    "name": "Lymphangiography",
+    "category": "Cardiology Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "CI013",
+    "name": "Sinogram",
+    "category": "Cardiology Investigation",
+    "rate": 1360.0
+  },
+  {
+    "code": "CI014",
+    "name": "Digital Subtraction Angiography-Peripheral artery",
+    "category": "Cardiology Investigation",
+    "rate": 9935.0
+  },
+  {
+    "code": "CI015",
+    "name": "Digital Subtraction Angiography- venogram",
+    "category": "Cardiology Investigation",
+    "rate": 9935.0
+  },
+  {
+    "code": "CI016",
+    "name": "Coronary Angiography",
+    "category": "Cardiology Investigation",
+    "rate": 9112.0
+  },
+  {
+    "code": "CI017",
+    "name": "Cardiac Catheterization (CATH)",
+    "category": "Cardiology Investigation",
+    "rate": 10132.0
+  },
+  {
+    "code": "CP001",
+    "name": "Balloon Coronary Angioplasty / Percutaneous transluminal coronary angioplasty (PTCA) /Percutaneous coronary intervention (PCI) with Vascular closure device (VCD) excluding the cost of Stent. Cost of Drug Eluting Balloon allowed in lieu of Stent",
+    "category": "Cardiology Procedure",
+    "rate": 62662.0
+  },
+  {
+    "code": "CP002",
+    "name": "Balloon Coronary Angioplasty / Percutaneous transluminal coronary angioplasty (PTCA) / Percutaneous coronary intervention (PCI) without Vascular closure device (VCD) excluding the cost of Stent.Cost of Drug Eluting Balloon allowed in lieu of Stent",
+    "category": "Cardiology Procedure",
+    "rate": 54086.0
+  },
+  {
+    "code": "CP003",
+    "name": "Rotablation excluding the cost of Rotablator Burr/Advancer",
+    "category": "Cardiology Procedure",
+    "rate": 39940.0
+  },
+  {
+    "code": "CP004",
+    "name": "Balloon Mitral Valvotomy / Percutaneous Transvenous Mitral Commissurotomy (PTMC)",
+    "category": "Cardiology Procedure",
+    "rate": 62662.0
+  },
+  {
+    "code": "CP005",
+    "name": "Temporary Pacemaker Implantation (TPI) (Temporary Cardiac Pacing) Single Chamber",
+    "category": "Cardiology Procedure",
+    "rate": 13644.0
+  },
+  {
+    "code": "CP006",
+    "name": "Permanent pacemaker implantation (PPI)- Single Chamber excluding the cost of Pacemaker",
+    "category": "Cardiology Procedure",
+    "rate": 22739.0
+  },
+  {
+    "code": "CP007",
+    "name": "Permanent pacemaker implantation- Dual Chamber excluding the cost of Pacemaker",
+    "category": "Cardiology Procedure",
+    "rate": 30556.0
+  },
+  {
+    "code": "CP008",
+    "name": "Permanent pacemaker implantation (PPI)- Biventricular excluding the cost of pacemaker",
+    "category": "Cardiology Procedure",
+    "rate": 35264.0
+  },
+  {
+    "code": "CP009",
+    "name": "Automatic implantable cardioverter defibrillator (AICD) Single Chamber - excluding the cost of Device",
+    "category": "Cardiology Procedure",
+    "rate": 35530.0
+  },
+  {
+    "code": "CP010",
+    "name": "Automatic implantable cardioverter defibrillator (AICD) Dual Chamber excluding the cost of Device",
+    "category": "Cardiology Procedure",
+    "rate": 37200.0
+  },
+  {
+    "code": "CP011",
+    "name": "Combo Device Implantation excluding the cost of Device",
+    "category": "Cardiology Procedure",
+    "rate": 41925.0
+  },
+  {
+    "code": "CP012",
+    "name": "Radiofrequency (RF) Ablation Conventional",
+    "category": "Cardiology Procedure",
+    "rate": 62662.0
+  },
+  {
+    "code": "CP013",
+    "name": "Radiofrequency (RF) Ablation Atrial Tachycardia/CARTO",
+    "category": "Cardiology Procedure",
+    "rate": 116280.0
+  },
+  {
+    "code": "CP014",
+    "name": "Intra-aortic balloon pump (IABP) excluding the cost of the balloon",
+    "category": "Cardiology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "CP015",
+    "name": "Intra vascular coiling excluding cost of the coils",
+    "category": "Cardiology Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "CP016",
+    "name": "Balloon Septostomy",
+    "category": "Cardiology Procedure",
+    "rate": 21318.0
+  },
+  {
+    "code": "CP017",
+    "name": "Aortic Valve Balloon Dilatation (AVBD) / Pulmonary Valve Balloon Dilatation (PVBD)",
+    "category": "Cardiology Procedure",
+    "rate": 40078.0
+  },
+  {
+    "code": "CP018",
+    "name": "Peripheral Angioplasty with Vascular Closure Device (VCD) excluding the cost of Stent",
+    "category": "Cardiology Procedure",
+    "rate": 39438.0
+  },
+  {
+    "code": "CP019",
+    "name": "Peripheral Angioplasty without Vascular Closure Device (VCD) excluding the cost of Stent",
+    "category": "Cardiology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "CP020",
+    "name": "Renal Angioplasty excluding the cost of Stent",
+    "category": "Cardiology Procedure",
+    "rate": 39083.0
+  },
+  {
+    "code": "CP021",
+    "name": "Transcatheter Aortic Valve Implantation (TAVI) / Transcatheter Aortic Valve Replacement (TAVR) - Procedure Cost. (Approval of Director, CGHS in consultation with Special Technical Committee (STC) is required for this procedure)",
+    "category": "Cardiology Procedure",
+    "rate": 64600.0
+  },
+  {
+    "code": "CP022",
+    "name": "TAVI / TAVR Implant (cost of implant only)",
+    "category": "Cardiology Implant(Valve)",
+    "rate": 1284000.0
+  },
+  {
+    "code": "CP023",
+    "name": "Cost of Intravascular ultrasound (IVUS) Catheter excluding GST(Procedure Charge included in PTCA)",
+    "category": "Cardiology Add on Procedure",
+    "rate": 55000.0
+  },
+  {
+    "code": "CP024",
+    "name": "Cost of Fractional flow reserve (FFR) Catheter excluding GST (Procedure Charge included in PTCA)",
+    "category": "Cardiology Add on Procedure",
+    "rate": 33000.0
+  },
+  {
+    "code": "CP025",
+    "name": "Catheter cost of Intracoronary optical coherence tomography (OCT) / Intravascular optical coherence tomography (IVOCT) / Intravascular Ventricular Assist System excluding GST(Procedure cost is included in PTCA)",
+    "category": "Cardiology Add on Procedure",
+    "rate": 65000.0
+  },
+  {
+    "code": "CP026",
+    "name": "IVL (Coronary Intra vascular Lithotripsy / Shock wave Lithotripsy - Including GST (Approval of Director, CGHS in consultation with Special Technical Committee (STC) is required for this procedure)",
+    "category": "Cardiology Add on Procedure",
+    "rate": 268000.0
+  },
+  {
+    "code": "CV001",
+    "name": "Varicose vein Surgery-Trendelenburg Operation with Suturing or Ligation",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 16344.0
+  },
+  {
+    "code": "CV002",
+    "name": "Radio Ablation of Varicose Veins (RFA Ablation) excluding the cost of RFA Catheter",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 6358.0
+  },
+  {
+    "code": "CV003",
+    "name": "Laser Ablation of Varicose Veins",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 28424.0
+  },
+  {
+    "code": "CV004",
+    "name": "Atrial Septal Defect (ASD) closure excluding the cost of the Device",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 71060.0
+  },
+  {
+    "code": "CV005",
+    "name": "Ventricular Septal Defect (VSD) with Graft / VSD Device Closure excluding the cost of the Device",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 77520.0
+  },
+  {
+    "code": "CV006",
+    "name": "Tetralogy of Fallot (TOF)/TAPVC/TCPC/REV/RSOV repair",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 116280.0
+  },
+  {
+    "code": "CV007",
+    "name": "BD Glenn/Left Atrium Myxoma",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 116280.0
+  },
+  {
+    "code": "CV008",
+    "name": "Senning/Arterial Switch Operation (ASO) with graft",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 116280.0
+  },
+  {
+    "code": "CV009",
+    "name": "Double Switch Operation (DSO)",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 152456.0
+  },
+  {
+    "code": "CV010",
+    "name": "Atrioventricular(AV) Canal Repair",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 152456.0
+  },
+  {
+    "code": "CV011",
+    "name": "Fontan Procedure",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 177004.0
+  },
+  {
+    "code": "CV012",
+    "name": "Conduit Repair",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 152456.0
+  },
+  {
+    "code": "CV013",
+    "name": "Coronary Artery Bypass Graft surgery (CABG)",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 116280.0
+  },
+  {
+    "code": "CV014",
+    "name": "Coronary Artery Bypass Graft surgery (CABG) + Intra-Aortic Balloon Pump (IABP)",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 152456.0
+  },
+  {
+    "code": "CV015",
+    "name": "Coronary Artery Bypass Graft surgery (CABG) + Valve Replacement excluding the cost of the valve",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 177004.0
+  },
+  {
+    "code": "CV016",
+    "name": "CABG without bypass.",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 152456.0
+  },
+  {
+    "code": "CV017",
+    "name": "Ascending Aorta Replacement",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 177004.0
+  },
+  {
+    "code": "CV018",
+    "name": "Double Valve Replacement (DVR)",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 152456.0
+  },
+  {
+    "code": "CV019",
+    "name": "Mitral valve Replacement(MVR)/ Aortic valve Replacement (AVR)/ Tricuspid Valve Replacement (TVR) / Pulmonary valve replacement (PVR)",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 116280.0
+  },
+  {
+    "code": "CV020",
+    "name": "Mitral valve (MV) Repair + Aortic valve (AV) Repair / Tricuspid Valve (TV) Repair + Pulmonary valve (PV) repair",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 116280.0
+  },
+  {
+    "code": "CV021",
+    "name": "Aorta Femoral Bypass",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 83334.0
+  },
+  {
+    "code": "CV022",
+    "name": "Blalock-Taussig Shunt (BT Shunt) / Coarctation",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 98192.0
+  },
+  {
+    "code": "CV023",
+    "name": "Pulmonary Artery Banding (PA Banding) Septostomy",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 98192.0
+  },
+  {
+    "code": "CV024",
+    "name": "Pericardiocentesis",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 6800.0
+  },
+  {
+    "code": "CV025",
+    "name": "Pericardiectomy",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 98192.0
+  },
+  {
+    "code": "CV026",
+    "name": "Patent Ductus Arteriosus (PDA)-Device Closure",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 71060.0
+  },
+  {
+    "code": "CV027",
+    "name": "Heart Transplant Surgery (As per Guidelines mentioned in OM.No. Z-42011/11/2021-MG/EHS Dated 1st December, 2023)",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 1140000.0
+  },
+  {
+    "code": "CV028",
+    "name": "Aortic Arch Replacement",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 177004.0
+  },
+  {
+    "code": "CV029",
+    "name": "Aortic Dissection",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 177004.0
+  },
+  {
+    "code": "CV030",
+    "name": "Thoraco Abdominal Aneurysm Repair",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 152456.0
+  },
+  {
+    "code": "CV031",
+    "name": "Embolectomy",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "CV032",
+    "name": "Vascular Repair",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "CV033",
+    "name": "Bentall Repair with Prosthetic Valve",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 177004.0
+  },
+  {
+    "code": "CV034",
+    "name": "Bentall Repair with Biologic Valve",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 152456.0
+  },
+  {
+    "code": "CV035",
+    "name": "Coarctation dilatation / Balloon dilatation of Aortic coarctation -Excluding the cost of Balloon",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 50879.0
+  },
+  {
+    "code": "CV036",
+    "name": "Coarctation dilatation with Stenting",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "CV037",
+    "name": "Septostomy- Blade",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "CV038",
+    "name": "Aortic stent grafting for aortic aneurysm",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 116280.0
+  },
+  {
+    "code": "CV039",
+    "name": "Inferior Vena Cava (IVC) filter implantation- excluding the cost of filter",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 21318.0
+  },
+  {
+    "code": "CV040",
+    "name": "Video Assisted Thoracoscopic Surgery (VATS) for Decortication of Lungs/Thymectomy/Other Major Surgeries",
+    "category": "Cardiovascular And Cardiac Surgery Procedure",
+    "rate": 116280.0
+  },
+  {
+    "code": "GS001",
+    "name": "Sclerotherapy Injection / Banding of Haemorrhoids (cost of drug/sclerotherapy agent/band extra)",
+    "category": "General Surgery",
+    "rate": 476.0
+  },
+  {
+    "code": "GS002",
+    "name": "Injection for Varicose Veins (cost of drug/sclerotherapy agent extra)",
+    "category": "General Surgery",
+    "rate": 476.0
+  },
+  {
+    "code": "GS003",
+    "name": "Suturing of small wounds",
+    "category": "General Surgery",
+    "rate": 935.0
+  },
+  {
+    "code": "GS004",
+    "name": "Secondary suture of wounds",
+    "category": "General Surgery",
+    "rate": 2992.0
+  },
+  {
+    "code": "GS005",
+    "name": "Debridement of wounds - Small",
+    "category": "General Surgery",
+    "rate": 1122.0
+  },
+  {
+    "code": "GS006",
+    "name": "Phimosis Under LA",
+    "category": "General Surgery",
+    "rate": 4080.0
+  },
+  {
+    "code": "GS007",
+    "name": "Removal Of Foreign Bodies -without C-ARM",
+    "category": "General Surgery",
+    "rate": 1020.0
+  },
+  {
+    "code": "GS008",
+    "name": "Toe Nail Removal",
+    "category": "General Surgery",
+    "rate": 680.0
+  },
+  {
+    "code": "GS009",
+    "name": "Excision of Cervical Lymph Node under Local Anaesthesia",
+    "category": "General Surgery",
+    "rate": 2108.0
+  },
+  {
+    "code": "GS010",
+    "name": "Excision of Axillary Lymph Node under General Anaesthesia",
+    "category": "General Surgery",
+    "rate": 5780.0
+  },
+  {
+    "code": "GS011",
+    "name": "Excision of Inguinal Lymph Node under Local Anaesthesia",
+    "category": "General Surgery",
+    "rate": 2040.0
+  },
+  {
+    "code": "GS012",
+    "name": "Excision of Sebaceous Cysts",
+    "category": "General Surgery",
+    "rate": 3400.0
+  },
+  {
+    "code": "GS013",
+    "name": "Excision of Superficial Lipoma",
+    "category": "General Surgery",
+    "rate": 3400.0
+  },
+  {
+    "code": "GS014",
+    "name": "Excision of Superficial Neurofibroma",
+    "category": "General Surgery",
+    "rate": 3400.0
+  },
+  {
+    "code": "GS015",
+    "name": "Excision of Dermoid Cysts",
+    "category": "General Surgery",
+    "rate": 3400.0
+  },
+  {
+    "code": "GS016",
+    "name": "Excision of Keloid",
+    "category": "General Surgery",
+    "rate": 6256.0
+  },
+  {
+    "code": "GS017",
+    "name": "Excision of mammary fistula",
+    "category": "General Surgery",
+    "rate": 17765.0
+  },
+  {
+    "code": "GS018",
+    "name": "Haemorrhoidectomy",
+    "category": "General Surgery",
+    "rate": 21318.0
+  },
+  {
+    "code": "GS019",
+    "name": "Stapler haemorrhoidectomy excluding the cost of Stapler",
+    "category": "General Surgery",
+    "rate": 22610.0
+  },
+  {
+    "code": "GS020",
+    "name": "Debridement of Large wounds including Diabetic Wound under Anaesthesia",
+    "category": "General Surgery",
+    "rate": 17765.0
+  },
+  {
+    "code": "GI001",
+    "name": "Gastro Oesophageal Reflux Study (GER Study)",
+    "category": "Gastro and Hepatobiliary Investigation",
+    "rate": 2040.0
+  },
+  {
+    "code": "GI002",
+    "name": "Meckel's Scan",
+    "category": "Gastro and Hepatobiliary/Nuclear Medicine Investigation",
+    "rate": 2040.0
+  },
+  {
+    "code": "GI003",
+    "name": "Hepatobiliary Scintigraphy.",
+    "category": "Gastro and Hepatobiliary/Nuclear Medicine Investigation",
+    "rate": 2720.0
+  },
+  {
+    "code": "GI004",
+    "name": "Gastrointestinal Bleed (GloB.) Study with Technetium 99m labeled RBCs.",
+    "category": "Gastro and Hepatobiliary/Nuclear Medicine Investigation",
+    "rate": 4080.0
+  },
+  {
+    "code": "GI005",
+    "name": "Gastric Emptying",
+    "category": "Gastro and Hepatobiliary/Nuclear Medicine Investigation",
+    "rate": 1700.0
+  },
+  {
+    "code": "GI006",
+    "name": "Hepatosplenic scintigraphy with Technetium-99m radiopharmaceuticals",
+    "category": "Gastro and Hepatobiliary/Nuclear Medicine Investigation",
+    "rate": 3400.0
+  },
+  {
+    "code": "GI007",
+    "name": "Diagnostic Angiography",
+    "category": "Gastroenterology/Interventional Radiology Investigation",
+    "rate": 6256.0
+  },
+  {
+    "code": "GI008",
+    "name": "Oesophageal pH metry",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 5943.0
+  },
+  {
+    "code": "GI009",
+    "name": "Oesophageal Manometry",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 6256.0
+  },
+  {
+    "code": "GI010",
+    "name": "Small Bowel Manometry",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 6800.0
+  },
+  {
+    "code": "GI011",
+    "name": "Anorectal manometry",
+    "category": "Gastroenterology / Endoscopic Investigation",
+    "rate": 29240.0
+  },
+  {
+    "code": "GI012",
+    "name": "Colonic manometry",
+    "category": "Gastroenterology / Endoscopic Investigation",
+    "rate": 23800.0
+  },
+  {
+    "code": "GI013",
+    "name": "Biliary Manometry",
+    "category": "Gastroenterology / Endoscopic Investigation",
+    "rate": 29240.0
+  },
+  {
+    "code": "GI014",
+    "name": "Breath Tests (Urea breath test/ H. pylori breath test)/RUT",
+    "category": "Gastroenterology / Endoscopic Investigation",
+    "rate": 1965.0
+  },
+  {
+    "code": "MG001",
+    "name": "Gastroscopy/Upper GI Endoscopy with or without Biopsy",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 2720.0
+  },
+  {
+    "code": "MG002",
+    "name": "Lower GI Endoscopy(Colonoscopy/Sigmoidoscopy) with or without Biopsy",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 4080.0
+  },
+  {
+    "code": "MG003",
+    "name": "Endoscopic mucosal resection",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 8656.0
+  },
+  {
+    "code": "MG004",
+    "name": "Endoscopic Polypectomy - GIT",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG005",
+    "name": "Oesophageal Stricture dilatation",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 6256.0
+  },
+  {
+    "code": "MG006",
+    "name": "Balloon dilatation of achalasia cardia",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 8656.0
+  },
+  {
+    "code": "MG007",
+    "name": "Gastrointestinal (GIT) Foreign body removal",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG008",
+    "name": "Oesophageal stenting excluding the cost of stent",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 9112.0
+  },
+  {
+    "code": "MG009",
+    "name": "Band ligation of oesophageal varices",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 5780.0
+  },
+  {
+    "code": "MG010",
+    "name": "Sclerotherapy of oesophageal varices",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 5780.0
+  },
+  {
+    "code": "MG011",
+    "name": "Glue injection of varices",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 9112.0
+  },
+  {
+    "code": "MG012",
+    "name": "Argon plasma coagulation",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 6256.0
+  },
+  {
+    "code": "MG013",
+    "name": "Pyloric balloon dilatation",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 5780.0
+  },
+  {
+    "code": "MG014",
+    "name": "Enteral stenting excluding cost of the stent",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG015",
+    "name": "Duodenal stricture dilation",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 5780.0
+  },
+  {
+    "code": "MG016",
+    "name": "Single balloon enteroscopy",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 9112.0
+  },
+  {
+    "code": "MG017",
+    "name": "Double balloon enteroscopy",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG018",
+    "name": "Capsule endoscopy excluding the cost of capsule",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 8656.0
+  },
+  {
+    "code": "MG019",
+    "name": "Piles banding",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 3400.0
+  },
+  {
+    "code": "MG020",
+    "name": "Colonic stricture dilatation",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 5780.0
+  },
+  {
+    "code": "MG021",
+    "name": "Hot biopsy forceps procedures",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 5780.0
+  },
+  {
+    "code": "MG022",
+    "name": "Colonic stenting excluding cost of the stent",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 9112.0
+  },
+  {
+    "code": "MG023",
+    "name": "Junction biopsy",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 3400.0
+  },
+  {
+    "code": "MG024",
+    "name": "Conjugal microscopy",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 5780.0
+  },
+  {
+    "code": "MG025",
+    "name": "ERCP (Endoscopic Retrograde Cholangio -Pancreatography) Diagnostic",
+    "category": "Gastro and Hepatobiliary Investigation",
+    "rate": 9112.0
+  },
+  {
+    "code": "MG026",
+    "name": "Endoscopic sphincterotomy by ERCP",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG027",
+    "name": "Common Bile Duct (CBD) stone extraction by ERCP",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG028",
+    "name": "Common Bile Duct (CBD) stricture dilatation by ERCP",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG029",
+    "name": "Biliary stenting (plastic and metallic) by ERCP",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG030",
+    "name": "Mechanical lithotripsy of CBD stones by ERCP",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 22610.0
+  },
+  {
+    "code": "MG031",
+    "name": "Pancreatic sphincterotomy by ERCP",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG032",
+    "name": "Pancreatic stricture dilatation by ERCP",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG033",
+    "name": "Pancreatic stone extraction by ERCP",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG034",
+    "name": "Mechanical lithotripsy of pancreatic stones",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 22610.0
+  },
+  {
+    "code": "MG035",
+    "name": "Endoscopic cysto gastrostomy",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG036",
+    "name": "Balloon dilatation of papilla",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG037",
+    "name": "Percutaneous Transhepatic Biliary Drainage (PTBD)",
+    "category": "Gastroenterology/Interventional Radiology Procedures",
+    "rate": 12920.0
+  },
+  {
+    "code": "MG038",
+    "name": "Vascular Embolization",
+    "category": "Gastroenterology/Interventional Radiology Procedures",
+    "rate": 27778.0
+  },
+  {
+    "code": "MG039",
+    "name": "Transjugular Intrahepatic Portosystemic Shunt (TIPS)",
+    "category": "Gastroenterology/Interventional Radiology Procedures",
+    "rate": 34238.0
+  },
+  {
+    "code": "MG040",
+    "name": "Inferior Vena Cava (IVC) Venography and Hepatic Vein (HV Venography)",
+    "category": "Gastroenterology/Interventional Radiology Procedures",
+    "rate": 27778.0
+  },
+  {
+    "code": "MG041",
+    "name": "Muscular Stenting",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 34238.0
+  },
+  {
+    "code": "MG042",
+    "name": "Balloon-Occluded Retrograde Intravenous Obliteration (BRTO)",
+    "category": "Gastroenterology/Interventional Radiology Procedures",
+    "rate": 34238.0
+  },
+  {
+    "code": "MG043",
+    "name": "Portal Haemodynamic Studies",
+    "category": "Gastroenterology/Interventional Radiology Procedures",
+    "rate": 5780.0
+  },
+  {
+    "code": "MG044",
+    "name": "Sengstaken Blakemore (SB) Tube Tamponade",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 6256.0
+  },
+  {
+    "code": "MG045",
+    "name": "Lintas Machles Tube Tempode",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 4080.0
+  },
+  {
+    "code": "MG046",
+    "name": "EUS (Endoscopic Ultrasound) guided FNAC Excluding the cost of the Needle",
+    "category": "Gastroenterology / Endoscopic Procedures",
+    "rate": 11220.0
+  },
+  {
+    "code": "AG001",
+    "name": "Atresia of Oesophagus and Tracheo Oesophageal Fistula",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG002",
+    "name": "Operations for Replacement of Oesophagus by Colon / Colon-Inter position or Replacement of Oesophagus",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG003",
+    "name": "Heller-s Operation",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG004",
+    "name": "Oesophageal Intubation (Mousseau Barbin Tube)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "AG005",
+    "name": "Achalasia Cardia Transthoracic",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG006",
+    "name": "Achalasia Cardia Abdominal",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG007",
+    "name": "Pyloromyotomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "AG008",
+    "name": "Gastrostomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "AG009",
+    "name": "Simple Closure of Perforated peptic Ulcer",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG010",
+    "name": "Vagotomy Pyloroplasty / Gastro Jejunostomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG011",
+    "name": "Duodenojejunostomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG012",
+    "name": "Partial/Subtotal Gastrectomy for Ulcer",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG013",
+    "name": "Operation for Bleeding Peptic Ulcer",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG014",
+    "name": "Operation for Gastrojejunal Ulcer",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG015",
+    "name": "Highly Selective Vagotomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG016",
+    "name": "Selective Vagotomy & Drainage",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG017",
+    "name": "Exploratory Laparotomy (Open)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "AG018",
+    "name": "Congenital Diaphragmatic Hernia",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG019",
+    "name": "Hiatus Hernia Repair- Abdominal (excluding cost of mesh and tacker if used)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 23450.0
+  },
+  {
+    "code": "AG020",
+    "name": "Hiatus Hernia Repair- Transthoracic (excluding cost of mesh and tacker if used)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 23450.0
+  },
+  {
+    "code": "AG021",
+    "name": "Epigastric Hernia Repair - excluding the cost of mesh and tacker",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "AG022",
+    "name": "Umbilical Hernia Repair - excluding the cost of mesh and tacker",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG023",
+    "name": "Ventral /incisional Hernia Repair - excluding the cost of mesh and tacker",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG024",
+    "name": "Inguinal Hernia Herniorrhaphy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 18476.0
+  },
+  {
+    "code": "AG025",
+    "name": "Inguinal Hernia - Hernioplasty excluding the cost of mesh and tacker",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG026",
+    "name": "Femoral Hernia Repair - excluding the cost of mesh and tacker",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG027",
+    "name": "Rare Hernias Repair (Spigelian, Obturator, Lumbar, Sciatic) - excluding the cost of mesh and tacker",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG028",
+    "name": "Splenectomy - For Trauma",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG029",
+    "name": "Splenectomy - For Hypersplenism",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "AG030",
+    "name": "Splenorenal Anastomosis",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG031",
+    "name": "Portocaval Anastomosis",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "AG032",
+    "name": "Direct Operation on Oesophagus for Portal Hypertension",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG033",
+    "name": "Mesentericocaval Anastomosis",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG034",
+    "name": "Warren Shunt (Distal Splenorenal Shunt)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG035",
+    "name": "Pancreaticoduodenectomy (Whipple's procedure)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG036",
+    "name": "Cystojejunostomy or Cystogastrostomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG037",
+    "name": "Cholecystectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG038",
+    "name": "Cholecystectomy & Exploration of CBD",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 23450.0
+  },
+  {
+    "code": "AG039",
+    "name": "Repair of Common Bile Duct (CBD)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG040",
+    "name": "Cholecystostomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 17054.0
+  },
+  {
+    "code": "AG041",
+    "name": "Operation for Hydatid Cyst of Liver",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 19186.0
+  },
+  {
+    "code": "AG042",
+    "name": "Hepatic Resections (Lobectomy /Hepatectomy)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 23450.0
+  },
+  {
+    "code": "AG043",
+    "name": "Operation on Adrenal Glands - Bilateral",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "AG044",
+    "name": "Operation on Adrenal Glands - Unilateral",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG045",
+    "name": "Appendicectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 13501.0
+  },
+  {
+    "code": "AG046",
+    "name": "Appendicular Abscess - Drainage",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG047",
+    "name": "Mesenteric Cyst- Excision",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG048",
+    "name": "Diagnostic Peritonioscopy/Laparoscopy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "AG049",
+    "name": "Jejunostomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG050",
+    "name": "Ileostomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG051",
+    "name": "Resection & Anastomosis of Small Intestine",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 33754.0
+  },
+  {
+    "code": "AG052",
+    "name": "Duodenal Diverticulum",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG053",
+    "name": "Operation for Intestinal Obstruction including resection , anastomosis, Adhesiolysis",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG054",
+    "name": "Operation for Intestinal perforation including resection, anastomosis , Adhesiolysis",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG055",
+    "name": "Operations for Benign Tumours of Small Intestine",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG056",
+    "name": "Excision of Small Intestine Fistula",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 31977.0
+  },
+  {
+    "code": "AG057",
+    "name": "Operations for GI Bleed",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG058",
+    "name": "Operations for Haemorrhage of Small Intestines",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG059",
+    "name": "Operations of the Duplication of the Intestines - including Exploratory Laparotomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 29135.0
+  },
+  {
+    "code": "AG060",
+    "name": "Operations for Recurrent Intestinal Obstruction (Noble Plication & Other Operations for Adhesions)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG061",
+    "name": "Ileosigmoidostomy and related resection",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG062",
+    "name": "Ileotransverse Colostomy and related resection",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG063",
+    "name": "Caecostomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG064",
+    "name": "Loop Colostomy Transverse Sigmoid",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG065",
+    "name": "Terminal Colostomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 21318.0
+  },
+  {
+    "code": "AG066",
+    "name": "Closure of Colostomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 21318.0
+  },
+  {
+    "code": "AG067",
+    "name": "Right Hemicolectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22739.0
+  },
+  {
+    "code": "AG068",
+    "name": "Left Hemicolectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22739.0
+  },
+  {
+    "code": "AG069",
+    "name": "Total Colectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 28424.0
+  },
+  {
+    "code": "AG070",
+    "name": "Operations for Volvulus of Large Bowel",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG071",
+    "name": "Operations for Sigmoid Diverticulitis",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "AG072",
+    "name": "Fissure in Ano with Internal sphincterotomy with fissurectomy.",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG073",
+    "name": "Fissure in Ano - Fissurectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "AG074",
+    "name": "Rectal Polyp-Excision",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 9735.0
+  },
+  {
+    "code": "AG075",
+    "name": "Fistula in Ano - High Fistulectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "AG076",
+    "name": "Fistula in Ano - Low Fistulectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 16344.0
+  },
+  {
+    "code": "AG077",
+    "name": "Prolapse Rectum - Thiersch Wiring",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "AG078",
+    "name": "Prolapse Rectum - Rectopexy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 9948.0
+  },
+  {
+    "code": "AG079",
+    "name": "Excision of Pilonidal Sinus (open)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 15633.0
+  },
+  {
+    "code": "AG080",
+    "name": "Excision of Pilonidal Sinus with closure",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "AG081",
+    "name": "Abdomino-Perineal Excision of Rectum",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG082",
+    "name": "Anterior Resection of Rectum",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "AG083",
+    "name": "Pull Through Abdominal Resection",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG084",
+    "name": "Retro Peritoneal Tumour Removal",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG085",
+    "name": "Laparoscopic Fundoplication",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "AG086",
+    "name": "Laparoscopic Splenectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "AG087",
+    "name": "Laparoscopic Removal of hydatid cyst",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "AG088",
+    "name": "Laparoscopic Treatment of Pseudo Pancreatic cyst",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "AG089",
+    "name": "Laparoscopic Whipple's operation (Laparoscopic Pancreaticoduodenectomy)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG090",
+    "name": "Laparoscopic GI bypass operation",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "AG091",
+    "name": "Laparoscopic Total Colectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "AG092",
+    "name": "Laparoscopic Hemicolectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "AG093",
+    "name": "Laparoscopic Anterior Resection (of Intestine/Rectum)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "AG094",
+    "name": "Laparoscopic Cholecystectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 23450.0
+  },
+  {
+    "code": "AG095",
+    "name": "Laparoscopic Appendectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 21318.0
+  },
+  {
+    "code": "AG096",
+    "name": "Laparoscopic Hernia - Inguinoplasty (excluding the cost of Tacker and Mesh)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 24871.0
+  },
+  {
+    "code": "AG097",
+    "name": "Laparoscopic Ventral Hernia Repair (excluding the cost of Tacker and Mesh)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 24871.0
+  },
+  {
+    "code": "AG098",
+    "name": "Laparoscopic Paraumbilical Hernia Repair (excluding the cost of Tacker and Mesh)",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 24871.0
+  },
+  {
+    "code": "AG099",
+    "name": "Laparoscopic Adrenalectomy",
+    "category": "Abdomen/GI Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "PS001",
+    "name": "Diaphragmatic Hernia Repair (Thoracic or Abdominal Approach)",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "PS002",
+    "name": "Tracheoesophageal Fistula (Correction Surgery)",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "PS003",
+    "name": "Colon Replacement of Oesophagus",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS004",
+    "name": "Omphalomesenteric Cyst Excision",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS005",
+    "name": "Omphalomesenteric Duct- Excision",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS006",
+    "name": "Omphalocele 1st Stage (Hernia Repair)",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "PS007",
+    "name": "Omphalocele 2nd Stage (Hernia Repair)",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "PS008",
+    "name": "Gastroschisis Repair",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS009",
+    "name": "Inguinal Herniotomy",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "PS010",
+    "name": "Congenital Hydrocele",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "PS011",
+    "name": "Hydrocele of Cord",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "PS012",
+    "name": "Torsion Testis Operation",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "PS013",
+    "name": "Congenital Pyloric Stenosis- operation",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "PS014",
+    "name": "Duodenal Atresia Operation",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS015",
+    "name": "Pancreatic Ring Operation",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "PS016",
+    "name": "Meconium Ileus Operation",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS017",
+    "name": "Malrotation of Intestines Operation",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS018",
+    "name": "Rectal Biopsy (Megacolon)",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "PS019",
+    "name": "Colostomy Transverse",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS020",
+    "name": "Colostomy Left Iliac",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS021",
+    "name": "Abdominal Perineal Pull Through (Hirschsprung's Disease)",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "PS022",
+    "name": "Imperforate Anus Low Anomaly -Cut Back Operation",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "PS023",
+    "name": "Imperforate Anus Low Anomaly - Perineal Anoplasty",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "PS024",
+    "name": "Imperforate Anus High Anomaly -Sacroabdomino Perineal Pull Through",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "PS025",
+    "name": "Imperforate Anus High Anomaly - Closure of Colostomy",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "PS026",
+    "name": "Intussusception Operation",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS027",
+    "name": "Choledochoduodenostomy for Atresia of Extra Hepatic Biliary Duct",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "PS028",
+    "name": "Operation of Choledochal Cyst",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "PS029",
+    "name": "Nephrectomy for -Pyonephrosis",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS030",
+    "name": "Nephrectomy for - Hydronephrosis",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS031",
+    "name": "Sacro-Coccygeal Teratoma Excision",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS032",
+    "name": "Congenital Atresia & Stenosis of Small Intestine",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "PS033",
+    "name": "Malrotation & Volvulus of the Midgut",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "PS034",
+    "name": "Excision of Meckel-s Diverticulum",
+    "category": "Paediatric Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG001",
+    "name": "Non Stress Test",
+    "category": "Obstetrics Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "OG002",
+    "name": "Normal delivery with or without Episiotomy & P.repair/ forceps delivery /Vacuum delivery/assisted breech delivery including Routine New Born Care",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG003",
+    "name": "Normal Delivery of High Risk Pregnancy(Preeclampsia/Eclampsia/GDM/Cardiac/Vascular/Renal/Pulmonary/Twin Pregnancy/RA/SLE/IVF Conception/Severe Anaemia,)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG004",
+    "name": "Caesarean Section(CS) with or without Sterilization including Routine New Born Care",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OG005",
+    "name": "Caesarian Delivery of High Risk Pregnancy(Preeclampsia/Eclampsia/GDM/Cardiac/Vascular/Renal/Pulmonary/Twin Pregnancy/RA/SLE/IVF Conception/Severe Anaemia)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OG006",
+    "name": "Rupture Uterus Closure & Repair with Tubal Ligation",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG007",
+    "name": "Perforation of Uterus after D/E Laparotomy & Closure",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OG008",
+    "name": "Laparotomy for Ectopic Pregnancy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG009",
+    "name": "Laparotomy peritonitis Lavage and Drainage",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG010",
+    "name": "Ovarian Cystectomy - Laparoscopic.",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG011",
+    "name": "Ovarian Cystectomy - Laparotomy.",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG012",
+    "name": "Laparoscopic Broad Ligament Hematoma Drainage with repair",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 0.0
+  },
+  {
+    "code": "OG013",
+    "name": "Exploration of perineal Haematoma & Repair",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 0.0
+  },
+  {
+    "code": "OG014",
+    "name": "Exploration of abdominal Haematoma (after laparotomy/ LSCS)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "OG015",
+    "name": "Manual Removal of Placenta",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 0.0
+  },
+  {
+    "code": "OG016",
+    "name": "Examination under anaesthesia (EUA)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OG017",
+    "name": "Burst-Abdomen Repair",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG018",
+    "name": "Gaping Perineal Wound Secondary Suturing",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OG019",
+    "name": "Gaping Abdominal Wound Secondary Suturing",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OG020",
+    "name": "Complete Perineal Tear-Repair",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 0.0
+  },
+  {
+    "code": "OG021",
+    "name": "Pelvic Floor Repair(Rectocele +/- Cystocele +/- Enterocele)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG022",
+    "name": "Suction Evacuation Vesicular Mole",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "OG023",
+    "name": "Colpotomy/Post-Coital Tear Repair",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "OG024",
+    "name": "Excision of urethral carbuncle",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OG025",
+    "name": "Shirodkar/ McDonald stitch//Cervical Stitch(Cerclage)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OG026",
+    "name": "Abdominal Hysterectomy with or without salpingo-oophorectomy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG027",
+    "name": "Non-descent Vaginal Hysterectomy (NDVH) with or without BSO",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG028",
+    "name": "Vaginal Hysterectomy ( including of BSO) with or without repairs",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG029",
+    "name": "Myomectomy -laparotomy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG030",
+    "name": "Myomectomy -laparoscopic",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG031",
+    "name": "Vaginoplasty",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG032",
+    "name": "Vulvectomy -Simple",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG033",
+    "name": "Rectovaginal Fistula (RVF) Repair",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG034",
+    "name": "Manchester/Fothergill-s operation",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG035",
+    "name": "Shirodkar-s sling Operation or other sling operations for prolapse uterus",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OG036",
+    "name": "Laparoscopic sling operations for prolapse uterus",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG037",
+    "name": "Dilatation and Curettage(diagnostic/therapeutic) with or without Polypectomy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "OG038",
+    "name": "Cervical Biopsy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "OG039",
+    "name": "Transcervical/Hysteroscopic Polypectomy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OG040",
+    "name": "Excision of Vaginal Cyst/Bartholin Cyst/Gartner Cyst",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "OG041",
+    "name": "Excision of Vaginal/Uterus Septum",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OG042",
+    "name": "Diagnostic hysterolaparoscopy(DHL) with or without chromopertubation/Adhesiolysis/ovarian drilling",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OG043",
+    "name": "Laparoscopy Sterilization/Laproscopic tubal occlusion(LTO)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "OG044",
+    "name": "Laparoscopically Assisted Vaginal Hysterectomy (LAVH) with or without BSO",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OG045",
+    "name": "Balloon Tamponade for Post Partum Haemorrhage/Conservative management of PPH(Atonic/traumatic PPH)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 5491.0
+  },
+  {
+    "code": "OG046",
+    "name": "Total Laparoscopic Hysterectomy with or without BSO",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OG047",
+    "name": "Laparoscopic Treatment of Ectopic Pregnancy-Milking/Salpingotomy/Salpingectomy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG048",
+    "name": "Conisation of cervix/Chemical Cautery of Cervical Ectopy/Erosion",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "OG049",
+    "name": "Diagnostic hysteroscopy with or without polypectomy/endometrial curettage",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OG050",
+    "name": "Laparotomy recanalization of Fallopian tubes-(Tuboplasty)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OG051",
+    "name": "Laparoscopic recanalization of Fallopian tubes-(Tuboplasty)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OG052",
+    "name": "Colposcopy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OG053",
+    "name": "Inversion of Uterus - Vaginal Reposition",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 3876.0
+  },
+  {
+    "code": "OG054",
+    "name": "Inversion of Uterus - Abdominal Reposition",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 3876.0
+  },
+  {
+    "code": "OG055",
+    "name": "Vaginal Vesicovaginal Fistula (VVF) Repair",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OG056",
+    "name": "Interventional Ultrasonography- Chorionic villus sampling (CVS)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OG057",
+    "name": "Amniocentesis",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "OG058",
+    "name": "Thermal balloon ablation.",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG059",
+    "name": "Ultrasonographic myolysis",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "OG060",
+    "name": "Vaginal/Cervical Myomectomy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG061",
+    "name": "Intra Uterine Insemination",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OG062",
+    "name": "Intracytoplasmic sperm injection (ICSI)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 13600.0
+  },
+  {
+    "code": "OG063",
+    "name": "Laparotomy abdominal sacro-colpopexy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OG064",
+    "name": "Vaginal Colpopexy/colpopexy-abdominal",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG065",
+    "name": "Laparoscopic abdominal colpopexy/sacro-colpopexy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OG066",
+    "name": "Endometrial aspiration cytology/biopsy (including Pipelle Charges)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "OG067",
+    "name": "Laparoscopic treatment for stress incontinence",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG068",
+    "name": "Transvaginal tapes for Stress incontinence",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG069",
+    "name": "Trans-obturator tapes for Stress incontinence",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OG070",
+    "name": "Interventional radiographic arterial embolization/Uterine artery embolization(UAE)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG071",
+    "name": "Internal Iliac Artery ligation",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 5491.0
+  },
+  {
+    "code": "OG072",
+    "name": "Surgical management of PPH (Uterine compression stitches/stepwise devascularisation)/peripartum hysterectomy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OG073",
+    "name": "Intra-uterine fetal blood transfusion",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OG074",
+    "name": "Hysteroscopy Transcervical Resection of Endometrium (TCRE)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG075",
+    "name": "Hysteroscopy Removal of Intra-Uterine Contraceptive Device (IUCD)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 13600.0
+  },
+  {
+    "code": "OG076",
+    "name": "hysteroscopic resection of uterine septum",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OG077",
+    "name": "Diagnostic Hysteroscopy with or without endometrial Biopsy",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 13600.0
+  },
+  {
+    "code": "OG078",
+    "name": "Sterilization (minilap)-post partum/post abortion",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 5943.0
+  },
+  {
+    "code": "OG079",
+    "name": "Interval Sterilization(minilap)-BAT / Male Sterilization(Vasectomy)",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OG080",
+    "name": "Medical Termination of Pregnancy (MTP)- 1st Trimester with Medicine /Manual Vacuum Aspiration /Check Curettage",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "OG081",
+    "name": "Medical Termination of Pregnancy (MTP) - 2nd Trimester /Suction and Evacuation/Dilatation and Curettage/Dilatation and expulsion",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OG082",
+    "name": "Insertion of IUD/IUCD/Pessary",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "OG083",
+    "name": "Removal of IUD/IUCD/Pessary",
+    "category": "Obstetrics And Gynaecology Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "NU001",
+    "name": "Ultrasound guided kidney Biopsy",
+    "category": "Nephrology And Urology - Biopsy",
+    "rate": 6256.0
+  },
+  {
+    "code": "NU002",
+    "name": "Testicular Biopsy",
+    "category": "Nephrology And Urology - Biopsy",
+    "rate": 9112.0
+  },
+  {
+    "code": "NU003",
+    "name": "Transrectal Ultrasound (TRUS) guided prostate biopsy",
+    "category": "Nephrology And Urology - Biopsy",
+    "rate": 6256.0
+  },
+  {
+    "code": "NU004",
+    "name": "Uroflow Study (Uroflowmetry)",
+    "category": "Nephrology And Urology Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "NU005",
+    "name": "Urodynamic Study (Cystometry)",
+    "category": "Nephrology And Urology Investigation",
+    "rate": 2040.0
+  },
+  {
+    "code": "NU006",
+    "name": "Voiding-cysto-urethrogram and retrograde urethrogram (Nephrostogram)",
+    "category": "Nephrology And Urology Investigation",
+    "rate": 5780.0
+  },
+  {
+    "code": "NU007",
+    "name": "Fistulogram for Arteriovenous Fistula",
+    "category": "Nephrology And Urology Investigation",
+    "rate": 6256.0
+  },
+  {
+    "code": "NU008",
+    "name": "Partial Nephrectomy -open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU009",
+    "name": "Partial Nephrectomy-Laparoscopic/Endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU010",
+    "name": "Nephrectomy Simple -Open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU011",
+    "name": "Laparoscopic Nephrectomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU012",
+    "name": "Nephrolithotomy -open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU013",
+    "name": "Nephrolithotomy -Laparoscopic/endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU014",
+    "name": "Pyelolithotomy-open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU015",
+    "name": "Pyelolithotomy -Laparoscopic/endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU016",
+    "name": "Operations for Hydronephrosis -pyeloplasty open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU017",
+    "name": "Operations for Hydronephrosis -pyeloplasty Lap/endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU018",
+    "name": "Operations for Hydronephrosis Endopyelotomy antegrade",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU019",
+    "name": "Operations for Hydronephrosis Endopyelotomy retrograde",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU020",
+    "name": "Operations for Hydronephrosis ureterocalicostomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU021",
+    "name": "Operations for Hydronephrosis-Ileal ureter",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU022",
+    "name": "Open Drainage of Perinephric Abscess",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU023",
+    "name": "Percutaneous Drainage of Perinephric Abscess -Ultrasound guided",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "NU024",
+    "name": "Cavernostomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NU025",
+    "name": "Operations for Cyst of the Kidney -open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU026",
+    "name": "Operations for Cyst of the Kidney Lap/endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU027",
+    "name": "Ureterolithotomy -open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU028",
+    "name": "Ureterolithotomy-Lap/Endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU029",
+    "name": "Nephroureterectomy open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU030",
+    "name": "Operations for Ureter for -Double Ureters",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU031",
+    "name": "Operations for Ureter -for Ectopia of Single Ureter",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU032",
+    "name": "Operations for Vesicoureteral Reflux (VUR) -Open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU033",
+    "name": "Operations for Vesicoureteral Reflux (VUR)-Lap/Endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU034",
+    "name": "Operations for Vesicoureteral Reflux (VUR)/ Urinary incontinence with bulking agents",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU035",
+    "name": "Ureterostomy - Cutaneous",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU036",
+    "name": "Uretero-Colic anastomosis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU037",
+    "name": "Formation of an Ileal Conduit",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU038",
+    "name": "Ureteric Catheterisation/DJ Stenting",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "NU039",
+    "name": "DJ stent removal",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 6508.0
+  },
+  {
+    "code": "NU040",
+    "name": "Biopsy of Bladder (Cystoscopic) including (Cold Cup Biopsy)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "NU041",
+    "name": "Cysto-Litholapaxy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU042",
+    "name": "Operations for Injuries of the Bladder",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU043",
+    "name": "Suprapubic Drainage (Cystostomy/vesicostomy)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "NU044",
+    "name": "Simple Cystectomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU045",
+    "name": "Diverticulectomy -open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU046",
+    "name": "Diverticulectomy- Lap/Endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU047",
+    "name": "Diverticulectomy -Endoscopic incision of neck",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU048",
+    "name": "Augmentation Cystoplasty",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU049",
+    "name": "Operations for Exstrophy of the Bladder- Single stage repair",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU050",
+    "name": "Operations for Exstrophy of the Bladder- Multistage repair",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU051",
+    "name": "Operations for Exstrophy of the Bladder- simple cystectomy with urinary diversion",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU052",
+    "name": "Repair of Ureterocele -Open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU053",
+    "name": "Repair of Ureterocele -Lap/Endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU054",
+    "name": "Repair of Ureterocele -Endoscopic incision",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU055",
+    "name": "Vesicovaginal Fistula (VVF) Repair (Open)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU056",
+    "name": "Vesicovaginal Fistula (VVF) Repair (Laparoscopic)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU057",
+    "name": "Open Suprapubic Prostatectomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU058",
+    "name": "Open Retropubic Prostatectomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU059",
+    "name": "Transurethral Resection of Prostate (TURP)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU060",
+    "name": "Urethroscopy/ Cystopanendoscopy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "NU061",
+    "name": "Internal urethrotomy -optical",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NU062",
+    "name": "Internal urethrotomy -Core through urethroplasty",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU063",
+    "name": "Urethral Reconstruction -End to end anastomosis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU064",
+    "name": "Urethral Reconstruction - substitution urethroplasty (Transpubic urethroplasty)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU065",
+    "name": "Abdomino Perineal urethroplasty",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU066",
+    "name": "Posterior Urethral Valve fulguration.",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU067",
+    "name": "Operations for Incontinence of Urine - Male -Open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU068",
+    "name": "Operations for Incontinence of Urine - Male -Sling",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU069",
+    "name": "Operations for Incontinence of Urine - Male-Bulking agent",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU070",
+    "name": "Operations for Incontinence of Urine - Female -Open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU071",
+    "name": "Operations for Incontinence of Urine - Female-Sling",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU072",
+    "name": "Operations for Incontinence of Urine - Female-Bulking agent",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU073",
+    "name": "Reduction of Paraphimosis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "NU074",
+    "name": "Circumcision",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "NU075",
+    "name": "Meatotomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 5491.0
+  },
+  {
+    "code": "NU076",
+    "name": "Meatoplasty",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "NU077",
+    "name": "Operations for Hypospadias + Chordee Correction",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU078",
+    "name": "Operations for Hypospadias - Second Stage",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU079",
+    "name": "Operations for Hypospadias - One Stage Repair",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU080",
+    "name": "Operations for Crippled Hypospadias",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU081",
+    "name": "Operations for Epispadias -primary repair",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU082",
+    "name": "Operations for Epispadias-crippled epispadias",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU083",
+    "name": "Partial Amputation of the Penis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU084",
+    "name": "Total amputation of the Penis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU085",
+    "name": "Orchidectomy-Simple",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NU086",
+    "name": "Epididymectomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "NU087",
+    "name": "Operations for Hydrocele - Unilateral",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NU088",
+    "name": "Operations for Hydrocele - Bilateral",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU089",
+    "name": "Operation for Torsion of Testis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NU090",
+    "name": "Micro-surgical Vasovasostomy /Vaso epididymal anastomosis .",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NU091",
+    "name": "Operations for Varicocele Unilateral Microsurgical",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU092",
+    "name": "Operations for Varicocele Palomo-s Unilateral -Laparoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU093",
+    "name": "Operations for Varicocele Bilateral --Microsurgical",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU094",
+    "name": "Operations for Varicocele Palomo-s Bilateral - Laparoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU095",
+    "name": "Excision of Filarial Scrotum",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NU096",
+    "name": "Kidney Transplantation (related)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 241604.0
+  },
+  {
+    "code": "NU097",
+    "name": "Kidney Transplantation (Spousal/ unrelated) Including immunosuppressant therapy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 274550.0
+  },
+  {
+    "code": "NU098",
+    "name": "Kidney Transplantation (Cadaver)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 226100.0
+  },
+  {
+    "code": "NU099",
+    "name": "ABO incompatible Transplantation",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 387600.0
+  },
+  {
+    "code": "NU100",
+    "name": "Kidney Transplant Graft Nephrectomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "NU101",
+    "name": "Donor Nephrectomy (Open)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU102",
+    "name": "Donor Nephrectomy (Laparoscopic)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 71060.0
+  },
+  {
+    "code": "NU103",
+    "name": "Post-Transplant Collection drainage for Lymphocele (open)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "NU104",
+    "name": "Post-Transplant Collection drainage for Lymphocele (percutaneous)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "NU105",
+    "name": "Post-Transplant Collection drainage for Lymphocele (Laparoscopic)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "NU106",
+    "name": "Arteriovenous Fistula for Haemodialysis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "NU107",
+    "name": "Arteriovenous Shunt for Haemodialysis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "NU108",
+    "name": "Jugular Catheterization for Haemodialysis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "NU109",
+    "name": "Subclavian Catheterization for Haemodialysis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "NU110",
+    "name": "One Sided (single Lumen) Femoral Catheterization for Haemodialysis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "NU111",
+    "name": "Bilateral (single Lumen) Femoral Catheterization for Haemodialysis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "NU112",
+    "name": "Double Lumen Femoral Catheterization for Haemodialysis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "NU113",
+    "name": "Permcath Insertion excluding the cost of the catheter",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "NU114",
+    "name": "Arterio Venous Prosthetic Graft",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 29240.0
+  },
+  {
+    "code": "NU115",
+    "name": "Single lumen Jugular Catheterization",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "NU116",
+    "name": "Single lumen Subclavian Catheterization",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "NU117",
+    "name": "Plasma Exchange/ Plasmapheresis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "NU118",
+    "name": "Continuous Ambulatory Peritoneal Dialysis (CAPD) catheter insertion- Open method",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "NU119",
+    "name": "Continuous Ambulatory Peritoneal Dialysis (CAPD) catheter insertion- Schlendinger/ Seldinger method",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "NU120",
+    "name": "Sustained low efficiency haemodialysis /haemodialysis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "NU121",
+    "name": "Continuous Veno venous/Arteriovenous Haemofiltration /Haemofiltration/CRRT per day",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 11560.0
+  },
+  {
+    "code": "NU122",
+    "name": "Haemodialysis / Haemodialysis for Sero negative cases including Dialyser and all other Consumables",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 1700.0
+  },
+  {
+    "code": "NU123",
+    "name": "Haemodialysis / Haemodialysis for Sero Positive cases including Dialyser and all other Consumables",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "NU124",
+    "name": "Acute Peritoneal Dialysis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 3604.0
+  },
+  {
+    "code": "NU125",
+    "name": "Peritoneal Dialysis",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 2448.0
+  },
+  {
+    "code": "NU126",
+    "name": "Fistula stenosis dilation",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "NU127",
+    "name": "Slow continuous Ultrafiltration",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "NU128",
+    "name": "Percutaneous Nephrolithotomy (PCNL) - Unilateral",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU129",
+    "name": "Percutaneous Nephrolithotomy (PCNL) - Bilateral",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU130",
+    "name": "Endoscopic Bulking agent Inject (including cost of bulking agent)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU131",
+    "name": "Nephrostomy -Open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU132",
+    "name": "Nephrostomy -Lap/Endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU133",
+    "name": "Ureteric Reimplant for Megaureter/ Vesicoureteric reflux/ureterocele (Open)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU134",
+    "name": "Ureteric Reimplant for Megaureter / Vesicoureteric reflux/ ureterocele (Laparoscopic)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU135",
+    "name": "Partial Cystectomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU136",
+    "name": "Transurethral Resection of Prostate (TURP) with Cystolithotripsy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU137",
+    "name": "Closure of Urethral Fistula",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU138",
+    "name": "Orchidopexy - Unilateral -Open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU139",
+    "name": "Orchidopexy - Unilateral- Lap/Endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU140",
+    "name": "Orchidopexy - Bilateral -Open",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU141",
+    "name": "Orchidopexy - Bilateral -Lap/Endoscopic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU142",
+    "name": "Cystolithotomy -Suprapubic",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NU143",
+    "name": "Endoscopic Removal of Stone in Bladder",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU144",
+    "name": "Resection Bladder Neck Endoscopic / Bladder neck incision / transurethral incision on prostrate",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU145",
+    "name": "Ureteroscopic Surgery",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU146",
+    "name": "Urethroplasty 1st Stage",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU147",
+    "name": "Scrotal Exploration",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NU148",
+    "name": "Perineal Urethrostomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU149",
+    "name": "Dilatation of Stricture Urethra under G.A.",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "NU150",
+    "name": "Laparoscopic pyelolithotomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU151",
+    "name": "Laparoscopic Pyeloplasty",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU152",
+    "name": "Laparoscopic surgery for Renal cyst",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU153",
+    "name": "Laparoscopic ureterolithotomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU154",
+    "name": "Laparoscopic Nephroureterectomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU155",
+    "name": "Extracorporeal Shock Wave Lithotripsy (ESWL)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU156",
+    "name": "Diagnostic Cystoscopy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "NU157",
+    "name": "Cystoscopy with Retrograde Catheter -Unilateral/RGP",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "NU158",
+    "name": "Cystoscopy with Retrograde Catheter - Bilateral/RGP",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NU159",
+    "name": "Retrograde Intrarenal Surgery (RIRS)/ Flexible Ureteroscopy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NU160",
+    "name": "Holmium YAG Prostate Surgery",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NU161",
+    "name": "Holmium YAG Optical Internal Urethrotomy (OIU)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU162",
+    "name": "Holmium YAG Core through internal Urethrotomy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NU163",
+    "name": "Holmium YAG Stone Lithotripsy",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NU164",
+    "name": "Green Light Laser for Prostate",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NU165",
+    "name": "Cystoscopic Botulinum Toxin Injection ( Over active bladder/ Neurogenic bladder) -excluding cost of drug",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "NU166",
+    "name": "Peyronie-s Disease - Plaque excision with grafting",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NU167",
+    "name": "Prosthetic Surgery for urinary incontinence",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NU168",
+    "name": "Ultrasound Guided Percutaneous Nephrostomy (PCN)",
+    "category": "Nephrology And Urology Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "NI001",
+    "name": "Electroencephalogram (EEG)/ Video EEG",
+    "category": "Neurology Investigation",
+    "rate": 680.0
+  },
+  {
+    "code": "NI002",
+    "name": "Electromyography (EMG)",
+    "category": "Neurology Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "NI003",
+    "name": "Nerve conduction velocity (NCV), -two or more limbs",
+    "category": "Neurology Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "NI004",
+    "name": "Repetitive nerve stimulation (RNS)-Decremental response (before and after neostigmine)",
+    "category": "Neurology Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "NI005",
+    "name": "Repetitive nerve stimulation (RNS)-Incremental response",
+    "category": "Neurology Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "NI006",
+    "name": "Somatosensory evoked potentials (SSEP)",
+    "category": "Neurology Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "NI007",
+    "name": "Polysomnography (PSG) / Level I Sleep study including Room Rent and Titration",
+    "category": "Neurology Investigation",
+    "rate": 6120.0
+  },
+  {
+    "code": "NI008",
+    "name": "Brachial plexus study",
+    "category": "Neurology Investigation",
+    "rate": 1020.0
+  },
+  {
+    "code": "NI009",
+    "name": "RNS( Repetitive Nerve stimulation)",
+    "category": "Neurology Investigation",
+    "rate": 1088.0
+  },
+  {
+    "code": "NS001",
+    "name": "Lumbar Pressure Monitoring",
+    "category": "Neuro-Surgery Investigation",
+    "rate": 6256.0
+  },
+  {
+    "code": "NS002",
+    "name": "Brain Mapping",
+    "category": "Neuro-Surgery Investigation",
+    "rate": 18700.0
+  },
+  {
+    "code": "NS003",
+    "name": "Nerve Biopsy",
+    "category": "Neuro-Surgery Biopsy",
+    "rate": 12920.0
+  },
+  {
+    "code": "NS004",
+    "name": "Brain Biopsy",
+    "category": "Neuro-Surgery Biopsy",
+    "rate": 27778.0
+  },
+  {
+    "code": "NS005",
+    "name": "Craniotomy and Evacuation of Haematoma -Subdural",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "NS006",
+    "name": "Craniotomy and Evacuation of Haematoma - Extradural",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "NS007",
+    "name": "Evacuation /Excision of Brain Abscess by craniotomy",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "NS008",
+    "name": "Excision of Lobe (Frontal Temporal Cerebellum etc.)",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "NS009",
+    "name": "Twist Drill Craniostomy",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NS010",
+    "name": "Subdural Tapping",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "NS011",
+    "name": "Ventricular Tapping",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NS012",
+    "name": "Brain Abscess Tapping",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NS013",
+    "name": "Placement of Intracranial pressure (ICP) Monitor",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NS014",
+    "name": "Skull Traction Application",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "NS015",
+    "name": "Vascular Malformations",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 62662.0
+  },
+  {
+    "code": "NS016",
+    "name": "Meningoencephalocele excision and repair",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS017",
+    "name": "Meningomyelocele Repair",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS018",
+    "name": "CSF Rhinorrhoea Repair",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS019",
+    "name": "Cranioplasty",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS020",
+    "name": "Anterior Cervical Discectomy",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS021",
+    "name": "Brachial Plexus Exploration and neurotization",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS022",
+    "name": "Median Nerve Decompression",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NS023",
+    "name": "Peripheral Nerve Surgery - Major",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS024",
+    "name": "Peripheral Nerve Surgery Minor",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS025",
+    "name": "Ventriculoatrial /Ventriculoperitoneal Shunt",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS026",
+    "name": "Anterior Cervical Spine Surgery with fusion",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS027",
+    "name": "Anterio Lateral Decompression of spine",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "NS028",
+    "name": "Cervical or Dorsal or Lumbar Laminectomy",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS029",
+    "name": "Combined Trans-Oral Surgery & Craniovertebral (CV) Junction Fusion",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS030",
+    "name": "Craniovertebral Junction (CVJ) Fusion procedures",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS031",
+    "name": "Depressed Fracture Elevation",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS032",
+    "name": "Lumbar Discectomy",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS033",
+    "name": "Endarterectomy (Carotid)",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS034",
+    "name": "Radiofrequency (RF) Lesion for Trigeminal Neuralgia",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS035",
+    "name": "Spasticity Surgery",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS036",
+    "name": "Spinal Fusion Procedure",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS037",
+    "name": "Spinal Bifida Surgery Major",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS038",
+    "name": "Spinal Bifida Surgery Minor",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS039",
+    "name": "Stereotaxic Procedures- biopsy/aspiration of cyst",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NS040",
+    "name": "Trans Sphenoidal Surgery",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS041",
+    "name": "Trans Oral Surgery",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS042",
+    "name": "Implantation of Deep Brain Stimulation (DBS) -One electrode (as per guidelines mentioned in OM.No.Z15025/44/2023/DIR/CGHS/EHS Dated 09.09.2024)",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS043",
+    "name": "Implantation of Deep Brain Stimulation (DBS) -two electrodes (as per guidelines mentioned in OM.No.Z15025/44/2023/DIR/CGHS/EHS Dated 09.09.2024)",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS044",
+    "name": "Endoscopic aqueductoplasty",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS045",
+    "name": "Facial nerve reconstruction",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS046",
+    "name": "Carotid Stenting excluding the cost of Stent",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS047",
+    "name": "Cervical disc arthroplasty",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS048",
+    "name": "Lumbar disc arthroplasty",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS049",
+    "name": "Corpus callostomy for Epilepsy",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "NS050",
+    "name": "Hemispherotomy for Epilepsy",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "NS051",
+    "name": "Endoscopic CSF rhinorrhoea repair",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS052",
+    "name": "Burr hole evacuation of chronic subdural haematoma",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS053",
+    "name": "Epilepsy surgery other than at Code No. NS049 and NS050",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 62662.0
+  },
+  {
+    "code": "NS054",
+    "name": "Radiofrequency (RF) lesion for facet joint pain syndrome",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS055",
+    "name": "Cervical Laminoplasty",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS056",
+    "name": "Lateral mass C1-C2 screw fixation",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS057",
+    "name": "Microsurgical decompression for Trigeminal nerve",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS058",
+    "name": "Microsurgical decompression for hemifacial spasm",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS059",
+    "name": "Extracranial-Intracranial Bypass Procedures (EC-IC) bypass procedures",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS060",
+    "name": "Image Guided Craniotomy",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "NS061",
+    "name": "Baclofen pump implantation lesioning for movement disorder including Parkinsonism/Spinal Cord Stimulator Implantation",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS062",
+    "name": "Programmable Ventriculo-Peritoneal (VP) shunt excluding the cost of the Device",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS063",
+    "name": "Endoscopic Sympathectomy",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS064",
+    "name": "Lumbar Puncture",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "NS065",
+    "name": "External Ventricular Drainage (EVD)",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "NS066",
+    "name": "Endoscopic 3rd ventriculostomy",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS067",
+    "name": "Endoscopic cranial surgery/Biopsy/aspiration",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS068",
+    "name": "Endoscopic discectomy (Lumbar, Cervical)",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS069",
+    "name": "Aneurysm coiling (Endovascular)",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS070",
+    "name": "Surgery for Skull Fractures",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS071",
+    "name": "Carpel Tunnel decompression",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "NS072",
+    "name": "Clipping of intracranial aneurysm",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "NS073",
+    "name": "Surgery for intracranial Arteriovenous malformations (AVM)",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 62662.0
+  },
+  {
+    "code": "NS074",
+    "name": "Foramen magnum decompression for Chiari Malformation",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 83334.0
+  },
+  {
+    "code": "NS075",
+    "name": "Dorsal column stimulation for backache in failed back syndrome",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS076",
+    "name": "Surgery for recurrent disc prolapse/epidural fibrosis",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS077",
+    "name": "Decompressive craniotomy for hemispherical acute subdural haematoma/ brain swelling/large infarct",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "NS078",
+    "name": "Intra-arterial thrombolysis with Tissue Plasminogen Activator (TPA) (for ischemic stroke )",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NS079",
+    "name": "Stereotactic aspiration of intracerebral haematoma",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS080",
+    "name": "Endoscopic aspiration of intracerebellar haematoma",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS081",
+    "name": "Stereotactic Radiosurgery for brain pathology (X knife/Gamma) - ONE session",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS082",
+    "name": "Stereotactic Radiosurgery for brain pathology (X knife / Gamma knife -Two or more sessions)",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "NS083",
+    "name": "Battery Placement for Deep Brain Stimulation (DBS)",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NS084",
+    "name": "Baclofen pump implantation for spasticity/Intra-thecal Pump Implantation",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "NS085",
+    "name": "Surgery for Scalp Arteriovenous Malformations (AVMs)",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS086",
+    "name": "Kyphoplasty excluding the cost of implants",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "NS087",
+    "name": "Balloon Kyphoplasty",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "NS088",
+    "name": "Lesioning procedures for Parkinson-s disease,Dystonia etc.",
+    "category": "Neuro-Surgery Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR001",
+    "name": "Joints Aspiration",
+    "category": "Orthopaedics Procedure",
+    "rate": 1088.0
+  },
+  {
+    "code": "OR002",
+    "name": "Plaster Work",
+    "category": "Orthopaedics Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OR003",
+    "name": "Fingers (post slab)",
+    "category": "Orthopaedics Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "OR004",
+    "name": "Fingers full plaster",
+    "category": "Orthopaedics Procedure",
+    "rate": 1020.0
+  },
+  {
+    "code": "OR005",
+    "name": "Colles Fracture - Below elbow",
+    "category": "Orthopaedics Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "OR006",
+    "name": "Colles Fracture - Full plaster",
+    "category": "Orthopaedics Procedure",
+    "rate": 3060.0
+  },
+  {
+    "code": "OR007",
+    "name": "Colles fracture Ant. Or post. slab",
+    "category": "Orthopaedics Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "OR008",
+    "name": "Above elbow full plaster",
+    "category": "Orthopaedics Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "OR009",
+    "name": "Above Knee post-slab",
+    "category": "Orthopaedics Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "OR010",
+    "name": "Below Knee full plaster",
+    "category": "Orthopaedics Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "OR011",
+    "name": "Below Knee post-slab",
+    "category": "Orthopaedics Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OR012",
+    "name": "Tube Plaster (or plaster cylinder)",
+    "category": "Orthopaedics Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OR013",
+    "name": "Above knee full plaster",
+    "category": "Orthopaedics Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OR014",
+    "name": "Above knee full slab",
+    "category": "Orthopaedics Procedure",
+    "rate": 2380.0
+  },
+  {
+    "code": "OR015",
+    "name": "Minerva Jacket",
+    "category": "Orthopaedics Procedure",
+    "rate": 6256.0
+  },
+  {
+    "code": "OR016",
+    "name": "Plaster Jacket",
+    "category": "Orthopaedics Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "OR017",
+    "name": "Shoulder spica",
+    "category": "Orthopaedics Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OR018",
+    "name": "Single Hip spica",
+    "category": "Orthopaedics Procedure",
+    "rate": 4760.0
+  },
+  {
+    "code": "OR019",
+    "name": "Double Hip spica",
+    "category": "Orthopaedics Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OR020",
+    "name": "Strapping of Finger",
+    "category": "Orthopaedics Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "OR021",
+    "name": "Strapping of Toes",
+    "category": "Orthopaedics Procedure",
+    "rate": 408.0
+  },
+  {
+    "code": "OR022",
+    "name": "Strapping of Wrist",
+    "category": "Orthopaedics Procedure",
+    "rate": 510.0
+  },
+  {
+    "code": "OR023",
+    "name": "Strapping of Elbow",
+    "category": "Orthopaedics Procedure",
+    "rate": 1020.0
+  },
+  {
+    "code": "OR024",
+    "name": "Strapping of Knee",
+    "category": "Orthopaedics Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "OR025",
+    "name": "Strapping of Ankle",
+    "category": "Orthopaedics Procedure",
+    "rate": 544.0
+  },
+  {
+    "code": "OR026",
+    "name": "Strapping of Chest",
+    "category": "Orthopaedics Procedure",
+    "rate": 1020.0
+  },
+  {
+    "code": "OR027",
+    "name": "Strapping of Shoulder",
+    "category": "Orthopaedics Procedure",
+    "rate": 1020.0
+  },
+  {
+    "code": "OR028",
+    "name": "Figure of 8 bandage",
+    "category": "Orthopaedics Procedure",
+    "rate": 680.0
+  },
+  {
+    "code": "OR029",
+    "name": "Collar and cuff sling",
+    "category": "Orthopaedics Procedure",
+    "rate": 340.0
+  },
+  {
+    "code": "OR030",
+    "name": "Ball bandage",
+    "category": "Orthopaedics Procedure",
+    "rate": 544.0
+  },
+  {
+    "code": "OR031",
+    "name": "Application of POP Casts for Upper & Lower Limbs",
+    "category": "Orthopaedics Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "OR032",
+    "name": "Application of Functional Cast Brace",
+    "category": "Orthopaedics Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "OR033",
+    "name": "Application of Skin Traction",
+    "category": "Orthopaedics Procedure",
+    "rate": 1700.0
+  },
+  {
+    "code": "OR034",
+    "name": "Application of Skeletal Tractions",
+    "category": "Orthopaedics Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "OR035",
+    "name": "Bandage & Strappings for Fractures",
+    "category": "Orthopaedics Procedure",
+    "rate": 1360.0
+  },
+  {
+    "code": "OR036",
+    "name": "Aspiration & Intra Articular Injections",
+    "category": "Orthopaedics Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "OR037",
+    "name": "Application of POP Spices & Jackets",
+    "category": "Orthopaedics Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "OR038",
+    "name": "Close Reduction of Fractures of Limb & POP",
+    "category": "Orthopaedics Procedure",
+    "rate": 9112.0
+  },
+  {
+    "code": "OR039",
+    "name": "Open Reduction & Internal Fixation (ORIF) of Fingers & Toes",
+    "category": "Orthopaedics Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OR040",
+    "name": "Open Reduction of fracture of Long Bones of Upper / Lower Limb -Nailing & External Fixation",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR041",
+    "name": "Open Reduction of fracture of Long Bones of Upper /Lower Limb -AO Procedures",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR042",
+    "name": "Tension Band Wirings",
+    "category": "Orthopaedics Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "OR043",
+    "name": "Bone Grafting",
+    "category": "Orthopaedics Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "OR044",
+    "name": "Excision or other Operations for Scaphoid Fractures",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR045",
+    "name": "Sequestrectomy & Saucerisation",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR046",
+    "name": "Sequestrectomy & Saucerizations -Arthrotomy",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR047",
+    "name": "Multiple Pinning Fracture Neck Femur",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR048",
+    "name": "Plate Fixations for Fracture Neck Femur",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR049",
+    "name": "AO Compression Procedures for Fracture Neck Femur",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR050",
+    "name": "Open Reduction of Fracture Neck Femur Muscle Pedicle Graft and Internal Fixations",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR051",
+    "name": "Close Reduction of Dislocations",
+    "category": "Orthopaedics Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "OR052",
+    "name": "Open Reduction of Dislocations",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR053",
+    "name": "Open Reduction & Internal Fixation (ORIF) of Fracture Dislocation",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR054",
+    "name": "Neurolysis/Nerve repair",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR055",
+    "name": "Nerve Repair with Grafting",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR056",
+    "name": "Tendon with Transplant or Graft",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR057",
+    "name": "Tendon Lengthening/Tendon repair",
+    "category": "Orthopaedics Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "OR058",
+    "name": "Tendon Transfer",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR059",
+    "name": "Split Osteotomy and Internal Fixations",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR060",
+    "name": "Anterolateral decompression for tuberculosis/ Costo-Transversectomy",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR061",
+    "name": "Anterolateral Decompression and Spine Fusion",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR062",
+    "name": "Corrective Osteotomy & Internal Fixation- short bones",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR063",
+    "name": "Corrective Osteotomy & Internal Fixation- long bones",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR064",
+    "name": "Arthrodesis of - Minor Joints",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR065",
+    "name": "Arthrodesis of - Major Joints",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR066",
+    "name": "Soft Tissue Operations for Congenital Talipes Equinovarus (CTEV)",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR067",
+    "name": "Hemiarthroplasty- Hip",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR068",
+    "name": "Hemiarthroplasty- Shoulder",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR069",
+    "name": "Operations for Brachial Plexus & Cervical Rib",
+    "category": "Orthopaedics Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "OR070",
+    "name": "Amputations - Below Knee",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR071",
+    "name": "Amputations - Below Elbow",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR072",
+    "name": "Amputations - Above Knee",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR073",
+    "name": "Amputations - Above Elbow",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR074",
+    "name": "Amputations - Forequarter",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR075",
+    "name": "Amputations -Hind Quarter and Hemipelvectomy",
+    "category": "Orthopaedics Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "OR076",
+    "name": "Disarticulations - Major joint",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR077",
+    "name": "Disarticulations - Minor joint",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR078",
+    "name": "Arthrography",
+    "category": "Orthopaedics Investigation",
+    "rate": 12920.0
+  },
+  {
+    "code": "OR079",
+    "name": "Arthroscopy - Diagnostic",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR080",
+    "name": "Arthroscopy-therapeutic: without implant",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR081",
+    "name": "Arthroscopy-therapeutic: with implant",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR082",
+    "name": "Soft Tissue Operation on Joints -Small",
+    "category": "Orthopaedics Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "OR083",
+    "name": "Soft Tissue Operation on Joints -Large",
+    "category": "Orthopaedics Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "OR084",
+    "name": "Myocutaneous and Fasciocutaneous Flap Procedures for Limbs",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR085",
+    "name": "Removal of Wires & Screw",
+    "category": "Orthopaedics Procedure",
+    "rate": 8656.0
+  },
+  {
+    "code": "OR086",
+    "name": "Removal of Plates",
+    "category": "Orthopaedics Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "OR087",
+    "name": "Total Hip Replacement (THR)",
+    "category": "Orthopaedics Procedure",
+    "rate": 83334.0
+  },
+  {
+    "code": "OR088",
+    "name": "Total Ankle Joint Replacement (TAR) - Unilateral",
+    "category": "Orthopaedics Procedure",
+    "rate": 83334.0
+  },
+  {
+    "code": "OR089",
+    "name": "Total Knee Joint Replacement (TKR) - Unilateral",
+    "category": "Orthopaedics Procedure",
+    "rate": 98192.0
+  },
+  {
+    "code": "OR090",
+    "name": "Total Shoulder Joint Replacement - Unilateral",
+    "category": "Orthopaedics Procedure",
+    "rate": 83334.0
+  },
+  {
+    "code": "OR091",
+    "name": "Total Elbow Joint Replacement - Unilateral",
+    "category": "Orthopaedics Procedure",
+    "rate": 71060.0
+  },
+  {
+    "code": "OR092",
+    "name": "Total Wrist Joint Replacement - Unilateral",
+    "category": "Orthopaedics Procedure",
+    "rate": 83334.0
+  },
+  {
+    "code": "OR093",
+    "name": "Total Finger Joint Replacement",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR094",
+    "name": "Tubular external fixator",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR095",
+    "name": "Ilizarov's External Fixator",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR096",
+    "name": "Pelvi-acetabular fracture -Internal fixation",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR097",
+    "name": "Meniscectomy",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR098",
+    "name": "Meniscus Repair",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR099",
+    "name": "Anterior Cruciate Ligament (ACL) Reconstruction",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR100",
+    "name": "Posterior Cruciate Ligament (PCL) Reconstruction",
+    "category": "Orthopaedics Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "OR101",
+    "name": "Knee Collateral Ligament Reconstruction",
+    "category": "Orthopaedics Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "OR102",
+    "name": "Bankart Repair Shoulder",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR103",
+    "name": "Rotator cuff repair / RC repair",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR104",
+    "name": "Biceps Tenodesis",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR105",
+    "name": "Distal biceps tendon repair",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR106",
+    "name": "Arthrolysis of knee",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR107",
+    "name": "Capsulotomy of Shoulder",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR108",
+    "name": "Conservative Plaster of Paris (POP)",
+    "category": "Orthopaedics Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "OR109",
+    "name": "Application for CTEV per sitting",
+    "category": "Orthopaedics Procedure",
+    "rate": 5780.0
+  },
+  {
+    "code": "OR110",
+    "name": "Total Hip Replacement (THR) Revision Stage-I",
+    "category": "Orthopaedics Procedure",
+    "rate": 62662.0
+  },
+  {
+    "code": "OR111",
+    "name": "Total Hip Replacement (THR) Revision Stage-II",
+    "category": "Orthopaedics Procedure",
+    "rate": 83334.0
+  },
+  {
+    "code": "OR112",
+    "name": "Total Knee Replacement (TKR) Revision Stage-I",
+    "category": "Orthopaedics Procedure",
+    "rate": 62662.0
+  },
+  {
+    "code": "OR113",
+    "name": "Total Knee Replacement (TKR) Revision Stage-II",
+    "category": "Orthopaedics Procedure",
+    "rate": 83334.0
+  },
+  {
+    "code": "OR114",
+    "name": "Illizarov/ external fixation for limb lengthening/deformity correction",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR115",
+    "name": "Discectomy/ Micro Discectomy",
+    "category": "Orthopaedics Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "OR116",
+    "name": "Spinal Fixation Cervical/dorsolumbar/ lumbosacral",
+    "category": "Orthopaedics Procedure",
+    "rate": 98192.0
+  },
+  {
+    "code": "OR117",
+    "name": "Fusion Surgery Cervical/ Lumbar Spine up to 2 Level",
+    "category": "Orthopaedics Procedure",
+    "rate": 40698.0
+  },
+  {
+    "code": "OR118",
+    "name": "Spinal Fusion Surgery Cervical/ Lumbar Spine -More than 2 Level",
+    "category": "Orthopaedics Procedure",
+    "rate": 52972.0
+  },
+  {
+    "code": "OR119",
+    "name": "Scoliosis Surgery/ Deformity Correction of Spine",
+    "category": "Orthopaedics Procedure",
+    "rate": 62662.0
+  },
+  {
+    "code": "OR120",
+    "name": "Vertebroplasty",
+    "category": "Orthopaedics Procedure",
+    "rate": 49096.0
+  },
+  {
+    "code": "OR121",
+    "name": "Spinal Injections",
+    "category": "Orthopaedics Procedure",
+    "rate": 3230.0
+  },
+  {
+    "code": "OR122",
+    "name": "Dynamic Hip Screw (DHS) for Fracture Neck Femur",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR123",
+    "name": "Proximal Femur Nail (PFN) for IT fracture (Intertrochanteric Fractures)",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR124",
+    "name": "Spinal Osteotomy",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR125",
+    "name": "Illizarov-s / External Fixation for Trauma",
+    "category": "Orthopaedics Procedure",
+    "rate": 34238.0
+  },
+  {
+    "code": "OR126",
+    "name": "Soft Tissue Operations for Polio/ Cerebral Palsy",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "OR127",
+    "name": "Mini Fixator for Hand/Foot",
+    "category": "Orthopaedics Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "BP001",
+    "name": "Injection of Keloids - Ganglion",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "BP002",
+    "name": "Injection of Keloids - Haemangioma",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 2720.0
+  },
+  {
+    "code": "BP003",
+    "name": "Free Grafts - Wolfe Grafts",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "BP004",
+    "name": "Free Grafts - Thiersch- Small Area 5%",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 12920.0
+  },
+  {
+    "code": "BP005",
+    "name": "Free Grafts - Large Area 10%",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "BP006",
+    "name": "Free Grafts - Very Large Area 20% and above.",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP007",
+    "name": "Skin Flaps - Rotation Flaps",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "BP008",
+    "name": "Skin Flaps - Advancement Flaps",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "BP009",
+    "name": "Skin Flaps - Direct- cross Leg Flaps- Cross Arm Flap",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP010",
+    "name": "Skin Flaps - Cross Finger",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "BP011",
+    "name": "Skin Flaps - Abdominal",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "BP012",
+    "name": "Skin Flaps - Thoracic",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "BP013",
+    "name": "Skin Flaps - Arm Etc.",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "BP014",
+    "name": "Subcutaneous Pedicle Flaps Raising",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "BP015",
+    "name": "Subcutaneous Pedicle Flaps Delay",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "BP016",
+    "name": "Subcutaneous Pedicle Flaps Transfer",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "BP017",
+    "name": "Cartilage Grafting",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP018",
+    "name": "Cleft Lip - Repair.",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "BP019",
+    "name": "Cleft Palate Repair",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP020",
+    "name": "Primary Bone Grafting for Alveolar Cleft in Cleft Lip",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP021",
+    "name": "Secondary Surgery for Cleft Lip Deformity",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP022",
+    "name": "Secondary Surgery for Cleft Palate",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP023",
+    "name": "Reconstruction of Eyelid Defects - Minor",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "BP024",
+    "name": "Reconstruction of Eyelid Defects - Major",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "BP025",
+    "name": "Plastic Surgery of Different Regions of the Ear -Minor",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "BP026",
+    "name": "Plastic Surgery of Different Regions of the Ear -Major",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP027",
+    "name": "Plastic Surgery of the Nose - Minor",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 17765.0
+  },
+  {
+    "code": "BP028",
+    "name": "Plastic Surgery of the Nose - Major",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP029",
+    "name": "Plastic Surgery for Facial Paralysis (Support with Reanimation)",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP030",
+    "name": "After Mastectomy (Reconstruction) Mammoplasty",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP031",
+    "name": "Syndactyly Repair",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 22610.0
+  },
+  {
+    "code": "BP032",
+    "name": "Dermabrasion Face",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 27778.0
+  },
+  {
+    "code": "BP033",
+    "name": "Flap Reconstructive Surgery - Head and Neck",
+    "category": "Burns and Plastic Surgery",
+    "rate": 40698.0
+  },
+  {
+    "code": "BP034",
+    "name": "up to 30% Burns 1st Dressing",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 2040.0
+  },
+  {
+    "code": "BP035",
+    "name": "up to 30% Burns Subsequent Dressing",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 1700.0
+  },
+  {
+    "code": "BP036",
+    "name": "30% to 50% Burns 1st Dressing",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 3400.0
+  },
+  {
+    "code": "BP037",
+    "name": "30% to 50% Burns Subsequent Dressing",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 2380.0
+  },
+  {
+    "code": "BP038",
+    "name": "Extensive Burn -above 50% Frist Dressing",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 4080.0
+  },
+  {
+    "code": "BP039",
+    "name": "Extensive Burn -above 50% Subsequent dressing",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 2380.0
+  },
+  {
+    "code": "BP040",
+    "name": "VAC Therapy/Dressing including all Consumables",
+    "category": "Burns And Plastic Surgery Procedure",
+    "rate": 6800.0
+  },
+  {
+    "code": "HC001",
+    "name": "Annual Health Check-up - CCS Group A Officer of above 40 years of age / Pensioner primary card holder 75 years of age and above-Male,",
+    "category": "Annual Health Check-up",
+    "rate": 2000.0
+  },
+  {
+    "code": "HC002",
+    "name": "Annual Health Check-up - CCS Group A Officer of above 40 years of age / Pensioner primary card holder 75 years of age and above - Female",
+    "category": "Annual Health Check-up",
+    "rate": 2200.0
+  },
+  {
+    "code": "WC001",
+    "name": "Per Day Ward charges",
+    "category": "Ward charges",
+    "rate": 1500.0
+  },
+  {
+    "code": "IMPP01U100",
+    "name": "Cost of the Needle - Endo bronchial Ultrasound (EBUS) -Trans bronchial needle aspiration (TBNA)",
+    "category": "Pulmonology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMRP01U100",
+    "name": "USG Guided Intervention - Specialized Procedures excluding cost of Catheter or biopsy gun",
+    "category": "Interventional Radiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMRP02U100",
+    "name": "CT Guided Intervention - Percutaneous catheter drainage/tube placement excluding the cost of tube /catheter",
+    "category": "Interventional Radiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMDP01U100",
+    "name": "Cost of the Graft Used in Segmental / Hemi Mandibulectomy with graft",
+    "category": "Dentistry",
+    "rate": 0.0
+  },
+  {
+    "code": "IMDP02U100",
+    "name": "Cost of the Graft Used in Sub-Total mandibulectomy with graft",
+    "category": "Dentistry",
+    "rate": 0.0
+  },
+  {
+    "code": "IMDP03U100",
+    "name": "Cost of the Graft Used in Maxillectomy/Mandibulectomy- Total with graft",
+    "category": "Dentistry",
+    "rate": 0.0
+  },
+  {
+    "code": "IMDP04U100",
+    "name": "Cost of the Graft Used in Maxillectomy- partial with graft",
+    "category": "Dentistry",
+    "rate": 0.0
+  },
+  {
+    "code": "IMDP05U100",
+    "name": "Cost of the Implants Used in Facial bones - Complicated Reduction with fixation",
+    "category": "Dentistry",
+    "rate": 0.0
+  },
+  {
+    "code": "IMDP06U100",
+    "name": "Unspecified Implant - Dentistry",
+    "category": "Dentistry",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOP01U100",
+    "name": "Cost of the Lacrimal Implants per eye",
+    "category": "Ophthalmology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOP02U100",
+    "name": "Cost of the Trabeculotomy /kahook dual blade goniotomy excluding blade cost per eye",
+    "category": "Ophthalmology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOP03U100",
+    "name": "Cost of the CAIRS Corneal allogenic intrastromal ring segments per eye",
+    "category": "Ophthalmology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOP05",
+    "name": "Hydrophobic Foldable IOL (Multi Piece/Single Piece Aspheric)",
+    "category": "Ophthalmology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOP06",
+    "name": "Hydrophilic Acrylic Lens",
+    "category": "Ophthalmology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOP07",
+    "name": "PMMA IOL",
+    "category": "Ophthalmology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOP08",
+    "name": "Scleral Fixated IOL",
+    "category": "Ophthalmology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOP09U100",
+    "name": "Unspecified Implant - Ophthalmology",
+    "category": "Ophthalmology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP01",
+    "name": "Drug eluting coronary stents( All DCGI approved, DCGI and FDA approved , All DCGI and CE approved)",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP02",
+    "name": "Bare Metal Coronary stents (cobalt and other coated stents)",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP03",
+    "name": "Stainless Steel Bare Coronary Metal Stents",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP04",
+    "name": "Stainless Steel Bare metal - Non Coronary Vascular Stents",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP05",
+    "name": "Cobalt Bare metal - Non Coronary Vascular Stents",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP06",
+    "name": "Nitinol/Other Bare metal - Non Coronary Vascular Stents",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP07",
+    "name": "Single Chamber Cardiac Pacemaker without rate response",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP08",
+    "name": "Single Chamber Cardiac Pacemaker with rate response",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP09",
+    "name": "Dual Chamber Cardiac Pacemaker",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP10",
+    "name": "Bi-Ventricular Pacemaker (CRT-P)",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP11",
+    "name": "Implantable Cardioverter Defibrillator (Single Chamber) (ICD/AICD- Single Chamber)",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP12",
+    "name": "Implantable Cardioverter Defibrillator (Dual  Chamber) (ICD/AICD- Dual Chamber)",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP13",
+    "name": "Combo Device (CRT-D)",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP14",
+    "name": "Rotablator with Advancer",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP15",
+    "name": "Rotablator Burr",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP16U100",
+    "name": "Intra aortic balloon pump (IABP)",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP17U100",
+    "name": "Cost of the Intra Vascular Coils",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCP18U100",
+    "name": "Unspecified Implant - Cardiology",
+    "category": "Cardiology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV01U100",
+    "name": "Cost of RFA Ablation Catheter for Varicose Veins",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV02U100",
+    "name": "Atrial Septal Defect (ASD) Closure Device",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV03U100",
+    "name": "VSD Closure Device",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV04U100",
+    "name": "Patent Ductus Arteriosus (PDA) Closure Device",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV05U100",
+    "name": "Aortic Valve - Mechanical",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV06U100",
+    "name": "Aortic Valve - Biological",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV07U100",
+    "name": "Mitral Valve - Mechanical",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV08U100",
+    "name": "Mitral Valve - Biological",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV09U100",
+    "name": "Tricuspid Valve - Mechanical",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV10U100",
+    "name": "Tricuspid Valve - Biological",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV11U100",
+    "name": "Pulmonary Valve - Mechanical",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV12U100",
+    "name": "Pulmonary Valve - Biological",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV13U100",
+    "name": "Cost of Conduit",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV14U100",
+    "name": "Aorta Femoral Bypass Graft",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV15U100",
+    "name": "Aortic Graft(Ascending Aorta/Arch of Aorta/Descending Aorta(Thoracic/Abdominal)",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV16",
+    "name": "Aortic Stent Graft (expandable, bifurcated and including delivery system)",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV17U100",
+    "name": "Graft Used in Bentall Repair",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV18U100",
+    "name": "Cost of the Balloon used in Balloon dilatation of Aortic coarctation",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV19U100",
+    "name": "Cost of the Stent used in Coarctation Dilatation with Stenting",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV20U100",
+    "name": "Inferior Vena Cava (IVC) Filter",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMCV21U100",
+    "name": "Unspecified Implant - Cardiovascular And Cardiac Surgery",
+    "category": "Cardiovascular And Cardiac Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMGS01U100",
+    "name": "Cost of Haemorrhoidectomy Stappler",
+    "category": "General Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMGS02U100",
+    "name": "Unspecified Implant - General Surgery",
+    "category": "General Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMMG01U100",
+    "name": "Cost of the Oesophageal Stent",
+    "category": "Medical Gastroenterology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMMG02U100",
+    "name": "Cost of the Enteral Stent",
+    "category": "Medical Gastroenterology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMMG03U100",
+    "name": "Cost of the Endoscopy Capsule",
+    "category": "Medical Gastroenterology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMMG04U100",
+    "name": "Cost of the Colonic Stent",
+    "category": "Medical Gastroenterology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMMG05U100",
+    "name": "Cost of the Biliary Stent - Plastic",
+    "category": "Medical Gastroenterology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMMG06U100",
+    "name": "Cost of the Biliary Stent - Metallic",
+    "category": "Medical Gastroenterology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMMG07U100",
+    "name": "Cost of the Stent used in Transjugular Intrahepatic Portosystemic Shunt (TIPS)",
+    "category": "Medical Gastroenterology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMMG08U100",
+    "name": "Cost of the EUS (Endoscopic Ultrasound) Needle",
+    "category": "Medical Gastroenterology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMMG09U100",
+    "name": "Unspecified Implant - Medical Gastroenterology",
+    "category": "Medical Gastroenterology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMAG01U100",
+    "name": "Cost of the Simple Mesh",
+    "category": "Abdomen/GI Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMAG02U100",
+    "name": "Cost of the Composite Mesh",
+    "category": "Abdomen/GI Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMAG03U100",
+    "name": "Cost of the Tacker",
+    "category": "Abdomen/GI Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMAG04U100",
+    "name": "Unspecified Implant - Abdomen/GI Surgery",
+    "category": "Abdomen/GI Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNU01U100",
+    "name": "Cost of the DJ Stent",
+    "category": "Nephrology And Urology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNU02U100",
+    "name": "Cost of the Permcath catheter",
+    "category": "Nephrology And Urology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNU03U100",
+    "name": "Cost of the Arterio Venous Prosthetic Graft",
+    "category": "Nephrology And Urology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNU04U100",
+    "name": "Unspecified Implant - Nephrology And Urology",
+    "category": "Nephrology And Urology",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS01U100",
+    "name": "Cranioplasty Implants",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS02U100",
+    "name": "Stent Used in Ventriculoatrial /Ventriculoperitoneal Shunt",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS03U100",
+    "name": "Cost of the Implants Used in Anterior Cervical Spine Surgery with fusion",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS04U100",
+    "name": "Cost of the Implants Used in Anterio Lateral Decompression of spine",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS05U100",
+    "name": "Cost of the Implants Used in Cervical or Dorsal or Lumbar Laminectomy",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS06U100",
+    "name": "Cost of the Implants Used in Combined Trans-Oral Surgery & Craniovertebral (CV) Junction Fusion",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS07U100",
+    "name": "Cost of the Implants Used in Craniovertebral Junction (CVJ) Fusion procedures",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS08U100",
+    "name": "Cost of the Implants Used in Depressed Fracture Elevation",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS09U100",
+    "name": "Cost of the Implants Used in Lumbar Discectomy",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS10U100",
+    "name": "Cost of the Graft Used in Carotid Endarterectomy",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS11U100",
+    "name": "Cost of the Implants Used in Spinal Fusion Procedure",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS12",
+    "name": "DBS-Non-Rechargeable Device with Non-Directional Leads",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS13",
+    "name": "DBS-Non-Rechargeable Device with Directional Leads",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS14",
+    "name": "DBS-Rechargeable Device with Non-Directional Leads",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS15",
+    "name": "DBS-Rechargeable Device with Directional Leads",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS16",
+    "name": "New Battery (Implantable Pulse Generator)",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS17",
+    "name": "Intra-thecal Pump",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS18",
+    "name": "Spinal Cord Stimulator",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS19U100",
+    "name": "Cost of the Implants Used in Endoscopic aqueductoplasty",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS20U100",
+    "name": "Cost of the Stent Used in Carotid Stenting",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS21U100",
+    "name": "Cost of the Implants Used in Cervical disc arthroplasty",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS22U100",
+    "name": "Cost of the Implants Used in Lumbar disc arthroplasty",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS23U100",
+    "name": "Cost of the Implants Used in Cervical Laminoplasty",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS24U100",
+    "name": "Cost of the Implants Used in Lateral mass C1-C2 screw fixation",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS25U100",
+    "name": "Baclofen pump implantation lesioning for movement disorder including Parkinsonism",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS26U100",
+    "name": "Cost of the Device Used in Programmable Ventriculo-Peritoneal (VP) shunt",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS27U100",
+    "name": "External Ventricular Drainage (EVD)",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS28U100",
+    "name": "Cost of the Implants Used in Endoscopic discectomy (Lumbar, Cervical)",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS29U100",
+    "name": "Cost of the Endovascular Aneurysm Coils",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS30U100",
+    "name": "Cost of the Implants Used in Surgery for Skull Fractures",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS31U100",
+    "name": "Clipping of intracranial aneurysm",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS32U100",
+    "name": "Cost of the Implants Used in Surgery for intracranial Arteriovenous malformations (AVM)",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS33U100",
+    "name": "Cost of the Implants Used in Foramen magnum decompression for Chiari Malformation",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS34U100",
+    "name": "Cost of the Implants Used in Dorsal column stimulation for backache in failed back syndrome",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS35U100",
+    "name": "Cost of the Implants Used in Surgery for recurrent disc prolapse/epidural fibrosis",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS36U100",
+    "name": "Cost of the Implants Used in Baclofen pump implantation for spasticity",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS37U100",
+    "name": "Cost of the Implants Used in Kyphoplasty",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS38U100",
+    "name": "Cost of the Implants Used in Balloon Kyphoplasty",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMNS39U100",
+    "name": "Unspecified Implant - Neuro-Surgery",
+    "category": "Neuro-Surgery",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR01U100",
+    "name": "Cost of the Implants Used in Open Reduction & Internal Fixation (ORIF) of Fingers & Toes",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR02U100",
+    "name": "Cost of the Implants Used in Open Reduction of fracture of Long Bones of Upper / Lower Limb -Nailing & External Fixation",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR03U100",
+    "name": "Cost of the Implants Used in Open Reduction of fracture of Long Bones of Upper /Lower Limb -AO Procedures",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR04U100",
+    "name": "Cost of the Implants Used in Tension Band Wirings",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR05U100",
+    "name": "Cost of the Implants Used in Multiple Pinning Fracture Neck Femur",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR06U100",
+    "name": "Cost of the Implants Used in Plate Fixations for Fracture Neck Femur",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR07U100",
+    "name": "Cost of the Implants Used in AO Compression Procedures for Fracture Neck Femur",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR08U100",
+    "name": "Cost of the Implants Used in Open Reduction of Fracture Neck Femur Muscle Pedicle Graft and Internal Fixations",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR09U100",
+    "name": "Cost of the Implants Used in Open Reduction & Internal Fixation (ORIF) of Fracture Dislocation",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR10U100",
+    "name": "Cost of the Implants Used in Split Osteotomy and Internal Fixations",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR11U100",
+    "name": "Cost of the Implants Used in Anterolateral decompression for tuberculosis/ Costo-Transversectomy",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR12U100",
+    "name": "Cost of the Implants Used in Anterolateral Decompression and Spine Fusion",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR13U100",
+    "name": "Cost of the Implants Used in Corrective Osteotomy & Internal Fixation- short bones",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR14U100",
+    "name": "Cost of the Implants Used in Corrective Osteotomy & Internal Fixation- long bones",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR15U100",
+    "name": "Cost of the Implants Used in Arthrodesis of - Minor Joints",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR16U100",
+    "name": "Cost of the Implants Used in Arthrodesis of - Major Joints",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR17U100",
+    "name": "Cost of the Implants Used in Hemiarthroplasty- Hip",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR18U100",
+    "name": "Cost of the Implants Used in Hemiarthroplasty- Shoulder",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR19U100",
+    "name": "Cost of the Implants Used in Arthroscopy-therapeutic: with implant",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR20",
+    "name": "Cost of the Implants Used in Total Hip Replacement (THR)",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR21U100",
+    "name": "Cost of the Implants Used in Total Ankle Joint Replacement (TAR) - Unilateral",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR22",
+    "name": "Primary TKR - Titanium Alloy Coated-Femoral Component By Whatsoever Name/ Specifications",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR23",
+    "name": "Primary TKR - Oxidized Zirconium (OxZr) Alloy -Femoral Component By Whatsoever Name/ Specifications",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR24",
+    "name": "Primary TKR - Hi-Flex -Femoral Component By Whatsoever Name/ Specifications",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR25",
+    "name": "Primary TKR - Cobalt Chromium (CoCr) Alloy and other than at 1, 2 and 3 above -Femoral Component By Whatsoever Name/ Specifications",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR26",
+    "name": "Primary TKR - Titanium Alloy Coated-Tibial Component By Whatsoever Name/ Specifications",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR27",
+    "name": "Primary TKR - Oxidized Zirconium (OxZr) Alloy -Tibial Component By Whatsoever Name/ Specifications",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR28",
+    "name": "Primary TKR - Cobalt Chromium (CoCr) Alloy and other than Titanium Alloy Coated/Oxidized Zirconium (OxZr) Alloy/Hi-Flex -Tibial Component By Whatsoever Name/ Specifications",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR29",
+    "name": "Primary TKR - Articular Surface / Insert By Whatsoever Name / Specification (Any Material)",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR30",
+    "name": "Patella Component By Whatsoever Name / Specifications",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR31",
+    "name": "Primary TKR - Component Having Tibial Tray and Insert Combined as Single Unit By Whatsoever Name Specification -Polyethylene or cross linked polyethylene or highly cross linked polyethylene or any other material",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR32",
+    "name": "Primary TKR - Component Having Tibial Tray and Insert Combined as Single Unit By Whatsoever Name Specification -Tibial : Metallic,                                                                                                               Insert : Polyethylene or cross linked polyethylene or any other material.",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR33",
+    "name": "Revision Knee Implant System - Femoral Component By Whatsoever Name/ Specifications",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR34",
+    "name": "Revision Knee Implant System - Tibial Component By Whatsoever Name/ Specifications",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR35",
+    "name": "Revision Knee Implant System - Articular Surface / Insert By Whatsoever Name / Specification (Any Material)",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR36",
+    "name": "Revision Knee Implant System - Patella Component By Whatsoever Name / Specifications",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR37U100",
+    "name": "Cost of the Implants Used in Total Hip Replacement (THR) Revision Stage-II",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR38U100",
+    "name": "Cost of the Implants Used in Total Shoulder Joint Replacement - Unilateral",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR39U100",
+    "name": "Cost of the Implants Used in Total Elbow Joint Replacement - Unilateral",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR40U100",
+    "name": "Cost of the Implants Used in Total Wrist Joint Replacement - Unilateral",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR41U100",
+    "name": "Cost of the Implants Used in Total Finger Joint Replacement",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR42U100",
+    "name": "Cost of the Implants Used in Pelvi-acetabular fracture -Internal fixation",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR43U100",
+    "name": "Cost of the Implants Used in Meniscus Repair",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR44U100",
+    "name": "Cost of the Implants Used in Anterior Cruciate Ligament (ACL) Reconstruction",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR45U100",
+    "name": "Cost of the Implants Used in Posterior Cruciate Ligament (PCL) Reconstruction",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR46U100",
+    "name": "Cost of the Implants Used in Knee Collateral Ligament Reconstruction",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR47U100",
+    "name": "Cost of the Implants Used in Bankart Repair Shoulder",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR48U100",
+    "name": "Cost of the Implants Used in Rotator cuff repair / RC repair",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR49U100",
+    "name": "Cost of the Implants Used in Biceps Tenodesis",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR50U100",
+    "name": "Cost of the Implants Used in Distal biceps tendon repair",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR51U100",
+    "name": "Cost of the Implants Used in Spinal Fixation Cervical/dorsolumbar/ lumbosacral",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR52U100",
+    "name": "Cost of the Implants Used in Fusion Surgery Cervical/ Lumbar Spine upto 2 Level",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR53U100",
+    "name": "Cost of the Implants Used in Spinal Fusion Surgery Cervical/ Lumbar Spine -More than 2 Level",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR54U100",
+    "name": "Cost of the Implants Used in Scoliosis Surgery/ Deformity Correction of Spine",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR55U100",
+    "name": "Cost of the Implants Used in Vertebroplasty",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR56U100",
+    "name": "Cost of the Implants Used in Dynamic Hip Screw (DHS) for Fracture Neck Femur",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR57U100",
+    "name": "Cost of the Implants Used in Proximal Femur Nail (PFN) for IT fracture (Intertrochanteric Fractures)",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR58U100",
+    "name": "Cost of the Implants Used in Spinal Osteotomy",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "IMOR59U100",
+    "name": "Unspecified Implant - Orthopaedics",
+    "category": "Orthopaedics",
+    "rate": 0.0
+  },
+  {
+    "code": "US001",
+    "name": "Unspecified Code",
+    "category": "All specialities",
+    "rate": 0.0
+  },
+  {
+    "code": "CN004",
+    "name": "Eye Consultation(857,873,877 cannot be booked )",
+    "category": "Consultation",
+    "rate": 350.0
+  },
+  {
+    "code": "TMH001",
+    "name": "Caldwell Luc Operation (TMH - Head & Neck) (G1S1)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH002",
+    "name": "Evaluation under anaesthesia (TMH - Head & Neck) (G1S2)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH003",
+    "name": "Knife/Punch/ Excision Biopsy of Tumour (TMH - Head & Neck) (G1S3)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH004",
+    "name": "Laryngoscopy Direct (TMH - Head & Neck) (G1S4)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH005",
+    "name": "Laser Fulguration for recurrent lesions (TMH - Head & Neck) (G1S5)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH006",
+    "name": "Neck Biopsy-Excisional (TMH - Head & Neck) (G1S6)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH007",
+    "name": "Node Biopsy (TMH - Head & Neck) (G1S7)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH008",
+    "name": "Oral Cavity Fulguration (Laser) (TMH - Head & Neck) (G1S8)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH009",
+    "name": "Orbital Mass Biopsy (TMH - Head & Neck) (G1S9)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH010",
+    "name": "Gastroscopy (TMH - G.I. Surgery) (G1S10)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH011",
+    "name": "Rigid Sigmoidoscopy (TMH - G.I. Surgery) (G1S11)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH012",
+    "name": "Biopsy Needle  (TMH - Bone & Soft Tissue) (G1S12)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH013",
+    "name": "Bronchoscopy Diagnostic (TMH - Thoracic & Paediatric) (G1S13)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH014",
+    "name": "Esophagoscopy-Diagnostic (TMH - Thoracic & Paediatric) (G1S14)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH015",
+    "name": "Hickman Catheter Removal (TMH - Thoracic & Paediatric) (G1S15)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH016",
+    "name": "ICD Placement (TMH - Thoracic & Paediatric) (G1S16)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH017",
+    "name": "Lymph Node Biopsy - Superficial (TMH - Thoracic & Paediatric) (G1S17)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH018",
+    "name": "Pericardial Tap (TMH - Thoracic & Paediatric) (G1S18)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH019",
+    "name": "Pleural Tap (TMH - Thoracic & Paediatric) (G1S19)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH020",
+    "name": "Thorax (Trucut Biopsy) (TMH - Thoracic & Paediatric) (G1S20)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH021",
+    "name": "Tracheostom?y (TMH - Thoracic & Paediatric) (G1S21)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH022",
+    "name": "Trans Thoracic Needle Biopsy (TMH - Thoracic & Paediatric) (G1S22)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH023",
+    "name": "Circumcision (TMH - Genitourinary / Gynaecology) (G1S23)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH024",
+    "name": "Colposcopy (TMH - Genitourinary / Gynaecology) (G1S24)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH025",
+    "name": "Dilatation & Curettage (TMH - Genitourinary / Gynaecology) (G1S25)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH026",
+    "name": "Incision & Drainage (TMH - Genitourinary / Gynaecology) (G1S26)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH027",
+    "name": "Testicular Biopsy (TMH - Genitourinary / Gynaecology) (G1S27)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH028",
+    "name": "Excision Gland/Nodule (TMH - Breast) (G1S28)",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH029",
+    "name": "Alveolectomy (Upper) Per Oral (TMH - Head & Neck) (G2S1)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH030",
+    "name": "Excision of Pinna (TMH - Head & Neck) (G2S2)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH031",
+    "name": "Excision of Skin Malignancy - Head & Neck (TMH - Head & Neck) (G2S3)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH032",
+    "name": "Eye Lid Tumor Excision (TMH - Head & Neck) (G2S4)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH033",
+    "name": "Jaw Cyst Enucleation  (TMH - Head & Neck) (G2S5)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH034",
+    "name": "Mandible Curettage (TMH - Head & Neck) (G2S6)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH035",
+    "name": "Maxilla Curettage (TMH - Head & Neck) (G2S7)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH036",
+    "name": "Neck Exploration (TMH - Head & Neck) (G2S8)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH037",
+    "name": "Panendoscopy (TMH - Head & Neck) (G2S9)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH038",
+    "name": "Submandibular gland excision (TMH - Head & Neck) (G2S10)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH039",
+    "name": "Tongue wide excision per oral (TMH - Head & Neck) (G2S11)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH040",
+    "name": "Tonsillectomy (TMH - Head & Neck) (G2S12)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH041",
+    "name": "Wide Excision - Lip Lesion (TMH - Head & Neck) (G2S13)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH042",
+    "name": "Oral cavity excision-Small lesion -Laser (TMH - Head & Neck) (G2S14)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH043",
+    "name": "Colostomy Closure (TMH - G.I. Surgery) (G2S15)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH044",
+    "name": "Gastrostomy (TMH - G.I. Surgery) (G2S16)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH045",
+    "name": "Gastrotomy (TMH - G.I. Surgery) (G2S17)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH046",
+    "name": "Ileostomy (TMH - G.I. Surgery) (G2S18)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH047",
+    "name": "Closure Of Ileostomy (TMH - G.I. Surgery) (G2S19)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH048",
+    "name": "Internal Stenting (TMH - G.I. Surgery) (G2S20)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH049",
+    "name": "Exploratory Laparotomy (TMH - G.I. Surgery) (G2S21)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH050",
+    "name": "Laparoscopy Diagnostic (TMH - G.I. Surgery) (G2S22)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH051",
+    "name": "Amputation Of Fingers/Toes (TMH - Bone & Soft Tissue) (G2S23)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH052",
+    "name": "Biopsy Open (TMH - Bone & Soft Tissue) (G2S24)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH053",
+    "name": "Bronchoscopy +Esophagoscopy (Diagnostic) (TMH - Thoracic & Paediatric) (G2S25)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH054",
+    "name": "Bronchoscopy - Therapeutic (TMH - Thoracic & Paediatric) (G2S26)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH055",
+    "name": "Esophagoscopy - Therapeutic (TMH - Thoracic & Paediatric) (G2S27)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH056",
+    "name": "Exploratory Laparotomy/Thoracotomy (Inoperable) (TMH - Thoracic & Paediatric) (G2S28)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH057",
+    "name": "Hickman Catheterisation (TMH - Thoracic & Paediatric) (G2S29)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH058",
+    "name": "Nonresectable Esophageal Ca. Exploration (TMH - Thoracic & Paediatric) (G2S30)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH059",
+    "name": "Pleurodesis Talc (TMH - Thoracic & Paediatric) (G2S31)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH060",
+    "name": "Secondary Suturing (Thoracic) (TMH - Thoracic & Paediatric) (G2S32)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH061",
+    "name": "Thoracoscopic Pleurodesis (TMH - Thoracic & Paediatric) (G2S33)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH062",
+    "name": "Thoracoscopy-Diagnostic (TMH - Thoracic & Paediatric) (G2S34)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH063",
+    "name": "Thoracotomy-Inoperable (TMH - Thoracic & Paediatric) (G2S35)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH064",
+    "name": "Chest Wall Sinus Exploration (TMH - Thoracic & Paediatric) (G2S36)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH065",
+    "name": "Peneumonectomy Partial/Total (TMH - Thoracic & Paediatric) (G2S37)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH066",
+    "name": "Conisation (TMH - Genitourinary / Gynaecology) (G2S38)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH067",
+    "name": "Inoperable Laparotomy (TMH - Genitourinary / Gynaecology) (G2S39)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH068",
+    "name": "Diagnostic Hysteroscopy (TMH - Genitourinary / Gynaecology) (G2S40)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH069",
+    "name": "Bilateral Orchidectomy (TMH - Genitourinary / Gynaecology) (G2S41)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH070",
+    "name": "Cystoscopy (TMH - Genitourinary / Gynaecology) (G2S42)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH071",
+    "name": "Inguinal Node Biopsy (TMH - Genitourinary / Gynaecology) (G2S43)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH072",
+    "name": "Meatoplasty (TMH - Genitourinary / Gynaecology) (G2S44)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH073",
+    "name": "Prostate Biopsy (TMH - Genitourinary / Gynaecology) (G2S45)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH074",
+    "name": "Urethral Dilatation (TMH - Genitourinary / Gynaecology) (G2S46)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH075",
+    "name": "Reconstruction with Skin/Mucosal Graft (TMH - Plastic & Reconstructive) (G2S47)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH076",
+    "name": "Microdochectomy (TMH - Breast) (G2S48)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH077",
+    "name": "S/C Fossa Gland Dissection (TMH - Breast) (G2S49)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH078",
+    "name": "Breast Lumpectomy Alone (TMH - Breast) (G2S50)",
+    "category": "Cancer Surgery",
+    "rate": 7650.0
+  },
+  {
+    "code": "TMH079",
+    "name": "Buccal/Mucosa wide excision Cheek Flap (TMH - Head & Neck) (G3S1)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH080",
+    "name": "Central Compartment Clearance (TMH - Head & Neck) (G3S2)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH081",
+    "name": "Ethmoidectomy (TMH - Head & Neck) (G3S3)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH082",
+    "name": "Excision of parapharyngeal mass (TMH - Head & Neck) (G3S4)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH083",
+    "name": "Excision STS Neck / Mass Neck (TMH - Head & Neck) (G3S5)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH084",
+    "name": "Jaw Tumour Excision (TMH - Head & Neck) (G3S6)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH085",
+    "name": "Laser Subglottic Tracheal Stenosis (TMH - Head & Neck) (G3S8)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH086",
+    "name": "Laser Fulguration - Respiratory Papilloma (TMH - Head & Neck) (G3S9)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH087",
+    "name": "Neck Dissection-Functional/Modified/Supra omohyoid (TMH - Head & Neck) (G3S10)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH088",
+    "name": "Orbital mass excision (TMH - Head & Neck) (G3S11)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH089",
+    "name": "Parathyroid excision (TMH - Head & Neck) (G3S12)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH090",
+    "name": "Pharyngectomy-Partial (TMH - Head & Neck) (G3S13)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH091",
+    "name": "Premaxillectomy (TMH - Head & Neck) (G3S14)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH092",
+    "name": "Scalp tumor+skull bone excision (TMH - Head & Neck) (G3S15)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH093",
+    "name": "Thyroid-Hemi/Subtotal/Total Thyroidectomy (TMH - Head & Neck) (G3S16)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH094",
+    "name": "Tongue wide excision per oral with neck dissection (TMH - Head & Neck) (G3S17)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH095",
+    "name": "Tracheal wall partial resection (TMH - Head & Neck) (G3S18)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH096",
+    "name": "Wide excision floor of the mouth/Neck (TMH - Head & Neck) (G3S19)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH097",
+    "name": "Wide excision -Lip and Neck (TMH - Head & Neck) (G3S20)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH098",
+    "name": "Laser exciston-Supraglottic (TMH - Head & Neck) (G3S21)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH099",
+    "name": "Buccal/Mucosa wide excision - Peroral (TMH - Head & Neck) (G3S22)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH100",
+    "name": "Enucleation of the Eye (TMH - Head & Neck) (G3S23)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH101",
+    "name": "Eye lid (upper/lower) Excision with reconstruction (TMH - Head & Neck) (G3S24)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH102",
+    "name": "Floor of the Mouth - Wide excision (TMH - Head & Neck) (G3S25)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH103",
+    "name": "Laser Aretynoidectomy (TMH - Head & Neck) (G3S26)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH104",
+    "name": "Hemiglossectomy - Peroral (TMH - Head & Neck) (G3S27)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH105",
+    "name": "Micro laryngoscopy Chord stripping (Laser)/Laser excision Chordectomy (TMH - Head & Neck) (G3S28)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH106",
+    "name": "Oral cavity excision-Large lesion Laser (TMH - Head & Neck) (G3S29)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH107",
+    "name": "Abdominal Mass Excision (TMH - G.I. Surgery) (G3S30)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH108",
+    "name": "Cholecystectomy (TMH - G.I. Surgery) (G3S31)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH109",
+    "name": "Cholecysto-Jejunostomy (TMH - G.I. Surgery) (G3S32)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH110",
+    "name": "Choledocho-Duodenostomy (TMH - G.I. Surgery) (G3S33)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH111",
+    "name": "Colectomy Revision (TMH - G.I. Surgery) (G3S34)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH112",
+    "name": "Colon (Resection Anastomosis) (TMH - G.I. Surgery) (G3S35)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH113",
+    "name": "Colon (Left Hemicolectomy/Right Hemicolectomy/Sigmoid Colectomy/Transverse-Colectomy) (TMH - G.I. Surgery) (G3S36)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH114",
+    "name": "Colonic By-Pass (Multiple/Single) (TMH - G.I. Surgery) (G3S37)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH115",
+    "name": "Colostomy With Closure (TMH - G.I. Surgery) (G3S38)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH116",
+    "name": "Duodenotomy (TMH - G.I. Surgery) (G3S39)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH117",
+    "name": "Gastric Wedge Resection (TMH - G.I. Surgery) (G3S40)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH118",
+    "name": "Gastro-Jejunostomy (TMH - G.I. Surgery) (G3S41)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH119",
+    "name": "Hepatic Excision (TMH - G.I. Surgery) (G3S42)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH120",
+    "name": "Hepatic Port Placement/Port Removal (TMH - G.I. Surgery) (G3S43)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH121",
+    "name": "Laparoscopy Therapeutic/ Exploratory (TMH - G.I. Surgery) (G3S44)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH122",
+    "name": "Laparotomy For Staging (TMH - G.I. Surgery) (G3S45)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH123",
+    "name": "Pancreas Triple Bypass (TMH - G.I. Surgery) (G3S46)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH124",
+    "name": "Rectum Local Excision (TMH - G.I. Surgery) (G3S47)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH125",
+    "name": "Small Bowel By-Pass (Multiple)/(Single) (TMH - G.I. Surgery) (G3S48)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH126",
+    "name": "Small Bowel Resection Anastomosis (TMH - G.I. Surgery) (G3S49)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH127",
+    "name": "Splenectomy (TMH - G.I. Surgery) (G3S50)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH128",
+    "name": "Amputation Above Elbow/Below Elbow (TMH - Bone & Soft Tissue) (G3S51)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH129",
+    "name": "Amputation Above Knee/Below Knee (TMH - Bone & Soft Tissue) (G3S52)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH130",
+    "name": "Clavicle Excision (TMH - Bone & Soft Tissue) (G3S53)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH131",
+    "name": "Extracorporeal Irradiation (TMH - Bone & Soft Tissue) (G3S54)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH132",
+    "name": "Fibula Lower End Reconstruction (TMH - Bone & Soft Tissue) (G3S55)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH133",
+    "name": "Fibulectomy (TMH - Bone & Soft Tissue) (G3S56)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH134",
+    "name": "Groin + Iliac Node Dissection (TMH - Bone & Soft Tissue) (G3S57)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH135",
+    "name": "Groin Node Dissection (TMH - Bone & Soft Tissue) (G3S58)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH136",
+    "name": "Knee Arthrodesis (TMH - Bone & Soft Tissue) (G3S59)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH137",
+    "name": "Muscle Group Excision (TMH - Bone & Soft Tissue) (G3S60)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH138",
+    "name": "Open Biopsy of Vertebra (TMH - Bone & Soft Tissue) (G3S61)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH139",
+    "name": "Radius Lower End Excision (TMH - Bone & Soft Tissue) (G3S62)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH140",
+    "name": "Ray Amputation (TMH - Bone & Soft Tissue) (G3S63)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH141",
+    "name": "Scapulectomy Partial/Total (TMH - Bone & Soft Tissue) (G3S64)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH142",
+    "name": "Shoulder Disarticulation (TMH - Bone & Soft Tissue) (G3S65)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH143",
+    "name": "Soft Tissue Wide Excision (TMH - Bone & Soft Tissue) (G3S66)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH144",
+    "name": "Soft Tissue Wide Excision + Implant (TMH - Bone & Soft Tissue) (G3S67)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH145",
+    "name": "Soft Tissue Wide Excision + SSG (TMH - Bone & Soft Tissue) (G3S68)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH146",
+    "name": "Ulna Lower End Excision (TMH - Bone & Soft Tissue) (G3S69)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH147",
+    "name": "External Fixation (TMH - Bone & Soft Tissue) (G3S70)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH148",
+    "name": "Talar/Calcaneal Resection (TMH - Bone & Soft Tissue) (G3S71)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH149",
+    "name": "Percutaneous Vertebral Biopsy (TMH - Bone & Soft Tissue) (G3S72)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH150",
+    "name": "Bone Grafting (TMH - Bone & Soft Tissue) (G3S73)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH151",
+    "name": "Popliteal Clearance of Nodes (TMH - Bone & Soft Tissue) (G3S74)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH152",
+    "name": "Amputation (Paediatric) (TMH - Thoracic & Paediatric) (G3S75)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH153",
+    "name": "Anterior Mediastinotomy (TMH - Thoracic & Paediatric) (G3S76)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH154",
+    "name": "Bronchial Stent Placement (TMH - Thoracic & Paediatric) (G3S77)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH155",
+    "name": "Bulla Stapling (TMH - Thoracic & Paediatric) (G3S78)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH156",
+    "name": "Cervical Esophagostomy (TMH - Thoracic & Paediatric) (G3S79)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH157",
+    "name": "Chest Wall Excision Without Reconstruction (TMH - Thoracic & Paediatric) (G3S80)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH158",
+    "name": "Esophagoscopic Stent (TMH - Thoracic & Paediatric) (G3S81)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH159",
+    "name": "Excision/Pericardiac Window Open (TMH - Thoracic & Paediatric) (G3S82)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH160",
+    "name": "Gastric By-Pass (TMH - Thoracic & Paediatric) (G3S83)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH161",
+    "name": "Lung Wedge Resection (TMH - Thoracic & Paediatric) (G3S84)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH162",
+    "name": "Mediastinal Lymph Node Dissection (TMH - Thoracic & Paediatric) (G3S85)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH163",
+    "name": "Mediastinoscopy (TMH - Thoracic & Paediatric) (G3S86)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH164",
+    "name": "Metastatectomy (Single Lung) (TMH - Thoracic & Paediatric) (G3S87)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH165",
+    "name": "Palliative Bowel Bypass (TMH - Thoracic & Paediatric) (G3S88)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH166",
+    "name": "Pericardiectomy (TMH - Thoracic & Paediatric) (G3S89)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH167",
+    "name": "Retinoblastoma Excision (Paediatric) (TMH - Thoracic & Paediatric) (G3S90)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH168",
+    "name": "Retroperitoneal Lymph Node Biopsy (Exploration) (TMH - Thoracic & Paediatric) (G3S91)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH169",
+    "name": "STS Excision (Paediatric) (TMH - Thoracic & Paediatric) (G3S92)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH170",
+    "name": "Thoracoscopy-Therapeutic (TMH - Thoracic & Paediatric) (G3S93)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH171",
+    "name": "Thorax Re-Exploration (TMH - Thoracic & Paediatric) (G3S94)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH172",
+    "name": "Jejunostomy/Gastrostomy (TMH - Thoracic & Paediatric) (G3S95)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH173",
+    "name": "Rib Excision Only (TMH - Thoracic & Paediatric) (G3S96)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH174",
+    "name": "Burst Abdomen Suturing (TMH - Thoracic & Paediatric) (G3S97)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH175",
+    "name": "Exploration Emergency (TMH - Genitourinary / Gynaecology) (G3S98)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH176",
+    "name": "Groin Node Dissection (Unilateral) (TMH - Genitourinary / Gynaecology) (G3S99)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH177",
+    "name": "Excision of Ovarian Mass/Cyst (TMH - Genitourinary / Gynaecology) (G3S100)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH178",
+    "name": "Second Look Laparoscopy (TMH - Genitourinary / Gynaecology) (G3S101)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH179",
+    "name": "Second Look Laparotomy (TMH - Genitourinary / Gynaecology) (G3S102)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH180",
+    "name": "TAH (Total Abdominal Hysterectomy) (TMH - Genitourinary / Gynaecology) (G3S103)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH181",
+    "name": "TAH+ Bilateral Salpingo-Oopherectomy (TMH - Genitourinary / Gynaecology) (G3S104)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH182",
+    "name": "TAH + BSO + Node Sampling (TMH - Genitourinary / Gynaecology) (G3S105)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH183",
+    "name": "Vulva Hemivulvectomy (TMH - Genitourinary / Gynaecology) (G3S106)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH184",
+    "name": "Vulva Wide Excision (TMH - Genitourinary / Gynaecology) (G3S107)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH185",
+    "name": "Operative Hysteroscopy (TMH - Genitourinary / Gynaecology) (G3S108)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH186",
+    "name": "Lymphocoele Drainage (TMH - Genitourinary / Gynaecology) (G3S109)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH187",
+    "name": "Colostomy/Ileostomy Closure (TMH - Genitourinary / Gynaecology) (G3S110)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH188",
+    "name": "Cystoscopy + DJ Stenting (TMH - Genitourinary / Gynaecology) (G3S111)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH189",
+    "name": "Cystostomy - Suprapubic (TMH - Genitourinary / Gynaecology) (G3S112)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH190",
+    "name": "High Orchidectomy (TMH - Genitourinary / Gynaecology) (G3S113)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH191",
+    "name": "Scrotectomy (TMH - Genitourinary / Gynaecology) (G3S114)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH192",
+    "name": "Autograft Flap Reconstruction (Breast) (TMH - Plastic & Reconstructive) (G3S115)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH193",
+    "name": "Implant Reconstruction (Breast) (TMH - Plastic & Reconstructive) (G3S116)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH194",
+    "name": "Interpolated Flap Reconstruction-Extremity (TMH - Plastic & Reconstructive) (G3S117)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH195",
+    "name": "Local Flap Reconstruction (Extremity) (TMH - Plastic & Reconstructive) (G3S118)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH196",
+    "name": "Reconstruction with Anatomical Closure (TMH - Plastic & Reconstructive) (G3S119)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH197",
+    "name": "Reconstruction with Local Skin/Mucosal Flap (TMH - Plastic & Reconstructive) (G3S120)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH198",
+    "name": "Reconstruction with Single Flap (H & N) (TMH - Plastic & Reconstructive) (G3S121)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH199",
+    "name": "More than 2 Intermediate Procedures (TMH - Breast) (G3S122)",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "TMH200",
+    "name": "Alveolus Composite Resection/Commando (TMH - Head & Neck) (G4S1)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH201",
+    "name": "Bite Excision/Composite (TMH - Head & Neck) (G4S2)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH202",
+    "name": "Buccal/Mucosa Composite Resection/Commando (TMH - Head & Neck) (G4S3)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH203",
+    "name": "Composite Resection - Tonsil (TMH - Head & Neck) (G4S4)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH204",
+    "name": "Floor of the Mouth - Composite Resection (TMH - Head & Neck) (G4S5)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH205",
+    "name": "Hemiglossectomy peroral + neck dissection (TMH - Head & Neck) (G4S6)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH206",
+    "name": "Neck Dissection - Bilateral (TMH - Head & Neck) (G4S7)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH207",
+    "name": "Parotidectomy with neck dissection (TMH - Head & Neck) (G4S8)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH208",
+    "name": "Thyroidectomy (Hemi/Subtotal/Total) with neck dissection (TMH - Head & Neck) (G4S9)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH209",
+    "name": "Tongue/Floor of the Mouth - Pull through neck (TMH - Head & Neck) (G4S10)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH210",
+    "name": "Tongue composite resection/Commando  (TMH - Head & Neck) (G4S11)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH211",
+    "name": "Tracheal resection with anastomosis (TMH - Head & Neck) (G4S12)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH212",
+    "name": "Glosectomy - Anterior 2/3rd (TMH - Head & Neck) (G4S13)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH213",
+    "name": "Endoscopic Laser excision for Hypopharynx (TMH - Head & Neck) (G4S14)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH214",
+    "name": "Laryngectomy Near Total (TMH - Head & Neck) (G4S15)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH215",
+    "name": "Laryngectomy - Partial (TMH - Head & Neck) (G4S16)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH216",
+    "name": "Laryngectomy - Total (TMH - Head & Neck) (G4S17)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH217",
+    "name": "Laser fulguration/Excision Trachea (TMH - Head & Neck) (G4S18)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH218",
+    "name": "Mandibulectomy- Hemi./Marginal/Segmental including middle 1/3rd (TMH - Head & Neck) (G4S19)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH219",
+    "name": "Maxillectomy - Median/Partial/Total/Total with exenteration (TMH - Head & Neck) (G4S20)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH220",
+    "name": "Glossectomy Total (TMH - Head & Neck) (G4S21)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH221",
+    "name": "Parotidectomy - Radical/Superficial/Total (TMH - Head & Neck) (G4S22)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH222",
+    "name": "Abdominoperineal Resection (TMH - G.I. Surgery) (G4S23)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH223",
+    "name": "Cholecystectomy Radical (TMH - G.I. Surgery) (G4S24)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH224",
+    "name": "Colectomy Total (TMH - G.I. Surgery) (G4S25)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH225",
+    "name": "Gastrectomy (Bilroth-1)/(Bilroth-2) Distal Radical (TMH - G.I. Surgery) (G4S26)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH226",
+    "name": "Gastrectomy Proximal Radical (TMH - G.I. Surgery) (G4S27)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH227",
+    "name": "Hepatico-Jejunostomy (TMH - G.I. Surgery) (G4S28)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH228",
+    "name": "Rectum Anterior Resection (TMH - G.I. Surgery) (G4S29)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH229",
+    "name": "Colostomy (TMH - G.I. Surgery) (G4S30)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH230",
+    "name": "Colectomy Subtotal (TMH - G.I. Surgery) (G4S31)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH231",
+    "name": "Colo-Rectal Anastomosis (TMH - G.I. Surgery) (G4S32)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH232",
+    "name": "Cysto-Gastrostomy (TMH - G.I. Surgery) (G4S33)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH233",
+    "name": "Duodenum Partial Excision (TMH - G.I. Surgery) (G4S34)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH234",
+    "name": "Gastrectomy - Partial (TMH - G.I. Surgery) (G4S35)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH235",
+    "name": "Hepatectomy - Left Lateral (TMH - G.I. Surgery) (G4S36)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH236",
+    "name": "Hepatic Metastatectomy (TMH - G.I. Surgery) (G4S37)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH237",
+    "name": "Hepatic Wedge Excision (TMH - G.I. Surgery) (G4S38)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH238",
+    "name": "Pancreas Tumor Enucleation (TMH - G.I. Surgery) (G4S39)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH239",
+    "name": "Pancreatectomy - Distal (TMH - G.I. Surgery) (G4S40)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH240",
+    "name": "Pancreatic Fistula Closure (TMH - G.I. Surgery) (G4S41)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH241",
+    "name": "Peustow's Procedure (TMH - G.I. Surgery) (G4S42)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH242",
+    "name": "Re-Exploration (TMH - G.I. Surgery) (G4S43)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH243",
+    "name": "Segmental Hepatecomy (TMH - G.I. Surgery) (G4S44)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH244",
+    "name": "Amputation - Forequarter (TMH - Bone & Soft Tissue) (G4S45)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH245",
+    "name": "Centralization Of Ulna With Arthrodesis (TMH - Bone & Soft Tissue) (G4S46)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH246",
+    "name": "Elbow Replacement (TMH - Bone & Soft Tissue) (G4S47)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH247",
+    "name": "En Bloc Upper Humerus Excision (TMH - Bone & Soft Tissue) (G4S48)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH248",
+    "name": "Hip Replacement (TMH - Bone & Soft Tissue) (G4S49)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH249",
+    "name": "Knee Total Replacement (TMH - Bone & Soft Tissue) (G4S50)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH250",
+    "name": "Paraspinal Tumor Excision (TMH - Bone & Soft Tissue) (G4S51)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH251",
+    "name": "Sacral Chordomas (TMH - Bone & Soft Tissue) (G4S52)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH252",
+    "name": "Segmental Resection Lower Limb + Replacement (TMH - Bone & Soft Tissue) (G4S53)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH253",
+    "name": "Silastic Replacement (TMH - Bone & Soft Tissue) (G4S54)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH254",
+    "name": "Silastic Replacement of Hand (TMH - Bone & Soft Tissue) (G4S55)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH255",
+    "name": "Soft Tissue Wide Excision + Reconstruction (TMH - Bone & Soft Tissue) (G4S56)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH256",
+    "name": "Tikhoff Linberg (TMH - Bone & Soft Tissue) (G4S57)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH257",
+    "name": "Internal Fixation of Fractures (TMH - Bone & Soft Tissue) (G4S58)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH258",
+    "name": "Radius Lower End Excision + Wrist Fusion (TMH - Bone & Soft Tissue) (G4S59)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH259",
+    "name": "Shoulder/Elbow Arthrodesis (TMH - Bone & Soft Tissue) (G4S60)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH260",
+    "name": "Hip Arthrodesis (TMH - Bone & Soft Tissue) (G4S61)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH261",
+    "name": "Ilizarov Procedure (TMH - Bone & Soft Tissue) (G4S62)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH262",
+    "name": "Ankle Arthrodesis (TMH - Bone & Soft Tissue) (G4S63)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH263",
+    "name": "Curettage + Cement / Bone Graft (TMH - Bone & Soft Tissue) (G4S64)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH264",
+    "name": "Hip Disarticulation (TMH - Bone & Soft Tissue) (G4S65)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH265",
+    "name": "Spinal Decompression (TMH - Bone & Soft Tissue) (G4S66)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH266",
+    "name": "B.P. Fistula Repair (TMH - Thoracic & Paediatric) (G4S67)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH267",
+    "name": "Bronchial Sleeve Resection (TMH - Thoracic & Paediatric) (G4S68)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH268",
+    "name": "Chest Wall Excision With Any Lung Operation (TMH - Thoracic & Paediatric) (G4S69)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH269",
+    "name": "Chest Wall Excision With Reconstruction (TMH - Thoracic & Paediatric) (G4S70)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH270",
+    "name": "Coloplasty (TMH - Thoracic & Paediatric) (G4S71)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH271",
+    "name": "Esophagus R.A. (TMH - Thoracic & Paediatric) (G4S72)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH272",
+    "name": "Hemipelvectomy (Paediatric) (TMH - Thoracic & Paediatric) (G4S73)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH273",
+    "name": "Lobectomy/Bi-lobectomy (Pulmonary) (TMH - Thoracic & Paediatric) (G4S74)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH274",
+    "name": "Metastatectomy (Both Lungs) (TMH - Thoracic & Paediatric) (G4S75)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH275",
+    "name": "Thoracoscopic Pleurectomy (TMH - Thoracic & Paediatric) (G4S76)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH276",
+    "name": "Orbital Exenteration (Paediatric) (TMH - Thoracic & Paediatric) (G4S77)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH277",
+    "name": "Radical Nephrectomy (Paediatric) (TMH - Thoracic & Paediatric) (G4S78)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH278",
+    "name": "Thoracoscopic Excision (TMH - Thoracic & Paediatric) (G4S79)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH279",
+    "name": "Tracheal Stent (TMH - Thoracic & Paediatric) (G4S80)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH280",
+    "name": "High Orchidectomy + Scrotectomy (TMH - Genitourinary / Gynaecology) (G4S81)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH281",
+    "name": "Urethrotomy Visual Internal (TMH - Genitourinary / Gynaecology) (G4S82)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH282",
+    "name": "Bladder Tumor Trans Urethral Resection (TMH - Genitourinary / Gynaecology) (G4S83)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH283",
+    "name": "Colostomy + Urinary Diversion (TMH - Genitourinary / Gynaecology) (G4S84)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH284",
+    "name": "TAH+ BSO + Omentectomy (TMH - Genitourinary / Gynaecology) (G4S85)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH285",
+    "name": "Excision of Undescended Testis Tumor (TMH - Genitourinary / Gynaecology) (G4S86)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH286",
+    "name": "Vulvectomy - Radical (TMH - Genitourinary / Gynaecology) (G4S87)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH287",
+    "name": "Vulvectomy - Total (TMH - Genitourinary / Gynaecology) (G4S88)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH288",
+    "name": "Microvascular Reconstruction (Extremity) (TMH - Plastic & Reconstructive) (G4S89)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH289",
+    "name": "Penile Reconstruction (TMH - Plastic & Reconstructive) (G4S90)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH290",
+    "name": "Reconstruction With Double Flaps (Head and Neck) (TMH - Plastic & Reconstructive) (G4S91)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH291",
+    "name": "Reconstruction With Interpolation - Composite Flap (TMH - Plastic & Reconstructive) (G4S92)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH292",
+    "name": "Skeletal Reconstruction (Extremity) (TMH - Plastic & Reconstructive) (G4S93)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH293",
+    "name": "Bilateral Mastectomy (TMH - Breast) (G4S94)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH294",
+    "name": "Axillary Dissection Alone (TMH - Breast) (G4S95)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH295",
+    "name": "Breast Lumpectomy + Axilla Dissection (TMH - Breast) (G4S96)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH296",
+    "name": "Simple/Radical/Modified Radical Mastectomy (TMH - Breast) (G4S97)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH297",
+    "name": "Radical/Simple Mastectomy (TMH - Breast) (G4S98)",
+    "category": "Cancer Surgery",
+    "rate": 15300.0
+  },
+  {
+    "code": "TMH298",
+    "name": "Anterior Craniofacial Excision (TMH - Head & Neck) (G5S1)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH299",
+    "name": "Excision of Carotid Body Tumour (TMH - Head & Neck) (G5S2)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH300",
+    "name": "Excision of Transnasal Angiofibroma (TMH - Head & Neck) (G5S3)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH301",
+    "name": "Laryngopharyngectomy Total with Gastric Pull Up (TMH - Head & Neck) (G5S4)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH302",
+    "name": "Temporal Bone Resection (TMH - Head & Neck) (G5S5)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH303",
+    "name": "Excision of Clivus Tumour (Skull Base + Reconstruction) (TMH - Head & Neck) (G5S6)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH304",
+    "name": "Infratemporal fossa clearance (TMH - Head & Neck) (G5S7)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH305",
+    "name": "Colon (Total Proctocolectomy) (TMH - G.I. Surgery) (G5S8)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH306",
+    "name": "Common Bile Duct Excision (TMH - G.I. Surgery) (G5S9)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH307",
+    "name": "Excision Cholangiocarcinoma (TMH - G.I. Surgery) (G5S10)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH308",
+    "name": "Gastrectomy -Total (TMH - G.I. Surgery) (G5S11)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH309",
+    "name": "Hepatectomy -Right (TMH - G.I. Surgery) (G5S12)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH310",
+    "name": "Multi Organ Excision (TMH - G.I. Surgery) (G5S13)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH311",
+    "name": "Pancreatectomy -Subtotal (TMH - G.I. Surgery) (G5S14)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH312",
+    "name": "Rectum Post Exenteration (TMH - G.I. Surgery) (G5S15)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH313",
+    "name": "Retroperitoneal Sarcoma (TMH - G.I. Surgery) (G5S16)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH314",
+    "name": "Knee Arthrodesis with Turnoplasty/Allograft  (TMH - Bone & Soft Tissue) (G5S17)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH315",
+    "name": "Spinal Decompression + Reconstruction/Instrumentation  (TMH - Bone & Soft Tissue) (G5S18)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH316",
+    "name": "Revision of Shoulder/Knee Replacement (TMH - Bone & Soft Tissue) (G5S19)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH317",
+    "name": "En Bloc Excision + Reconstruction (TMH - Bone & Soft Tissue) (G5S20)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH318",
+    "name": "Rotationplasty (TMH - Bone & Soft Tissue) (G5S21)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH319",
+    "name": "Sacral Tumors (TMH - Bone & Soft Tissue) (G5S22)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH320",
+    "name": "Bronchial + Vascular Sleeve (TMH - Thoracic & Paediatric) (G5S23)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH321",
+    "name": "Radical Nephrectomy (Paediatric) + Bowel Excision (TMH - Thoracic & Paediatric) (G5S24)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH322",
+    "name": "Retroperitoneal Tumor + Bowel Excision (TMH - Thoracic & Paediatric) (G5S25)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH323",
+    "name": "Ivor Lewis (TMH - Thoracic & Paediatric) (G5S26)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH324",
+    "name": "Mediastinal Tumor Excision (TMH - Thoracic & Paediatric) (G5S27)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH325",
+    "name": "Pneumonectomy (TMH - Thoracic & Paediatric) (G5S28)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH326",
+    "name": "Total Esophagectomy (Transhiatal) (TMH - Thoracic & Paediatric) (G5S29)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH327",
+    "name": "Thymectomy (TMH - Thoracic & Paediatric) (G5S30)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH328",
+    "name": "Nephrectomy - Radical + IVC Thrombectomy (TMH - Genitourinary / Gynaecology) (G5S31)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH329",
+    "name": "Laparoscopy (TMH - Genitourinary / Gynaecology) (G5S32)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH330",
+    "name": "Ureteroscopy (TMH - Genitourinary / Gynaecology) (G5S33)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH331",
+    "name": "Cystectomy - Partial (TMH - Genitourinary / Gynaecology) (G5S34)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH332",
+    "name": "Exploration + Ileo/Colostomy (TMH - Genitourinary / Gynaecology) (G5S35)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH333",
+    "name": "Ileal Conduit (Bladder) (TMH - Genitourinary / Gynaecology) (G5S36)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH334",
+    "name": "Transurethral Resection of Prostate (TMH - Genitourinary / Gynaecology) (G5S37)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH335",
+    "name": "Ureter Resection Anastomosis (TMH - Genitourinary / Gynaecology) (G5S38)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH336",
+    "name": "Reimplantation of Ureter(s) (TMH - Genitourinary / Gynaecology) (G5S39)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH337",
+    "name": "Ureterectomy + Bladder Cuff (TMH - Genitourinary / Gynaecology) (G5S40)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH338",
+    "name": "Urethrectomy (TMH - Genitourinary / Gynaecology) (G5S41)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH339",
+    "name": "Ureteroscopic Resection (TMH - Genitourinary / Gynaecology) (G5S42)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH340",
+    "name": "Continent Urinary Diversion (TMH - Genitourinary / Gynaecology) (G5S43)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH341",
+    "name": "Neobladder (TMH - Genitourinary / Gynaecology) (G5S44)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH342",
+    "name": "Nephrectomy - Radical (TMH - Genitourinary / Gynaecology) (G5S45)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH343",
+    "name": "Nephroureterectomy (TMH - Genitourinary / Gynaecology) (G5S46)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH344",
+    "name": "Prostatectomy - Radical (TMH - Genitourinary / Gynaecology) (G5S47)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH345",
+    "name": "Radical Hysterectomy + Pelvic Lymphadenectomy (Wertheim's) (TMH - Genitourinary / Gynaecology) (G5S48)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH346",
+    "name": "Laparoscopic Hysterectomy (TMH - Genitourinary / Gynaecology) (G5S49)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH347",
+    "name": "Reconstruction With Flap (Chest & Abdominal) (TMH - Plastic & Reconstructive) (G5S50)",
+    "category": "Cancer Surgery",
+    "rate": 21420.0
+  },
+  {
+    "code": "TMH348",
+    "name": "Cervical Neuroblastoma Excision (TMH - Head & Neck) (G6S1)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH349",
+    "name": "Combine Craniofacial Resection (TMH - Head & Neck) (G6S2)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH350",
+    "name": "Craniotomy for posterior fossa tumors with navigation (TMH - Head & Neck) (G6S3)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH351",
+    "name": "Craniotomy for supratentorial tumors - without navigation (TMH - Head & Neck) (G6S4)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH352",
+    "name": "Retromastoid Craniotomy (TMH - Head & Neck) (G6S5)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH353",
+    "name": "Skeletal Reconstruction (Head & Neck) (TMH - Head & Neck) (G6S6)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH354",
+    "name": "Trans-sphenoidal surgery (TMH - Head & Neck) (G6S7)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH355",
+    "name": "Abdominal Neuroblastoma Excision (TMH - G.I. Surgery) (G6S8)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH356",
+    "name": "Abdominosacral Resection (TMH - G.I. Surgery) (G6S9)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH357",
+    "name": "Colo-Whipple (TMH - G.I. Surgery) (G6S10)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH358",
+    "name": "Gastrectomy (Radical) + Extended Lymphadenectomy (TMH - G.I. Surgery) (G6S11)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH359",
+    "name": "Hepatectomy Left Extended (TMH - G.I. Surgery) (G6S12)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH360",
+    "name": "Jejunal Transposition (TMH - G.I. Surgery) (G6S13)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH361",
+    "name": "Pancreatectomy - Total (TMH - G.I. Surgery) (G6S14)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH362",
+    "name": "Pancreatectomy - Whipple's Procedure (TMH - G.I. Surgery) (G6S15)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH363",
+    "name": "Pancreaticoduodenctomy (TMH - G.I. Surgery) (G6S16)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH364",
+    "name": "Total Esophagectomy (Trans Thoracic) (TMH - G.I. Surgery) (G6S17)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH365",
+    "name": "Tracheal Resection (TMH - G.I. Surgery) (G6S18)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH366",
+    "name": "Excision of Cholangiocarcinoma + Liver Resection (TMH - G.I. Surgery) (G6S19)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH367",
+    "name": "Laminectomy for intramedullary tumors (TMH - Bone & Soft Tissue) (G6S20)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH368",
+    "name": "Sacral tumors excision (combined approach) (TMH - Bone & Soft Tissue) (G6S21)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH369",
+    "name": "Thoracic Surgery (Combination of two or more) (TMH - Thoracic & Paediatric) (G6S22)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH370",
+    "name": "Thoracoscopic Lobectomy/ Pneumonectomy (TMH - Thoracic & Paediatric) (G6S23)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH371",
+    "name": "Thymectomy with Vascular Surgery/Lung (TMH - Thoracic & Paediatric) (G6S24)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH372",
+    "name": "Thyroidectomy with Tracheal Resection (TMH - Thoracic & Paediatric) (G6S25)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH373",
+    "name": "Mediastinal Neuroblastoma Excision (TMH - Thoracic & Paediatric) (G6S26)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH374",
+    "name": "Excision of Adrenal Tumor + Nephrectomy (TMH - Genitourinary / Gynaecology) (G6S27)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH375",
+    "name": "Exenteration Anterior/Posterior (TMH - Genitourinary / Gynaecology) (G6S29)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH376",
+    "name": "Hemipelvectomy - External (TMH - Genitourinary / Gynaecology) (G6S30)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH377",
+    "name": "Hemipelvectomy - Internal (TMH - Genitourinary / Gynaecology) (G6S31)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH378",
+    "name": "Hepatectomy Right Extended (TMH - Genitourinary / Gynaecology) (G6S32)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH379",
+    "name": "Laparoscopic Exenteration (Anterior) (TMH - Genitourinary / Gynaecology) (G6S33)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH380",
+    "name": "Laparoscopic Exenteration (Posterior) (TMH - Genitourinary / Gynaecology) (G6S34)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH381",
+    "name": "Laparoscopic Exenteration (Total) (TMH - Genitourinary / Gynaecology) (G6S35)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH382",
+    "name": "Laparoscopic Nephrectomy (TMH - Genitourinary / Gynaecology) (G6S36)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH383",
+    "name": "Laparoscopic Radical Hysterectomy (TMH - Genitourinary / Gynaecology) (G6S37)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH384",
+    "name": "Laparoscopic Retroperitoneal Node Dissection (TMH - Genitourinary / Gynaecology) (G6S38)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH385",
+    "name": "Nephrectomy - Partial (TMH - Genitourinary / Gynaecology) (G6S39)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH386",
+    "name": "Pelvic Exenteration Total (TMH - Genitourinary / Gynaecology) (G6S40)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH387",
+    "name": "Pelvic Neuroblastoma Excision (TMH - Genitourinary / Gynaecology) (G6S41)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH388",
+    "name": "Pelvic Posterior Exenteration (TMH - Genitourinary / Gynaecology) (G6S42)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH389",
+    "name": "Radical Cystectomy (TMH - Genitourinary / Gynaecology) (G6S43)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH390",
+    "name": "Retroperitoneal Lymph Node Dissection with Nerve Sparing (TMH - Genitourinary / Gynaecology) (G6S44)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH391",
+    "name": "Retroperitoneal Lymphadenectomy (TMH - Genitourinary / Gynaecology) (G6S45)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH392",
+    "name": "Retroperitoneal Sarcoma + Visceral Excision (TMH - Genitourinary / Gynaecology) (G6S46)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH393",
+    "name": "Retroperitoneal Tumor + Excision of Ureter (TMH - Genitourinary / Gynaecology) (G6S47)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH394",
+    "name": "Retroperitoneal Tumor Excision (TMH - Genitourinary / Gynaecology) (G6S48)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH395",
+    "name": "TAH + BSO + Omento + Node Dissection (TMH - Genitourinary / Gynaecology) (G6S49)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH396",
+    "name": "TAH + BSO + Pelvic Lymphadenectomy + Para-aortic Lymphadenectomy (TMH - Genitourinary / Gynaecology) (G6S50)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH397",
+    "name": "Cytoreductive Surgery (TMH - Genitourinary / Gynaecology) (G6S51)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH398",
+    "name": "Groin Node Dissection (Bilateral) (TMH - Genitourinary / Gynaecology) (G6S52)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH399",
+    "name": "Laparoscopic Pelvic Node Dissection (TMH - Genitourinary / Gynaecology) (G6S53)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH400",
+    "name": "Exenteration - Total (TMH - Genitourinary / Gynaecology) (G6S54)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH401",
+    "name": "Urethroplasty (TMH - Plastic & Reconstructive) (G6S55)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH402",
+    "name": "Vaginal Reconstruction (TMH - Plastic & Reconstructive) (G6S56)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH403",
+    "name": "Micro Vascular Breast Reconstruction (TMH - Breast) (G6S57)",
+    "category": "Cancer Surgery",
+    "rate": 27540.0
+  },
+  {
+    "code": "TMH404",
+    "name": "Anaesthesia Fees - Grade I",
+    "category": "Cancer Surgery",
+    "rate": 1652.0
+  },
+  {
+    "code": "TMH405",
+    "name": "Anaesthesia Fees - Grade II",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH406",
+    "name": "Anaesthesia Fees - Grade III",
+    "category": "Cancer Surgery",
+    "rate": 4896.0
+  },
+  {
+    "code": "TMH407",
+    "name": "Anaesthesia Fees - Grade IV",
+    "category": "Cancer Surgery",
+    "rate": 6120.0
+  },
+  {
+    "code": "TMH408",
+    "name": "Anaesthesia Fees - Grade V",
+    "category": "Cancer Surgery",
+    "rate": 8568.0
+  },
+  {
+    "code": "TMH409",
+    "name": "Anaesthesia Fees - Grade VI",
+    "category": "Cancer Surgery",
+    "rate": 11016.0
+  },
+  {
+    "code": "TMH410",
+    "name": "Minor OT - Service Charges",
+    "category": "Cancer Surgery",
+    "rate": 612.0
+  },
+  {
+    "code": "TMH411",
+    "name": "Minor OT - Surgery Charges",
+    "category": "Cancer Surgery",
+    "rate": 532.0
+  },
+  {
+    "code": "TMH412",
+    "name": "Minor OT - Drugs/Consumables (Without GA)",
+    "category": "Cancer Surgery",
+    "rate": 306.0
+  },
+  {
+    "code": "TMH413",
+    "name": "Minor OT - Drugs/Consumables (With GA)",
+    "category": "Cancer Surgery",
+    "rate": 459.0
+  },
+  {
+    "code": "TMH414",
+    "name": "Major OT - Service Charges - Less than 2 Hrs.",
+    "category": "Cancer Surgery",
+    "rate": 3060.0
+  },
+  {
+    "code": "TMH415",
+    "name": "Major OT - Service Charges - 2 to 4 Hrs",
+    "category": "Cancer Surgery",
+    "rate": 6120.0
+  },
+  {
+    "code": "TMH416",
+    "name": "Major OT -Service Charges - More than 4 Hrs",
+    "category": "Cancer Surgery",
+    "rate": 12240.0
+  },
+  {
+    "code": "US002",
+    "name": "Unspecified Code(Medical)2",
+    "category": "All specialities",
+    "rate": 0.0
+  },
+  {
+    "code": "US003",
+    "name": "Drugs",
+    "category": "All specialities",
+    "rate": 0.0
+  },
+  {
+    "code": "US004",
+    "name": "Consumables",
+    "category": "All specialities",
+    "rate": 0.0
+  },
+  {
+    "code": "WC002",
+    "name": "Day Care Charges (Accomidation only )",
+    "category": "Ward charges",
+    "rate": 1500.0
+  }
+];
+  if (typeof window !== 'undefined') {
+    window.CGHS_APPROVED_RATES = rates;
+  }
+  if (typeof globalThis !== 'undefined') {
+    globalThis.CGHS_APPROVED_RATES = rates;
+  }
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = rates;
+  }
+})(typeof self !== 'undefined' ? self : this);

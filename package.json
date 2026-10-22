@@ -1,0 +1,23 @@
+{
+  "name": "shiv-diagnostic-lan-sync-server",
+  "version": "1.0.0",
+  "description": "Local LAN Real-Time Multi-Computer Sync Server for Shiv Sonography & Diagnostic Centre",
+  "main": "lan-server.js",
+  "scripts": {
+    "start": "node lan-server.js"
+  },
+  "keywords": [
+    "railway",
+    "diagnostic",
+    "lan-sync",
+    "realtime",
+    "websocket"
+  ],
+  "author": "Shiv Sonography & Diagnostic Centre",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "ws": "^8.16.0"
+  }
+}

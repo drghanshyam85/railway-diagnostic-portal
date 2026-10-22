@@ -1,0 +1,79 @@
+{
+  "bills": [
+    {
+      "id": "bill_1792582591218_602",
+      "billNo": "NWR/2026-27/00001",
+      "date": "2026-09-28",
+      "time": "11:21",
+      "umidId": "36474230544b",
+      "patientName": "PINKI KUMARI VERMA",
+      "phone": "6367722959",
+      "age": "35",
+      "sex": "Female",
+      "beneficiaryType": "Dependent Family Member",
+      "referredBy": "Railway Health Unit (RHU), Phulera",
+      "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
+      "items": [
+        {
+          "code": "LB012",
+          "name": "Complete Haemogram/CBC, Hb,RBC Count and Indices,TLC, DLC, Platelet, ESR, Peripheral Smear Examination)",
+          "category": "Non-NABL Z-Tier CGHS (Phulera)",
+          "rate": 204
+        },
+        {
+          "code": "LB160",
+          "name": "T3, T4, TSH -Thyroid Function Test (TFT)",
+          "category": "Non-NABL Z-Tier CGHS (Phulera)",
+          "rate": 306
+        },
+        {
+          "code": "RI020",
+          "name": "USG Whole Abdomen Including Pelvis and post Void urine",
+          "category": "Non-NABL Z-Tier CGHS (Phulera)",
+          "rate": 544
+        },
+        {
+          "code": "LB124",
+          "name": "Liver Function Test (LFT)",
+          "category": "Non-NABL Z-Tier CGHS (Phulera)",
+          "rate": 340
+        },
+        {
+          "code": "LB123",
+          "name": "Kidney Function Test (KFT)- (Sr.Creatinine,Blood Urea,BUN,Sr.Uric Acid,Sr.Sodium,Sr.Potassium,Urine R/E)",
+          "category": "Non-NABL Z-Tier CGHS (Phulera)",
+          "rate": 340
+        },
+        {
+          "code": "LB127",
+          "name": "Vitamin B12 Assay.",
+          "category": "Non-NABL Z-Tier CGHS (Phulera)",
+          "rate": 408
+        },
+        {
+          "code": "LB154",
+          "name": "Calcidiol / 25-hydroxycholecalciferol / Vitamin D3 assay (Vit D3)",
+          "category": "Non-NABL Z-Tier CGHS (Phulera)",
+          "rate": 680
+        },
+        {
+          "code": "LB125",
+          "name": "Lipid Profile (Total cholesterol ,Triglycerides, LDL, HDL,VLDL)",
+          "category": "Non-NABL Z-Tier CGHS (Phulera)",
+          "rate": 333
+        }
+      ],
+      "totalAmount": 3155,
+      "cashReceived": 0,
+      "patientBalance": 0,
+      "billedToNwr": 3155,
+      "createdAt": "2026-10-21T11:45:23.252Z",
+      "updatedAt": "2026-10-21T11:45:23.252Z",
+      "workstationId": "PC-859"
+    }
+  ],
+  "config": null,
+  "catalog": null,
+  "nextBillSequence": 144,
+  "lastUpdated": "2026-10-21T12:18:44.433Z"
+}
