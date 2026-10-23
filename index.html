@@ -1056,6 +1056,156 @@
       box-shadow: 0 6px 16px rgba(5, 150, 105, 0.4);
     }
 
+    /* Primary Save Button */
+    .btn-primary-save {
+      background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.28);
+    }
+
+    .btn-primary-save:hover {
+      background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.38);
+    }
+
+    /* Saved Patients Card & Table on Registration Page */
+    .saved-patients-card {
+      margin-top: 24px;
+      border: 1.5px solid #cbd5e1;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+    }
+
+    .saved-patients-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .bill-badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: #0369a1;
+      background: #e0f2fe;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #bae6fd;
+      font-size: 11.5px;
+    }
+
+    .umid-badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      color: #334155;
+      background: #f1f5f9;
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+      font-size: 11px;
+    }
+
+    .bene-badge {
+      display: inline-block;
+      padding: 2.5px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .bene-badge.bene-serving {
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+
+    .bene-badge.bene-dependent {
+      background: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+
+    .bene-badge.bene-retired {
+      background: #ede9fe;
+      color: #6d28d9;
+      border: 1px solid #ddd6fe;
+    }
+
+    .bene-badge.bene-other {
+      background: #f1f5f9;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+    }
+
+    .saved-tests-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      max-width: 380px;
+    }
+
+    .saved-test-chip {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 11px;
+      line-height: 1.3;
+    }
+
+    .saved-test-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: #0284c7;
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+
+    .saved-test-name {
+      flex: 1;
+      color: #1e293b;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .saved-test-rate {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: #059669;
+      font-size: 10.5px;
+      flex-shrink: 0;
+    }
+
+    .cashless-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+      padding: 2px 7px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    @keyframes rowSavedFlash {
+      0% { background-color: #bbf7d0; }
+      100% { background-color: transparent; }
+    }
+
+    .row-just-saved td {
+      animation: rowSavedFlash 2.5s ease-out;
+    }
+
     .btn-secondary {
       background: #ffffff;
       border: 1px solid var(--border);
@@ -2453,15 +2603,66 @@
             </div>
           </div>
           <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <button type="button" class="btn-lg btn-secondary" onclick="saveCurrentBillToArchive(false)">
-              💾 Save to Archive Only
+            <button type="button" class="btn-lg btn-primary-save" id="btnSavePatientRecord" onclick="saveCurrentBillToArchive(false)" title="Save patient registration and automatically clear form for next entry">
+              💾 Save Patient Record
             </button>
             <button type="button" class="btn-lg btn-outline-primary" onclick="previewTripleReceipt()">
               👁️ Preview Triple Receipt
             </button>
-            <button type="button" class="btn-lg btn-save-print" onclick="saveAndPrintTripleReceipt()">
+            <button type="button" class="btn-lg btn-save-print" onclick="saveAndPrintTripleReceipt()" title="Save record, print 3-in-1 receipt and automatically clear form for next entry">
               🖨️ Save & Print Triple Receipt
             </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SAVED PATIENT RECORDS (SAME PAGE) ================= -->
+      <div class="card saved-patients-card" id="regSavedPatientsCard">
+        <div class="card-header">
+          <div class="card-title">
+            <span>👥</span> Saved Patient Records
+            <span class="badge-count" id="regPatientCountBadge">0</span>
+          </div>
+          <div class="saved-patients-header-actions">
+            <input type="text" id="regPatientSearchInput" class="input-control" style="max-width: 280px;" placeholder="🔍 Search saved patients by Name, UMID, Bill..." oninput="renderRegistrationPatientList()">
+            <select id="regPatientPeriodFilter" class="select-control" style="max-width: 170px;" onchange="renderRegistrationPatientList()">
+              <option value="ALL">All Saved Records</option>
+              <option value="TODAY">Today's Patients</option>
+              <option value="CURRENT_MONTH">Current Month</option>
+            </select>
+            <button type="button" class="btn-action-sm" onclick="renderRegistrationPatientList()" title="Refresh List">🔄 Refresh</button>
+            <button type="button" class="btn-action-sm" onclick="switchTab('tab-archive')" title="View Full Claim Sheet & Export CSV/Word">🗄️ Full Archive & Claims</button>
+          </div>
+        </div>
+        <div class="table-container" style="max-height: 520px; overflow-y: auto;">
+          <table class="data-table" id="regSavedPatientsTable">
+            <thead>
+              <tr>
+                <th style="width: 45px; text-align: center;">#</th>
+                <th style="width: 155px;">Bill / Voucher No</th>
+                <th style="width: 110px;">Date & Time</th>
+                <th style="width: 145px;">UMID ID No.</th>
+                <th style="min-width: 170px;">Patient Full Name</th>
+                <th style="width: 95px;">Age / Sex</th>
+                <th style="width: 160px;">Beneficiary Type</th>
+                <th style="min-width: 240px;">Prescribed Investigations</th>
+                <th style="width: 110px; text-align: right;">Amount (₹)</th>
+                <th style="width: 115px; text-align: center;">Status</th>
+                <th class="row-actions-cell" style="width: 150px; text-align: center;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="regSavedPatientsTableBody">
+              <!-- Rendered via renderRegistrationPatientList() -->
+            </tbody>
+          </table>
+        </div>
+        <div class="table-toolbar">
+          <div style="font-size: 12px; color: #475569; font-weight: 600;">
+            Showing <span id="regSavedPatientsShowingCount">0</span> of <span id="regSavedPatientsTotalCount">0</span> saved patient records (Latest registered first).
+            <em>Click <strong>"✏️ Edit"</strong> to load any patient back into the registration form above, or <strong>"🖨️ Print"</strong> to reprint vouchers.</em>
+          </div>
+          <div style="font-size: 13.5px; font-weight: 800; color: #0f3d64;">
+            Total Claim: <span id="regSavedPatientsTotalAmount">₹ 0.00</span>
           </div>
         </div>
       </div>
@@ -3338,6 +3539,7 @@
       ensureInitialBillNumber();
       loadDefaultUsgRow();
       renderArchiveTable();
+      renderRegistrationPatientList();
 
       // Initialize Dual-Mode Real-Time Sync Engine (Cloud + Local LAN + Local Fallback)
       if (window.syncManager) {
@@ -3345,6 +3547,7 @@
         billArchive = syncManager.getBills();
         syncConfigToUi();
         renderArchiveTable();
+        renderRegistrationPatientList();
 
         // Listen for real-time updates from other workstations
         syncManager.onRemoteBillUpdate((bill, isNew) => {
@@ -3352,6 +3555,7 @@
           const badge = document.getElementById('archiveCountBadge');
           if (badge) badge.innerText = billArchive.length;
           renderArchiveTable();
+          renderRegistrationPatientList();
 
           // Auto-advance active form if another computer just used the current voucher number
           if (bill && bill.billNo) {
@@ -3367,6 +3571,7 @@
           const badge = document.getElementById('archiveCountBadge');
           if (badge) badge.innerText = billArchive.length;
           renderArchiveTable();
+          renderRegistrationPatientList();
         });
 
         syncManager.onStatusChange((status) => {
@@ -3398,7 +3603,10 @@
       const targetPanel = document.getElementById(tabId);
       if (targetPanel) targetPanel.classList.add('active');
 
-      if (tabId === 'tab-registration') document.getElementById('btn-tab-registration').classList.add('active');
+      if (tabId === 'tab-registration') {
+        document.getElementById('btn-tab-registration').classList.add('active');
+        renderRegistrationPatientList();
+      }
       if (tabId === 'tab-archive') {
         document.getElementById('btn-tab-archive').classList.add('active');
         renderArchiveTable();
@@ -3446,7 +3654,7 @@
       }
     }
 
-    async function generateNextBillNumber() {
+    async function generateNextBillNumber(silent = false) {
       const prefix = appConfig.billPrefix || "NWR/2026-27/";
       let nextNum = "";
 
@@ -3467,17 +3675,18 @@
       }
 
       document.getElementById('regBillNo').value = nextNum;
-      showToast(`Assigned Voucher No: ${nextNum}`, 'info');
+      if (!silent) {
+        showToast(`Assigned Voucher No: ${nextNum}`, 'info');
+      }
       return nextNum;
     }
 
     function focusNewRegistration() {
-      document.getElementById('regUmidId').focus();
+      const umidInput = document.getElementById('regUmidId');
+      if (umidInput) umidInput.focus();
     }
 
-    function resetPatientForm() {
-      generateNextBillNumber();
-      autoFillCurrentTime();
+    async function resetPatientForm(notify = true) {
       document.getElementById('regUmidId').value = "";
       document.getElementById('regPatientName').value = "";
       document.getElementById('regPhone').value = "";
@@ -3485,13 +3694,21 @@
       document.getElementById('regSex').value = "Male";
       document.getElementById('regBeneficiaryType').value = "Serving Railway Employee";
       document.getElementById('regReferredBy').value = appConfig.defaultReferredBy;
+      document.getElementById('regBillingScheme').value = "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)";
+      const qInput = document.getElementById('quickTestSearchInput');
+      if (qInput) qInput.value = "";
       loadDefaultUsgRow();
       isManualTotalOverride = false;
       document.getElementById('finTotalAmountOverrideInput').style.display = "none";
       document.getElementById('finTotalAmount').style.display = "inline";
       document.getElementById('btnOverrideTotal').innerText = "✏️ Override";
       recalculateFormTotals();
-      showToast("Form reset to new patient registration.", "info");
+      autoFillCurrentTime();
+      await generateNextBillNumber(!notify);
+      if (notify) {
+        showToast("Form reset to new patient registration.", "info");
+      }
+      focusNewRegistration();
     }
 
     /* ========================================================================
@@ -3858,12 +4075,15 @@
         saveAppData();
       }
 
-      if (!silent) {
-        showToast(`Bill #${record.billNo} saved & synced across computers.`, "success");
-      }
-
       syncConfigToUi();
       renderArchiveTable();
+      renderRegistrationPatientList();
+
+      if (!silent) {
+        showToast(`✅ Patient "${record.patientName}" (Bill #${record.billNo}) saved! Form cleared for next entry.`, "success");
+        await resetPatientForm(false);
+        highlightSavedPatientRow(record.id);
+      }
       return true;
     }
 
@@ -4191,10 +4411,10 @@
     }
 
     async function saveAndPrintTripleReceipt() {
+      const record = gatherCurrentFormData();
       const saved = await saveCurrentBillToArchive(true);
       if (!saved) return;
 
-      const record = gatherCurrentFormData();
       const html = generateTripleReceiptHtml(record, false);
 
       const printWrapper = document.getElementById('print-triple-voucher-wrapper');
@@ -4209,6 +4429,12 @@
       setTimeout(() => {
         document.body.classList.remove('printing-triple');
       }, 1000);
+
+      await resetPatientForm(false);
+      renderRegistrationPatientList();
+      renderArchiveTable();
+      highlightSavedPatientRow(record.id);
+      showToast(`🖨️ Bill #${record.billNo} saved & sent to print! Form ready for next entry.`, "success");
     }
 
     function printVoucherFromArchive(billId) {
@@ -4230,6 +4456,190 @@
       setTimeout(() => {
         document.body.classList.remove('printing-triple');
       }, 1000);
+    }
+
+    function previewVoucherFromArchive(billId) {
+      const record = billArchive.find(b => b.id === billId || b.billNo === billId);
+      if (!record) {
+        showToast("Bill not found in archive", "error");
+        return;
+      }
+      const html = generateTripleReceiptHtml(record, true);
+      document.getElementById('previewModalBody').innerHTML = html;
+      updatePreviewLayoutButtons();
+      document.getElementById('previewModal').classList.add('show');
+    }
+
+    async function deleteRegistrationPatient(billId) {
+      const record = billArchive.find(b => b.id === billId || b.billNo === billId);
+      const name = record ? record.patientName : "this patient";
+      if (!confirm(`Are you sure you want to delete the record for ${name} (${record?.billNo || billId})?`)) return;
+
+      if (window.syncManager) {
+        await syncManager.deleteBill(billId);
+        billArchive = syncManager.getBills();
+      } else {
+        billArchive = billArchive.filter(b => b.id !== billId && b.billNo !== billId);
+        saveAppData();
+      }
+      selectedBillIds.delete(billId);
+      renderArchiveTable();
+      renderRegistrationPatientList();
+      showToast(`Deleted patient record for ${name}.`, "info");
+    }
+
+    function highlightSavedPatientRow(billId) {
+      setTimeout(() => {
+        const row = document.getElementById(`reg-pat-row-${billId}`);
+        if (row) {
+          row.classList.add('row-just-saved');
+          row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }, 100);
+    }
+
+    function getBeneBadgeClass(beneType) {
+      if (!beneType) return 'bene-serving';
+      const lower = beneType.toLowerCase();
+      if (lower.includes('serving')) return 'bene-serving';
+      if (lower.includes('dependent')) return 'bene-dependent';
+      if (lower.includes('retired') || lower.includes('pensioner')) return 'bene-retired';
+      return 'bene-other';
+    }
+
+    /* ========================================================================
+       SAVED PATIENT RECORDS LIST ON SAME PAGE (REGISTRATION TAB)
+       ======================================================================== */
+    function renderRegistrationPatientList() {
+      const tbody = document.getElementById('regSavedPatientsTableBody');
+      if (!tbody) return;
+
+      const search = (document.getElementById('regPatientSearchInput')?.value || '').toLowerCase().trim();
+      const periodFilter = document.getElementById('regPatientPeriodFilter')?.value || 'ALL';
+
+      const now = new Date();
+      const todayStr = now.toISOString().slice(0, 10);
+      const currentMonthStr = now.toISOString().slice(0, 7);
+
+      // Sort with newest / latest registered patient first
+      const sortedBills = [...billArchive].sort((a, b) => {
+        const timeA = a.createdAt || (a.date ? `${a.date}T${a.time || '00:00'}` : '');
+        const timeB = b.createdAt || (b.date ? `${b.date}T${b.time || '00:00'}` : '');
+        if (timeA && timeB) return timeB.localeCompare(timeA);
+        return (b.billNo || '').localeCompare(a.billNo || '');
+      });
+
+      const filtered = sortedBills.filter(b => {
+        if (search) {
+          const matchBill = (b.billNo || '').toLowerCase().includes(search);
+          const matchUmid = (b.umidId || '').toLowerCase().includes(search);
+          const matchName = (b.patientName || '').toLowerCase().includes(search);
+          const matchPhone = (b.phone || '').toLowerCase().includes(search);
+          const matchBene = (b.beneficiaryType || '').toLowerCase().includes(search);
+          const matchTests = (b.items || []).some(it => (it.name || '').toLowerCase().includes(search) || (it.code || '').toLowerCase().includes(search));
+          if (!matchBill && !matchUmid && !matchName && !matchPhone && !matchBene && !matchTests) return false;
+        }
+
+        const bDate = (b.date || '').trim();
+        if (periodFilter === 'TODAY') {
+          if (bDate !== todayStr) return false;
+        } else if (periodFilter === 'CURRENT_MONTH') {
+          if (!bDate.startsWith(currentMonthStr)) return false;
+        }
+
+        return true;
+      });
+
+      // Update counters & totals
+      const countBadge = document.getElementById('regPatientCountBadge');
+      if (countBadge) countBadge.innerText = billArchive.length;
+
+      const showingCount = document.getElementById('regSavedPatientsShowingCount');
+      if (showingCount) showingCount.innerText = filtered.length;
+
+      const totalCount = document.getElementById('regSavedPatientsTotalCount');
+      if (totalCount) totalCount.innerText = billArchive.length;
+
+      const totalAmount = filtered.reduce((sum, b) => sum + (parseFloat(b.totalAmount) || 0), 0);
+      const totalDisplay = document.getElementById('regSavedPatientsTotalAmount');
+      if (totalDisplay) totalDisplay.innerText = `₹ ${totalAmount.toFixed(2)}`;
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="11" style="text-align: center; padding: 36px 20px; color: #64748b;">
+              <div style="font-size: 30px; margin-bottom: 6px;">📋</div>
+              <strong style="color: #334155; font-size: 14px;">No Saved Patient Records Found</strong><br>
+              <span style="font-size: 12px; color: #64748b;">${search ? 'No patients match your search filter.' : 'Register a patient using the form above and click "💾 Save Patient Record" to see it listed here.'}</span>
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = "";
+      const frag = document.createDocumentFragment();
+
+      filtered.forEach((b, idx) => {
+        const tr = document.createElement('tr');
+        tr.id = `reg-pat-row-${b.id}`;
+
+        const testsSummary = (b.items || []).map(it => `
+          <div class="saved-test-chip" title="${escapeHtml(it.name || '')} (₹${it.rate || 0})">
+            <span class="saved-test-code">${escapeHtml(it.code || 'CGHS')}</span>
+            <span class="saved-test-name">${escapeHtml(it.name || '')}</span>
+            <span class="saved-test-rate">₹${it.rate || 0}</span>
+          </div>
+        `).join('');
+
+        const formattedDate = b.date || '';
+        const formattedTime = b.time ? `<small style="color: #64748b; display: block; font-size: 11px;">⏰ ${escapeHtml(b.time)}</small>` : '';
+
+        tr.innerHTML = `
+          <td style="text-align: center; font-weight: 700; color: #64748b; vertical-align: middle;">${idx + 1}</td>
+          <td style="vertical-align: middle;">
+            <span class="bill-badge">${escapeHtml(b.billNo || '')}</span>
+          </td>
+          <td style="vertical-align: middle; font-size: 11.5px; white-space: nowrap;">
+            <strong>${escapeHtml(formattedDate)}</strong>
+            ${formattedTime}
+          </td>
+          <td style="vertical-align: middle;">
+            <span class="umid-badge">${escapeHtml(b.umidId || '')}</span>
+          </td>
+          <td style="vertical-align: middle;">
+            <div style="font-weight: 700; color: #0f172a; font-size: 13px;">${escapeHtml(b.patientName || '')}</div>
+            ${b.phone ? `<div style="font-size: 11px; color: #64748b;">📞 ${escapeHtml(b.phone)}</div>` : ''}
+          </td>
+          <td style="vertical-align: middle; font-size: 12px; white-space: nowrap;">
+            ${escapeHtml(b.age || '')} <span style="color: #94a3b8;">/</span> <strong>${escapeHtml(b.sex || '')}</strong>
+          </td>
+          <td style="vertical-align: middle;">
+            <span class="bene-badge ${getBeneBadgeClass(b.beneficiaryType)}">${escapeHtml(b.beneficiaryType || 'Railway Beneficiary')}</span>
+          </td>
+          <td style="vertical-align: middle;">
+            <div class="saved-tests-wrapper">
+              ${testsSummary || '<span style="color: #94a3b8; font-size: 11px;">No tests recorded</span>'}
+            </div>
+          </td>
+          <td style="text-align: right; vertical-align: middle;">
+            <strong style="color: #1e40af; font-family: 'JetBrains Mono', monospace; font-size: 13.5px;">₹ ${(parseFloat(b.totalAmount) || 0).toFixed(2)}</strong>
+          </td>
+          <td style="text-align: center; vertical-align: middle;">
+            <span class="cashless-pill" title="100% Cashless Bilateral MOU (Zero Patient Fee)">🛡️ Cashless</span>
+          </td>
+          <td class="row-actions-cell" style="vertical-align: middle;">
+            <button type="button" class="btn-row-action" title="Edit / Load into Form" onclick="loadBillIntoForm('${b.id}')">✏️ Edit</button>
+            <button type="button" class="btn-row-action" title="Print 3-in-1 Triple Receipt" onclick="printVoucherFromArchive('${b.id}')">🖨️ Print</button>
+            <button type="button" class="btn-row-action" title="Preview Receipt" onclick="previewVoucherFromArchive('${b.id}')">👁️</button>
+            <button type="button" class="btn-row-action delete" title="Delete Patient Record" onclick="deleteRegistrationPatient('${b.id}')">🗑️</button>
+          </td>
+        `;
+
+        frag.appendChild(tr);
+      });
+
+      tbody.appendChild(frag);
     }
 
     /* ========================================================================
@@ -4574,8 +4984,10 @@
         addNewInvestigationRow("CGHS-GEN", "Diagnostic Investigation", "Non-NABL Z-Tier CGHS", item.totalAmount || 0);
       }
 
+      recalculateFormTotals();
       switchTab('tab-registration');
-      showToast(`Loaded Bill #${item.billNo} into registration form.`, "success");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      showToast(`✏️ Loaded Bill #${item.billNo} for ${item.patientName} into registration form.`, "success");
     }
 
     async function deleteArchiveBill(billId) {
@@ -4589,6 +5001,7 @@
       }
       selectedBillIds.delete(billId);
       renderArchiveTable();
+      renderRegistrationPatientList();
       showToast("Bill deleted from archive.", "info");
     }
 
@@ -4611,6 +5024,7 @@
         }
         selectedBillIds.clear();
         renderArchiveTable();
+        renderRegistrationPatientList();
         showToast("Archive cleared.", "info");
       }
     }
@@ -4731,6 +5145,7 @@
           saveAppData();
         }
         renderArchiveTable();
+        renderRegistrationPatientList();
         showToast(`Successfully imported ${importedCount} bills from ${filename}!`, "success");
       } catch (err) {
         console.error("CSV import error:", err);
@@ -5919,6 +6334,7 @@
         saveAppData();
       }
       renderArchiveTable();
+      renderRegistrationPatientList();
       if (!silent) showToast("Loaded sample North Western Railway bills.", "success");
     }
 
@@ -5958,6 +6374,7 @@
           populateMasterDatalist();
           renderMasterRateCatalog();
           renderArchiveTable();
+          renderRegistrationPatientList();
           showToast("Backup restored successfully!", "success");
         } catch (err) {
           showToast("Error restoring JSON backup: " + err.message, "error");
