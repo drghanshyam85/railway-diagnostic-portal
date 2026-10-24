@@ -1207,6 +1207,165 @@
       animation: rowSavedFlash 2.5s ease-out;
     }
 
+    /* ================= DUPLICATE PATIENT PREVENTION & EDIT BANNER STYLES ================= */
+    .duplicate-alert-banner {
+      display: none;
+      background: #fffbeb;
+      border: 1.5px solid #f59e0b;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.18);
+      animation: fadeInSlide 0.25s ease-out;
+    }
+
+    .duplicate-alert-content {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .duplicate-alert-icon {
+      font-size: 26px;
+      line-height: 1;
+      color: #d97706;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .duplicate-alert-body {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .duplicate-alert-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #92400e;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .duplicate-alert-desc {
+      font-size: 12.5px;
+      color: #78350f;
+      line-height: 1.45;
+    }
+
+    .duplicate-alert-subtext {
+      font-size: 11.5px;
+      color: #b45309;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    .duplicate-alert-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .btn-dup-load {
+      background: #d97706;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .btn-dup-load:hover {
+      background: #b45309;
+    }
+
+    .btn-dup-print {
+      background: #ffffff;
+      color: #78350f;
+      border: 1px solid #d97706;
+      border-radius: 5px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn-dup-print:hover {
+      background: #fef3c7;
+    }
+
+    .input-warning {
+      border-color: #f59e0b !important;
+      background-color: #fffdf5 !important;
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.22) !important;
+    }
+
+    .badge-duplicate-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #fef2f2;
+      color: #b91c1c;
+      border: 1px solid #fecaca;
+      padding: 2.5px 7px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-left: 6px;
+    }
+
+    .badge-dup-counter {
+      background: #fef2f2;
+      color: #dc2626;
+      border: 1px solid #fca5a5;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .active-edit-banner {
+      display: none;
+      background: #eff6ff;
+      border: 1.5px solid #3b82f6;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13px;
+      color: #1e40af;
+      animation: fadeInSlide 0.2s ease-out;
+    }
+
+    .active-edit-banner .btn-cancel-edit {
+      background: #ffffff;
+      border: 1px solid #93c5fd;
+      color: #1d4ed8;
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .active-edit-banner .btn-cancel-edit:hover {
+      background: #dbeafe;
+    }
+
     .btn-secondary {
       background: #ffffff;
       border: 1px solid var(--border);
@@ -2342,6 +2501,41 @@
           </div>
         </div>
         <div class="card-body">
+          <!-- Active Editing Mode Banner -->
+          <div id="activeEditingBillBanner" class="active-edit-banner">
+            <div>
+              <span>✏️</span> <strong>Now Editing Record:</strong> <span id="activeEditBillNoText"></span> &bull; <span id="activeEditPatientText"></span>
+              <span style="display: block; font-size: 11.5px; opacity: 0.85; margin-top: 2px;">Saving or printing will update this existing record without creating duplicates.</span>
+            </div>
+            <button type="button" class="btn-cancel-edit" onclick="resetPatientForm()">✖️ Cancel Edit / New Entry</button>
+          </div>
+
+          <!-- Real-Time Duplicate Patient Alert Banner -->
+          <div id="duplicatePatientAlertBanner" class="duplicate-alert-banner">
+            <div class="duplicate-alert-content">
+              <span class="duplicate-alert-icon">⚠️</span>
+              <div class="duplicate-alert-body">
+                <div class="duplicate-alert-title">
+                  <span>Duplicate Patient Entry Detected Today!</span>
+                </div>
+                <div class="duplicate-alert-desc">
+                  Patient <strong><span id="dupAlertName"></span></strong> 
+                  (UMID: <code id="dupAlertUmid" style="background:#fef3c7; padding:1px 5px; border-radius:3px;"></code>) has already been registered on 
+                  <strong><span id="dupAlertDate"></span></strong> under Voucher 
+                  <strong>#<span id="dupAlertBillNo"></span></strong> 
+                  (<span id="dupAlertTests"></span> tests &bull; ₹<span id="dupAlertAmount"></span>).
+                </div>
+                <div class="duplicate-alert-subtext">
+                  Duplicate patient entries on the same day are blocked to prevent double-billing and maintain audit compliance. You can load and modify the existing voucher instead.
+                </div>
+                <div class="duplicate-alert-actions">
+                  <button type="button" class="btn-dup-load" id="btnDupLoadExisting" onclick="loadDuplicateRecord()">✏️ Open & Edit Existing Bill</button>
+                  <button type="button" class="btn-dup-print" id="btnDupPrintExisting" onclick="printDuplicateRecord()">🖨️ Print Existing Slip</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="grid-form">
             <!-- Bill / Voucher No -->
             <div class="form-group">
@@ -2623,13 +2817,15 @@
           <div class="card-title">
             <span>👥</span> Saved Patient Records
             <span class="badge-count" id="regPatientCountBadge">0</span>
+            <span class="badge-dup-counter" id="regPatientDupBadge" style="display:none;" onclick="filterToDuplicates()" title="Click to view duplicate patient entries on same day">⚠️ 0 Duplicates</span>
           </div>
           <div class="saved-patients-header-actions">
             <input type="text" id="regPatientSearchInput" class="input-control" style="max-width: 280px;" placeholder="🔍 Search saved patients by Name, UMID, Bill..." oninput="renderRegistrationPatientList()">
-            <select id="regPatientPeriodFilter" class="select-control" style="max-width: 170px;" onchange="renderRegistrationPatientList()">
+            <select id="regPatientPeriodFilter" class="select-control" style="max-width: 180px;" onchange="renderRegistrationPatientList()">
               <option value="ALL">All Saved Records</option>
               <option value="TODAY">Today's Patients</option>
               <option value="CURRENT_MONTH">Current Month</option>
+              <option value="DUPLICATES">⚠️ Same-Day Duplicates</option>
             </select>
             <button type="button" class="btn-action-sm" onclick="renderRegistrationPatientList()" title="Refresh List">🔄 Refresh</button>
             <button type="button" class="btn-action-sm" onclick="switchTab('tab-archive')" title="View Full Claim Sheet & Export CSV/Word">🗄️ Full Archive & Claims</button>
@@ -2720,6 +2916,7 @@
             <button type="button" class="btn-period-chip active" id="chipPeriodAll" onclick="setArchivePeriodFilter('ALL')">🌟 All Archive Bills</button>
             <button type="button" class="btn-period-chip" id="chipPeriodCurrentMonth" onclick="setArchivePeriodFilter('CURRENT_MONTH')">📅 Current Month</button>
             <button type="button" class="btn-period-chip" id="chipPeriodPrevMonth" onclick="setArchivePeriodFilter('PREVIOUS_MONTH')">⏮️ Previous Month</button>
+            <button type="button" class="btn-period-chip" id="chipPeriodDuplicates" onclick="setArchivePeriodFilter('DUPLICATES')">⚠️ Same-Day Duplicates</button>
             <input type="month" id="archiveMonthPicker" class="input-control" style="max-width: 140px; padding: 4px 8px; font-size: 11px;" onchange="setArchivePeriodFilter('CUSTOM_MONTH', this.value)" title="Filter by specific Month/Year">
             <input type="date" id="archiveDateFilter" class="input-control" style="max-width: 135px; padding: 4px 8px; font-size: 11px;" onchange="setArchivePeriodFilter('CUSTOM_DATE', this.value)" title="Filter by specific Date">
           </div>
@@ -3604,9 +3801,30 @@
         updateLanBanner();
       }
 
-      // If archive is empty, provide sample records
-      if (billArchive.length === 0) {
-        seedSampleRailwayData(true);
+      // Only seed sample records on the very first application run
+      const isFirstLaunch = !localStorage.getItem('shiv_railway_app_initialized');
+      if (isFirstLaunch) {
+        localStorage.setItem('shiv_railway_app_initialized', 'true');
+        if (billArchive.length === 0) {
+          seedSampleRailwayData(true);
+        }
+      }
+
+      // Attach real-time duplicate patient detection listeners
+      const umidInput = document.getElementById('regUmidId');
+      const nameInput = document.getElementById('regPatientName');
+      const dateInput = document.getElementById('regDate');
+
+      if (umidInput) {
+        umidInput.addEventListener('input', checkDuplicatePatientLive);
+        umidInput.addEventListener('change', checkDuplicatePatientLive);
+      }
+      if (nameInput) {
+        nameInput.addEventListener('input', checkDuplicatePatientLive);
+        nameInput.addEventListener('change', checkDuplicatePatientLive);
+      }
+      if (dateInput) {
+        dateInput.addEventListener('change', checkDuplicatePatientLive);
       }
     });
 
@@ -3701,6 +3919,10 @@
     }
 
     async function resetPatientForm(notify = true) {
+      currentEditingBillId = null;
+      hideActiveEditBanner();
+      hideDuplicateAlertBanner();
+
       document.getElementById('regUmidId').value = "";
       document.getElementById('regPatientName').value = "";
       document.getElementById('regPhone').value = "";
@@ -3998,6 +4220,184 @@
     }
 
     /* ========================================================================
+       DUPLICATE PATIENT DETECTION & PREVENTION SYSTEM
+       ======================================================================== */
+    let currentEditingBillId = null;
+    let currentDuplicateBillId = null;
+
+    function normalizeUmid(umid) {
+      if (!umid) return '';
+      return String(umid).toUpperCase().replace(/[^A-Z0-9]/g, '');
+    }
+
+    function normalizeName(name) {
+      if (!name) return '';
+      return String(name).trim().toLowerCase().replace(/\s+/g, ' ');
+    }
+
+    function findDuplicatePatientEntry(record, currentArchive = billArchive) {
+      if (!record || !record.date) return null;
+      const recDate = String(record.date).trim();
+      if (!recDate) return null;
+
+      const recUmid = normalizeUmid(record.umidId);
+      const recName = normalizeName(record.patientName);
+      if (!recUmid && !recName) return null;
+
+      const targetId = record.id || currentEditingBillId || '';
+      const targetBillNo = (record.billNo || '').trim();
+
+      return currentArchive.find(b => {
+        // Exclude the record currently being edited
+        if (targetId && b.id === targetId) return false;
+        if (targetBillNo && b.billNo === targetBillNo) return false;
+
+        // Must match the exact same date
+        if (String(b.date || '').trim() !== recDate) return false;
+
+        const bUmid = normalizeUmid(b.umidId);
+        const bName = normalizeName(b.patientName);
+
+        // 1. If both have UMID, match by UMID
+        if (recUmid && bUmid) {
+          return recUmid === bUmid;
+        }
+
+        // 2. If one or both lack UMID, match by patient name
+        if (recName && bName && recName === bName) {
+          return true;
+        }
+
+        return false;
+      }) || null;
+    }
+
+    function getSameDayDuplicateBillIds() {
+      const duplicateIds = new Set();
+      const currentArchive = (window.syncManager && window.syncManager.getBills)
+        ? window.syncManager.getBills()
+        : (billArchive || []);
+
+      for (let i = 0; i < currentArchive.length; i++) {
+        const a = currentArchive[i];
+        const dateA = String(a.date || '').trim();
+        if (!dateA) continue;
+        const umidA = normalizeUmid(a.umidId);
+        const nameA = normalizeName(a.patientName);
+
+        for (let j = i + 1; j < currentArchive.length; j++) {
+          const b = currentArchive[j];
+          const dateB = String(b.date || '').trim();
+          if (dateA !== dateB) continue;
+
+          const umidB = normalizeUmid(b.umidId);
+          const nameB = normalizeName(b.patientName);
+
+          let isMatch = false;
+          if (umidA && umidB) {
+            if (umidA === umidB) isMatch = true;
+          } else if (nameA && nameB && nameA === nameB) {
+            isMatch = true;
+          }
+
+          if (isMatch) {
+            duplicateIds.add(a.id);
+            duplicateIds.add(b.id);
+          }
+        }
+      }
+      return duplicateIds;
+    }
+
+    function checkDuplicatePatientLive() {
+      const umidId = document.getElementById('regUmidId')?.value?.trim() || '';
+      const patientName = document.getElementById('regPatientName')?.value?.trim() || '';
+      const date = document.getElementById('regDate')?.value?.trim() || '';
+      const billNo = document.getElementById('regBillNo')?.value?.trim() || '';
+
+      const dup = findDuplicatePatientEntry({
+        id: currentEditingBillId,
+        billNo,
+        umidId,
+        patientName,
+        date
+      });
+
+      const umidInput = document.getElementById('regUmidId');
+      const nameInput = document.getElementById('regPatientName');
+
+      if (dup) {
+        showDuplicateAlertBanner(dup);
+        if (umidInput) umidInput.classList.add('input-warning');
+        if (nameInput) nameInput.classList.add('input-warning');
+      } else {
+        hideDuplicateAlertBanner();
+        if (umidInput) umidInput.classList.remove('input-warning');
+        if (nameInput) nameInput.classList.remove('input-warning');
+      }
+    }
+
+    function showDuplicateAlertBanner(dup) {
+      currentDuplicateBillId = dup.id;
+      const banner = document.getElementById('duplicatePatientAlertBanner');
+      if (!banner) return;
+
+      document.getElementById('dupAlertName').innerText = dup.patientName || 'Unknown Patient';
+      document.getElementById('dupAlertUmid').innerText = dup.umidId || 'N/A';
+      document.getElementById('dupAlertDate').innerText = dup.date || '';
+      document.getElementById('dupAlertBillNo').innerText = dup.billNo || '';
+      document.getElementById('dupAlertTests').innerText = (dup.items ? dup.items.length : 0);
+      document.getElementById('dupAlertAmount').innerText = (parseFloat(dup.totalAmount) || 0).toFixed(2);
+
+      banner.style.display = 'block';
+    }
+
+    function hideDuplicateAlertBanner() {
+      currentDuplicateBillId = null;
+      const banner = document.getElementById('duplicatePatientAlertBanner');
+      if (banner) banner.style.display = 'none';
+      const umidInput = document.getElementById('regUmidId');
+      const nameInput = document.getElementById('regPatientName');
+      if (umidInput) umidInput.classList.remove('input-warning');
+      if (nameInput) nameInput.classList.remove('input-warning');
+    }
+
+    function showActiveEditBanner(bill) {
+      const banner = document.getElementById('activeEditingBillBanner');
+      if (!banner) return;
+      document.getElementById('activeEditBillNoText').innerText = bill.billNo || '';
+      document.getElementById('activeEditPatientText').innerText = bill.patientName || '';
+      banner.style.display = 'flex';
+    }
+
+    function hideActiveEditBanner() {
+      const banner = document.getElementById('activeEditingBillBanner');
+      if (banner) banner.style.display = 'none';
+    }
+
+    function loadDuplicateRecord() {
+      if (currentDuplicateBillId) {
+        loadBillIntoForm(currentDuplicateBillId);
+      }
+    }
+
+    function printDuplicateRecord() {
+      if (currentDuplicateBillId) {
+        printVoucherFromArchive(currentDuplicateBillId);
+      }
+    }
+
+    function filterToDuplicates() {
+      const periodSelect = document.getElementById('regPatientPeriodFilter');
+      if (periodSelect) {
+        periodSelect.value = 'DUPLICATES';
+        renderRegistrationPatientList();
+        const card = document.getElementById('regSavedPatientsCard');
+        if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    /* ========================================================================
        SAVE BILL & LOCAL STORAGE ARCHIVE
        ======================================================================== */
     function gatherCurrentFormData() {
@@ -4029,7 +4429,7 @@
       const totalAmount = parseFloat(document.getElementById('finTotalAmount').innerText) || 0;
 
       return {
-        id: 'bill_' + Date.now() + '_' + Math.floor(Math.random() * 1000),
+        id: currentEditingBillId || ('bill_' + Date.now() + '_' + Math.floor(Math.random() * 1000)),
         billNo,
         date,
         time,
@@ -4070,24 +4470,47 @@
         return false;
       }
 
-      // Preserve ID if editing existing bill with matching billNo
-      const existing = billArchive.find(b => b.billNo === record.billNo);
-      if (existing && existing.id) {
-        record.id = existing.id;
+      // Preserve ID if editing existing bill
+      if (currentEditingBillId) {
+        record.id = currentEditingBillId;
+      } else {
+        const existing = billArchive.find(b => b.billNo === record.billNo);
+        if (existing && existing.id) {
+          record.id = existing.id;
+        }
       }
 
-      if (window.syncManager) {
-        await syncManager.saveBill(record);
-        billArchive = syncManager.getBills();
-      } else {
-        const existingIdx = billArchive.findIndex(b => b.billNo === record.billNo);
-        if (existingIdx >= 0) {
-          billArchive[existingIdx] = record;
-        } else {
-          billArchive.unshift(record);
-        }
-        saveAppData();
+      // STRICT SAME-DAY DUPLICATE PREVENTION
+      const duplicate = findDuplicatePatientEntry(record);
+      if (duplicate) {
+        showToast(`❌ DUPLICATE PREVENTED: Patient "${duplicate.patientName}" (UMID: ${duplicate.umidId}) is already registered on ${duplicate.date} under Bill #${duplicate.billNo}.`, "error");
+        showDuplicateAlertBanner(duplicate);
+        const banner = document.getElementById('duplicatePatientAlertBanner');
+        if (banner) banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return false;
       }
+
+      try {
+        if (window.syncManager) {
+          await syncManager.saveBill(record);
+          billArchive = syncManager.getBills();
+        } else {
+          const existingIdx = billArchive.findIndex(b => b.id === record.id || b.billNo === record.billNo);
+          if (existingIdx >= 0) {
+            billArchive[existingIdx] = record;
+          } else {
+            billArchive.unshift(record);
+          }
+          saveAppData();
+        }
+      } catch (err) {
+        showToast(`Save Error: ${err.message}`, "error");
+        return false;
+      }
+
+      currentEditingBillId = null;
+      hideActiveEditBanner();
+      hideDuplicateAlertBanner();
 
       syncConfigToUi();
       renderArchiveTable();
@@ -4487,7 +4910,9 @@
     async function deleteRegistrationPatient(billId) {
       const record = billArchive.find(b => b.id === billId || b.billNo === billId);
       const name = record ? record.patientName : "this patient";
-      if (!confirm(`Are you sure you want to delete the record for ${name} (${record?.billNo || billId})?`)) return;
+      const billNo = record ? record.billNo : billId;
+
+      if (!confirm(`Are you sure you want to PERMANENTLY delete the record for ${name} (${billNo})?\n\n⚠️ PERMANENT DELETION WARNING: This record will be permanently erased from local storage, IndexedDB, and sync servers. It CANNOT be undone and CANNOT be restored.`)) return;
 
       if (window.syncManager) {
         await syncManager.deleteBill(billId);
@@ -4497,9 +4922,14 @@
         saveAppData();
       }
       selectedBillIds.delete(billId);
+      if (record && record.id) selectedBillIds.delete(record.id);
+      if (currentEditingBillId === billId || (record && currentEditingBillId === record.id)) {
+        resetPatientForm();
+      }
       renderArchiveTable();
       renderRegistrationPatientList();
-      showToast(`Deleted patient record for ${name}.`, "info");
+      checkDuplicatePatientLive();
+      showToast(`Permanently deleted patient record for ${name} (${billNo}).`, "info");
     }
 
     function highlightSavedPatientRow(billId) {
@@ -4535,6 +4965,19 @@
       const todayStr = now.toISOString().slice(0, 10);
       const currentMonthStr = now.toISOString().slice(0, 7);
 
+      const dupIds = getSameDayDuplicateBillIds();
+
+      // Update duplicate counter badge
+      const dupBadge = document.getElementById('regPatientDupBadge');
+      if (dupBadge) {
+        if (dupIds.size > 0) {
+          dupBadge.style.display = 'inline-flex';
+          dupBadge.innerText = `⚠️ ${dupIds.size} Duplicate${dupIds.size > 1 ? 's' : ''}`;
+        } else {
+          dupBadge.style.display = 'none';
+        }
+      }
+
       // Sort with newest / latest registered patient first
       const sortedBills = [...billArchive].sort((a, b) => {
         const timeA = a.createdAt || (a.date ? `${a.date}T${a.time || '00:00'}` : '');
@@ -4559,6 +5002,8 @@
           if (bDate !== todayStr) return false;
         } else if (periodFilter === 'CURRENT_MONTH') {
           if (!bDate.startsWith(currentMonthStr)) return false;
+        } else if (periodFilter === 'DUPLICATES') {
+          if (!dupIds.has(b.id)) return false;
         }
 
         return true;
@@ -4584,7 +5029,7 @@
             <td colspan="11" style="text-align: center; padding: 36px 20px; color: #64748b;">
               <div style="font-size: 30px; margin-bottom: 6px;">📋</div>
               <strong style="color: #334155; font-size: 14px;">No Saved Patient Records Found</strong><br>
-              <span style="font-size: 12px; color: #64748b;">${search ? 'No patients match your search filter.' : 'Register a patient using the form above and click "💾 Save Patient Record" to see it listed here.'}</span>
+              <span style="font-size: 12px; color: #64748b;">${search ? 'No patients match your search filter.' : periodFilter === 'DUPLICATES' ? 'No duplicate patient entries found on the same day. All records are unique!' : 'Register a patient using the form above and click "💾 Save Patient Record" to see it listed here.'}</span>
             </td>
           </tr>
         `;
@@ -4597,6 +5042,11 @@
       filtered.forEach((b, idx) => {
         const tr = document.createElement('tr');
         tr.id = `reg-pat-row-${b.id}`;
+
+        const isDup = dupIds.has(b.id);
+        if (isDup) {
+          tr.style.backgroundColor = 'rgba(254, 242, 242, 0.65)';
+        }
 
         const testsSummary = (b.items || []).map(it => `
           <div class="saved-test-chip" title="${escapeHtml(it.name || '')} (₹${it.rate || 0})">
@@ -4613,6 +5063,7 @@
           <td style="text-align: center; font-weight: 700; color: #64748b; vertical-align: middle;">${idx + 1}</td>
           <td style="vertical-align: middle;">
             <span class="bill-badge">${escapeHtml(b.billNo || '')}</span>
+            ${isDup ? `<div class="badge-duplicate-tag" style="margin-top:3px; font-size:10px;" title="Another record with same UMID or Name exists on this day">⚠️ Duplicate</div>` : ''}
           </td>
           <td style="vertical-align: middle; font-size: 11.5px; white-space: nowrap;">
             <strong>${escapeHtml(formattedDate)}</strong>
@@ -4671,10 +5122,12 @@
       const chipAll = document.getElementById('chipPeriodAll');
       const chipCurrent = document.getElementById('chipPeriodCurrentMonth');
       const chipPrev = document.getElementById('chipPeriodPrevMonth');
+      const chipDup = document.getElementById('chipPeriodDuplicates');
 
       if (chipAll) chipAll.classList.toggle('active', filterType === 'ALL');
       if (chipCurrent) chipCurrent.classList.toggle('active', filterType === 'CURRENT_MONTH');
       if (chipPrev) chipPrev.classList.toggle('active', filterType === 'PREVIOUS_MONTH');
+      if (chipDup) chipDup.classList.toggle('active', filterType === 'DUPLICATES');
 
       renderArchiveTable();
       showToast(`Filter applied: ${getPeriodFilterLabel(filterType, val)}`, "info");
@@ -4684,6 +5137,7 @@
       if (filterType === 'ALL') return 'All Archive Bills';
       if (filterType === 'CURRENT_MONTH') return 'Current Month Bills';
       if (filterType === 'PREVIOUS_MONTH') return 'Previous Month Bills';
+      if (filterType === 'DUPLICATES') return 'Same-Day Duplicate Records';
       if (filterType === 'CUSTOM_MONTH') return `Month: ${val}`;
       if (filterType === 'CUSTOM_DATE') return `Date: ${val}`;
       return filterType;
@@ -4698,6 +5152,8 @@
       const currentYearMonth = now.toISOString().slice(0, 7); // e.g. "2026-10"
       const prevDate = new Date(now.getFullYear(), now.getMonth() - 1, 1);
       const prevYearMonth = prevDate.toISOString().slice(0, 7); // e.g. "2026-09"
+
+      const dupIds = currentPeriodFilter === 'DUPLICATES' ? getSameDayDuplicateBillIds() : null;
 
       return billArchive.filter(b => {
         // Search text matching
@@ -4720,6 +5176,8 @@
           if (bYearMonth !== currentYearMonth) return false;
         } else if (currentPeriodFilter === 'PREVIOUS_MONTH') {
           if (bYearMonth !== prevYearMonth) return false;
+        } else if (currentPeriodFilter === 'DUPLICATES') {
+          if (!dupIds || !dupIds.has(b.id)) return false;
         } else if (currentPeriodFilter === 'CUSTOM_MONTH') {
           if (currentPeriodValue && bYearMonth !== currentPeriodValue) return false;
         } else if (currentPeriodFilter === 'CUSTOM_DATE') {
@@ -4784,6 +5242,7 @@
       tbody.innerHTML = "";
 
       const filtered = getFilteredArchiveBills();
+      const dupIds = getSameDayDuplicateBillIds();
 
       // Initialize selectedBillIds on first render if empty
       if (!isMasterSelectInitialized && billArchive.length > 0) {
@@ -4816,6 +5275,10 @@
         tr.id = `arch-row-${b.id}`;
 
         const isChecked = selectedBillIds.has(b.id);
+        const isDup = dupIds.has(b.id);
+        if (isDup) {
+          tr.style.backgroundColor = 'rgba(254, 242, 242, 0.65)';
+        }
 
         let itemsHtml = (b.items || []).map((it, itemIdx) => `
           <div class="archive-item-pill">
@@ -4836,6 +5299,7 @@
           <td style="text-align: center; font-weight: 700; color: #64748b;">${index + 1}</td>
           <td>
             <input type="text" class="inrow-input" value="${escapeHtml(b.billNo)}" onchange="updateArchiveField('${b.id}', 'billNo', this.value)" style="font-weight: 700; font-family: monospace;">
+            ${isDup ? `<div class="badge-duplicate-tag" style="margin-top: 3px; font-size: 10px;" title="Same-day duplicate entry">⚠️ Same-Day Duplicate</div>` : ''}
           </td>
           <td>
             <input type="date" class="inrow-input" value="${b.date || ''}" onchange="updateArchiveField('${b.id}', 'date', this.value)" style="font-size: 11px;">
@@ -4977,6 +5441,10 @@
       const item = billArchive.find(b => b.id === billId);
       if (!item) return;
 
+      currentEditingBillId = item.id;
+      showActiveEditBanner(item);
+      hideDuplicateAlertBanner();
+
       document.getElementById('regBillNo').value = item.billNo || '';
       document.getElementById('regDate').value = item.date || '';
       document.getElementById('regTime').value = item.time || '';
@@ -5005,7 +5473,10 @@
     }
 
     async function deleteArchiveBill(billId) {
-      if (!confirm("Are you sure you want to delete this bill from the archive?")) return;
+      const bill = billArchive.find(b => b.id === billId);
+      const billDesc = bill ? `Bill #${bill.billNo} (${bill.patientName || 'Patient'})` : 'this record';
+      if (!confirm(`⚠️ PERMANENT DELETION WARNING:\n\nAre you sure you want to permanently delete ${billDesc}?\n\nThis record will be permanently erased from local storage, IndexedDB, LAN server, and Cloud sync. It CANNOT be undone and CANNOT be restored.`)) return;
+
       if (window.syncManager) {
         await syncManager.deleteBill(billId);
         billArchive = syncManager.getBills();
@@ -5014,9 +5485,13 @@
         saveAppData();
       }
       selectedBillIds.delete(billId);
+      if (currentEditingBillId === billId) {
+        resetPatientForm();
+      }
       renderArchiveTable();
       renderRegistrationPatientList();
-      showToast("Bill deleted from archive.", "info");
+      checkDuplicatePatientLive();
+      showToast("Record permanently deleted from all storage.", "info");
     }
 
     function clearArchiveFilters() {
@@ -5028,19 +5503,23 @@
     }
 
     async function confirmClearArchive() {
-      if (confirm("WARNING: This will delete ALL saved bills in the archive. Are you sure you wish to proceed?")) {
-        if (window.syncManager) {
-          await syncManager.clearAllBills();
-          billArchive = syncManager.getBills();
-        } else {
-          billArchive = [];
-          saveAppData();
-        }
-        selectedBillIds.clear();
-        renderArchiveTable();
-        renderRegistrationPatientList();
-        showToast("Archive cleared.", "info");
+      const count = billArchive.length;
+      if (!confirm(`🚨 PERMANENT PURGE WARNING:\n\nAre you sure you want to permanently delete ALL ${count} saved bills?\n\nThis will completely purge all records across Local Storage, IndexedDB, LAN server, and Cloud sync.\n\nDeleted records will be registered as permanently deleted and cannot be restored.`)) {
+        return;
       }
+      if (window.syncManager) {
+        await syncManager.clearAllBills();
+        billArchive = syncManager.getBills();
+      } else {
+        billArchive = [];
+        saveAppData();
+      }
+      selectedBillIds.clear();
+      resetPatientForm();
+      renderArchiveTable();
+      renderRegistrationPatientList();
+      checkDuplicatePatientLive();
+      showToast("All records have been permanently deleted and purged.", "info");
     }
 
     /* ========================================================================
@@ -5147,6 +5626,21 @@
             billedToNwr: rateVal,
             createdAt: new Date().toISOString()
           };
+
+          // Skip if bill was permanently deleted
+          if (window.syncManager && window.syncManager.isBillDeleted(record.id, record.billNo)) {
+            console.warn(`[CSV Import] Skipped permanently deleted bill: ${record.billNo}`);
+            continue;
+          }
+
+          // Skip if duplicate patient entry on same day
+          const isDup = window.syncManager
+            ? window.syncManager.findDuplicatePatient(record)
+            : findDuplicatePatientEntry(record);
+          if (isDup) {
+            console.warn(`[CSV Import] Skipped duplicate patient on same day: ${record.patientName} (${record.date})`);
+            continue;
+          }
 
           billArchive.unshift(record);
           importedCount++;
@@ -6380,7 +6874,12 @@
       reader.onload = function(e) {
         try {
           const parsed = JSON.parse(e.target.result);
-          if (parsed.archive) billArchive = parsed.archive;
+          if (parsed.archive) {
+            billArchive = parsed.archive;
+            if (window.syncManager) {
+              syncManager.setBills(billArchive);
+            }
+          }
           if (parsed.catalog) cghsCatalog = parsed.catalog;
           if (parsed.config) appConfig = Object.assign({}, DEFAULT_CONFIG, parsed.config);
           saveAppData();

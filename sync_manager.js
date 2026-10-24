@@ -61,6 +61,10 @@ class DualModeSyncManager {
     this.syncQueue = []; // Offline pending operations
     this.activeWorkstations = [];
 
+    // Permanently deleted records tracking (cannot be restored)
+    this.deletedBillIds = new Set();
+    this.loadDeletedBillIds();
+
     // Event listeners
     this.listeners = {
       statusChange: [],
@@ -74,13 +78,48 @@ class DualModeSyncManager {
     this.activityLogs = [];
   }
 
+  loadDeletedBillIds() {
+    try {
+      const saved = localStorage.getItem('shiv_railway_deleted_bills');
+      if (saved) {
+        const arr = JSON.parse(saved);
+        if (Array.isArray(arr)) {
+          arr.forEach(id => { if (id) this.deletedBillIds.add(String(id)); });
+        }
+      }
+    } catch (e) {
+      console.warn('Error reading shiv_railway_deleted_bills:', e);
+    }
+  }
+
+  persistDeletedBillIds() {
+    try {
+      localStorage.setItem('shiv_railway_deleted_bills', JSON.stringify([...this.deletedBillIds]));
+    } catch (e) {
+      console.warn('Error writing shiv_railway_deleted_bills:', e);
+    }
+  }
+
+  markBillPermanentlyDeleted(billId, billNo) {
+    if (billId) this.deletedBillIds.add(String(billId));
+    if (billNo) this.deletedBillIds.add(String(billNo));
+    this.persistDeletedBillIds();
+  }
+
+  isBillDeleted(billId, billNo) {
+    if (billId && this.deletedBillIds.has(String(billId))) return true;
+    if (billNo && this.deletedBillIds.has(String(billNo))) return true;
+    return false;
+  }
+
   // ================= INITIALIZATION =================
   async init(initialBills = [], initialConfig = null, initialCatalog = []) {
-    this.bills = [...initialBills];
+    // Filter out any permanently deleted bills
+    this.bills = initialBills.filter(b => b && !this.isBillDeleted(b.id, b.billNo));
     this.config = initialConfig;
     this.catalog = [...initialCatalog];
 
-    this.log(`Initializing Dual-Mode Sync Manager on ${this.workstationId}...`, 'info');
+    this.log(`Initializing Dual-Mode Sync Manager on ${this.workstationId} (${this.deletedBillIds.size} deleted IDs tracked)...`, 'info');
 
     // 1. Initialize IndexedDB
     try {
@@ -260,9 +299,19 @@ class DualModeSyncManager {
       });
 
       if (storedBills && storedBills.length > 0) {
-        // Merge stored bills with in-memory bills (latest updatedAt wins)
-        this.reconcileLocalArrays(storedBills);
-        this.log(`Loaded ${storedBills.length} records from IndexedDB.`, 'info');
+        // Discard any bills that were permanently deleted
+        const activeBills = [];
+        for (const b of storedBills) {
+          if (b && !this.isBillDeleted(b.id, b.billNo)) {
+            activeBills.push(b);
+          } else if (b && b.id) {
+            // Purge deleted bill lingering in IndexedDB
+            this.deleteBillFromIndexedDb(b.id);
+          }
+        }
+        // Merge active bills with in-memory bills (latest updatedAt wins)
+        this.reconcileLocalArrays(activeBills);
+        this.log(`Loaded ${activeBills.length} active records from IndexedDB (${storedBills.length - activeBills.length} deleted purged).`, 'info');
       } else if (this.bills.length > 0) {
         // Populate IndexedDB with current in-memory bills
         await this.persistAllBillsToIndexedDb(this.bills);
@@ -383,6 +432,10 @@ class DualModeSyncManager {
         this.firestoreUnsubscribe();
         this.firestoreUnsubscribe = null;
       }
+      if (typeof this.firestoreDeletedUnsubscribe === 'function') {
+        try { this.firestoreDeletedUnsubscribe(); } catch (e) {}
+        this.firestoreDeletedUnsubscribe = null;
+      }
       this.isCloudConnected = false;
     } else if (mode === this.MODE_LAN) {
       if (this.wsPingInterval) {
@@ -453,10 +506,14 @@ class DualModeSyncManager {
         }
       }
 
-      // 4. Detach previous listener if existing
+      // 4. Detach previous listeners if existing
       if (typeof this.firestoreUnsubscribe === 'function') {
         try { this.firestoreUnsubscribe(); } catch (e) {}
         this.firestoreUnsubscribe = null;
+      }
+      if (typeof this.firestoreDeletedUnsubscribe === 'function') {
+        try { this.firestoreDeletedUnsubscribe(); } catch (e) {}
+        this.firestoreDeletedUnsubscribe = null;
       }
 
       // 5. Attach Real-Time Listener on `nwr_bills` collection
@@ -468,27 +525,45 @@ class DualModeSyncManager {
 
           snapshot.docChanges().forEach((change) => {
             const billData = change.doc.data();
-            if (!billData || !billData.id) return;
+            const docId = change.doc.id;
+            if (!billData && !docId) return;
 
             // Skip local writes echo
-            if (billData.workstationId === this.workstationId && snapshot.metadata.hasPendingWrites) {
+            if (billData && billData.workstationId === this.workstationId && snapshot.metadata.hasPendingWrites) {
               return;
             }
 
             if (change.type === 'added' || change.type === 'modified') {
-              if (billData.deleted) {
-                this.handleRemoteBillDelete(billData.id, billData.workstationId || 'Cloud');
+              if (billData?.deleted || this.isBillDeleted(billData?.id || docId, billData?.billNo)) {
+                this.handleRemoteBillDelete(billData?.id || docId, billData?.workstationId || 'Cloud');
+                // Ensure document is permanently purged from nwr_bills
+                this.firestore.collection('nwr_bills').doc(docId).delete().catch(() => {});
               } else {
                 this.handleRemoteBillUpdate(billData, billData.workstationId || 'Cloud');
               }
             } else if (change.type === 'removed') {
-              this.handleRemoteBillDelete(billData.id, billData.workstationId || 'Cloud');
+              this.handleRemoteBillDelete(docId, billData?.workstationId || 'Cloud');
             }
           });
         }, (error) => {
           console.warn('Firestore snapshot listener event:', error.message);
           this.isCloudConnected = (typeof navigator !== 'undefined' && navigator.onLine !== false);
           this.notifyStatusChange();
+        });
+
+      // 6. Attach Real-Time Listener on `nwr_deleted_bills` collection
+      this.firestoreDeletedUnsubscribe = this.firestore.collection('nwr_deleted_bills')
+        .onSnapshot((snapshot) => {
+          snapshot.docChanges().forEach((change) => {
+            if (change.type === 'added' || change.type === 'modified') {
+              const delId = change.doc.id;
+              if (delId) {
+                this.handleRemoteBillDelete(delId, 'Cloud');
+              }
+            }
+          });
+        }, (err) => {
+          console.warn('Firestore deleted-bills listener note:', err.message);
         });
 
       this.isCloudConnected = true;
@@ -505,6 +580,14 @@ class DualModeSyncManager {
   }
 
   async pushBillToCloud(bill) {
+    if (!bill || !bill.id) return false;
+
+    // Never push a permanently deleted bill to cloud
+    if (this.isBillDeleted(bill.id, bill.billNo)) {
+      console.warn(`[SYNC] Dropped push of permanently deleted bill #${bill.billNo} (${bill.id}) to Cloud.`);
+      return false;
+    }
+
     if (!this.firestore) {
       await this.initCloudMode();
     }
@@ -525,6 +608,8 @@ class DualModeSyncManager {
   }
 
   async deleteBillFromCloud(billId) {
+    if (!billId) return false;
+
     if (!this.firestore) {
       await this.initCloudMode();
     }
@@ -533,13 +618,16 @@ class DualModeSyncManager {
       return false;
     }
     try {
-      // Soft-delete with tombstone for seamless sync across offline peers
-      await this.firestore.collection('nwr_bills').doc(billId).set({
+      // 1. Permanently hard-delete the document from nwr_bills
+      await this.firestore.collection('nwr_bills').doc(billId).delete();
+
+      // 2. Record permanent tombstone in nwr_deleted_bills so peer workstations purge and cannot restore it
+      await this.firestore.collection('nwr_deleted_bills').doc(billId).set({
         id: billId,
-        deleted: true,
-        updatedAt: new Date().toISOString(),
+        deletedAt: new Date().toISOString(),
         workstationId: this.workstationId
       }, { merge: true });
+
       this.isCloudConnected = true;
       this.notifyStatusChange();
       return true;
@@ -665,8 +753,12 @@ class DualModeSyncManager {
       }
 
       case 'FULL_SYNC_DATA': {
+        if (Array.isArray(msg.deletedBillIds)) {
+          msg.deletedBillIds.forEach(id => this.markBillPermanentlyDeleted(id));
+        }
         if (Array.isArray(msg.bills)) {
-          this.reconcileLocalArrays(msg.bills);
+          const activeBills = msg.bills.filter(b => !this.isBillDeleted(b.id, b.billNo));
+          this.reconcileLocalArrays(activeBills);
           this.syncToLocalStorage();
           this.persistAllBillsToIndexedDb(this.bills);
           this.log(`Received full synchronized archive from LAN Server (${this.bills.length} bills).`, 'success');
@@ -677,6 +769,18 @@ class DualModeSyncManager {
           this.syncToLocalStorage();
           if (typeof syncConfigToUi === 'function') syncConfigToUi();
         }
+        break;
+      }
+
+      case 'ALL_BILLS_CLEARED': {
+        this.bills = [];
+        this.syncToLocalStorage();
+        if (this.db) {
+          const tx = this.db.transaction('bills', 'readwrite');
+          tx.objectStore('bills').clear();
+        }
+        this.log(`All bills cleared remotely on LAN by ${msg.workstationId}`, 'warning');
+        this.notifyRemoteBillDelete('*');
         break;
       }
 
@@ -699,14 +803,19 @@ class DualModeSyncManager {
 
       case 'BILL_UPDATED': {
         if (msg.bill && msg.workstationId !== this.workstationId) {
-          this.handleRemoteBillUpdate(msg.bill, msg.workstationName || msg.workstationId);
+          if (!this.isBillDeleted(msg.bill.id, msg.bill.billNo)) {
+            this.handleRemoteBillUpdate(msg.bill, msg.workstationName || msg.workstationId);
+          }
         }
         break;
       }
 
       case 'BILL_DELETED': {
-        if (msg.billId && msg.workstationId !== this.workstationId) {
-          this.handleRemoteBillDelete(msg.billId, msg.workstationName || msg.workstationId);
+        if (msg.billId) {
+          this.markBillPermanentlyDeleted(msg.billId, msg.billNo);
+          if (msg.workstationId !== this.workstationId) {
+            this.handleRemoteBillDelete(msg.billId, msg.workstationName || msg.workstationId);
+          }
         }
         break;
       }
@@ -737,6 +846,14 @@ class DualModeSyncManager {
   }
 
   async pushBillToLan(bill) {
+    if (!bill || !bill.id) return false;
+
+    // Never push a permanently deleted bill to LAN
+    if (this.isBillDeleted(bill.id, bill.billNo)) {
+      console.warn(`[SYNC] Dropped push of permanently deleted bill #${bill.billNo} (${bill.id}) to LAN.`);
+      return false;
+    }
+
     bill.updatedAt = bill.updatedAt || new Date().toISOString();
     bill.workstationId = this.workstationId;
 
@@ -850,11 +967,75 @@ class DualModeSyncManager {
     return record;
   }
 
+  // ================= PATIENT DUPLICATION PREVENTION =================
+  normalizeUmid(umid) {
+    if (!umid) return '';
+    return String(umid).toUpperCase().replace(/[^A-Z0-9]/g, '');
+  }
+
+  normalizeName(name) {
+    if (!name) return '';
+    return String(name).trim().toLowerCase().replace(/\s+/g, ' ');
+  }
+
+  findDuplicatePatient(record) {
+    if (!record || !record.date) return null;
+    const recDate = String(record.date).trim();
+    if (!recDate) return null;
+
+    const recUmid = this.normalizeUmid(record.umidId);
+    const recName = this.normalizeName(record.patientName);
+    if (!recUmid && !recName) return null;
+
+    const targetId = record.id || '';
+    const targetBillNo = (record.billNo || '').trim();
+
+    return this.bills.find(b => {
+      // Allow updating the exact same bill being edited
+      if (targetId && b.id === targetId) return false;
+      if (targetBillNo && b.billNo === targetBillNo) return false;
+      if (String(b.date || '').trim() !== recDate) return false;
+
+      const bUmid = this.normalizeUmid(b.umidId);
+      const bName = this.normalizeName(b.patientName);
+
+      // 1. If both have UMID, match by UMID
+      if (recUmid && bUmid) {
+        return recUmid === bUmid;
+      }
+
+      // 2. If one or both lack UMID, match by patient name
+      if (recName && bName && recName === bName) {
+        return true;
+      }
+
+      return false;
+    }) || null;
+  }
+
   // ================= CRUD OPERATIONS (UNIFIED DATA LAYER) =================
   async saveBill(record, options = {}) {
     if (!record.id) {
       record.id = 'bill_' + Date.now() + '_' + this.workstationId + '_' + Math.floor(Math.random() * 1000);
     }
+
+    // Check if ID was permanently deleted
+    if (this.isBillDeleted(record.id, record.billNo)) {
+      const err = new Error(`Cannot save: Bill #${record.billNo} (${record.id}) has been permanently deleted from records.`);
+      this.log(`⚠️ Blocked attempt to recreate permanently deleted bill #${record.billNo}`, 'warning');
+      throw err;
+    }
+
+    // Duplicate patient entry prevention on the same day
+    if (!options.allowDuplicate && !options.skipDuplicateCheck) {
+      const dup = this.findDuplicatePatient(record);
+      if (dup) {
+        const dupMsg = `Duplicate patient entry blocked: Patient "${dup.patientName}" (UMID: ${dup.umidId || 'N/A'}) already registered on ${dup.date} with Bill #${dup.billNo}.`;
+        this.log(`⚠️ ${dupMsg}`, 'warning');
+        throw new Error(dupMsg);
+      }
+    }
+
     if (!record.createdAt) {
       record.createdAt = new Date().toISOString();
     }
@@ -888,36 +1069,99 @@ class DualModeSyncManager {
   }
 
   async deleteBill(billId) {
-    const bill = this.bills.find(b => b.id === billId);
+    if (!billId) return false;
+    const bill = this.bills.find(b => b.id === billId || b.billNo === billId);
+    const actualId = bill ? bill.id : billId;
     const billNo = bill ? bill.billNo : billId;
 
-    // 1. Remove from in-memory array
-    this.bills = this.bills.filter(b => b.id !== billId);
+    // 1. Mark permanently deleted in blacklist (cannot be restored)
+    this.markBillPermanentlyDeleted(actualId, billNo);
 
-    // 2. Remove locally (IndexedDB + localStorage)
+    // 2. Remove from in-memory array
+    this.bills = this.bills.filter(b => b.id !== actualId && b.billNo !== billNo);
+
+    // 3. Purge from offline queue
+    this.syncQueue = this.syncQueue.filter(item => {
+      if (item.bill && (item.bill.id === actualId || item.bill.billNo === billNo)) return false;
+      if (item.billId === actualId || item.billId === billNo) return false;
+      return true;
+    });
+
+    // 4. Remove locally (IndexedDB + localStorage)
     this.syncToLocalStorage();
-    await this.deleteBillFromIndexedDb(billId);
+    await this.deleteBillFromIndexedDb(actualId);
 
-    // 3. Propagate to active remote driver
+    // 5. Propagate permanent deletion to active remote driver
     if (this.currentMode === this.MODE_CLOUD) {
-      await this.deleteBillFromCloud(billId);
+      await this.deleteBillFromCloud(actualId);
     } else if (this.currentMode === this.MODE_LAN) {
-      await this.deleteBillFromLan(billId);
+      await this.deleteBillFromLan(actualId);
     }
 
-    this.log(`Deleted Bill #${billNo} from database.`, 'info');
+    this.log(`Permanently deleted Bill #${billNo} (${actualId}) from database. Cannot be restored.`, 'info');
     return true;
   }
 
   async clearAllBills() {
     const count = this.bills.length;
+    const oldBills = [...this.bills];
+
+    // 1. Mark all records permanently deleted in blacklist
+    oldBills.forEach(b => {
+      if (b) this.markBillPermanentlyDeleted(b.id, b.billNo);
+    });
+
+    // 2. Clear local memory and queue
     this.bills = [];
+    this.syncQueue = [];
     this.syncToLocalStorage();
+
+    // 3. Clear IndexedDB
     if (this.db) {
-      const tx = this.db.transaction('bills', 'readwrite');
-      tx.objectStore('bills').clear();
+      try {
+        const tx = this.db.transaction('bills', 'readwrite');
+        tx.objectStore('bills').clear();
+      } catch (e) {
+        console.warn('Error clearing IndexedDB:', e);
+      }
     }
-    this.log(`Cleared all ${count} bills locally.`, 'warning');
+
+    // 4. Propagate clear to Cloud
+    if (this.currentMode === this.MODE_CLOUD && this.firestore) {
+      try {
+        for (const b of oldBills) {
+          if (b && b.id) {
+            await this.firestore.collection('nwr_bills').doc(b.id).delete().catch(() => {});
+            await this.firestore.collection('nwr_deleted_bills').doc(b.id).set({
+              id: b.id,
+              deletedAt: new Date().toISOString(),
+              workstationId: this.workstationId
+            }).catch(() => {});
+          }
+        }
+      } catch (e) {
+        console.warn('Error clearing cloud collection:', e);
+      }
+    }
+
+    // 5. Propagate clear to LAN
+    if (this.currentMode === this.MODE_LAN) {
+      try {
+        if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+          this.ws.send(JSON.stringify({
+            type: 'CLEAR_ALL_BILLS',
+            workstationId: this.workstationId
+          }));
+        }
+        await fetch(`${this.lanServerUrl}/api/bills?workstationId=${encodeURIComponent(this.workstationId)}`, {
+          method: 'DELETE'
+        }).catch(() => {});
+      } catch (e) {
+        console.warn('Error clearing LAN server bills:', e);
+      }
+    }
+
+    this.log(`Permanently cleared all ${count} bills from database. Cannot be restored.`, 'warning');
     return true;
   }
 
@@ -999,21 +1243,25 @@ class DualModeSyncManager {
   }
 
   handleRemoteBillDelete(billId, sourceName) {
-    const existing = this.bills.find(b => b.id === billId);
-    if (!existing) return;
+    if (!billId) return;
 
-    const billNo = existing.billNo;
-    this.bills = this.bills.filter(b => b.id !== billId);
+    // Mark permanently deleted in blacklist so it can never be restored
+    this.markBillPermanentlyDeleted(billId);
+
+    const existing = this.bills.find(b => b.id === billId || b.billNo === billId);
+    const billNo = existing ? existing.billNo : billId;
+
+    this.bills = this.bills.filter(b => b.id !== billId && b.billNo !== billId);
 
     this.syncToLocalStorage();
     this.deleteBillFromIndexedDb(billId);
 
     if (typeof showToast === 'function') {
       const icon = this.currentMode === this.MODE_CLOUD ? '☁️' : '🖧';
-      showToast(`${icon} ${sourceName} deleted Bill #${billNo}`, 'info');
+      showToast(`${icon} ${sourceName} permanently deleted Bill #${billNo}`, 'info');
     }
 
-    this.log(`Remote delete received from ${sourceName}: Bill #${billNo}`, 'info');
+    this.log(`Remote permanent delete received from ${sourceName}: Bill #${billNo}`, 'info');
     this.notifyRemoteBillDelete(billId);
   }
 
@@ -1023,24 +1271,35 @@ class DualModeSyncManager {
 
     if (this.currentMode === this.MODE_LAN) {
       try {
+        const payload = {
+          bills: this.bills.filter(b => !this.isBillDeleted(b.id, b.billNo)),
+          workstationId: this.workstationId
+        };
         const res = await fetch(`${this.lanServerUrl}/api/sync`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            bills: this.bills,
-            workstationId: this.workstationId
-          })
+          body: JSON.stringify(payload)
         });
 
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         
-        if (data && Array.isArray(data.bills)) {
-          this.reconcileLocalArrays(data.bills);
-          this.syncToLocalStorage();
-          await this.persistAllBillsToIndexedDb(this.bills);
+        if (data) {
+          // 1. Process server deletedBillIds
+          if (Array.isArray(data.deletedBillIds)) {
+            data.deletedBillIds.forEach(id => this.markBillPermanentlyDeleted(id));
+          }
+
+          // 2. Filter active bills
+          if (Array.isArray(data.bills)) {
+            const activeServerBills = data.bills.filter(b => !this.isBillDeleted(b.id, b.billNo));
+            this.reconcileLocalArrays(activeServerBills);
+            this.bills = this.bills.filter(b => !this.isBillDeleted(b.id, b.billNo));
+            this.syncToLocalStorage();
+            await this.persistAllBillsToIndexedDb(this.bills);
+          }
           
-          this.log(`LAN Sync completed: ${this.bills.length} total records reconciled.`, 'success');
+          this.log(`LAN Sync completed: ${this.bills.length} total active records reconciled.`, 'success');
           if (notifyUser && typeof showToast === 'function') {
             showToast(`🔄 Two-way LAN Sync complete. ${this.bills.length} bills synchronized.`, 'success');
           }
@@ -1060,6 +1319,7 @@ class DualModeSyncManager {
       }
 
       if (!this.firestore) {
+        this.bills = this.bills.filter(b => !this.isBillDeleted(b.id, b.billNo));
         this.syncToLocalStorage();
         await this.persistAllBillsToIndexedDb(this.bills);
         if (notifyUser && typeof showToast === 'function') {
@@ -1070,11 +1330,31 @@ class DualModeSyncManager {
       }
 
       try {
+        // 1. Fetch permanently deleted bills tombstone collection first
+        try {
+          const delSnapshot = await this.firestore.collection('nwr_deleted_bills').get();
+          delSnapshot.forEach(doc => {
+            this.markBillPermanentlyDeleted(doc.id);
+          });
+        } catch (e) {
+          console.warn('Note on nwr_deleted_bills:', e.message);
+        }
+
+        // 2. Filter local bills to eliminate any that were permanently deleted
+        this.bills = this.bills.filter(b => !this.isBillDeleted(b.id, b.billNo));
+
         const snapshot = await this.firestore.collection('nwr_bills').get();
         const remoteBills = [];
         snapshot.forEach(doc => {
           const d = doc.data();
-          if (d && !d.deleted) remoteBills.push(d);
+          if (!d || !d.id) return;
+
+          if (this.isBillDeleted(d.id, d.billNo) || d.deleted) {
+            // Document was deleted; hard delete from nwr_bills if lingering
+            this.firestore.collection('nwr_bills').doc(d.id).delete().catch(() => {});
+          } else {
+            remoteBills.push(d);
+          }
         });
 
         // Two-way merge
@@ -1083,6 +1363,7 @@ class DualModeSyncManager {
 
         // 1. Merge remote bills into local
         remoteBills.forEach(rBill => {
+          if (this.isBillDeleted(rBill.id, rBill.billNo)) return;
           if (!localMap.has(rBill.id)) {
             this.bills.unshift(rBill);
             localMap.set(rBill.id, rBill);
@@ -1097,19 +1378,20 @@ class DualModeSyncManager {
           }
         });
 
-        // 2. Upload any local bills that remote didn't have
+        // 2. Upload any local bills that remote didn't have (ONLY non-deleted)
         const remoteIdSet = new Set(remoteBills.map(b => b.id));
-        const missingOnRemote = this.bills.filter(b => !remoteIdSet.has(b.id));
+        const missingOnRemote = this.bills.filter(b => !remoteIdSet.has(b.id) && !this.isBillDeleted(b.id, b.billNo));
 
         for (const localOnlyBill of missingOnRemote) {
           await this.pushBillToCloud(localOnlyBill);
         }
 
+        this.bills = this.bills.filter(b => !this.isBillDeleted(b.id, b.billNo));
         this.syncToLocalStorage();
         await this.persistAllBillsToIndexedDb(this.bills);
 
         this.isCloudConnected = true;
-        this.log(`Cloud Sync completed: ${this.bills.length} bills merged, ${missingOnRemote.length} uploaded.`, 'success');
+        this.log(`Cloud Sync completed: ${this.bills.length} active bills merged, ${missingOnRemote.length} uploaded.`, 'success');
         if (notifyUser && typeof showToast === 'function') {
           showToast(`☁️ Two-way Cloud Sync complete. ${this.bills.length} bills synchronized.`, 'success');
         }
@@ -1117,6 +1399,7 @@ class DualModeSyncManager {
         return true;
       } catch (err) {
         this.log(`Cloud Sync notice: ${err.message}`, 'warning');
+        this.bills = this.bills.filter(b => !this.isBillDeleted(b.id, b.billNo));
         this.syncToLocalStorage();
         await this.persistAllBillsToIndexedDb(this.bills);
         this.isCloudConnected = true;
@@ -1137,11 +1420,14 @@ class DualModeSyncManager {
 
   // Reconcile two bill arrays by ID and timestamp
   reconcileLocalArrays(remoteBills) {
+    if (!Array.isArray(remoteBills)) return;
     const localMap = new Map();
     this.bills.forEach((b, idx) => localMap.set(b.id, idx));
 
     remoteBills.forEach(rBill => {
       if (!rBill || !rBill.id) return;
+      if (this.isBillDeleted(rBill.id, rBill.billNo)) return;
+
       if (localMap.has(rBill.id)) {
         const idx = localMap.get(rBill.id);
         const lBill = this.bills[idx];
@@ -1154,6 +1440,9 @@ class DualModeSyncManager {
         this.bills.unshift(rBill);
       }
     });
+
+    // Filter out any permanently deleted bills
+    this.bills = this.bills.filter(b => !this.isBillDeleted(b.id, b.billNo));
 
     // Sort descending by date/time
     this.bills.sort((a, b) => {
@@ -1180,6 +1469,10 @@ class DualModeSyncManager {
     for (const item of queueCopy) {
       try {
         if (item.type === 'SAVE_BILL') {
+          if (item.bill && this.isBillDeleted(item.bill.id, item.bill.billNo)) {
+            console.warn(`[QUEUE] Dropped queued SAVE_BILL for permanently deleted bill #${item.bill.billNo}`);
+            continue;
+          }
           if (this.currentMode === this.MODE_CLOUD) await this.pushBillToCloud(item.bill);
           if (this.currentMode === this.MODE_LAN) await this.pushBillToLan(item.bill);
         } else if (item.type === 'DELETE_BILL') {

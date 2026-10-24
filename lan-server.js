@@ -47,14 +47,16 @@ function loadDatabase() {
       if (parsed && typeof parsed === 'object') {
         db = {
           bills: Array.isArray(parsed.bills) ? parsed.bills : [],
+          deletedBillIds: Array.isArray(parsed.deletedBillIds) ? parsed.deletedBillIds : [],
           config: parsed.config || null,
           catalog: Array.isArray(parsed.catalog) ? parsed.catalog : null,
           nextBillSequence: parsed.nextBillSequence || 141,
           lastUpdated: parsed.lastUpdated || new Date().toISOString()
         };
-        console.log(`[DB] Loaded ${db.bills.length} bills from ${DB_FILE}`);
+        console.log(`[DB] Loaded ${db.bills.length} bills (${db.deletedBillIds.length} deleted records tracked) from ${DB_FILE}`);
       }
     } else {
+      db.deletedBillIds = [];
       saveDatabase();
       console.log(`[DB] Initialized new database at ${DB_FILE}`);
     }
@@ -216,6 +218,12 @@ function handleWebSocketMessage(ws, msg) {
       const bill = msg.bill;
       if (!bill || !bill.id) return;
 
+      // Ensure deleted records can never be restored
+      if (db.deletedBillIds && (db.deletedBillIds.includes(bill.id) || (bill.billNo && db.deletedBillIds.includes(bill.billNo)))) {
+        console.warn(`[SYNC REJECTED] Workstation ${msg.workstationId} attempted to restore permanently deleted Bill #${bill.billNo} (${bill.id}). Action blocked.`);
+        return;
+      }
+
       bill.updatedAt = bill.updatedAt || new Date().toISOString();
       bill.workstationId = msg.workstationId || (clientInfo ? clientInfo.workstationId : 'Unknown');
 
@@ -245,20 +253,49 @@ function handleWebSocketMessage(ws, msg) {
       const billId = msg.billId;
       if (!billId) return;
 
-      const idx = db.bills.findIndex(b => b.id === billId);
+      if (!db.deletedBillIds) db.deletedBillIds = [];
+      if (!db.deletedBillIds.includes(billId)) {
+        db.deletedBillIds.push(billId);
+      }
+
+      const idx = db.bills.findIndex(b => b.id === billId || b.billNo === billId);
       let deletedBillNo = '';
       if (idx >= 0) {
         deletedBillNo = db.bills[idx].billNo;
+        if (deletedBillNo && !db.deletedBillIds.includes(deletedBillNo)) {
+          db.deletedBillIds.push(deletedBillNo);
+        }
         db.bills.splice(idx, 1);
-        scheduleSaveDatabase();
       }
+      scheduleSaveDatabase();
 
-      console.log(`[SYNC BROADCAST] Bill ${billId} (${deletedBillNo}) deleted by ${msg.workstationId}`);
+      console.log(`[SYNC BROADCAST] Bill ${billId} (${deletedBillNo}) permanently deleted by ${msg.workstationId}`);
 
       broadcast({
         type: 'BILL_DELETED',
         billId: billId,
         billNo: deletedBillNo,
+        workstationId: msg.workstationId,
+        workstationName: clientInfo ? clientInfo.workstationName : msg.workstationId,
+        timestamp: new Date().toISOString()
+      }, ws);
+      break;
+    }
+
+    case 'CLEAR_ALL_BILLS': {
+      if (!db.deletedBillIds) db.deletedBillIds = [];
+      db.bills.forEach(b => {
+        if (b && b.id && !db.deletedBillIds.includes(b.id)) db.deletedBillIds.push(b.id);
+        if (b && b.billNo && !db.deletedBillIds.includes(b.billNo)) db.deletedBillIds.push(b.billNo);
+      });
+      const clearedCount = db.bills.length;
+      db.bills = [];
+      scheduleSaveDatabase();
+
+      console.log(`[SYNC BROADCAST] All ${clearedCount} bills permanently deleted by ${msg.workstationId}`);
+
+      broadcast({
+        type: 'ALL_BILLS_CLEARED',
         workstationId: msg.workstationId,
         workstationName: clientInfo ? clientInfo.workstationName : msg.workstationId,
         timestamp: new Date().toISOString()
@@ -283,6 +320,7 @@ function handleWebSocketMessage(ws, msg) {
       ws.send(JSON.stringify({
         type: 'FULL_SYNC_DATA',
         bills: db.bills,
+        deletedBillIds: db.deletedBillIds || [],
         config: db.config,
         serverTime: new Date().toISOString()
       }));
@@ -370,6 +408,11 @@ app.post('/api/bills', (req, res) => {
     return res.status(400).json({ success: false, error: 'Bill ID is required' });
   }
 
+  // Prevent restoration of permanently deleted bill
+  if (db.deletedBillIds && (db.deletedBillIds.includes(bill.id) || (bill.billNo && db.deletedBillIds.includes(bill.billNo)))) {
+    return res.status(409).json({ success: false, error: 'Bill has been permanently deleted and cannot be restored.' });
+  }
+
   bill.updatedAt = bill.updatedAt || new Date().toISOString();
   bill.workstationId = workstationId;
 
@@ -392,28 +435,57 @@ app.post('/api/bills', (req, res) => {
   res.json({ success: true, bill: bill });
 });
 
-// Delete Bill
+// Delete Single Bill (Permanent Delete)
 app.delete('/api/bills/:id', (req, res) => {
   const billId = req.params.id;
   const workstationId = req.query.workstationId || 'REST-Client';
 
-  const idx = db.bills.findIndex(b => b.id === billId);
+  if (!db.deletedBillIds) db.deletedBillIds = [];
+  if (!db.deletedBillIds.includes(billId)) {
+    db.deletedBillIds.push(billId);
+  }
+
+  const idx = db.bills.findIndex(b => b.id === billId || b.billNo === billId);
+  let deletedBillNo = '';
   if (idx >= 0) {
     const deleted = db.bills.splice(idx, 1)[0];
-    scheduleSaveDatabase();
-
-    broadcast({
-      type: 'BILL_DELETED',
-      billId: billId,
-      billNo: deleted.billNo,
-      workstationId: workstationId,
-      timestamp: new Date().toISOString()
-    });
-
-    res.json({ success: true, deletedId: billId });
-  } else {
-    res.status(404).json({ success: false, error: 'Bill not found' });
+    deletedBillNo = deleted.billNo;
+    if (deletedBillNo && !db.deletedBillIds.includes(deletedBillNo)) {
+      db.deletedBillIds.push(deletedBillNo);
+    }
   }
+  scheduleSaveDatabase();
+
+  broadcast({
+    type: 'BILL_DELETED',
+    billId: billId,
+    billNo: deletedBillNo,
+    workstationId: workstationId,
+    timestamp: new Date().toISOString()
+  });
+
+  res.json({ success: true, deletedId: billId, billNo: deletedBillNo });
+});
+
+// Clear All Bills (Permanent Bulk Deletion)
+app.delete('/api/bills', (req, res) => {
+  const workstationId = req.query.workstationId || 'REST-Client';
+  if (!db.deletedBillIds) db.deletedBillIds = [];
+  db.bills.forEach(b => {
+    if (b && b.id && !db.deletedBillIds.includes(b.id)) db.deletedBillIds.push(b.id);
+    if (b && b.billNo && !db.deletedBillIds.includes(b.billNo)) db.deletedBillIds.push(b.billNo);
+  });
+  const count = db.bills.length;
+  db.bills = [];
+  scheduleSaveDatabase();
+
+  broadcast({
+    type: 'ALL_BILLS_CLEARED',
+    workstationId: workstationId,
+    timestamp: new Date().toISOString()
+  });
+
+  res.json({ success: true, clearedCount: count });
 });
 
 // Two-Way Reconciliation & Merge Endpoint
@@ -421,6 +493,8 @@ app.delete('/api/bills/:id', (req, res) => {
 app.post('/api/sync', (req, res) => {
   const clientBills = Array.isArray(req.body.bills) ? req.body.bills : [];
   const workstationId = req.body.workstationId || 'Client';
+
+  if (!db.deletedBillIds) db.deletedBillIds = [];
 
   let addedToServer = 0;
   let updatedOnServer = 0;
@@ -431,6 +505,11 @@ app.post('/api/sync', (req, res) => {
   clientBills.forEach(cBill => {
     if (!cBill || !cBill.id) return;
     
+    // Discard any incoming bills that were permanently deleted
+    if (db.deletedBillIds.includes(cBill.id) || (cBill.billNo && db.deletedBillIds.includes(cBill.billNo))) {
+      return;
+    }
+
     if (serverBillMap.has(cBill.id)) {
       const sIdx = serverBillMap.get(cBill.id);
       const sBill = db.bills[sIdx];
@@ -461,10 +540,11 @@ app.post('/api/sync', (req, res) => {
     });
   }
 
-  // Return server's complete master list of bills back to the client
+  // Return server's complete master list of bills back to the client along with deleted IDs
   res.json({
     success: true,
     bills: db.bills,
+    deletedBillIds: db.deletedBillIds || [],
     config: db.config,
     serverTime: new Date().toISOString(),
     stats: {
