@@ -114,6 +114,12 @@ class DualModeSyncManager {
 
   // ================= INITIALIZATION =================
   async init(initialBills = [], initialConfig = null, initialCatalog = []) {
+    const BATCH_KEY = 'shiv_railway_archive_batch_2026_nov';
+    if (localStorage.getItem(BATCH_KEY) !== 'v1') {
+      this.deletedBillIds.clear();
+      this.persistDeletedBillIds();
+    }
+
     // Filter out any permanently deleted bills
     this.bills = initialBills.filter(b => b && !this.isBillDeleted(b.id, b.billNo));
     this.config = initialConfig;
@@ -124,6 +130,15 @@ class DualModeSyncManager {
     // 1. Initialize IndexedDB
     try {
       await this.initIndexedDb();
+      if (localStorage.getItem(BATCH_KEY) !== 'v1') {
+        try {
+          if (this.db) {
+            const tx = this.db.transaction('bills', 'readwrite');
+            tx.objectStore('bills').clear();
+          }
+        } catch (e) {}
+        localStorage.setItem(BATCH_KEY, 'v1');
+      }
       this.log('Local IndexedDB storage initialized.', 'success');
     } catch (err) {
       console.warn('IndexedDB initialization failed, falling back to localStorage:', err);
@@ -925,7 +940,7 @@ class DualModeSyncManager {
     }
 
     // Fallback or Cloud/Local mode: compute highest from all known bills
-    let maxNum = 140;
+    let maxNum = 0;
     this.bills.forEach(item => {
       if (item.billNo && item.billNo.startsWith(prefix)) {
         const numPart = item.billNo.replace(prefix, '').trim();
@@ -949,7 +964,7 @@ class DualModeSyncManager {
     if (clash) {
       // Find highest number and increment
       const prefix = record.billNo.replace(/\d+$/, '');
-      let maxNum = 140;
+      let maxNum = 0;
       this.bills.forEach(item => {
         if (item.billNo && item.billNo.startsWith(prefix)) {
           const numPart = item.billNo.replace(prefix, '').trim();

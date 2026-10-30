@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Official CGHS Non-NABL Z-Tier / Z-City Rate Master Schedule (2,594 Approved Items) -->
   <script src="cghs_approved_rates.js"></script>
+  <!-- Official North Western Railway Uploaded Monthly Claim Bills Archive (53 Bills) -->
+  <script src="nwr_official_bills.js"></script>
   <!-- Firebase App, Auth & Firestore Compat SDKs (for Cloud Mode A) -->
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
@@ -3698,25 +3700,24 @@
             : [...DEFAULT_CGHS_CATALOG];
         }
 
-        const savedArchive = localStorage.getItem('shiv_railway_archive');
-        if (savedArchive) {
-          billArchive = JSON.parse(savedArchive);
-          // Migrate old mock item codes in saved bills if any exist
-          billArchive.forEach(bill => {
-            if (bill.items) {
-              bill.items.forEach(it => {
-                if (it.code === 'CGHS-USG-01') { it.code = 'RI020'; it.name = 'USG Whole Abdomen Including Pelvis'; it.rate = 544; }
-                if (it.code === 'CGHS-USG-02') { it.code = 'RI021'; it.name = 'Pelvic USG (KUB / Gynae)'; it.rate = 340; }
-                if (it.code === 'CGHS-USG-03') { it.code = 'RI021'; it.name = 'USG KUB (Kidney, Ureter, Bladder)'; it.rate = 340; }
-                if (it.code === 'CGHS-XR-01') { it.code = 'RI034'; it.name = 'X-Ray Chest PA View'; it.rate = 156; }
-                if (it.code === 'CGHS-ECG-01') { it.code = 'CI001'; it.name = 'Electrocardiogram (ECG)'; it.rate = 119; }
-                if (it.code === 'CGHS-DOP-02') { it.code = 'RI029'; it.name = 'Arterial Colour Doppler Bilateral'; it.rate = 680; }
-                if (it.code === 'CGHS-LAB-01') { it.code = 'LB012'; it.name = 'Complete Haemogram / CBC'; it.rate = 204; }
-              });
-              bill.totalAmount = bill.items.reduce((sum, item) => sum + (parseFloat(item.rate) || 0), 0);
-              bill.billedToNwr = bill.totalAmount;
-            }
-          });
+        const BATCH_KEY = 'shiv_railway_archive_batch_2026_nov';
+        const hasOfficialBills = typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026) && OFFICIAL_NWR_BILLS_2026.length > 0;
+
+        if (localStorage.getItem(BATCH_KEY) !== 'v1' && hasOfficialBills) {
+          // Delete all previous bills and seed fresh with the 53 official bills from the PDF
+          localStorage.removeItem('shiv_railway_deleted_bills');
+          billArchive = JSON.parse(JSON.stringify(OFFICIAL_NWR_BILLS_2026));
+          localStorage.setItem('shiv_railway_archive', JSON.stringify(billArchive));
+          localStorage.setItem(BATCH_KEY, 'v1');
+        } else {
+          const savedArchive = localStorage.getItem('shiv_railway_archive');
+          if (savedArchive) {
+            billArchive = JSON.parse(savedArchive);
+          } else if (hasOfficialBills) {
+            billArchive = JSON.parse(JSON.stringify(OFFICIAL_NWR_BILLS_2026));
+            localStorage.setItem('shiv_railway_archive', JSON.stringify(billArchive));
+            localStorage.setItem(BATCH_KEY, 'v1');
+          }
         }
       } catch (err) {
         console.error("Error loading localStorage data:", err);
@@ -3893,7 +3894,7 @@
       if (window.syncManager) {
         nextNum = await syncManager.getNextSequentialBillNumber(prefix);
       } else {
-        let maxNum = 140; // baseline realistic seed
+        let maxNum = 0;
         billArchive.forEach(item => {
           if (item.billNo && item.billNo.startsWith(prefix)) {
             const numPart = item.billNo.replace(prefix, '').trim();

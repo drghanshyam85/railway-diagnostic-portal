@@ -34,7 +34,7 @@ let db = {
   bills: [],
   config: null,
   catalog: null,
-  nextBillSequence: 141,
+  nextBillSequence: 54,
   lastUpdated: new Date().toISOString()
 };
 
@@ -50,7 +50,7 @@ function loadDatabase() {
           deletedBillIds: Array.isArray(parsed.deletedBillIds) ? parsed.deletedBillIds : [],
           config: parsed.config || null,
           catalog: Array.isArray(parsed.catalog) ? parsed.catalog : null,
-          nextBillSequence: parsed.nextBillSequence || 141,
+          nextBillSequence: parsed.nextBillSequence || 54,
           lastUpdated: parsed.lastUpdated || new Date().toISOString()
         };
         console.log(`[DB] Loaded ${db.bills.length} bills (${db.deletedBillIds.length} deleted records tracked) from ${DB_FILE}`);
@@ -372,7 +372,7 @@ app.get('/api/bills', (req, res) => {
 // Multi-computer conflict prevention: Guarantees unique voucher numbers across all computers
 app.get('/api/next-bill-number', (req, res) => {
   const prefix = req.query.prefix || (db.config && db.config.billPrefix) || "NWR/2026-27/";
-  let maxNum = 140;
+  let maxNum = 0;
 
   db.bills.forEach(item => {
     if (item.billNo && item.billNo.startsWith(prefix)) {
@@ -384,7 +384,7 @@ app.get('/api/next-bill-number', (req, res) => {
     }
   });
 
-  const nextSeq = Math.max(maxNum + 1, (db.nextBillSequence || 141));
+  const nextSeq = Math.max(maxNum + 1, (db.nextBillSequence || 54));
   db.nextBillSequence = nextSeq + 1;
   scheduleSaveDatabase();
 
