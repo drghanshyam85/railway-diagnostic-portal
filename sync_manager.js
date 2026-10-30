@@ -88,8 +88,31 @@ class DualModeSyncManager {
           arr.forEach(id => { if (id) this.deletedBillIds.add(String(id)); });
         }
       }
+      this.unmarkOfficialBillsFromDeleted();
     } catch (e) {
       console.warn('Error reading shiv_railway_deleted_bills:', e);
+    }
+  }
+
+  unmarkOfficialBillsFromDeleted() {
+    const officialBills = (typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026))
+      ? OFFICIAL_NWR_BILLS_2026
+      : (typeof window !== 'undefined' && window.OFFICIAL_NWR_BILLS_2026 ? window.OFFICIAL_NWR_BILLS_2026 : []);
+    if (officialBills && officialBills.length > 0) {
+      let changed = false;
+      officialBills.forEach(b => {
+        if (b.id && this.deletedBillIds.has(String(b.id))) {
+          this.deletedBillIds.delete(String(b.id));
+          changed = true;
+        }
+        if (b.billNo && this.deletedBillIds.has(String(b.billNo))) {
+          this.deletedBillIds.delete(String(b.billNo));
+          changed = true;
+        }
+      });
+      if (changed) {
+        this.persistDeletedBillIds();
+      }
     }
   }
 
@@ -115,12 +138,21 @@ class DualModeSyncManager {
 
   // ================= INITIALIZATION =================
   async init(initialBills = [], initialConfig = null, initialCatalog = []) {
-    const PURGE_KEY = 'shiv_railway_clean_slate_purge_v3';
-    if (localStorage.getItem(PURGE_KEY) !== 'done') {
-      this.deletedBillIds.clear();
-      this.persistDeletedBillIds();
-      this.bills = [];
-      localStorage.setItem('shiv_railway_archive', JSON.stringify([]));
+    this.unmarkOfficialBillsFromDeleted();
+
+    const INTEGRATION_KEY = 'shiv_railway_55_active_bills_integrated_v3';
+    const officialList = (typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026))
+      ? OFFICIAL_NWR_BILLS_2026
+      : (typeof window !== 'undefined' && window.OFFICIAL_NWR_BILLS_2026 ? window.OFFICIAL_NWR_BILLS_2026 : []);
+
+    if (localStorage.getItem(INTEGRATION_KEY) !== 'done' || !initialBills || initialBills.length < 55) {
+      if (officialList && officialList.length >= 55) {
+        this.deletedBillIds.clear();
+        this.persistDeletedBillIds();
+        initialBills = JSON.parse(JSON.stringify(officialList));
+        localStorage.setItem('shiv_railway_archive', JSON.stringify(initialBills));
+        localStorage.setItem(INTEGRATION_KEY, 'done');
+      }
     }
 
     // Filter out any permanently deleted bills
@@ -309,8 +341,6 @@ class DualModeSyncManager {
 
   async loadFromIndexedDb() {
     if (!this.db) return;
-    const PURGE_KEY = 'shiv_railway_clean_slate_purge_v3';
-    if (localStorage.getItem(PURGE_KEY) !== 'done') return;
     try {
       const storedBills = await new Promise((resolve, reject) => {
         const tx = this.db.transaction('bills', 'readonly');
@@ -319,6 +349,8 @@ class DualModeSyncManager {
         req.onsuccess = () => resolve(req.result || []);
         req.onerror = () => reject(req.error);
       });
+
+      this.unmarkOfficialBillsFromDeleted();
 
       if (storedBills && storedBills.length > 0) {
         // Discard any bills that were permanently deleted
@@ -330,6 +362,15 @@ class DualModeSyncManager {
             // Purge deleted bill lingering in IndexedDB
             this.deleteBillFromIndexedDb(b.id);
           }
+        }
+        // Ensure official 55 bills are never dropped
+        const officialList = (typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026)) ? OFFICIAL_NWR_BILLS_2026 : [];
+        if (activeBills.length < 55 && officialList.length >= 55) {
+          officialList.forEach(ob => {
+            if (!activeBills.some(ab => ab.id === ob.id || ab.billNo === ob.billNo)) {
+              activeBills.push(ob);
+            }
+          });
         }
         // Merge active bills with in-memory bills (latest updatedAt wins)
         this.reconcileLocalArrays(activeBills);
@@ -775,9 +816,11 @@ class DualModeSyncManager {
       }
 
       case 'FULL_SYNC_DATA': {
+        this.unmarkOfficialBillsFromDeleted();
         if (Array.isArray(msg.deletedBillIds)) {
           msg.deletedBillIds.forEach(id => this.markBillPermanentlyDeleted(id));
         }
+        this.unmarkOfficialBillsFromDeleted();
         if (Array.isArray(msg.bills)) {
           const activeBills = msg.bills.filter(b => !this.isBillDeleted(b.id, b.billNo));
           this.reconcileLocalArrays(activeBills);

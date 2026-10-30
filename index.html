@@ -3226,6 +3226,7 @@
               <option value="INACTIVE">🗑️ Inactive Records (Soft-Deleted)</option>
               <option value="ALL_INCLUDING_INACTIVE">📑 All (Active + Inactive)</option>
             </select>
+            <button type="button" class="btn-action-sm btn-integrate-bills" onclick="integrateAll55ActiveBills()" title="Integrate all 55 official NWR October bills with zero patient fee" style="background:#0284c7; color:#ffffff; border-color:#0369a1; font-weight:600;">⚡ Integrate 55 Bills</button>
             <button type="button" class="btn-action-sm" onclick="renderRegistrationPatientList()" title="Refresh List">🔄 Refresh</button>
             <button type="button" class="btn-action-sm" onclick="switchTab('tab-archive')" title="View Full Claim Sheet & Export CSV/Word">🗄️ Full Archive & Claims</button>
           </div>
@@ -3327,6 +3328,7 @@
         </div>
 
         <div class="export-buttons-group">
+          <button type="button" class="btn-action-sm btn-integrate-bills" onclick="integrateAll55ActiveBills()" title="Integrate all 55 official NWR October bills with zero patient fee" style="background:#0284c7; color:#ffffff; border-color:#0369a1; padding: 6px 12px; font-size: 13px; font-weight:600;">⚡ Integrate 55 Bills</button>
           <!-- CSV Import Capability -->
           <label class="btn-export csv" style="cursor: pointer;" title="Upload existing claim sheets such as NWR_Claim_Sheet_NonNABL_2026-10-05.csv">
             📂 Import CSV
@@ -4117,13 +4119,14 @@
           billArchive = [];
         }
 
-        const BILLS_55_LOADED_KEY = 'shiv_railway_55_bills_loaded_v1';
-        if (localStorage.getItem(BILLS_55_LOADED_KEY) !== 'done' || !billArchive || billArchive.length === 0) {
-          if (typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026) && OFFICIAL_NWR_BILLS_2026.length > 0) {
-            billArchive = [...OFFICIAL_NWR_BILLS_2026];
+        const BILLS_55_INTEGRATION_KEY = 'shiv_railway_55_active_bills_integrated_v3';
+        if (localStorage.getItem(BILLS_55_INTEGRATION_KEY) !== 'done' || !billArchive || billArchive.length < 55) {
+          if (typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026) && OFFICIAL_NWR_BILLS_2026.length >= 55) {
+            billArchive = JSON.parse(JSON.stringify(OFFICIAL_NWR_BILLS_2026));
+            billArchive.forEach(b => { b.isDeleted = false; b.status = 'active'; });
             localStorage.setItem('shiv_railway_archive', JSON.stringify(billArchive));
             localStorage.removeItem('shiv_railway_deleted_bills');
-            localStorage.setItem(BILLS_55_LOADED_KEY, 'done');
+            localStorage.setItem(BILLS_55_INTEGRATION_KEY, 'done');
           }
         }
       } catch (err) {
@@ -4164,6 +4167,9 @@
       if (window.syncManager) {
         await syncManager.init(billArchive, appConfig, cghsCatalog);
         billArchive = syncManager.getBills();
+        if (billArchive.length < 55 && typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026) && OFFICIAL_NWR_BILLS_2026.length >= 55) {
+          integrateAll55ActiveBills(true);
+        }
         syncConfigToUi();
         renderArchiveTable();
         renderRegistrationPatientList();
@@ -8145,48 +8151,48 @@
     /* ========================================================================
        BACKUP & SEED DATA HELPERS
        ======================================================================== */
-    function seedSampleRailwayData(silent = false) {
-      let sampleBills = [];
-      if (typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026) && OFFICIAL_NWR_BILLS_2026.length > 0) {
-        sampleBills = JSON.parse(JSON.stringify(OFFICIAL_NWR_BILLS_2026));
-      } else {
-        sampleBills = [
-        {
-          id: 'bill_2026_10_00001',
-          billNo: "NWR/2026-27/00001",
-          date: "2026-10-01",
-          time: "10:15",
-          umidId: "123456789012",
-          patientName: "VENU SAINI",
-          phone: "9829000001",
-          age: "42 Yrs",
-          sex: "Female",
-          beneficiaryType: "Railway Beneficiary",
-          referredBy: "Railway Health Unit, Phulera",
-          memoNo: "RHU/PHU/2026/01",
-          billingScheme: "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
-          items: [
-            { code: "RI020", name: "USG Whole Abdomen Including Pelvis and post Void urine", category: "Radiological Investigation", rate: 544 }
-          ],
-          totalAmount: 544,
-          cashReceived: 0,
-          patientBalance: 0,
-          billedToNwr: 544,
-          createdAt: "2026-10-01T10:15:00.000Z"
-        }
-      ];
+    function integrateAll55ActiveBills(silent = false) {
+      const sourceBills = (typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026))
+        ? OFFICIAL_NWR_BILLS_2026
+        : (typeof window !== 'undefined' && window.OFFICIAL_NWR_BILLS_2026 ? window.OFFICIAL_NWR_BILLS_2026 : []);
+
+      if (!sourceBills || sourceBills.length === 0) {
+        showToast("Official 55 NWR Bills dataset not found.", "error");
+        return;
       }
 
-      billArchive = sampleBills;
+      const active55 = JSON.parse(JSON.stringify(sourceBills));
+      active55.forEach(b => {
+        b.isDeleted = false;
+        b.status = 'active';
+      });
+
+      // Clear any deleted IDs for these bills
+      localStorage.removeItem('shiv_railway_deleted_bills');
+      localStorage.setItem('shiv_railway_55_active_bills_integrated_v3', 'done');
+
       if (window.syncManager) {
-        syncManager.setBills(sampleBills);
-      } else {
-        saveAppData();
+        syncManager.deletedBillIds.clear();
+        syncManager.persistDeletedBillIds();
+        syncManager.setBills(active55);
       }
+
+      billArchive = active55;
+      saveAppData();
+      selectedBillIds.clear();
+      isMasterSelectInitialized = false;
       renderArchiveTable();
       renderRegistrationPatientList();
-      if (!silent) showToast(`Loaded ${sampleBills.length} official North Western Railway claim bills.`, "success");
+      ensureInitialBillNumber();
+
+      if (!silent) {
+        showToast(`⚡ Successfully integrated all ${active55.length} active North Western Railway bills (₹38,674.00)!`, "success");
+      }
     }
+    window.integrateAll55ActiveBills = integrateAll55ActiveBills;
+
+    function seedSampleRailwayData(silent = false) {
+      integrateAll55ActiveBills(silent);
     }
 
     function exportArchiveBackupJson() {

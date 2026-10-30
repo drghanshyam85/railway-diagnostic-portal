@@ -51,6 +51,7 @@ function loadDatabase() {
           config: parsed.config || null,
           catalog: Array.isArray(parsed.catalog) ? parsed.catalog : null,
           nextBillSequence: parsed.nextBillSequence || 1,
+          monthlySequences: parsed.monthlySequences || {},
           lastUpdated: parsed.lastUpdated || new Date().toISOString()
         };
         console.log(`[DB] Loaded ${db.bills.length} bills (${db.deletedBillIds.length} deleted records tracked) from ${DB_FILE}`);

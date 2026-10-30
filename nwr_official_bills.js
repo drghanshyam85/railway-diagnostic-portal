@@ -46,7 +46,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 816,
     "createdAt": "2026-10-01T11:08:00.000Z",
     "updatedAt": "2026-10-01T11:08:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00002",
@@ -76,7 +78,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 1360,
     "createdAt": "2026-10-01T15:41:00.000Z",
     "updatedAt": "2026-10-01T15:41:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00003",
@@ -106,7 +110,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-01T17:57:00.000Z",
     "updatedAt": "2026-10-01T17:57:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00004",
@@ -136,7 +142,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 680,
     "createdAt": "2026-10-02T09:50:00.000Z",
     "updatedAt": "2026-10-02T09:50:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00005",
@@ -172,7 +180,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 537,
     "createdAt": "2026-10-02T11:05:00.000Z",
     "updatedAt": "2026-10-02T11:05:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00006",
@@ -202,7 +212,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-02T10:00:00.000Z",
     "updatedAt": "2026-10-02T10:00:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00007",
@@ -232,7 +244,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-03T11:31:00.000Z",
     "updatedAt": "2026-10-03T11:31:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00008",
@@ -262,7 +276,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-03T11:33:00.000Z",
     "updatedAt": "2026-10-03T11:33:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00009",
@@ -298,7 +314,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 646,
     "createdAt": "2026-10-03T11:49:00.000Z",
     "updatedAt": "2026-10-03T11:49:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00010",
@@ -328,7 +346,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 333,
     "createdAt": "2026-10-03T12:25:00.000Z",
     "updatedAt": "2026-10-03T12:25:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00011",
@@ -370,7 +390,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 1394,
     "createdAt": "2026-10-03T13:17:00.000Z",
     "updatedAt": "2026-10-03T13:17:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00012",
@@ -400,7 +422,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 680,
     "createdAt": "2026-10-05T10:42:00.000Z",
     "updatedAt": "2026-10-05T10:42:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00013",
@@ -430,7 +454,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-06T10:00:00.000Z",
     "updatedAt": "2026-10-06T10:00:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00014",
@@ -460,7 +486,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-07T11:58:00.000Z",
     "updatedAt": "2026-10-07T11:58:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00015",
@@ -490,7 +518,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 306,
     "createdAt": "2026-10-07T12:40:00.000Z",
     "updatedAt": "2026-10-07T12:40:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00016",
@@ -550,7 +580,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 932,
     "createdAt": "2026-10-07T13:03:00.000Z",
     "updatedAt": "2026-10-07T13:03:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00017",
@@ -580,7 +612,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-07T16:45:00.000Z",
     "updatedAt": "2026-10-07T16:45:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00018",
@@ -646,7 +680,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 1462,
     "createdAt": "2026-10-08T16:20:00.000Z",
     "updatedAt": "2026-10-08T16:20:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00019",
@@ -676,7 +712,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-09T10:25:00.000Z",
     "updatedAt": "2026-10-09T10:25:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00020",
@@ -724,7 +762,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 1336,
     "createdAt": "2026-10-11T08:34:00.000Z",
     "updatedAt": "2026-10-11T08:34:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00021",
@@ -754,7 +794,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-12T10:28:00.000Z",
     "updatedAt": "2026-10-12T10:28:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00022",
@@ -784,7 +826,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 1360,
     "createdAt": "2026-10-13T11:52:00.000Z",
     "updatedAt": "2026-10-13T11:52:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00023",
@@ -814,7 +858,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-13T12:37:00.000Z",
     "updatedAt": "2026-10-13T12:37:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00024",
@@ -862,7 +908,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 1156,
     "createdAt": "2026-10-13T13:13:00.000Z",
     "updatedAt": "2026-10-13T13:13:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00025",
@@ -892,7 +940,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-14T11:25:00.000Z",
     "updatedAt": "2026-10-14T11:25:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00026",
@@ -922,7 +972,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 524,
     "createdAt": "2026-10-14T11:51:00.000Z",
     "updatedAt": "2026-10-14T11:51:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00027",
@@ -952,7 +1004,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 258,
     "createdAt": "2026-10-14T15:17:00.000Z",
     "updatedAt": "2026-10-14T15:17:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00028",
@@ -982,7 +1036,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-14T16:09:00.000Z",
     "updatedAt": "2026-10-14T16:09:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00029",
@@ -1012,7 +1068,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 156,
     "createdAt": "2026-10-15T12:19:00.000Z",
     "updatedAt": "2026-10-15T12:19:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00030",
@@ -1042,7 +1100,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-16T11:36:00.000Z",
     "updatedAt": "2026-10-16T11:36:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00031",
@@ -1078,7 +1138,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 272,
     "createdAt": "2026-10-17T09:00:00.000Z",
     "updatedAt": "2026-10-17T09:00:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00032",
@@ -1108,7 +1170,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-17T09:42:00.000Z",
     "updatedAt": "2026-10-17T09:42:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00033",
@@ -1138,7 +1202,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-17T16:01:00.000Z",
     "updatedAt": "2026-10-17T16:01:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00034",
@@ -1180,7 +1246,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 1156,
     "createdAt": "2026-10-19T10:54:00.000Z",
     "updatedAt": "2026-10-19T10:54:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00035",
@@ -1210,7 +1278,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 258,
     "createdAt": "2026-10-19T12:46:00.000Z",
     "updatedAt": "2026-10-19T12:46:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00036",
@@ -1240,7 +1310,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-19T13:11:00.000Z",
     "updatedAt": "2026-10-19T13:11:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00037",
@@ -1282,7 +1354,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 456,
     "createdAt": "2026-10-19T14:44:00.000Z",
     "updatedAt": "2026-10-19T14:44:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00038",
@@ -1312,7 +1386,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 68,
     "createdAt": "2026-10-20T10:55:00.000Z",
     "updatedAt": "2026-10-20T10:55:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00039",
@@ -1342,7 +1418,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-21T11:12:00.000Z",
     "updatedAt": "2026-10-21T11:12:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00040",
@@ -1372,7 +1450,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-22T09:11:00.000Z",
     "updatedAt": "2026-10-22T09:11:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00041",
@@ -1420,7 +1500,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 1292,
     "createdAt": "2026-10-22T10:55:00.000Z",
     "updatedAt": "2026-10-22T10:55:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00042",
@@ -1450,7 +1532,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 204,
     "createdAt": "2026-10-22T11:47:00.000Z",
     "updatedAt": "2026-10-22T11:47:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00043",
@@ -1480,7 +1564,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-22T13:20:00.000Z",
     "updatedAt": "2026-10-22T13:20:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00044",
@@ -1510,7 +1596,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-23T09:53:00.000Z",
     "updatedAt": "2026-10-23T09:53:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00045",
@@ -1540,7 +1628,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-23T11:52:00.000Z",
     "updatedAt": "2026-10-23T11:52:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00046",
@@ -1600,7 +1690,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 2081,
     "createdAt": "2026-10-23T12:11:00.000Z",
     "updatedAt": "2026-10-23T12:11:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00047",
@@ -1630,7 +1722,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-23T12:23:00.000Z",
     "updatedAt": "2026-10-23T12:23:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00048",
@@ -1660,7 +1754,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-26T12:44:00.000Z",
     "updatedAt": "2026-10-26T12:44:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00049",
@@ -1690,7 +1786,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-27T08:26:00.000Z",
     "updatedAt": "2026-10-27T08:26:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00050",
@@ -1732,7 +1830,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 544,
     "createdAt": "2026-10-27T10:57:00.000Z",
     "updatedAt": "2026-10-27T10:57:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00051",
@@ -1768,7 +1868,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 850,
     "createdAt": "2026-10-27T12:02:00.000Z",
     "updatedAt": "2026-10-27T12:02:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00052",
@@ -1798,7 +1900,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 333,
     "createdAt": "2026-10-27T12:25:00.000Z",
     "updatedAt": "2026-10-27T12:25:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00053",
@@ -1846,7 +1950,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 1557,
     "createdAt": "2026-10-27T12:11:00.000Z",
     "updatedAt": "2026-10-27T12:11:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00054",
@@ -1888,7 +1994,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 877,
     "createdAt": "2026-10-27T12:24:00.000Z",
     "updatedAt": "2026-10-27T12:24:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   },
   {
     "id": "bill_2026_10_00055",
@@ -1930,7 +2038,9 @@ const OFFICIAL_NWR_BILLS_2026 = [
     "billedToNwr": 1734,
     "createdAt": "2026-10-28T09:19:00.000Z",
     "updatedAt": "2026-10-28T09:19:00.000Z",
-    "workstationId": "PC-859"
+    "workstationId": "PC-859",
+    "status": "active",
+    "isDeleted": false
   }
 ];
 
