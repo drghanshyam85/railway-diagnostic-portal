@@ -155,8 +155,9 @@ class DualModeSyncManager {
       }
     }
 
-    // Filter out any permanently deleted bills
+    // Filter out any permanently deleted bills and sort ascending by bill number
     this.bills = initialBills.filter(b => b && !this.isBillDeleted(b.id, b.billNo));
+    this.sortBillsByBillNoAsc(this.bills);
     this.config = initialConfig;
     this.catalog = [...initialCatalog];
 
@@ -1528,12 +1529,40 @@ class DualModeSyncManager {
     return true;
   }
 
+  // Sort bills array by bill number in ascending order so list begins with the lowest bill number
+  sortBillsByBillNoAsc(bills = null) {
+    const target = bills || this.bills;
+    if (!Array.isArray(target)) return [];
+    return target.sort((a, b) => {
+      const billNoA = (a && a.billNo ? String(a.billNo) : '').trim();
+      const billNoB = (b && b.billNo ? String(b.billNo) : '').trim();
+      const matchA = billNoA.match(/(\d+)\s*$/);
+      const matchB = billNoB.match(/(\d+)\s*$/);
+      if (matchA && matchB) {
+        const prefixA = billNoA.slice(0, matchA.index);
+        const prefixB = billNoB.slice(0, matchB.index);
+        if (prefixA === prefixB) {
+          const numA = parseInt(matchA[1], 10);
+          const numB = parseInt(matchB[1], 10);
+          if (numA !== numB) return numA - numB;
+        }
+      }
+      const cmp = billNoA.localeCompare(billNoB, undefined, { numeric: true, sensitivity: 'base' });
+      if (cmp !== 0) return cmp;
+      const timeA = new Date(`${a.date || ''} ${a.time || ''}`).getTime() || 0;
+      const timeB = new Date(`${b.date || ''} ${b.time || ''}`).getTime() || 0;
+      return timeA - timeB;
+    });
+  }
+
   getBills() {
+    this.sortBillsByBillNoAsc(this.bills);
     return this.bills;
   }
 
   setBills(newBills) {
     this.bills = Array.isArray(newBills) ? [...newBills] : [];
+    this.sortBillsByBillNoAsc(this.bills);
     this.syncToLocalStorage();
     this.persistAllBillsToIndexedDb(this.bills);
     if (this.currentMode === this.MODE_LAN) {
@@ -1839,12 +1868,8 @@ class DualModeSyncManager {
     // Filter out any permanently deleted bills
     this.bills = this.bills.filter(b => !this.isBillDeleted(b.id, b.billNo));
 
-    // Sort descending by date/time
-    this.bills.sort((a, b) => {
-      const timeA = new Date(`${a.date || ''} ${a.time || ''}`).getTime() || 0;
-      const timeB = new Date(`${b.date || ''} ${b.time || ''}`).getTime() || 0;
-      return timeB - timeA;
-    });
+    // Sort ascending by bill number so list begins with the lowest bill number
+    this.sortBillsByBillNoAsc(this.bills);
   }
 
   // ================= OFFLINE QUEUE DRAIN =================

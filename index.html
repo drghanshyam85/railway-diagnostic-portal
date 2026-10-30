@@ -4124,11 +4124,13 @@
           if (typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026) && OFFICIAL_NWR_BILLS_2026.length >= 55) {
             billArchive = JSON.parse(JSON.stringify(OFFICIAL_NWR_BILLS_2026));
             billArchive.forEach(b => { b.isDeleted = false; b.status = 'active'; });
+            sortBillsByBillNoAsc(billArchive);
             localStorage.setItem('shiv_railway_archive', JSON.stringify(billArchive));
             localStorage.removeItem('shiv_railway_deleted_bills');
             localStorage.setItem(BILLS_55_INTEGRATION_KEY, 'done');
           }
         }
+        sortBillsByBillNoAsc(billArchive);
       } catch (err) {
         console.error("Error loading localStorage data:", err);
       }
@@ -4137,6 +4139,7 @@
     // Save to LocalStorage & Sync Engine
     function saveAppData() {
       try {
+        sortBillsByBillNoAsc(billArchive);
         localStorage.setItem('shiv_railway_config', JSON.stringify(appConfig));
         localStorage.setItem('shiv_railway_catalog', JSON.stringify(cghsCatalog));
         localStorage.setItem('shiv_railway_archive', JSON.stringify(billArchive));
@@ -4167,6 +4170,7 @@
       if (window.syncManager) {
         await syncManager.init(billArchive, appConfig, cghsCatalog);
         billArchive = syncManager.getBills();
+        sortBillsByBillNoAsc(billArchive);
         if (billArchive.length < 55 && typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026) && OFFICIAL_NWR_BILLS_2026.length >= 55) {
           integrateAll55ActiveBills(true);
         }
@@ -4177,6 +4181,7 @@
         // Listen for real-time updates from other workstations
         syncManager.onRemoteBillUpdate((bill, isNew) => {
           billArchive = syncManager.getBills();
+          sortBillsByBillNoAsc(billArchive);
           const badge = document.getElementById('archiveCountBadge');
           if (badge) badge.innerText = billArchive.length;
           renderArchiveTable();
@@ -4799,6 +4804,35 @@
         return false;
       }) || null;
     }
+
+    /**
+     * Sorts bills array by bill number in ascending order so the list begins with the lowest bill number.
+     * Extracts numerical suffix (e.g. NWR/2026-27/00001 -> 1) with natural alphanumeric collation fallback.
+     */
+    function sortBillsByBillNoAsc(bills) {
+      if (!Array.isArray(bills)) return [];
+      return bills.sort((a, b) => {
+        const billNoA = (a && a.billNo ? String(a.billNo) : '').trim();
+        const billNoB = (b && b.billNo ? String(b.billNo) : '').trim();
+        const matchA = billNoA.match(/(\d+)\s*$/);
+        const matchB = billNoB.match(/(\d+)\s*$/);
+        if (matchA && matchB) {
+          const prefixA = billNoA.slice(0, matchA.index);
+          const prefixB = billNoB.slice(0, matchB.index);
+          if (prefixA === prefixB) {
+            const numA = parseInt(matchA[1], 10);
+            const numB = parseInt(matchB[1], 10);
+            if (numA !== numB) return numA - numB;
+          }
+        }
+        const cmp = billNoA.localeCompare(billNoB, undefined, { numeric: true, sensitivity: 'base' });
+        if (cmp !== 0) return cmp;
+        const timeA = new Date(`${a.date || ''} ${a.time || ''}`).getTime() || 0;
+        const timeB = new Date(`${b.date || ''} ${b.time || ''}`).getTime() || 0;
+        return timeA - timeB;
+      });
+    }
+    window.sortBillsByBillNoAsc = sortBillsByBillNoAsc;
 
     /**
      * Determines chronological order of a record to identify the initial/original entry.
@@ -6085,13 +6119,8 @@
         }
       }
 
-      // Sort with newest / latest registered patient first
-      const sortedBills = [...billArchive].sort((a, b) => {
-        const timeA = a.createdAt || (a.date ? `${a.date}T${a.time || '00:00'}` : '');
-        const timeB = b.createdAt || (b.date ? `${b.date}T${b.time || '00:00'}` : '');
-        if (timeA && timeB) return timeB.localeCompare(timeA);
-        return (b.billNo || '').localeCompare(a.billNo || '');
-      });
+      // Sort bills array by bill number in ascending order so the list begins with the lowest bill number
+      const sortedBills = sortBillsByBillNoAsc([...billArchive]);
 
       const filtered = sortedBills.filter(b => {
         const isInactive = b.isDeleted || b.status === 'inactive';
@@ -6174,15 +6203,16 @@
 
       sortedMonthKeys.forEach(mKey => {
         const monthBills = monthGroups.get(mKey);
+        sortBillsByBillNoAsc(monthBills);
         const monthActiveBills = monthBills.filter(b => !b.isDeleted && b.status !== 'inactive');
         const monthTotalAmount = monthActiveBills.reduce((sum, b) => sum + (parseFloat(b.totalAmount) || 0), 0);
 
-        // Calculate voucher sequence range for this month
+        // Calculate voucher sequence range for this month (lowest to highest)
         const validVouchers = monthBills.map(b => b.billNo).filter(Boolean);
         let voucherSummary = "";
         if (validVouchers.length > 0) {
-          const firstV = validVouchers[validVouchers.length - 1]; // oldest in group
-          const lastV = validVouchers[0]; // newest in group
+          const firstV = validVouchers[0]; // lowest bill number in group
+          const lastV = validVouchers[validVouchers.length - 1]; // highest bill number in group
           voucherSummary = firstV === lastV ? firstV : `${firstV} — ${lastV}`;
         }
 
@@ -6401,6 +6431,7 @@
 
         return true;
       });
+      return sortBillsByBillNoAsc(matched);
     }
 
     function getSelectedArchiveBills() {
@@ -6410,7 +6441,7 @@
         filtered.forEach(b => selectedBillIds.add(b.id));
         return filtered;
       }
-      return selected.length > 0 ? selected : filtered;
+      return sortBillsByBillNoAsc(selected.length > 0 ? selected : filtered);
     }
 
     function toggleSelectAllBills(checked) {
@@ -6518,6 +6549,7 @@
 
       sortedMonthKeys.forEach(mKey => {
         const monthBills = monthGroups.get(mKey);
+        sortBillsByBillNoAsc(monthBills);
         const monthActiveBills = monthBills.filter(b => !b.isDeleted && b.status !== 'inactive');
         const monthTotalAmount = monthActiveBills.reduce((sum, b) => sum + (parseFloat(b.totalAmount) || 0), 0);
 
@@ -6538,12 +6570,12 @@
           }
         });
 
-        // Calculate voucher sequence range for this month
+        // Calculate voucher sequence range for this month (lowest to highest)
         const validVouchers = monthBills.map(b => b.billNo).filter(Boolean);
         let voucherSummary = "";
         if (validVouchers.length > 0) {
-          const firstV = validVouchers[validVouchers.length - 1]; // oldest in group
-          const lastV = validVouchers[0]; // newest in group
+          const firstV = validVouchers[0]; // lowest bill number in group
+          const lastV = validVouchers[validVouchers.length - 1]; // highest bill number in group
           voucherSummary = firstV === lastV ? firstV : `${firstV} — ${lastV}`;
         }
 
@@ -6962,10 +6994,12 @@
           billArchive.unshift(record);
           importedCount++;
         }
+        sortBillsByBillNoAsc(billArchive);
 
         if (window.syncManager) {
           await syncManager.importBackupJson({ bills: billArchive }, 'merge');
           billArchive = syncManager.getBills();
+          sortBillsByBillNoAsc(billArchive);
         } else {
           saveAppData();
         }
@@ -6992,6 +7026,7 @@
       if (currentPeriodFilter !== 'INACTIVE') {
         selectedBills = selectedBills.filter(b => !b.isDeleted && b.status !== 'inactive');
       }
+      sortBillsByBillNoAsc(selectedBills);
       if (selectedBills.length === 0) {
         showToast("No bills selected or found to export.", "error");
         return;
@@ -7079,6 +7114,7 @@
       if (currentPeriodFilter !== 'INACTIVE') {
         selectedBills = selectedBills.filter(b => !b.isDeleted && b.status !== 'inactive');
       }
+      sortBillsByBillNoAsc(selectedBills);
       if (selectedBills.length === 0) {
         showToast("No bills selected or found to export.", "error");
         return;
@@ -7322,6 +7358,7 @@
       if (currentPeriodFilter !== 'INACTIVE') {
         selectedBills = selectedBills.filter(b => !b.isDeleted && b.status !== 'inactive');
       }
+      sortBillsByBillNoAsc(selectedBills);
       if (selectedBills.length === 0) {
         showToast("No bills selected or found to copy.", "error");
         return;
@@ -8166,6 +8203,7 @@
         b.isDeleted = false;
         b.status = 'active';
       });
+      sortBillsByBillNoAsc(active55);
 
       // Clear any deleted IDs for these bills
       localStorage.removeItem('shiv_railway_deleted_bills');

@@ -38,6 +38,31 @@ let db = {
   lastUpdated: new Date().toISOString()
 };
 
+// Sort bills array by bill number in ascending order so list begins with the lowest bill number
+function sortBillsByBillNoAsc(bills) {
+  if (!Array.isArray(bills)) return [];
+  return bills.sort((a, b) => {
+    const billNoA = (a && a.billNo ? String(a.billNo) : '').trim();
+    const billNoB = (b && b.billNo ? String(b.billNo) : '').trim();
+    const matchA = billNoA.match(/(\d+)\s*$/);
+    const matchB = billNoB.match(/(\d+)\s*$/);
+    if (matchA && matchB) {
+      const prefixA = billNoA.slice(0, matchA.index);
+      const prefixB = billNoB.slice(0, matchB.index);
+      if (prefixA === prefixB) {
+        const numA = parseInt(matchA[1], 10);
+        const numB = parseInt(matchB[1], 10);
+        if (numA !== numB) return numA - numB;
+      }
+    }
+    const cmp = billNoA.localeCompare(billNoB, undefined, { numeric: true, sensitivity: 'base' });
+    if (cmp !== 0) return cmp;
+    const timeA = new Date(`${a.date || ''} ${a.time || ''}`).getTime() || 0;
+    const timeB = new Date(`${b.date || ''} ${b.time || ''}`).getTime() || 0;
+    return timeA - timeB;
+  });
+}
+
 // Load existing database from disk if present
 function loadDatabase() {
   try {
@@ -46,7 +71,7 @@ function loadDatabase() {
       const parsed = JSON.parse(raw);
       if (parsed && typeof parsed === 'object') {
         db = {
-          bills: Array.isArray(parsed.bills) ? parsed.bills : [],
+          bills: Array.isArray(parsed.bills) ? sortBillsByBillNoAsc(parsed.bills) : [],
           deletedBillIds: Array.isArray(parsed.deletedBillIds) ? parsed.deletedBillIds : [],
           config: parsed.config || null,
           catalog: Array.isArray(parsed.catalog) ? parsed.catalog : null,
@@ -75,6 +100,7 @@ function scheduleSaveDatabase() {
 
 function saveDatabase() {
   try {
+    if (Array.isArray(db.bills)) sortBillsByBillNoAsc(db.bills);
     db.lastUpdated = new Date().toISOString();
     const tempFile = DB_FILE + '.tmp';
     fs.writeFileSync(tempFile, JSON.stringify(db, null, 2), 'utf-8');
@@ -401,7 +427,7 @@ app.get('/api/bills', (req, res) => {
   res.json({
     success: true,
     count: db.bills.length,
-    bills: db.bills
+    bills: sortBillsByBillNoAsc(db.bills)
   });
 });
 
