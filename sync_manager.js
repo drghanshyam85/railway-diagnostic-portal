@@ -70,6 +70,7 @@ class DualModeSyncManager {
       statusChange: [],
       remoteBillUpdate: [],
       remoteBillDelete: [],
+      remoteSoftDelete: [],
       peersChange: [],
       logMessage: []
     };
@@ -114,10 +115,12 @@ class DualModeSyncManager {
 
   // ================= INITIALIZATION =================
   async init(initialBills = [], initialConfig = null, initialCatalog = []) {
-    const BATCH_KEY = 'shiv_railway_archive_batch_2026_nov';
-    if (localStorage.getItem(BATCH_KEY) !== 'v1') {
+    const PURGE_KEY = 'shiv_railway_clean_slate_purge_v3';
+    if (localStorage.getItem(PURGE_KEY) !== 'done') {
       this.deletedBillIds.clear();
       this.persistDeletedBillIds();
+      this.bills = [];
+      localStorage.setItem('shiv_railway_archive', JSON.stringify([]));
     }
 
     // Filter out any permanently deleted bills
@@ -130,14 +133,16 @@ class DualModeSyncManager {
     // 1. Initialize IndexedDB
     try {
       await this.initIndexedDb();
-      if (localStorage.getItem(BATCH_KEY) !== 'v1') {
+      if (localStorage.getItem(PURGE_KEY) !== 'done') {
         try {
           if (this.db) {
             const tx = this.db.transaction('bills', 'readwrite');
             tx.objectStore('bills').clear();
           }
         } catch (e) {}
-        localStorage.setItem(BATCH_KEY, 'v1');
+        this.bills = [];
+        this.syncToLocalStorage();
+        localStorage.setItem(PURGE_KEY, 'done');
       }
       this.log('Local IndexedDB storage initialized.', 'success');
     } catch (err) {
@@ -304,6 +309,8 @@ class DualModeSyncManager {
 
   async loadFromIndexedDb() {
     if (!this.db) return;
+    const PURGE_KEY = 'shiv_railway_clean_slate_purge_v3';
+    if (localStorage.getItem(PURGE_KEY) !== 'done') return;
     try {
       const storedBills = await new Promise((resolve, reject) => {
         const tx = this.db.transaction('bills', 'readonly');
@@ -825,6 +832,13 @@ class DualModeSyncManager {
         break;
       }
 
+      case 'BILL_SOFT_DELETED': {
+        if (msg.billId && msg.workstationId !== this.workstationId) {
+          this.handleRemoteBillSoftDelete(msg.billId, msg.isDeleted, msg.bill, msg.workstationName || msg.workstationId);
+        }
+        break;
+      }
+
       case 'BILL_DELETED': {
         if (msg.billId) {
           this.markBillPermanentlyDeleted(msg.billId, msg.billNo);
@@ -897,6 +911,45 @@ class DualModeSyncManager {
     }
   }
 
+  async pushSoftDeleteToLan(bill) {
+    if (!bill || !bill.id) return false;
+
+    // Send soft-delete action via WebSocket
+    if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+      this.ws.send(JSON.stringify({
+        type: 'BILL_SOFT_DELETED',
+        billId: bill.id,
+        billNo: bill.billNo,
+        isDeleted: bill.isDeleted,
+        status: bill.status,
+        deletedAt: bill.deletedAt,
+        restoredAt: bill.restoredAt,
+        bill: bill,
+        workstationId: this.workstationId,
+        workstationName: this.workstationName
+      }));
+    }
+
+    // Call REST endpoint
+    try {
+      await fetch(`${this.lanServerUrl}/api/bills/${bill.id}/soft-delete`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          isDeleted: bill.isDeleted,
+          status: bill.status,
+          deletedAt: bill.deletedAt,
+          workstationId: this.workstationId
+        })
+      });
+      return true;
+    } catch (err) {
+      console.warn('LAN Server REST soft-delete write failed, enqueued offline:', err);
+      this.enqueueOfflineAction({ type: 'SOFT_DELETE_BILL', billId: bill.id, bill });
+      return false;
+    }
+  }
+
   async deleteBillFromLan(billId) {
     // Send via WebSocket
     if (this.ws && this.ws.readyState === WebSocket.OPEN) {
@@ -921,17 +974,61 @@ class DualModeSyncManager {
   }
 
   // ================= CONFLICT PREVENTION & ATOMIC BILL NUMBERS =================
-  async getNextSequentialBillNumber(prefix = "NWR/2026-27/") {
-    // In LAN Mode, ask server for atomic counter
+  resolveMonthlyPrefix(rawPattern, yearMonth) {
+    const parts = (yearMonth || new Date().toISOString().slice(0, 7)).split('-');
+    const yyyy = parseInt(parts[0], 10) || new Date().getFullYear();
+    const mm = parts[1] || String(new Date().getMonth() + 1).padStart(2, '0');
+    const yy = String(yyyy).slice(-2);
+    const mInt = parseInt(mm, 10);
+    const fyStart = mInt >= 4 ? yyyy : yyyy - 1;
+    const fyEnd = String(fyStart + 1).slice(-2);
+    const fyStr = `${fyStart}-${fyEnd}`;
+    const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    const mmm = monthNames[mInt - 1] || 'GEN';
+
+    let pattern = rawPattern || "NWR/2026-27/{MM}/";
+    if (pattern.includes('{MM}') || pattern.includes('{YYYY}') || pattern.includes('{FY}') || pattern.includes('{MMM}')) {
+      return pattern
+        .replace(/{YYYY}/g, yyyy)
+        .replace(/{YY}/g, yy)
+        .replace(/{MM}/g, mm)
+        .replace(/{MMM}/g, mmm)
+        .replace(/{FY}/g, fyStr);
+    }
+
+    if (/\/\d{2}\/$/.test(pattern)) {
+      return pattern.replace(/\/\d{2}\/$/, `/${mm}/`);
+    }
+
+    if (pattern.endsWith('/')) {
+      return `${pattern}${mm}/`;
+    }
+    return `${pattern}/${mm}/`;
+  }
+
+  async getNextSequentialBillNumber(rawPrefix = "NWR/2026-27/{MM}/", dateStr = "") {
+    const targetDate = dateStr || new Date().toISOString().slice(0, 10);
+    const targetMonth = targetDate.slice(0, 7); // e.g. "2026-10"
+    const prefix = this.resolveMonthlyPrefix(rawPrefix, targetMonth);
+
+    // In LAN Mode, ask server for atomic counter scoped to this month
     if (this.currentMode === this.MODE_LAN && this.isWsConnected) {
       try {
-        const res = await fetch(`${this.lanServerUrl}/api/next-bill-number?prefix=${encodeURIComponent(prefix)}`, {
+        const res = await fetch(`${this.lanServerUrl}/api/next-bill-number?prefix=${encodeURIComponent(prefix)}&month=${encodeURIComponent(targetMonth)}&date=${encodeURIComponent(targetDate)}`, {
           signal: AbortSignal.timeout(2000)
         });
         if (res.ok) {
           const data = await res.json();
           if (data && data.billNo) {
-            return data.billNo;
+            const out = {
+              billNo: data.billNo,
+              recordId: data.recordId || `bill_${targetMonth.replace('-', '_')}_${String(data.sequence).padStart(5, '0')}`,
+              sequence: data.sequence,
+              month: targetMonth,
+              prefix: prefix
+            };
+            out.toString = function() { return this.billNo; };
+            return out;
           }
         }
       } catch (e) {
@@ -939,20 +1036,37 @@ class DualModeSyncManager {
       }
     }
 
-    // Fallback or Cloud/Local mode: compute highest from all known bills
+    // Fallback or Cloud/Local mode: compute highest from all known bills in this month
     let maxNum = 0;
     this.bills.forEach(item => {
-      if (item.billNo && item.billNo.startsWith(prefix)) {
-        const numPart = item.billNo.replace(prefix, '').trim();
-        const parsed = parseInt(numPart, 10);
-        if (!isNaN(parsed) && parsed > maxNum) {
-          maxNum = parsed;
+      if (!item) return;
+      const itemMonth = item.date ? String(item.date).slice(0, 7) : '';
+      const matchesPrefix = item.billNo && item.billNo.startsWith(prefix);
+      if (itemMonth === targetMonth || matchesPrefix) {
+        const match = String(item.billNo || '').match(/(\d+)\s*$/);
+        if (match) {
+          const parsed = parseInt(match[1], 10);
+          if (!isNaN(parsed) && parsed > maxNum) {
+            maxNum = parsed;
+          }
         }
       }
     });
 
-    const nextNum = String(maxNum + 1).padStart(5, '0');
-    return `${prefix}${nextNum}`;
+    const nextSeq = maxNum + 1;
+    const formattedSeq = String(nextSeq).padStart(5, '0');
+    const billNo = `${prefix}${formattedSeq}`;
+    const recordId = `bill_${targetMonth.replace('-', '_')}_${formattedSeq}`;
+
+    const result = {
+      billNo: billNo,
+      recordId: recordId,
+      sequence: nextSeq,
+      month: targetMonth,
+      prefix: prefix
+    };
+    result.toString = function() { return this.billNo; };
+    return result;
   }
 
   // Prevent simultaneous clash right before saving
@@ -988,50 +1102,187 @@ class DualModeSyncManager {
     return String(umid).toUpperCase().replace(/[^A-Z0-9]/g, '');
   }
 
+  normalizeBillNo(billNo) {
+    if (!billNo) return '';
+    return String(billNo).trim().toUpperCase().replace(/\s+/g, '');
+  }
+
   normalizeName(name) {
     if (!name) return '';
     return String(name).trim().toLowerCase().replace(/\s+/g, ' ');
   }
 
   findDuplicatePatient(record) {
-    if (!record || !record.date) return null;
-    const recDate = String(record.date).trim();
-    if (!recDate) return null;
-
-    const recUmid = this.normalizeUmid(record.umidId);
-    const recName = this.normalizeName(record.patientName);
-    if (!recUmid && !recName) return null;
+    if (!record) return null;
 
     const targetId = record.id || '';
-    const targetBillNo = (record.billNo || '').trim();
+    const recBillNo = this.normalizeBillNo(record.billNo);
+    const recDate = String(record.date || '').trim();
+    const recUmid = this.normalizeUmid(record.umidId);
+    const recName = this.normalizeName(record.patientName);
+
+    if (!recBillNo && !recUmid && !recName) return null;
 
     return this.bills.find(b => {
+      // Soft-deleted (inactive) records do not cause duplicate blocks
+      if (b.isDeleted || b.status === 'inactive') return false;
+
       // Allow updating the exact same bill being edited
       if (targetId && b.id === targetId) return false;
-      if (targetBillNo && b.billNo === targetBillNo) return false;
-      if (String(b.date || '').trim() !== recDate) return false;
 
-      const bUmid = this.normalizeUmid(b.umidId);
-      const bName = this.normalizeName(b.patientName);
-
-      // 1. If both have UMID, match by UMID
-      if (recUmid && bUmid) {
-        return recUmid === bUmid;
+      // 1. Unique Identifier: Bill Number match (globally unique across system)
+      const bBillNo = this.normalizeBillNo(b.billNo);
+      if (recBillNo && bBillNo && recBillNo === bBillNo) {
+        return true;
       }
 
-      // 2. If one or both lack UMID, match by patient name
-      if (recName && bName && recName === bName) {
-        return true;
+      // 2. Unique Identifier: UMID ID match on the same date
+      if (recDate && String(b.date || '').trim() === recDate) {
+        const bUmid = this.normalizeUmid(b.umidId);
+        if (recUmid && bUmid && recUmid === bUmid) {
+          return true;
+        }
+
+        // 3. Fallback: Patient name match on same date if UMID is blank
+        if (!recUmid && !bUmid) {
+          const bName = this.normalizeName(b.patientName);
+          if (recName && bName && recName === bName) {
+            return true;
+          }
+        }
       }
 
       return false;
     }) || null;
   }
 
+  getRecordOriginalOrder(record) {
+    if (!record) return Number.MAX_SAFE_INTEGER;
+    if (record.createdAt) {
+      const t = new Date(record.createdAt).getTime();
+      if (!isNaN(t) && t > 0) return t;
+    }
+    if (record.id) {
+      const m = String(record.id).match(/bill_(\d{10,13})/);
+      if (m) {
+        const t = parseInt(m[1], 10);
+        if (!isNaN(t) && t > 0) return t;
+      }
+    }
+    if (record.date) {
+      const timePart = (record.time && /^\d{1,2}:\d{2}/.test(record.time)) ? record.time : '00:00';
+      const t = new Date(`${record.date}T${timePart}`).getTime();
+      if (!isNaN(t) && t > 0) return t;
+    }
+    if (record.billNo) {
+      const match = String(record.billNo).match(/(\d+)\s*$/);
+      if (match) return parseInt(match[1], 10);
+    }
+    return Number.MAX_SAFE_INTEGER;
+  }
+
+  getDuplicateClusters(records = this.bills) {
+    const activeBills = (records || []).filter(b => b && !b.isDeleted && b.status !== 'inactive');
+
+    const parent = new Map();
+    const find = (id) => {
+      if (!parent.has(id)) parent.set(id, id);
+      if (parent.get(id) === id) return id;
+      const root = find(parent.get(id));
+      parent.set(id, root);
+      return root;
+    };
+    const union = (idA, idB) => {
+      const rootA = find(idA);
+      const rootB = find(idB);
+      if (rootA !== rootB) parent.set(rootA, rootB);
+    };
+
+    const billNoMap = new Map();
+    const umidDateMap = new Map();
+    const nameDateMap = new Map();
+
+    for (const bill of activeBills) {
+      find(bill.id);
+
+      const normBill = this.normalizeBillNo(bill.billNo);
+      if (normBill) {
+        if (billNoMap.has(normBill)) union(bill.id, billNoMap.get(normBill));
+        else billNoMap.set(normBill, bill.id);
+      }
+
+      const dateStr = String(bill.date || '').trim();
+      const normUmid = this.normalizeUmid(bill.umidId);
+      const normName = this.normalizeName(bill.patientName);
+
+      if (normUmid && dateStr) {
+        const key = normUmid + '___' + dateStr;
+        if (umidDateMap.has(key)) union(bill.id, umidDateMap.get(key));
+        else umidDateMap.set(key, bill.id);
+      } else if (normName && dateStr) {
+        const key = normName + '___' + dateStr;
+        if (nameDateMap.has(key)) union(bill.id, nameDateMap.get(key));
+        else nameDateMap.set(key, bill.id);
+      }
+    }
+
+    const clusterMap = new Map();
+    for (const bill of activeBills) {
+      const root = find(bill.id);
+      if (!clusterMap.has(root)) clusterMap.set(root, []);
+      clusterMap.get(root).push(bill);
+    }
+
+    const duplicateGroups = [];
+    clusterMap.forEach((bills) => {
+      if (bills.length > 1) {
+        // Sort to keep the FIRST ORIGINAL INITIAL ENTRY at index 0
+        bills.sort((a, b) => {
+          const orderA = this.getRecordOriginalOrder(a);
+          const orderB = this.getRecordOriginalOrder(b);
+          if (orderA !== orderB) return orderA - orderB;
+
+          const numA = (String(a.billNo || '').match(/(\d+)\s*$/) || [])[1] || 0;
+          const numB = (String(b.billNo || '').match(/(\d+)\s*$/) || [])[1] || 0;
+          const diffSeq = parseInt(numA, 10) - parseInt(numB, 10);
+          if (!isNaN(diffSeq) && diffSeq !== 0) return diffSeq;
+
+          return String(a.id || '').localeCompare(String(b.id || ''));
+        });
+
+        const primary = bills[0]; // Untouched original entry
+        const subsequentDuplicates = bills.slice(1); // Redundant copies to be removed
+
+        duplicateGroups.push({
+          primary,
+          duplicates: subsequentDuplicates,
+          allBills: bills,
+          count: subsequentDuplicates.length
+        });
+      }
+    });
+
+    return duplicateGroups;
+  }
+
   // ================= CRUD OPERATIONS (UNIFIED DATA LAYER) =================
   async saveBill(record, options = {}) {
     if (!record.id) {
-      record.id = 'bill_' + Date.now() + '_' + this.workstationId + '_' + Math.floor(Math.random() * 1000);
+      const targetMonth = (record.date ? String(record.date).slice(0, 7) : new Date().toISOString().slice(0, 7));
+      let maxMonthSeq = 0;
+      this.bills.forEach(item => {
+        if (!item) return;
+        const itemMonth = item.date ? String(item.date).slice(0, 7) : '';
+        if (itemMonth === targetMonth) {
+          const m = String(item.id || '').match(/bill_\d{4}_\d{2}_(\d+)/);
+          if (m) {
+            const p = parseInt(m[1], 10);
+            if (!isNaN(p) && p > maxMonthSeq) maxMonthSeq = p;
+          }
+        }
+      });
+      const nextMonthSeq = maxMonthSeq + 1;
+      record.id = `bill_${targetMonth.replace('-', '_')}_${String(nextMonthSeq).padStart(5, '0')}`;
     }
 
     // Check if ID was permanently deleted
@@ -1081,6 +1332,60 @@ class DualModeSyncManager {
 
     this.log(`Saved Bill #${record.billNo} (${record.patientName}) locally and synced.`, 'success');
     return record;
+  }
+
+  // ================= TWO-TIER DELETION SYSTEM =================
+
+  /**
+   * Tier 1: Soft Delete (Inactivate or Restore)
+   * Flags record as inactive (isDeleted: true, status: 'inactive') without removing from database.
+   * Excluded from active claim sheets, bill counts, and duplicate checking.
+   * Can be restored to active state at any time.
+   */
+  async softDeleteBill(billId, isDeleted = true, reason = '') {
+    if (!billId) return false;
+    const bill = this.bills.find(b => b.id === billId || b.billNo === billId);
+    if (!bill) return false;
+
+    bill.isDeleted = isDeleted !== false;
+    bill.status = bill.isDeleted ? 'inactive' : 'active';
+    bill.deletedAt = bill.isDeleted ? new Date().toISOString() : null;
+    if (!bill.isDeleted) {
+      bill.restoredAt = new Date().toISOString();
+      bill.restoredBy = this.workstationId;
+    } else {
+      bill.deletedBy = this.workstationId;
+      if (reason) bill.deletionReason = reason;
+    }
+    bill.updatedAt = new Date().toISOString();
+
+    // 1. Persist locally (IndexedDB + localStorage)
+    this.syncToLocalStorage();
+    await this.persistBillToIndexedDb(bill);
+
+    // 2. Propagate to active remote driver
+    if (this.currentMode === this.MODE_CLOUD) {
+      await this.pushBillToCloud(bill);
+    } else if (this.currentMode === this.MODE_LAN) {
+      await this.pushSoftDeleteToLan(bill);
+    }
+
+    const stateDesc = bill.isDeleted ? 'flagged as inactive (soft-deleted)' : 'restored to active';
+    this.log(`Bill #${bill.billNo} ${stateDesc}.`, 'info');
+    return true;
+  }
+
+  async restoreBill(billId) {
+    return this.softDeleteBill(billId, false);
+  }
+
+  /**
+   * Tier 2: Hard Delete (Permanent Purge)
+   * Irreversibly deletes record from database, in-memory array, IndexedDB, and localStorage.
+   * Added to permanent tombstone blacklist so peers cannot restore it.
+   */
+  async hardDeleteBill(billId) {
+    return this.deleteBill(billId);
   }
 
   async deleteBill(billId) {
@@ -1255,6 +1560,38 @@ class DualModeSyncManager {
 
     // Notify UI to re-render archive table and update badges
     this.notifyRemoteBillUpdate(remoteBill, isNew);
+  }
+
+  handleRemoteBillSoftDelete(billId, isDeleted, remoteBill, sourceName) {
+    if (!billId) return;
+
+    let target = this.bills.find(b => b.id === billId || b.billNo === billId);
+    if (!target && remoteBill) {
+      target = remoteBill;
+      this.bills.unshift(target);
+    }
+    if (!target) return;
+
+    target.isDeleted = isDeleted !== false;
+    target.status = target.isDeleted ? 'inactive' : 'active';
+    target.deletedAt = target.isDeleted ? (remoteBill?.deletedAt || new Date().toISOString()) : null;
+    if (!target.isDeleted) {
+      target.restoredAt = remoteBill?.restoredAt || new Date().toISOString();
+    }
+    target.updatedAt = remoteBill?.updatedAt || new Date().toISOString();
+
+    this.syncToLocalStorage();
+    this.persistBillToIndexedDb(target);
+
+    if (typeof showToast === 'function') {
+      const icon = this.currentMode === this.MODE_CLOUD ? '☁️' : '🖧';
+      const stateText = target.isDeleted ? 'moved to Inactive' : 'restored to Active';
+      showToast(`${icon} ${sourceName} ${stateText}: Bill #${target.billNo}`, 'info');
+    }
+
+    this.log(`Remote soft-delete event from ${sourceName}: #${target.billNo} isDeleted=${target.isDeleted}`, 'info');
+    this.notifyRemoteBillSoftDelete(target);
+    this.notifyRemoteBillUpdate(target, false);
   }
 
   handleRemoteBillDelete(billId, sourceName) {
@@ -1713,6 +2050,7 @@ class DualModeSyncManager {
   onStatusChange(cb) { this.listeners.statusChange.push(cb); }
   onRemoteBillUpdate(cb) { this.listeners.remoteBillUpdate.push(cb); }
   onRemoteBillDelete(cb) { this.listeners.remoteBillDelete.push(cb); }
+  onRemoteBillSoftDelete(cb) { this.listeners.remoteSoftDelete.push(cb); }
   onPeersChange(cb) { this.listeners.peersChange.push(cb); }
   onLog(cb) { this.listeners.logMessage.push(cb); }
 
@@ -1726,8 +2064,20 @@ class DualModeSyncManager {
     this.listeners.remoteBillUpdate.forEach(cb => cb(bill, isNew));
   }
 
+  notifyRemoteBillSoftDelete(bill) {
+    this.listeners.remoteSoftDelete.forEach(cb => cb(bill));
+  }
+
   notifyRemoteBillDelete(billId) {
     this.listeners.remoteBillDelete.forEach(cb => cb(billId));
+  }
+
+  getActiveBills() {
+    return this.bills.filter(b => !b.isDeleted && b.status !== 'inactive');
+  }
+
+  getInactiveBills() {
+    return this.bills.filter(b => b.isDeleted || b.status === 'inactive');
   }
 
   notifyPeersChange() {
@@ -1752,4 +2102,9 @@ class DualModeSyncManager {
 }
 
 // Global instance creation
-window.syncManager = new DualModeSyncManager();
+if (typeof window !== 'undefined') {
+  window.syncManager = new DualModeSyncManager();
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = DualModeSyncManager;
+}

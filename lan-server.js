@@ -34,7 +34,7 @@ let db = {
   bills: [],
   config: null,
   catalog: null,
-  nextBillSequence: 54,
+  nextBillSequence: 1,
   lastUpdated: new Date().toISOString()
 };
 
@@ -50,7 +50,7 @@ function loadDatabase() {
           deletedBillIds: Array.isArray(parsed.deletedBillIds) ? parsed.deletedBillIds : [],
           config: parsed.config || null,
           catalog: Array.isArray(parsed.catalog) ? parsed.catalog : null,
-          nextBillSequence: parsed.nextBillSequence || 54,
+          nextBillSequence: parsed.nextBillSequence || 1,
           lastUpdated: parsed.lastUpdated || new Date().toISOString()
         };
         console.log(`[DB] Loaded ${db.bills.length} bills (${db.deletedBillIds.length} deleted records tracked) from ${DB_FILE}`);
@@ -249,6 +249,42 @@ function handleWebSocketMessage(ws, msg) {
       break;
     }
 
+    case 'BILL_SOFT_DELETED': {
+      const billId = msg.billId;
+      if (!billId) return;
+
+      const isDeleted = msg.isDeleted !== false;
+      const status = msg.status || (isDeleted ? 'inactive' : 'active');
+
+      const idx = db.bills.findIndex(b => b.id === billId || b.billNo === billId);
+      if (idx >= 0) {
+        db.bills[idx].isDeleted = isDeleted;
+        db.bills[idx].status = status;
+        db.bills[idx].deletedAt = isDeleted ? (msg.deletedAt || new Date().toISOString()) : null;
+        if (!isDeleted) {
+          db.bills[idx].restoredAt = new Date().toISOString();
+        }
+        db.bills[idx].updatedAt = new Date().toISOString();
+        db.bills[idx].workstationId = msg.workstationId || (clientInfo ? clientInfo.workstationId : 'Unknown');
+        scheduleSaveDatabase();
+
+        console.log(`[SYNC BROADCAST] Bill #${db.bills[idx].billNo} soft-${isDeleted ? 'deleted (flagged inactive)' : 'restored (active)'} by ${msg.workstationId}`);
+
+        broadcast({
+          type: 'BILL_SOFT_DELETED',
+          billId: db.bills[idx].id,
+          billNo: db.bills[idx].billNo,
+          isDeleted: isDeleted,
+          status: status,
+          bill: db.bills[idx],
+          workstationId: msg.workstationId,
+          workstationName: clientInfo ? clientInfo.workstationName : msg.workstationId,
+          timestamp: new Date().toISOString()
+        }, ws);
+      }
+      break;
+    }
+
     case 'BILL_DELETED': {
       const billId = msg.billId;
       if (!billId) return;
@@ -368,33 +404,79 @@ app.get('/api/bills', (req, res) => {
   });
 });
 
-// Atomic Sequential Bill Number Generator
-// Multi-computer conflict prevention: Guarantees unique voucher numbers across all computers
-app.get('/api/next-bill-number', (req, res) => {
-  const prefix = req.query.prefix || (db.config && db.config.billPrefix) || "NWR/2026-27/";
-  let maxNum = 0;
+// Helper: Resolves dynamic monthly voucher prefix pattern based on date (YYYY-MM)
+function resolveMonthlyPrefix(rawPattern, yearMonth) {
+  const parts = (yearMonth || new Date().toISOString().slice(0, 7)).split('-');
+  const yyyy = parseInt(parts[0], 10) || new Date().getFullYear();
+  const mm = parts[1] || String(new Date().getMonth() + 1).padStart(2, '0');
+  const yy = String(yyyy).slice(-2);
+  const mInt = parseInt(mm, 10);
+  const fyStart = mInt >= 4 ? yyyy : yyyy - 1;
+  const fyEnd = String(fyStart + 1).slice(-2);
+  const fyStr = `${fyStart}-${fyEnd}`;
+  const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  const mmm = monthNames[mInt - 1] || 'GEN';
 
+  let pattern = rawPattern || "NWR/2026-27/{MM}/";
+  if (pattern.includes('{MM}') || pattern.includes('{YYYY}') || pattern.includes('{FY}') || pattern.includes('{MMM}')) {
+    return pattern
+      .replace(/{YYYY}/g, yyyy)
+      .replace(/{YY}/g, yy)
+      .replace(/{MM}/g, mm)
+      .replace(/{MMM}/g, mmm)
+      .replace(/{FY}/g, fyStr);
+  }
+
+  // If pattern already has a trailing /MM/ (e.g. /10/ or /09/), replace it with current mm/
+  if (/\/\d{2}\/$/.test(pattern)) {
+    return pattern.replace(/\/\d{2}\/$/, `/${mm}/`);
+  }
+
+  if (pattern.endsWith('/')) {
+    return `${pattern}${mm}/`;
+  }
+  return `${pattern}/${mm}/`;
+}
+
+// Atomic Sequential Bill Number Generator with Monthly Reset
+// Restarts sequence at 1 (00001) at the beginning of each month while preserving past months' archives
+app.get('/api/next-bill-number', (req, res) => {
+  const targetDate = req.query.date || '';
+  const targetMonth = req.query.month || (targetDate ? targetDate.slice(0, 7) : new Date().toISOString().slice(0, 7));
+  const rawPrefix = req.query.prefix || (db.config && db.config.billPrefix) || "NWR/2026-27/{MM}/";
+  const prefix = resolveMonthlyPrefix(rawPrefix, targetMonth);
+
+  let maxNum = 0;
   db.bills.forEach(item => {
-    if (item.billNo && item.billNo.startsWith(prefix)) {
-      const numPart = item.billNo.replace(prefix, '').trim();
-      const parsed = parseInt(numPart, 10);
-      if (!isNaN(parsed) && parsed > maxNum) {
-        maxNum = parsed;
+    if (!item) return;
+    const itemMonth = item.date ? String(item.date).slice(0, 7) : '';
+    const matchesPrefix = item.billNo && item.billNo.startsWith(prefix);
+    if (itemMonth === targetMonth || matchesPrefix) {
+      const match = String(item.billNo || '').match(/(\d+)\s*$/);
+      if (match) {
+        const parsed = parseInt(match[1], 10);
+        if (!isNaN(parsed) && parsed > maxNum) {
+          maxNum = parsed;
+        }
       }
     }
   });
 
-  const nextSeq = Math.max(maxNum + 1, (db.nextBillSequence || 54));
-  db.nextBillSequence = nextSeq + 1;
+  db.monthlySequences = db.monthlySequences || {};
+  const currentSeq = Math.max(maxNum + 1, (db.monthlySequences[targetMonth] || 1));
+  db.monthlySequences[targetMonth] = currentSeq + 1;
   scheduleSaveDatabase();
 
-  const formattedSeq = String(nextSeq).padStart(5, '0');
+  const formattedSeq = String(currentSeq).padStart(5, '0');
   const billNo = `${prefix}${formattedSeq}`;
+  const recordId = `bill_${targetMonth.replace('-', '_')}_${formattedSeq}`;
 
   res.json({
     success: true,
     billNo: billNo,
-    sequence: nextSeq,
+    recordId: recordId,
+    sequence: currentSeq,
+    month: targetMonth,
     prefix: prefix
   });
 });
@@ -435,7 +517,43 @@ app.post('/api/bills', (req, res) => {
   res.json({ success: true, bill: bill });
 });
 
-// Delete Single Bill (Permanent Delete)
+// Two-Tier Deletion: Soft Delete / Restore Endpoint (Flags record as inactive or active)
+app.post('/api/bills/:id/soft-delete', (req, res) => {
+  const billId = req.params.id;
+  const isDeleted = req.body.isDeleted !== false;
+  const status = req.body.status || (isDeleted ? 'inactive' : 'active');
+  const workstationId = req.body.workstationId || 'REST-Client';
+
+  const idx = db.bills.findIndex(b => b.id === billId || b.billNo === billId);
+  if (idx < 0) {
+    return res.status(404).json({ success: false, error: 'Bill not found' });
+  }
+
+  db.bills[idx].isDeleted = isDeleted;
+  db.bills[idx].status = status;
+  db.bills[idx].deletedAt = isDeleted ? (req.body.deletedAt || new Date().toISOString()) : null;
+  if (!isDeleted) {
+    db.bills[idx].restoredAt = new Date().toISOString();
+  }
+  db.bills[idx].updatedAt = new Date().toISOString();
+  db.bills[idx].workstationId = workstationId;
+  scheduleSaveDatabase();
+
+  broadcast({
+    type: 'BILL_SOFT_DELETED',
+    billId: db.bills[idx].id,
+    billNo: db.bills[idx].billNo,
+    isDeleted: isDeleted,
+    status: status,
+    bill: db.bills[idx],
+    workstationId: workstationId,
+    timestamp: new Date().toISOString()
+  });
+
+  res.json({ success: true, bill: db.bills[idx] });
+});
+
+// Two-Tier Deletion: Hard Delete Single Bill (Permanently removes from database)
 app.delete('/api/bills/:id', (req, res) => {
   const billId = req.params.id;
   const workstationId = req.query.workstationId || 'REST-Client';

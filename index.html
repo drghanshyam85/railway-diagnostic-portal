@@ -885,7 +885,7 @@
       cursor: pointer;
       border-radius: 4px;
       font-size: 13px;
-      transition: background 0.15s;
+      transition: all 0.15s;
       color: #64748b;
     }
 
@@ -897,6 +897,183 @@
     .btn-row-action.delete:hover {
       background: var(--danger-light);
       color: var(--danger);
+    }
+
+    /* Two-Tier Deletion Action Button Styles */
+    .btn-row-action.soft-delete {
+      color: #b45309;
+    }
+    .btn-row-action.soft-delete:hover {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    .btn-row-action.restore {
+      color: #15803d;
+      font-weight: 700;
+    }
+    .btn-row-action.restore:hover {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .btn-row-action.hard-delete {
+      color: #dc2626;
+      font-weight: 700;
+    }
+    .btn-row-action.hard-delete:hover {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .row-inactive {
+      background-color: #f8fafc !important;
+      opacity: 0.88;
+    }
+    .row-inactive:hover {
+      background-color: #f1f5f9 !important;
+    }
+    .badge-inactive-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+    .badge-active-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    /* Monthly Grouping & Archive Section Header Styles */
+    .month-section-row td {
+      padding: 0 !important;
+      background: #f8fafc !important;
+      border-top: 2px solid #0284c7 !important;
+      border-bottom: 2px solid #cbd5e1 !important;
+    }
+    .month-section-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 14px;
+      background: linear-gradient(90deg, #f0f9ff 0%, #e0f2fe 50%, #f8fafc 100%);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .month-section-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .month-section-name {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #0c4a6e;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .badge-month-pill {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2.5px 8.5px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .badge-month-count {
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+    .badge-month-amount {
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+    }
+    .badge-month-vouchers {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+      font-family: monospace;
+      font-size: 11px;
+    }
+    .badge-month-allocation {
+      background: #f3e8ff;
+      color: #6b21a8;
+      border: 1px solid #e9d5ff;
+      font-size: 11px;
+    }
+    .month-archive-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background: linear-gradient(90deg, #f0fdf4 0%, #e0f2fe 60%, #f8fafc 100%);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .month-archive-title-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .month-archive-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #065f46;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .month-nav-chips {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding: 6px 0;
+      margin-bottom: 8px;
+      scrollbar-width: thin;
+    }
+    .month-nav-chip {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #334155;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .month-nav-chip:hover {
+      background: #f1f5f9;
+      border-color: #94a3b8;
+    }
+    .month-nav-chip.active {
+      background: #0f3d64;
+      color: #ffffff;
+      border-color: #0f3d64;
     }
 
     /* Table Footer & Totals */
@@ -3033,6 +3210,7 @@
             <span>👥</span> Saved Patient Records
             <span class="badge-count" id="regPatientCountBadge">0</span>
             <span class="badge-dup-counter" id="regPatientDupBadge" style="display:none;" onclick="filterToDuplicates()" title="Click to view duplicate patient entries on same day">⚠️ 0 Duplicates</span>
+            <span class="badge-dup-counter" id="regPatientInactiveBadge" style="display:none; background:#fef3c7; color:#92400e; border-color:#fde68a;" onclick="filterToInactivePatients()" title="Click to view soft-deleted inactive records">🗑️ 0 Inactive</span>
             <!-- Single Button for All Duplicate Entry Delete Option -->
             <button type="button" class="btn-action-sm btn-delete-duplicates" id="btnDeleteAllDuplicatesReg" onclick="deleteAllDuplicateEntries()" title="Single-click button to scan, find and permanently delete all duplicate patient entries on the same day">
               🗑️ Delete All Duplicates
@@ -3040,11 +3218,13 @@
           </div>
           <div class="saved-patients-header-actions">
             <input type="text" id="regPatientSearchInput" class="input-control" style="max-width: 280px;" placeholder="🔍 Search saved patients by Name, UMID, Bill..." oninput="renderRegistrationPatientList()">
-            <select id="regPatientPeriodFilter" class="select-control" style="max-width: 180px;" onchange="renderRegistrationPatientList()">
-              <option value="ALL">All Saved Records</option>
+            <select id="regPatientPeriodFilter" class="select-control" style="max-width: 190px;" onchange="renderRegistrationPatientList()">
+              <option value="ALL">Active Patients (All)</option>
               <option value="TODAY">Today's Patients</option>
               <option value="CURRENT_MONTH">Current Month</option>
               <option value="DUPLICATES">⚠️ Same-Day Duplicates</option>
+              <option value="INACTIVE">🗑️ Inactive Records (Soft-Deleted)</option>
+              <option value="ALL_INCLUDING_INACTIVE">📑 All (Active + Inactive)</option>
             </select>
             <button type="button" class="btn-action-sm" onclick="renderRegistrationPatientList()" title="Refresh List">🔄 Refresh</button>
             <button type="button" class="btn-action-sm" onclick="switchTab('tab-archive')" title="View Full Claim Sheet & Export CSV/Word">🗄️ Full Archive & Claims</button>
@@ -3135,12 +3315,13 @@
             <button type="button" class="btn-period-chip active" id="chipPeriodAll" onclick="setArchivePeriodFilter('ALL')">🌟 All Archive Bills</button>
             <button type="button" class="btn-period-chip" id="chipPeriodCurrentMonth" onclick="setArchivePeriodFilter('CURRENT_MONTH')">📅 Current Month</button>
             <button type="button" class="btn-period-chip" id="chipPeriodPrevMonth" onclick="setArchivePeriodFilter('PREVIOUS_MONTH')">⏮️ Previous Month</button>
-            <button type="button" class="btn-period-chip" id="chipPeriodDuplicates" onclick="setArchivePeriodFilter('DUPLICATES')">⚠️ Same-Day Duplicates</button>
+            <button type="button" class="btn-period-chip" id="chipPeriodDuplicates" onclick="setArchivePeriodFilter('DUPLICATES')" title="Filter to view duplicate record groups">⚠️ Duplicate Records (<span id="archiveDuplicateCountBadge">0</span>)</button>
+            <button type="button" class="btn-period-chip" id="chipPeriodInactive" onclick="setArchivePeriodFilter('INACTIVE')" title="View soft-deleted records flagged as inactive">🗑️ Inactive Records (<span id="archiveInactiveCountBadge">0</span>)</button>
             <input type="month" id="archiveMonthPicker" class="input-control" style="max-width: 140px; padding: 4px 8px; font-size: 11px;" onchange="setArchivePeriodFilter('CUSTOM_MONTH', this.value)" title="Filter by specific Month/Year">
             <input type="date" id="archiveDateFilter" class="input-control" style="max-width: 135px; padding: 4px 8px; font-size: 11px;" onchange="setArchivePeriodFilter('CUSTOM_DATE', this.value)" title="Filter by specific Date">
           </div>
           <button type="button" class="btn-action-sm" onclick="clearArchiveFilters()">Reset Filters</button>
-          <button type="button" class="btn-action-sm btn-delete-duplicates" onclick="deleteAllDuplicateEntries()" title="Single-click button to scan, find and permanently delete all duplicate patient entries on the same day">
+          <button type="button" class="btn-action-sm btn-delete-duplicates" id="btnDeleteAllDuplicatesArchive" onclick="deleteAllDuplicateEntries()" title="Single-click button to remove subsequent duplicate entries while preserving initial records untouched">
             🗑️ Delete All Duplicates
           </button>
         </div>
@@ -3842,7 +4023,7 @@
       phone: "6375854709, 9887150552",
       email: "dr.ghanshyam85@gmail.com",
       defaultReferredBy: "Railway Health Unit (RHU), Phulera",
-      billPrefix: "NWR/2026-27/",
+      billPrefix: "NWR/2026-27/{MM}/",
       cashlessDeclaration: "VERIFIED: Strictly 100% Cashless Protocol under Bilateral MOU. Zero (₹0) fees or charges have been collected from the Railway Employee / UMID Beneficiary. 100% of charges are billed directly to North Western Railway at approved Non-NABL Z-Tier CGHS rates.",
       printPageMode: "single", // "single" for 1 A4 page (3-in-1), "separate" for 3 pages
       sigPatientTitle: "Signature of Patient / UMID Beneficiary",
@@ -3897,6 +4078,9 @@
         const savedConfig = localStorage.getItem('shiv_railway_config');
         if (savedConfig) appConfig = Object.assign({}, DEFAULT_CONFIG, JSON.parse(savedConfig));
         if (typeof appConfig.autoSave === 'undefined') appConfig.autoSave = true;
+        if (!appConfig.billPrefix || appConfig.billPrefix === 'NWR/2026-27/' || appConfig.billPrefix === 'NWR/2026-27') {
+          appConfig.billPrefix = DEFAULT_CONFIG.billPrefix;
+        }
 
         const savedCatalog = localStorage.getItem('shiv_railway_catalog');
         if (savedCatalog) {
@@ -3922,23 +4106,24 @@
             : [...DEFAULT_CGHS_CATALOG];
         }
 
-        const BATCH_KEY = 'shiv_railway_archive_batch_2026_nov';
-        const hasOfficialBills = typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026) && OFFICIAL_NWR_BILLS_2026.length > 0;
-
-        if (localStorage.getItem(BATCH_KEY) !== 'v1' && hasOfficialBills) {
-          // Delete all previous bills and seed fresh with the 53 official bills from the PDF
-          localStorage.removeItem('shiv_railway_deleted_bills');
-          billArchive = JSON.parse(JSON.stringify(OFFICIAL_NWR_BILLS_2026));
-          localStorage.setItem('shiv_railway_archive', JSON.stringify(billArchive));
-          localStorage.setItem(BATCH_KEY, 'v1');
-        } else {
-          const savedArchive = localStorage.getItem('shiv_railway_archive');
-          if (savedArchive) {
+        const savedArchive = localStorage.getItem('shiv_railway_archive');
+        if (savedArchive) {
+          try {
             billArchive = JSON.parse(savedArchive);
-          } else if (hasOfficialBills) {
-            billArchive = JSON.parse(JSON.stringify(OFFICIAL_NWR_BILLS_2026));
+          } catch(e) {
+            billArchive = [];
+          }
+        } else {
+          billArchive = [];
+        }
+
+        const BILLS_55_LOADED_KEY = 'shiv_railway_55_bills_loaded_v1';
+        if (localStorage.getItem(BILLS_55_LOADED_KEY) !== 'done' || !billArchive || billArchive.length === 0) {
+          if (typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026) && OFFICIAL_NWR_BILLS_2026.length > 0) {
+            billArchive = [...OFFICIAL_NWR_BILLS_2026];
             localStorage.setItem('shiv_railway_archive', JSON.stringify(billArchive));
-            localStorage.setItem(BATCH_KEY, 'v1');
+            localStorage.removeItem('shiv_railway_deleted_bills');
+            localStorage.setItem(BILLS_55_LOADED_KEY, 'done');
           }
         }
       } catch (err) {
@@ -4008,6 +4193,13 @@
           renderRegistrationPatientList();
         });
 
+        syncManager.onRemoteBillSoftDelete((bill) => {
+          billArchive = syncManager.getBills();
+          renderArchiveTable();
+          renderRegistrationPatientList();
+          checkDuplicatePatientLive();
+        });
+
         syncManager.onStatusChange((status) => {
           updateSyncModalStatus(status);
           updateLanBanner(status);
@@ -4024,13 +4216,10 @@
         updateLanBanner();
       }
 
-      // Only seed sample records on the very first application run
+      // Application initialization flag
       const isFirstLaunch = !localStorage.getItem('shiv_railway_app_initialized');
       if (isFirstLaunch) {
         localStorage.setItem('shiv_railway_app_initialized', 'true');
-        if (billArchive.length === 0) {
-          seedSampleRailwayData(true);
-        }
       }
 
       // Attach real-time duplicate detection & automatic entry save listeners to all form fields
@@ -4045,7 +4234,10 @@
             checkDuplicatePatientLive();
             scheduleAutoSave();
           });
-          el.addEventListener('change', () => {
+          el.addEventListener('change', async () => {
+            if (id === 'regDate' && !currentEditingBillId) {
+              await generateNextBillNumber(true);
+            }
             checkDuplicatePatientLive();
             scheduleAutoSave();
           });
@@ -4127,29 +4319,101 @@
       }
     }
 
+    function formatMonthYearLabel(yearMonthStr) {
+      if (!yearMonthStr || yearMonthStr === 'Undated' || yearMonthStr === 'Unknown Month') return 'General / Undated Records';
+      const parts = String(yearMonthStr).split('-');
+      if (parts.length < 2) return yearMonthStr;
+      const year = parseInt(parts[0], 10);
+      const month = parseInt(parts[1], 10);
+      const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+      const name = monthNames[month - 1] || month;
+      return `${name} ${year}`;
+    }
+
+    function resolveMonthlyBillPrefix(rawPattern, dateStr) {
+      const date = dateStr ? new Date(dateStr) : new Date();
+      const validDate = isNaN(date.getTime()) ? new Date() : date;
+      const yyyy = validDate.getFullYear();
+      const mm = String(validDate.getMonth() + 1).padStart(2, '0');
+      const yy = String(yyyy).slice(-2);
+      
+      const m = validDate.getMonth() + 1; // 1-12
+      const fyStartYear = m >= 4 ? yyyy : yyyy - 1;
+      const fyEndYear = (fyStartYear + 1).toString().slice(-2);
+      const fyStr = `${fyStartYear}-${fyEndYear}`;
+
+      const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+      const mmm = monthNames[validDate.getMonth()];
+
+      let pattern = rawPattern || "NWR/2026-27/{MM}/";
+
+      if (pattern.includes('{MM}') || pattern.includes('{YYYY}') || pattern.includes('{FY}') || pattern.includes('{MMM}')) {
+        return pattern
+          .replace(/{YYYY}/g, yyyy)
+          .replace(/{YY}/g, yy)
+          .replace(/{MM}/g, mm)
+          .replace(/{MMM}/g, mmm)
+          .replace(/{FY}/g, fyStr);
+      }
+
+      if (/\/\d{2}\/$/.test(pattern)) {
+        return pattern.replace(/\/\d{2}\/$/, `/${mm}/`);
+      }
+
+      if (pattern.endsWith('/')) {
+        return `${pattern}${mm}/`;
+      }
+      return `${pattern}/${mm}/`;
+    }
+
     async function generateNextBillNumber(silent = false) {
-      const prefix = appConfig.billPrefix || "NWR/2026-27/";
+      const regDate = document.getElementById('regDate')?.value || new Date().toISOString().slice(0, 10);
+      const targetMonth = regDate.slice(0, 7); // e.g. "2026-10"
+      const rawPrefix = appConfig.billPrefix || "NWR/2026-27/{MM}/";
+      const prefix = resolveMonthlyBillPrefix(rawPrefix, regDate);
+
       let nextNum = "";
+      let recordId = "";
 
       if (window.syncManager) {
-        nextNum = await syncManager.getNextSequentialBillNumber(prefix);
+        const res = await syncManager.getNextSequentialBillNumber(rawPrefix, regDate);
+        if (typeof res === 'object' && res.billNo) {
+          nextNum = res.billNo;
+          recordId = res.recordId;
+        } else {
+          nextNum = String(res);
+          recordId = `bill_${targetMonth.replace('-', '_')}_${nextNum.replace(/\D/g, '').slice(-5)}`;
+        }
       } else {
         let maxNum = 0;
         billArchive.forEach(item => {
-          if (item.billNo && item.billNo.startsWith(prefix)) {
-            const numPart = item.billNo.replace(prefix, '').trim();
-            const parsed = parseInt(numPart, 10);
-            if (!isNaN(parsed) && parsed > maxNum) {
-              maxNum = parsed;
+          if (!item) return;
+          const itemMonth = item.date ? String(item.date).slice(0, 7) : '';
+          const matchesPrefix = item.billNo && item.billNo.startsWith(prefix);
+          if (itemMonth === targetMonth || matchesPrefix) {
+            const match = String(item.billNo || '').match(/(\d+)\s*$/);
+            if (match) {
+              const parsed = parseInt(match[1], 10);
+              if (!isNaN(parsed) && parsed > maxNum) {
+                maxNum = parsed;
+              }
             }
           }
         });
-        nextNum = `${prefix}${String(maxNum + 1).padStart(5, '0')}`;
+        const nextSeq = maxNum + 1;
+        const formattedSeq = String(nextSeq).padStart(5, '0');
+        nextNum = `${prefix}${formattedSeq}`;
+        recordId = `bill_${targetMonth.replace('-', '_')}_${formattedSeq}`;
       }
 
       document.getElementById('regBillNo').value = nextNum;
+      window.nextGeneratedRecordId = recordId;
+
       if (!silent) {
-        showToast(`Assigned Voucher No: ${nextNum}`, 'info');
+        showToast(`Assigned Voucher No: ${nextNum} (${formatMonthYearLabel(targetMonth)} sequence)`, 'info');
       }
       return nextNum;
     }
@@ -4476,46 +4740,207 @@
       return String(umid).toUpperCase().replace(/[^A-Z0-9]/g, '');
     }
 
+    function normalizeBillNo(billNo) {
+      if (!billNo) return '';
+      return String(billNo).trim().toUpperCase().replace(/\s+/g, '');
+    }
+
     function normalizeName(name) {
       if (!name) return '';
       return String(name).trim().toLowerCase().replace(/\s+/g, ' ');
     }
 
     function findDuplicatePatientEntry(record, currentArchive = billArchive) {
-      if (!record || !record.date) return null;
-      const recDate = String(record.date).trim();
-      if (!recDate) return null;
-
-      const recUmid = normalizeUmid(record.umidId);
-      const recName = normalizeName(record.patientName);
-      if (!recUmid && !recName) return null;
+      if (!record) return null;
 
       const targetId = record.id || currentEditingBillId || '';
-      const targetBillNo = (record.billNo || '').trim();
+      const recBillNo = normalizeBillNo(record.billNo);
+      const recDate = String(record.date || '').trim();
+      const recUmid = normalizeUmid(record.umidId);
+      const recName = normalizeName(record.patientName);
+
+      if (!recBillNo && !recUmid && !recName) return null;
 
       return currentArchive.find(b => {
         // Exclude the record currently being edited
         if (targetId && b.id === targetId) return false;
-        if (targetBillNo && b.billNo === targetBillNo) return false;
 
-        // Must match the exact same date
-        if (String(b.date || '').trim() !== recDate) return false;
+        // Ignore soft-deleted / inactive records for duplicate detection
+        if (b.isDeleted || b.status === 'inactive') return false;
 
-        const bUmid = normalizeUmid(b.umidId);
-        const bName = normalizeName(b.patientName);
-
-        // 1. If both have UMID, match by UMID
-        if (recUmid && bUmid) {
-          return recUmid === bUmid;
+        // 1. Unique Identifier: Bill Number match (globally unique across system)
+        const bBillNo = normalizeBillNo(b.billNo);
+        if (recBillNo && bBillNo && recBillNo === bBillNo) {
+          return true;
         }
 
-        // 2. If one or both lack UMID, match by patient name
-        if (recName && bName && recName === bName) {
-          return true;
+        // 2. Unique Identifier: UMID ID match on the same date
+        if (recDate && String(b.date || '').trim() === recDate) {
+          const bUmid = normalizeUmid(b.umidId);
+          if (recUmid && bUmid && recUmid === bUmid) {
+            return true;
+          }
+
+          // 3. Fallback: Patient name match on the same date if UMID is blank
+          if (!recUmid && !bUmid) {
+            const bName = normalizeName(b.patientName);
+            if (recName && bName && recName === bName) {
+              return true;
+            }
+          }
         }
 
         return false;
       }) || null;
+    }
+
+    /**
+     * Determines chronological order of a record to identify the initial/original entry.
+     * Earliest created / entered timestamp or sequence number comes first.
+     */
+    function getRecordOriginalOrder(record) {
+      if (!record) return Number.MAX_SAFE_INTEGER;
+
+      // 1. Explicit createdAt ISO string
+      if (record.createdAt) {
+        const t = new Date(record.createdAt).getTime();
+        if (!isNaN(t) && t > 0) return t;
+      }
+
+      // 2. Extracted timestamp from ID (e.g. 'bill_1730000000000_...')
+      if (record.id) {
+        const m = String(record.id).match(/bill_(\d{10,13})/);
+        if (m) {
+          const t = parseInt(m[1], 10);
+          if (!isNaN(t) && t > 0) return t;
+        }
+      }
+
+      // 3. Date and Time fields (e.g. "2026-10-30" and "09:15")
+      if (record.date) {
+        const timePart = (record.time && /^\d{1,2}:\d{2}/.test(record.time)) ? record.time : '00:00';
+        const t = new Date(`${record.date}T${timePart}`).getTime();
+        if (!isNaN(t) && t > 0) return t;
+      }
+
+      // 4. Sequential numeric Bill Number (e.g. NWR/2026-27/00042 -> 42)
+      if (record.billNo) {
+        const match = String(record.billNo).match(/(\d+)\s*$/);
+        if (match) return parseInt(match[1], 10);
+      }
+
+      return Number.MAX_SAFE_INTEGER;
+    }
+
+    /**
+     * Groups active records based on unique identifiers:
+     * - Bill Number (unique identifier)
+     * - UMID ID (unique identifier on same date)
+     * - Patient Name (fallback when UMID is blank on same date)
+     *
+     * In each cluster, records are sorted chronologically:
+     * - primary = cluster[0] is the FIRST ORIGINAL INITIAL RECORD (untouched)
+     * - duplicates = cluster.slice(1) are SUBSEQUENT IDENTICAL ENTRIES (to be removed)
+     */
+    function getDuplicateClusters(currentArchive = billArchive) {
+      const activeBills = (currentArchive || []).filter(b => b && !b.isDeleted && b.status !== 'inactive');
+
+      // Union-Find / Disjoint-Set data structure to cluster duplicate records
+      const parent = new Map();
+      function find(id) {
+        if (!parent.has(id)) parent.set(id, id);
+        if (parent.get(id) === id) return id;
+        const root = find(parent.get(id));
+        parent.set(id, root);
+        return root;
+      }
+      function union(idA, idB) {
+        const rootA = find(idA);
+        const rootB = find(idB);
+        if (rootA !== rootB) {
+          parent.set(rootA, rootB);
+        }
+      }
+
+      const billNoMap = new Map();
+      const umidDateMap = new Map();
+      const nameDateMap = new Map();
+
+      for (const bill of activeBills) {
+        find(bill.id);
+
+        // 1. Group by Unique Identifier: Bill Number
+        const normBill = normalizeBillNo(bill.billNo);
+        if (normBill) {
+          if (billNoMap.has(normBill)) {
+            union(bill.id, billNoMap.get(normBill));
+          } else {
+            billNoMap.set(normBill, bill.id);
+          }
+        }
+
+        const dateStr = String(bill.date || '').trim();
+        const normUmid = normalizeUmid(bill.umidId);
+        const normName = normalizeName(bill.patientName);
+
+        // 2. Group by Unique Identifier: UMID ID on same date
+        if (normUmid && dateStr) {
+          const key = normUmid + '___' + dateStr;
+          if (umidDateMap.has(key)) {
+            union(bill.id, umidDateMap.get(key));
+          } else {
+            umidDateMap.set(key, bill.id);
+          }
+        } else if (normName && dateStr) {
+          // 3. Fallback if UMID is blank: Patient Name on same date
+          const key = normName + '___' + dateStr;
+          if (nameDateMap.has(key)) {
+            union(bill.id, nameDateMap.get(key));
+          } else {
+            nameDateMap.set(key, bill.id);
+          }
+        }
+      }
+
+      // Collect clusters
+      const clusterMap = new Map();
+      for (const bill of activeBills) {
+        const root = find(bill.id);
+        if (!clusterMap.has(root)) clusterMap.set(root, []);
+        clusterMap.get(root).push(bill);
+      }
+
+      const duplicateGroups = [];
+      clusterMap.forEach((bills) => {
+        if (bills.length > 1) {
+          // Sort to guarantee the FIRST ORIGINAL INITIAL ENTRY is at index 0
+          bills.sort((a, b) => {
+            const orderA = getRecordOriginalOrder(a);
+            const orderB = getRecordOriginalOrder(b);
+            if (orderA !== orderB) return orderA - orderB;
+
+            // Secondary: Numeric sequence from Bill Number (earliest bill number first)
+            const numA = (String(a.billNo || '').match(/(\d+)\s*$/) || [])[1] || 0;
+            const numB = (String(b.billNo || '').match(/(\d+)\s*$/) || [])[1] || 0;
+            const diffSeq = parseInt(numA, 10) - parseInt(numB, 10);
+            if (!isNaN(diffSeq) && diffSeq !== 0) return diffSeq;
+
+            return String(a.id || '').localeCompare(String(b.id || ''));
+          });
+
+          const primary = bills[0]; // FIRST ORIGINAL RECORD (untouched)
+          const subsequentDuplicates = bills.slice(1); // SUBSEQUENT IDENTICAL ENTRIES (removed)
+
+          duplicateGroups.push({
+            primary,
+            duplicates: subsequentDuplicates,
+            allBills: bills,
+            count: subsequentDuplicates.length
+          });
+        }
+      });
+
+      return duplicateGroups;
     }
 
     function getSameDayDuplicateBillIds() {
@@ -4524,35 +4949,28 @@
         ? window.syncManager.getBills()
         : (billArchive || []);
 
-      for (let i = 0; i < currentArchive.length; i++) {
-        const a = currentArchive[i];
-        const dateA = String(a.date || '').trim();
-        if (!dateA) continue;
-        const umidA = normalizeUmid(a.umidId);
-        const nameA = normalizeName(a.patientName);
-
-        for (let j = i + 1; j < currentArchive.length; j++) {
-          const b = currentArchive[j];
-          const dateB = String(b.date || '').trim();
-          if (dateA !== dateB) continue;
-
-          const umidB = normalizeUmid(b.umidId);
-          const nameB = normalizeName(b.patientName);
-
-          let isMatch = false;
-          if (umidA && umidB) {
-            if (umidA === umidB) isMatch = true;
-          } else if (nameA && nameB && nameA === nameB) {
-            isMatch = true;
-          }
-
-          if (isMatch) {
-            duplicateIds.add(a.id);
-            duplicateIds.add(b.id);
-          }
+      const groups = getDuplicateClusters(currentArchive);
+      for (const g of groups) {
+        for (const b of g.allBills) {
+          duplicateIds.add(b.id);
         }
       }
       return duplicateIds;
+    }
+
+    function getSubsequentDuplicateBillIds() {
+      const subDupIds = new Set();
+      const currentArchive = (window.syncManager && window.syncManager.getBills)
+        ? window.syncManager.getBills()
+        : (billArchive || []);
+
+      const groups = getDuplicateClusters(currentArchive);
+      for (const g of groups) {
+        for (const d of g.duplicates) {
+          subDupIds.add(d.id);
+        }
+      }
+      return subDupIds;
     }
 
     function checkDuplicatePatientLive() {
@@ -4827,8 +5245,19 @@
         const existing = billArchive.find(b => b.billNo === record.billNo);
         if (existing && existing.id) {
           record.id = existing.id;
+        } else if (window.nextGeneratedRecordId) {
+          record.id = window.nextGeneratedRecordId;
+          window.nextGeneratedRecordId = null;
         } else {
-          record.id = 'bill_' + Date.now() + '_' + Math.floor(Math.random() * 1000);
+          const recMonth = (record.date || new Date().toISOString().slice(0, 10)).slice(0, 7);
+          const monthBills = (billArchive || []).filter(b => (b.date || '').startsWith(recMonth));
+          let maxSeq = 0;
+          monthBills.forEach(b => {
+            const m = String(b.id || '').match(/bill_\d{4}_\d{2}_(\d+)/);
+            if (m) maxSeq = Math.max(maxSeq, parseInt(m[1], 10));
+          });
+          const nextSeq = maxSeq + 1;
+          record.id = `bill_${recMonth.replace('-', '_')}_${String(nextSeq).padStart(5, '0')}`;
         }
         // Bind to current editing ID so subsequent keystrokes/test additions update this same record
         currentEditingBillId = record.id;
@@ -4869,6 +5298,9 @@
 
     /* ========================================================================
        SINGLE BUTTON FOR ALL DUPLICATE ENTRY DELETE OPTION
+       Filters by Unique Identifier (UMID ID or Bill Number).
+       Guarantees the first original record is preserved untouched,
+       and only subsequent identical duplicate entries are removed.
        ======================================================================== */
     async function deleteAllDuplicateEntries() {
       const currentArchive = (window.syncManager && window.syncManager.getBills)
@@ -4880,87 +5312,41 @@
         return;
       }
 
-      // Group bills by date + patient identifier (normalized UMID or normalized patientName)
-      const groups = new Map();
+      // Group by Unique Identifier (UMID ID / Bill Number) & sort chronologically
+      const duplicateGroups = getDuplicateClusters(currentArchive);
 
-      currentArchive.forEach(bill => {
-        if (!bill) return;
-        const date = String(bill.date || '').trim();
-        if (!date) return;
-
-        const umid = normalizeUmid(bill.umidId);
-        const name = normalizeName(bill.patientName);
-        if (!umid && !name) return;
-
-        const key = date + '___' + (umid ? ('UMID:' + umid) : ('NAME:' + name));
-        if (!groups.has(key)) {
-          groups.set(key, []);
-        }
-        groups.get(key).push(bill);
-      });
-
-      const duplicateGroups = [];
-      const billsToDelete = [];
-
-      groups.forEach((bills, key) => {
-        if (bills.length > 1) {
-          // Sort to pick the BEST / PRIMARY record to KEEP:
-          // 1. Most items / tests first
-          // 2. Highest total amount
-          // 3. Earliest registered / created
-          bills.sort((a, b) => {
-            const testsA = Array.isArray(a.items) ? a.items.length : 0;
-            const testsB = Array.isArray(b.items) ? b.items.length : 0;
-            if (testsB !== testsA) return testsB - testsA;
-
-            const amtA = parseFloat(a.totalAmount || a.billedToNwr || 0);
-            const amtB = parseFloat(b.totalAmount || b.billedToNwr || 0);
-            if (amtB !== amtA) return amtB - amtA;
-
-            const timeA = new Date(a.createdAt || (a.date ? `${a.date}T${a.time || '00:00'}` : 0)).getTime();
-            const timeB = new Date(b.createdAt || (b.date ? `${b.date}T${b.time || '00:00'}` : 0)).getTime();
-            return timeA - timeB;
-          });
-
-          const primary = bills[0]; // RETAIN THIS PRIMARY RECORD
-          const duplicates = bills.slice(1); // PERMANENTLY REMOVE THESE REDUNDANT COPIES
-
-          duplicateGroups.push({
-            primary,
-            duplicates,
-            count: duplicates.length
-          });
-
-          duplicates.forEach(d => billsToDelete.push(d));
-        }
-      });
-
-      if (billsToDelete.length === 0) {
-        showToast("✅ Zero duplicates found! All saved patient records are unique.", "success");
+      if (duplicateGroups.length === 0) {
+        showToast("✅ Zero duplicates found! All saved records are unique by identifier.", "success");
         return;
       }
+
+      const billsToDelete = [];
+      duplicateGroups.forEach(g => {
+        g.duplicates.forEach(d => billsToDelete.push(d));
+      });
 
       const totalDupes = billsToDelete.length;
       const patientCount = duplicateGroups.length;
 
       const sampleList = duplicateGroups.slice(0, 4).map(g => {
         const dupNos = g.duplicates.map(d => '#' + (d.billNo || d.id)).join(', ');
-        return `• Patient: ${g.primary.patientName} (${g.primary.date})\n   ↳ Keeping Primary: #${g.primary.billNo} (${(g.primary.items || []).length} tests - ₹${(parseFloat(g.primary.totalAmount) || 0).toFixed(2)})\n   ↳ Deleting Duplicate(s): ${dupNos}`;
+        const idLabel = g.primary.umidId ? `UMID: ${g.primary.umidId}` : `Bill: #${g.primary.billNo}`;
+        return `• Original Record: #${g.primary.billNo} — ${g.primary.patientName} (${idLabel})\n   ↳ Retained Untouched: Registered ${g.primary.date} ${g.primary.time || ''}\n   ↳ Removing Subsequent Duplicate(s): ${dupNos}`;
       }).join('\n\n');
 
-      const moreText = patientCount > 4 ? `\n\n...plus ${patientCount - 4} more duplicate patient group(s).` : '';
+      const moreText = patientCount > 4 ? `\n\n...plus ${patientCount - 4} more duplicate record group(s).` : '';
 
-      const confirmMsg = `⚠️ DELETE ALL DUPLICATE PATIENT ENTRIES?\n\n` +
-        `Found ${totalDupes} duplicate record(s) across ${patientCount} patient registration(s) on the same day.\n\n` +
-        `Action Summary:\n${sampleList}${moreText}\n\n` +
-        `For each patient, the primary voucher with the most prescribed tests will be preserved, and the ${totalDupes} redundant duplicate record(s) will be PERMANENTLY deleted from local storage, IndexedDB, and LAN sync servers.\n\n` +
-        `Do you want to permanently delete all ${totalDupes} duplicate entries now?`;
+      const confirmMsg = `⚠️ REMOVE SUBSEQUENT DUPLICATE ENTRIES?\n\n` +
+        `Scanned records by unique identifier (UMID ID and Bill Number).\n` +
+        `Found ${totalDupes} subsequent duplicate entry/entries across ${patientCount} group(s).\n\n` +
+        `Summary of Actions:\n${sampleList}${moreText}\n\n` +
+        `The first original initial record in each group will remain completely untouched. Only the ${totalDupes} subsequent duplicate entry/entries will be permanently removed.\n\n` +
+        `Do you want to proceed and remove the ${totalDupes} subsequent duplicate(s)?`;
 
       if (!confirm(confirmMsg)) {
         return;
       }
 
-      // Delete all duplicate records
       let successCount = 0;
       for (const dup of billsToDelete) {
         try {
@@ -4990,7 +5376,7 @@
       renderRegistrationPatientList();
       checkDuplicatePatientLive();
 
-      showToast(`🗑️ Removed ${successCount} duplicate entries! All records are now clean & unique.`, "success");
+      showToast(`🗑️ Removed ${successCount} subsequent duplicate entries. Initial original records remained untouched!`, "success");
     }
     window.deleteAllDuplicateEntries = deleteAllDuplicateEntries;
 
@@ -5078,6 +5464,19 @@
         const existing = billArchive.find(b => b.billNo === record.billNo);
         if (existing && existing.id) {
           record.id = existing.id;
+        } else if (window.nextGeneratedRecordId) {
+          record.id = window.nextGeneratedRecordId;
+          window.nextGeneratedRecordId = null;
+        } else {
+          const recMonth = (record.date || new Date().toISOString().slice(0, 10)).slice(0, 7);
+          const monthBills = (billArchive || []).filter(b => (b.date || '').startsWith(recMonth));
+          let maxSeq = 0;
+          monthBills.forEach(b => {
+            const m = String(b.id || '').match(/bill_\d{4}_\d{2}_(\d+)/);
+            if (m) maxSeq = Math.max(maxSeq, parseInt(m[1], 10));
+          });
+          const nextSeq = maxSeq + 1;
+          record.id = `bill_${recMonth.replace('-', '_')}_${String(nextSeq).padStart(5, '0')}`;
         }
       }
 
@@ -5508,12 +5907,69 @@
       document.getElementById('previewModal').classList.add('show');
     }
 
-    async function deleteRegistrationPatient(billId) {
+    // ================= TWO-TIER DELETION SYSTEM HANDLERS =================
+
+    /**
+     * Tier 1: Soft Delete (Inactivate Record)
+     * Flags record as inactive (isDeleted: true, status: 'inactive') without removing from database.
+     * Soft-deleted records are excluded from active claim sheets, bill counts, and duplicate checks,
+     * but remain preserved and can be restored at any time.
+     */
+    async function softDeletePatientRecord(billId, isDeleted = true) {
       const record = billArchive.find(b => b.id === billId || b.billNo === billId);
       const name = record ? record.patientName : "this patient";
       const billNo = record ? record.billNo : billId;
 
-      if (!confirm(`Are you sure you want to PERMANENTLY delete the record for ${name} (${billNo})?\n\n⚠️ PERMANENT DELETION WARNING: This record will be permanently erased from local storage, IndexedDB, and sync servers. It CANNOT be undone and CANNOT be restored.`)) return;
+      if (isDeleted) {
+        if (!confirm(`⚠️ SOFT DELETE (INACTIVATE RECORD):\n\nDo you want to inactivate the record for ${name} (${billNo})?\n\n• The record will be flagged as inactive (soft-deleted).\n• It will be excluded from active claim sheets, totals, and duplicate checking.\n• It remains in the database and can be restored to Active at any time.`)) {
+          return;
+        }
+      }
+
+      if (window.syncManager) {
+        await syncManager.softDeleteBill(billId, isDeleted);
+        billArchive = syncManager.getBills();
+      } else {
+        if (record) {
+          record.isDeleted = isDeleted;
+          record.status = isDeleted ? 'inactive' : 'active';
+          record.deletedAt = isDeleted ? new Date().toISOString() : null;
+          record.updatedAt = new Date().toISOString();
+        }
+        saveAppData();
+      }
+
+      if (currentEditingBillId === billId || (record && currentEditingBillId === record.id)) {
+        resetPatientForm();
+      }
+
+      renderArchiveTable();
+      renderRegistrationPatientList();
+      checkDuplicatePatientLive();
+
+      const msg = isDeleted 
+        ? `⚠️ Record for ${name} (${billNo}) marked Inactive (soft-deleted). You can view it under "Inactive Records" and restore anytime.`
+        : `♻️ Record for ${name} (${billNo}) restored to Active!`;
+      showToast(msg, isDeleted ? "info" : "success");
+    }
+
+    async function restorePatientRecord(billId) {
+      return softDeletePatientRecord(billId, false);
+    }
+
+    /**
+     * Tier 2: Hard Delete (Permanent Purge)
+     * Irreversibly erases record from the database, local storage, IndexedDB, and LAN sync servers.
+     * Enters tombstone blacklist so no peer workstation can resurrect it.
+     */
+    async function hardDeletePatientRecord(billId) {
+      const record = billArchive.find(b => b.id === billId || b.billNo === billId);
+      const name = record ? record.patientName : "this patient";
+      const billNo = record ? record.billNo : billId;
+
+      if (!confirm(`💥 PERMANENT HARD DELETE WARNING:\n\nAre you sure you want to PERMANENTLY erase ${name} (${billNo}) from the database?\n\n⚠️ This will completely and permanently destroy this record across all local storage, IndexedDB, and LAN sync servers. This action CANNOT be undone and CANNOT be restored.`)) {
+        return;
+      }
 
       if (window.syncManager) {
         await syncManager.deleteBill(billId);
@@ -5522,15 +5978,36 @@
         billArchive = billArchive.filter(b => b.id !== billId && b.billNo !== billId);
         saveAppData();
       }
+
       selectedBillIds.delete(billId);
       if (record && record.id) selectedBillIds.delete(record.id);
       if (currentEditingBillId === billId || (record && currentEditingBillId === record.id)) {
         resetPatientForm();
       }
+
       renderArchiveTable();
       renderRegistrationPatientList();
       checkDuplicatePatientLive();
-      showToast(`Permanently deleted patient record for ${name} (${billNo}).`, "info");
+      showToast(`💥 Permanently erased ${name} (${billNo}) from database.`, "info");
+    }
+
+    // Aliases for Archive table
+    window.softDeleteArchiveBill = softDeletePatientRecord;
+    window.restoreArchiveBill = restorePatientRecord;
+    window.hardDeleteArchiveBill = hardDeletePatientRecord;
+
+    // Backwards-compatible aliases
+    window.deleteRegistrationPatient = softDeletePatientRecord;
+    window.deleteArchiveBill = hardDeletePatientRecord;
+
+    function filterToInactivePatients() {
+      const periodSelect = document.getElementById('regPatientPeriodFilter');
+      if (periodSelect) {
+        periodSelect.value = 'INACTIVE';
+        renderRegistrationPatientList();
+        const card = document.getElementById('regSavedPatientsCard');
+        if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
     function highlightSavedPatientRow(billId) {
@@ -5567,23 +6044,38 @@
       const currentMonthStr = now.toISOString().slice(0, 7);
 
       const dupIds = getSameDayDuplicateBillIds();
+      const subDupIds = getSubsequentDuplicateBillIds();
+
+      const activeBills = billArchive.filter(b => !b.isDeleted && b.status !== 'inactive');
+      const inactiveBills = billArchive.filter(b => b.isDeleted || b.status === 'inactive');
 
       // Update duplicate counter badge and single delete button
       const dupBadge = document.getElementById('regPatientDupBadge');
       const btnDelDupesReg = document.getElementById('btnDeleteAllDuplicatesReg');
       if (dupBadge) {
-        if (dupIds.size > 0) {
+        if (subDupIds.size > 0) {
           dupBadge.style.display = 'inline-flex';
-          dupBadge.innerText = `⚠️ ${dupIds.size} Duplicate${dupIds.size > 1 ? 's' : ''}`;
+          dupBadge.innerText = `⚠️ ${subDupIds.size} Duplicate${subDupIds.size > 1 ? 's' : ''}`;
         } else {
           dupBadge.style.display = 'none';
         }
       }
       if (btnDelDupesReg) {
-        if (dupIds.size > 0) {
-          btnDelDupesReg.innerHTML = `🗑️ Delete All Duplicates (${dupIds.size})`;
+        if (subDupIds.size > 0) {
+          btnDelDupesReg.innerHTML = `🗑️ Delete All Duplicates (${subDupIds.size})`;
         } else {
           btnDelDupesReg.innerHTML = `🗑️ Delete All Duplicates`;
+        }
+      }
+
+      // Update inactive records badge
+      const inactBadge = document.getElementById('regPatientInactiveBadge');
+      if (inactBadge) {
+        if (inactiveBills.length > 0) {
+          inactBadge.style.display = 'inline-flex';
+          inactBadge.innerText = `🗑️ ${inactiveBills.length} Inactive`;
+        } else {
+          inactBadge.style.display = 'none';
         }
       }
 
@@ -5596,6 +6088,13 @@
       });
 
       const filtered = sortedBills.filter(b => {
+        const isInactive = b.isDeleted || b.status === 'inactive';
+        if (periodFilter === 'INACTIVE') {
+          if (!isInactive) return false;
+        } else if (periodFilter !== 'ALL_INCLUDING_INACTIVE') {
+          if (isInactive) return false;
+        }
+
         if (search) {
           const matchBill = (b.billNo || '').toLowerCase().includes(search);
           const matchUmid = (b.umidId || '').toLowerCase().includes(search);
@@ -5620,15 +6119,15 @@
 
       // Update counters & totals
       const countBadge = document.getElementById('regPatientCountBadge');
-      if (countBadge) countBadge.innerText = billArchive.length;
+      if (countBadge) countBadge.innerText = activeBills.length;
 
       const showingCount = document.getElementById('regSavedPatientsShowingCount');
       if (showingCount) showingCount.innerText = filtered.length;
 
       const totalCount = document.getElementById('regSavedPatientsTotalCount');
-      if (totalCount) totalCount.innerText = billArchive.length;
+      if (totalCount) totalCount.innerText = activeBills.length;
 
-      const totalAmount = filtered.reduce((sum, b) => sum + (parseFloat(b.totalAmount) || 0), 0);
+      const totalAmount = filtered.filter(b => !b.isDeleted && b.status !== 'inactive').reduce((sum, b) => sum + (parseFloat(b.totalAmount) || 0), 0);
       const totalDisplay = document.getElementById('regSavedPatientsTotalAmount');
       if (totalDisplay) totalDisplay.innerText = `₹ ${totalAmount.toFixed(2)}`;
 
@@ -5638,7 +6137,7 @@
             <td colspan="11" style="text-align: center; padding: 36px 20px; color: #64748b;">
               <div style="font-size: 30px; margin-bottom: 6px;">📋</div>
               <strong style="color: #334155; font-size: 14px;">No Saved Patient Records Found</strong><br>
-              <span style="font-size: 12px; color: #64748b;">${search ? 'No patients match your search filter.' : periodFilter === 'DUPLICATES' ? 'No duplicate patient entries found on the same day. All records are unique!' : 'Register a patient using the form above and click "💾 Save Patient Record" to see it listed here.'}</span>
+              <span style="font-size: 12px; color: #64748b;">${search ? 'No patients match your search filter.' : periodFilter === 'INACTIVE' ? 'No inactive (soft-deleted) patient records found.' : periodFilter === 'DUPLICATES' ? 'No duplicate patient entries found on the same day. All records are unique!' : 'Register a patient using the form above and click "💾 Save Patient Record" to see it listed here.'}</span>
             </td>
           </tr>
         `;
@@ -5648,69 +6147,153 @@
       tbody.innerHTML = "";
       const frag = document.createDocumentFragment();
 
-      filtered.forEach((b, idx) => {
-        const tr = document.createElement('tr');
-        tr.id = `reg-pat-row-${b.id}`;
+      // Group filtered bills by month (YYYY-MM)
+      const monthGroups = new Map();
+      filtered.forEach(b => {
+        const mKey = b.date && b.date.length >= 7 ? b.date.slice(0, 7) : 'Undated';
+        if (!monthGroups.has(mKey)) {
+          monthGroups.set(mKey, []);
+        }
+        monthGroups.get(mKey).push(b);
+      });
 
-        const isDup = dupIds.has(b.id);
-        if (isDup) {
-          tr.style.backgroundColor = 'rgba(254, 242, 242, 0.65)';
+      // Sort month groups descending (newest month first)
+      const sortedMonthKeys = Array.from(monthGroups.keys()).sort((a, b) => {
+        if (a === 'Undated') return 1;
+        if (b === 'Undated') return -1;
+        return b.localeCompare(a);
+      });
+
+      let overallIdx = 0;
+
+      sortedMonthKeys.forEach(mKey => {
+        const monthBills = monthGroups.get(mKey);
+        const monthActiveBills = monthBills.filter(b => !b.isDeleted && b.status !== 'inactive');
+        const monthTotalAmount = monthActiveBills.reduce((sum, b) => sum + (parseFloat(b.totalAmount) || 0), 0);
+
+        // Calculate voucher sequence range for this month
+        const validVouchers = monthBills.map(b => b.billNo).filter(Boolean);
+        let voucherSummary = "";
+        if (validVouchers.length > 0) {
+          const firstV = validVouchers[validVouchers.length - 1]; // oldest in group
+          const lastV = validVouchers[0]; // newest in group
+          voucherSummary = firstV === lastV ? firstV : `${firstV} — ${lastV}`;
         }
 
-        const testsSummary = (b.items || []).map(it => `
-          <div class="saved-test-chip" title="${escapeHtml(it.name || '')} (₹${it.rate || 0})">
-            <span class="saved-test-code">${escapeHtml(it.code || 'CGHS')}</span>
-            <span class="saved-test-name">${escapeHtml(it.name || '')}</span>
-            <span class="saved-test-rate">₹${it.rate || 0}</span>
-          </div>
-        `).join('');
-
-        const formattedDate = b.date || '';
-        const formattedTime = b.time ? `<small style="color: #64748b; display: block; font-size: 11px;">⏰ ${escapeHtml(b.time)}</small>` : '';
-
-        tr.innerHTML = `
-          <td style="text-align: center; font-weight: 700; color: #64748b; vertical-align: middle;">${idx + 1}</td>
-          <td style="vertical-align: middle;">
-            <span class="bill-badge">${escapeHtml(b.billNo || '')}</span>
-            ${isDup ? `<div class="badge-duplicate-tag" style="margin-top:3px; font-size:10px;" title="Another record with same UMID or Name exists on this day">⚠️ Duplicate</div>` : ''}
-          </td>
-          <td style="vertical-align: middle; font-size: 11.5px; white-space: nowrap;">
-            <strong>${escapeHtml(formattedDate)}</strong>
-            ${formattedTime}
-          </td>
-          <td style="vertical-align: middle;">
-            <span class="umid-badge">${escapeHtml(b.umidId || '')}</span>
-          </td>
-          <td style="vertical-align: middle;">
-            <div style="font-weight: 700; color: #0f172a; font-size: 13px;">${escapeHtml(b.patientName || '')}</div>
-            ${b.phone ? `<div style="font-size: 11px; color: #64748b;">📞 ${escapeHtml(b.phone)}</div>` : ''}
-          </td>
-          <td style="vertical-align: middle; font-size: 12px; white-space: nowrap;">
-            ${escapeHtml(b.age || '')} <span style="color: #94a3b8;">/</span> <strong>${escapeHtml(b.sex || '')}</strong>
-          </td>
-          <td style="vertical-align: middle;">
-            <span class="bene-badge ${getBeneBadgeClass(b.beneficiaryType)}">${escapeHtml(b.beneficiaryType || 'Railway Beneficiary')}</span>
-          </td>
-          <td style="vertical-align: middle;">
-            <div class="saved-tests-wrapper">
-              ${testsSummary || '<span style="color: #94a3b8; font-size: 11px;">No tests recorded</span>'}
+        // Render Month Section Divider Row
+        const headerTr = document.createElement('tr');
+        headerTr.className = 'month-section-row';
+        headerTr.innerHTML = `
+          <td colspan="11">
+            <div class="month-section-bar">
+              <div class="month-section-left">
+                <span class="month-section-name">
+                  📅 ${formatMonthYearLabel(mKey)}
+                </span>
+                <span class="badge-month-pill badge-month-count">
+                  👥 ${monthBills.length} Patient${monthBills.length > 1 ? 's' : ''}
+                </span>
+                <span class="badge-month-pill badge-month-amount">
+                  💰 ₹ ${monthTotalAmount.toFixed(2)}
+                </span>
+                ${voucherSummary ? `
+                  <span class="badge-month-pill badge-month-vouchers" title="Monthly Voucher Sequence Range (Restarts each month at 00001)">
+                    🏷️ ${escapeHtml(voucherSummary)}
+                  </span>
+                ` : ''}
+              </div>
+              <div style="display: flex; gap: 6px; align-items: center;">
+                <button type="button" class="btn-action-sm" onclick="exportClaimSheetForMonth('${mKey}', 'csv')" title="Export ${formatMonthYearLabel(mKey)} Claim Sheet to CSV">
+                  📥 CSV
+                </button>
+                <button type="button" class="btn-action-sm" onclick="exportClaimSheetForMonth('${mKey}', 'word')" title="Export ${formatMonthYearLabel(mKey)} Claim Sheet to MS Word">
+                  📄 Word
+                </button>
+                <button type="button" class="btn-action-sm" onclick="viewMonthInArchive('${mKey}')" title="Filter and view ${formatMonthYearLabel(mKey)} in Full Archive Tab">
+                  🗄️ View in Archive
+                </button>
+              </div>
             </div>
           </td>
-          <td style="text-align: right; vertical-align: middle;">
-            <strong style="color: #1e40af; font-family: 'JetBrains Mono', monospace; font-size: 13.5px;">₹ ${(parseFloat(b.totalAmount) || 0).toFixed(2)}</strong>
-          </td>
-          <td style="text-align: center; vertical-align: middle;">
-            <span class="cashless-pill" title="100% Cashless Bilateral MOU (Zero Patient Fee)">🛡️ Cashless</span>
-          </td>
-          <td class="row-actions-cell" style="vertical-align: middle;">
-            <button type="button" class="btn-row-action" title="Edit / Load into Form" onclick="loadBillIntoForm('${b.id}')">✏️ Edit</button>
-            <button type="button" class="btn-row-action" title="Print 3-in-1 Triple Receipt" onclick="printVoucherFromArchive('${b.id}')">🖨️ Print</button>
-            <button type="button" class="btn-row-action" title="Preview Receipt" onclick="previewVoucherFromArchive('${b.id}')">👁️</button>
-            <button type="button" class="btn-row-action delete" title="Delete Patient Record" onclick="deleteRegistrationPatient('${b.id}')">🗑️</button>
-          </td>
         `;
+        frag.appendChild(headerTr);
 
-        frag.appendChild(tr);
+        // Render patient rows for this month
+        monthBills.forEach((b, mIdx) => {
+          overallIdx++;
+          const tr = document.createElement('tr');
+          tr.id = `reg-pat-row-${b.id}`;
+
+          const isInactive = b.isDeleted || b.status === 'inactive';
+          const isDup = dupIds.has(b.id);
+          if (isInactive) {
+            tr.className = 'row-inactive';
+          } else if (isDup) {
+            tr.style.backgroundColor = 'rgba(254, 242, 242, 0.65)';
+          }
+
+          const testsSummary = (b.items || []).map(it => `
+            <div class="saved-test-chip" title="${escapeHtml(it.name || '')} (₹${it.rate || 0})">
+              <span class="saved-test-code">${escapeHtml(it.code || 'CGHS')}</span>
+              <span class="saved-test-name">${escapeHtml(it.name || '')}</span>
+              <span class="saved-test-rate">₹${it.rate || 0}</span>
+            </div>
+          `).join('');
+
+          const formattedDate = b.date || '';
+          const formattedTime = b.time ? `<small style="color: #64748b; display: block; font-size: 11px;">⏰ ${escapeHtml(b.time)}</small>` : '';
+
+          tr.innerHTML = `
+            <td style="text-align: center; font-weight: 700; color: #64748b; vertical-align: middle;">
+              <span title="Overall #${overallIdx} | ${formatMonthYearLabel(mKey)} #${monthBills.length - mIdx}">${monthBills.length - mIdx}</span>
+            </td>
+            <td style="vertical-align: middle;">
+              <span class="bill-badge">${escapeHtml(b.billNo || '')}</span>
+              ${isInactive ? `<div class="badge-inactive-pill" style="margin-top:3px; font-size:10px;" title="Soft-deleted record flagged as inactive">⚠️ Inactive</div>` : (isDup ? (subDupIds.has(b.id) ? `<div class="badge-duplicate-tag" style="margin-top:3px; font-size:10px; background:#fee2e2; color:#dc2626; border:1px solid #f87171;" title="Subsequent identical entry — candidate for removal">⚠️ Subsequent Duplicate</div>` : `<div class="badge-duplicate-tag" style="margin-top:3px; font-size:10px; background:#dcfce7; color:#166534; border:1px solid #86efac;" title="First original record — remains untouched">✅ Original Record</div>`) : '')}
+            </td>
+            <td style="vertical-align: middle; font-size: 11.5px; white-space: nowrap;">
+              <strong>${escapeHtml(formattedDate)}</strong>
+              ${formattedTime}
+            </td>
+            <td style="vertical-align: middle;">
+              <span class="umid-badge">${escapeHtml(b.umidId || '')}</span>
+            </td>
+            <td style="vertical-align: middle;">
+              <div style="font-weight: 700; color: #0f172a; font-size: 13px;">${escapeHtml(b.patientName || '')}</div>
+              ${b.phone ? `<div style="font-size: 11px; color: #64748b;">📞 ${escapeHtml(b.phone)}</div>` : ''}
+            </td>
+            <td style="vertical-align: middle; font-size: 12px; white-space: nowrap;">
+              ${escapeHtml(b.age || '')} <span style="color: #94a3b8;">/</span> <strong>${escapeHtml(b.sex || '')}</strong>
+            </td>
+            <td style="vertical-align: middle;">
+              <span class="bene-badge ${getBeneBadgeClass(b.beneficiaryType)}">${escapeHtml(b.beneficiaryType || 'Railway Beneficiary')}</span>
+            </td>
+            <td style="vertical-align: middle;">
+              <div class="saved-tests-wrapper">
+                ${testsSummary || '<span style="color: #94a3b8; font-size: 11px;">No tests recorded</span>'}
+              </div>
+            </td>
+            <td style="text-align: right; vertical-align: middle;">
+              <strong style="color: #1e40af; font-family: 'JetBrains Mono', monospace; font-size: 13.5px;">₹ ${(parseFloat(b.totalAmount) || 0).toFixed(2)}</strong>
+            </td>
+            <td style="text-align: center; vertical-align: middle;">
+              ${isInactive ? `<span class="badge-inactive-pill" title="Soft-deleted record (Inactive)">⚠️ Inactive</span>` : `<span class="cashless-pill" title="100% Cashless Bilateral MOU (Zero Patient Fee)">🛡️ Cashless</span>`}
+            </td>
+            <td class="row-actions-cell" style="vertical-align: middle;">
+              ${isInactive ? `
+                <button type="button" class="btn-row-action restore" title="Restore record to Active" onclick="restorePatientRecord('${b.id}')">♻️ Restore</button>
+                <button type="button" class="btn-row-action hard-delete" title="Hard Delete: Permanently remove from database" onclick="hardDeletePatientRecord('${b.id}')">💥 Hard Delete</button>
+              ` : `
+                <button type="button" class="btn-row-action" title="Edit / Load into Form" onclick="loadBillIntoForm('${b.id}')">✏️ Edit</button>
+                <button type="button" class="btn-row-action" title="Print 3-in-1 Triple Receipt" onclick="printVoucherFromArchive('${b.id}')">🖨️ Print</button>
+                <button type="button" class="btn-row-action soft-delete" title="Soft Delete: Flag as Inactive (Can be restored anytime)" onclick="softDeletePatientRecord('${b.id}')">⚠️ Inactivate</button>
+                <button type="button" class="btn-row-action hard-delete" title="Hard Delete: Permanently remove from database" onclick="hardDeletePatientRecord('${b.id}')">💥 Hard Delete</button>
+              `}
+            </td>
+          `;
+
+          frag.appendChild(tr);
+        });
       });
 
       tbody.appendChild(frag);
@@ -5732,21 +6315,25 @@
       const chipCurrent = document.getElementById('chipPeriodCurrentMonth');
       const chipPrev = document.getElementById('chipPeriodPrevMonth');
       const chipDup = document.getElementById('chipPeriodDuplicates');
+      const chipInactive = document.getElementById('chipPeriodInactive');
 
       if (chipAll) chipAll.classList.toggle('active', filterType === 'ALL');
       if (chipCurrent) chipCurrent.classList.toggle('active', filterType === 'CURRENT_MONTH');
       if (chipPrev) chipPrev.classList.toggle('active', filterType === 'PREVIOUS_MONTH');
       if (chipDup) chipDup.classList.toggle('active', filterType === 'DUPLICATES');
+      if (chipInactive) chipInactive.classList.toggle('active', filterType === 'INACTIVE');
 
       renderArchiveTable();
       showToast(`Filter applied: ${getPeriodFilterLabel(filterType, val)}`, "info");
     }
 
     function getPeriodFilterLabel(filterType, val) {
-      if (filterType === 'ALL') return 'All Archive Bills';
+      if (filterType === 'ALL') return 'All Active Archive Bills';
       if (filterType === 'CURRENT_MONTH') return 'Current Month Bills';
       if (filterType === 'PREVIOUS_MONTH') return 'Previous Month Bills';
       if (filterType === 'DUPLICATES') return 'Same-Day Duplicate Records';
+      if (filterType === 'INACTIVE') return 'Soft-Deleted / Inactive Records';
+      if (filterType === 'ALL_INCLUDING_INACTIVE') return 'All Records (Active + Inactive)';
       if (filterType === 'CUSTOM_MONTH') return `Month: ${val}`;
       if (filterType === 'CUSTOM_DATE') return `Date: ${val}`;
       return filterType;
@@ -5765,6 +6352,19 @@
       const dupIds = currentPeriodFilter === 'DUPLICATES' ? getSameDayDuplicateBillIds() : null;
 
       return billArchive.filter(b => {
+        const isInactive = !!(b.isDeleted || b.status === 'inactive');
+
+        // Two-Tier filtering: exclude soft-deleted/inactive records from normal views
+        if (currentPeriodFilter === 'INACTIVE') {
+          if (!isInactive) return false;
+        } else if (currentPeriodFilter === 'ALL_INCLUDING_INACTIVE') {
+          // Show both active and inactive
+        } else {
+          // Standard filters ('ALL', 'CURRENT_MONTH', 'PREVIOUS_MONTH', 'DUPLICATES', 'CUSTOM_MONTH', 'CUSTOM_DATE')
+          // strictly only display ACTIVE records to keep active claims and totals clean
+          if (isInactive) return false;
+        }
+
         // Search text matching
         if (search) {
           const matchBill = (b.billNo || '').toLowerCase().includes(search);
@@ -5852,6 +6452,7 @@
 
       const filtered = getFilteredArchiveBills();
       const dupIds = getSameDayDuplicateBillIds();
+      const subDupIds = getSubsequentDuplicateBillIds();
 
       // Initialize selectedBillIds on first render if empty
       if (!isMasterSelectInitialized && billArchive.length > 0) {
@@ -5860,12 +6461,23 @@
       }
 
       // Update metrics
-      document.getElementById('statTotalBills').innerText = billArchive.length;
-      document.getElementById('statTotalAmountBilled').innerText = `₹ ${billArchive.reduce((acc, b) => acc + (parseFloat(b.totalAmount) || 0), 0).toFixed(2)}`;
-      document.getElementById('statUniquePatients').innerText = new Set(billArchive.map(b => b.umidId)).size;
+      const activeBills = billArchive.filter(b => !b.isDeleted && b.status !== 'inactive');
+      const inactiveBills = billArchive.filter(b => b.isDeleted || b.status === 'inactive');
+
+      document.getElementById('statTotalBills').innerText = activeBills.length;
+      document.getElementById('statTotalAmountBilled').innerText = `₹ ${activeBills.reduce((acc, b) => acc + (parseFloat(b.totalAmount) || 0), 0).toFixed(2)}`;
+      document.getElementById('statUniquePatients').innerText = new Set(activeBills.map(b => b.umidId)).size;
       document.getElementById('archiveDisplayCount').innerText = filtered.length;
       document.getElementById('archiveTotalCount').innerText = billArchive.length;
-      document.getElementById('archiveCountBadge').innerText = billArchive.length;
+      document.getElementById('archiveCountBadge').innerText = activeBills.length;
+      const inactiveBadge = document.getElementById('archiveInactiveCountBadge');
+      if (inactiveBadge) inactiveBadge.innerText = inactiveBills.length;
+      const dupBadgeArch = document.getElementById('archiveDuplicateCountBadge');
+      if (dupBadgeArch) dupBadgeArch.innerText = subDupIds.size;
+      const btnDelDupesArch = document.getElementById('btnDeleteAllDuplicatesArchive');
+      if (btnDelDupesArch) {
+        btnDelDupesArch.innerText = subDupIds.size > 0 ? `🗑️ Delete All Duplicates (${subDupIds.size})` : `🗑️ Delete All Duplicates`;
+      }
 
       if (filtered.length === 0) {
         tbody.innerHTML = `
@@ -5879,77 +6491,184 @@
         return;
       }
 
-      filtered.forEach((b, index) => {
-        const tr = document.createElement('tr');
-        tr.id = `arch-row-${b.id}`;
+      // Group archive bills by month (YYYY-MM)
+      const monthGroups = new Map();
+      filtered.forEach(b => {
+        const mKey = b.date && b.date.length >= 7 ? b.date.slice(0, 7) : 'Undated';
+        if (!monthGroups.has(mKey)) {
+          monthGroups.set(mKey, []);
+        }
+        monthGroups.get(mKey).push(b);
+      });
 
-        const isChecked = selectedBillIds.has(b.id);
-        const isDup = dupIds.has(b.id);
-        if (isDup) {
-          tr.style.backgroundColor = 'rgba(254, 242, 242, 0.65)';
+      // Sort month groups descending (newest month first)
+      const sortedMonthKeys = Array.from(monthGroups.keys()).sort((a, b) => {
+        if (a === 'Undated') return 1;
+        if (b === 'Undated') return -1;
+        return b.localeCompare(a);
+      });
+
+      let overallIdx = 0;
+
+      sortedMonthKeys.forEach(mKey => {
+        const monthBills = monthGroups.get(mKey);
+        const monthActiveBills = monthBills.filter(b => !b.isDeleted && b.status !== 'inactive');
+        const monthTotalAmount = monthActiveBills.reduce((sum, b) => sum + (parseFloat(b.totalAmount) || 0), 0);
+
+        // Calculate Demand 11 allocation breakdown (Serving vs Pensioner)
+        let servingAmount = 0;
+        let servingCount = 0;
+        let pensionerAmount = 0;
+        let pensionerCount = 0;
+        monthActiveBills.forEach(b => {
+          const amt = parseFloat(b.totalAmount) || 0;
+          const bType = (b.beneficiaryType || '').toLowerCase();
+          if (bType.includes('retired') || bType.includes('pensioner')) {
+            pensionerAmount += amt;
+            pensionerCount++;
+          } else {
+            servingAmount += amt;
+            servingCount++;
+          }
+        });
+
+        // Calculate voucher sequence range for this month
+        const validVouchers = monthBills.map(b => b.billNo).filter(Boolean);
+        let voucherSummary = "";
+        if (validVouchers.length > 0) {
+          const firstV = validVouchers[validVouchers.length - 1]; // oldest in group
+          const lastV = validVouchers[0]; // newest in group
+          voucherSummary = firstV === lastV ? firstV : `${firstV} — ${lastV}`;
         }
 
-        let itemsHtml = (b.items || []).map((it, itemIdx) => `
-          <div class="archive-item-pill">
-            <input type="text" class="inrow-input inv-code" style="width: 75px; font-family: monospace; font-size: 10px; font-weight: 700; color: #0369a1;" value="${escapeHtml(it.code || '')}" onchange="updateArchiveItemField('${b.id}', ${itemIdx}, 'code', this.value)" title="CGHS Code">
-            <input type="text" class="inrow-input inv-name" style="flex: 1; min-width: 120px; font-size: 11px;" value="${escapeHtml(it.name || '')}" onchange="updateArchiveItemField('${b.id}', ${itemIdx}, 'name', this.value)" title="Investigation Name">
-            <div style="display: flex; align-items: center; gap: 2px;">
-              <span style="font-size: 10px; font-weight: 700; color: #475569;">₹</span>
-              <input type="number" class="inrow-input inv-rate" style="width: 58px; font-size: 10.5px; font-weight: 700; text-align: right;" value="${it.rate || 0}" onchange="updateArchiveItemField('${b.id}', ${itemIdx}, 'rate', this.value)" title="CGHS Rate">
-            </div>
-            ${(b.items || []).length > 1 ? `<button type="button" class="btn-action-sm" style="padding: 1px 4px; font-size: 10px; color: #ef4444;" onclick="removeArchiveItem('${b.id}', ${itemIdx})" title="Remove test from bill">✕</button>` : ''}
-          </div>
-        `).join('');
-
-        tr.innerHTML = `
-          <td style="text-align: center;">
-            <input type="checkbox" class="bill-row-checkbox" ${isChecked ? 'checked' : ''} onchange="onBillSelectionChange('${b.id}', this.checked)">
-          </td>
-          <td style="text-align: center; font-weight: 700; color: #64748b;">${index + 1}</td>
-          <td>
-            <input type="text" class="inrow-input" value="${escapeHtml(b.billNo)}" onchange="updateArchiveField('${b.id}', 'billNo', this.value)" style="font-weight: 700; font-family: monospace;">
-            ${isDup ? `<div class="badge-duplicate-tag" style="margin-top: 3px; font-size: 10px;" title="Same-day duplicate entry">⚠️ Same-Day Duplicate</div>` : ''}
-          </td>
-          <td>
-            <input type="date" class="inrow-input" value="${b.date || ''}" onchange="updateArchiveField('${b.id}', 'date', this.value)" style="font-size: 11px;">
-          </td>
-          <td>
-            <input type="text" class="inrow-input" value="${escapeHtml(b.umidId)}" onchange="updateArchiveField('${b.id}', 'umidId', this.value)" style="font-family: monospace; font-weight: 600;">
-          </td>
-          <td>
-            <input type="text" class="inrow-input" value="${escapeHtml(b.patientName)}" onchange="updateArchiveField('${b.id}', 'patientName', this.value)" style="font-weight: 600;">
-          </td>
-          <td>
-            <div style="display: flex; gap: 4px;">
-              <input type="text" class="inrow-input" value="${escapeHtml(b.age || '')}" placeholder="Age" onchange="updateArchiveField('${b.id}', 'age', this.value)" style="width: 48px;">
-              <input type="text" class="inrow-input" value="${escapeHtml(b.sex || '')}" placeholder="Sex" onchange="updateArchiveField('${b.id}', 'sex', this.value)" style="width: 36px;">
-            </div>
-          </td>
-          <td>
-            <input type="text" class="inrow-input" value="${escapeHtml(b.beneficiaryType || '')}" onchange="updateArchiveField('${b.id}', 'beneficiaryType', this.value)">
-          </td>
-          <td>
-            <input type="text" class="inrow-input" value="${escapeHtml(b.referredBy || '')}" onchange="updateArchiveField('${b.id}', 'referredBy', this.value)">
-          </td>
-          <td>
-            <div class="archive-items-breakdown">
-              ${itemsHtml}
-              <div style="margin-top: 3px;">
-                <button type="button" class="btn-action-sm" style="font-size: 9.5px; padding: 1px 6px;" onclick="addArchiveItemPrompt('${b.id}')">➕ Add Test</button>
+        // Render Month Section Divider Row
+        const headerTr = document.createElement('tr');
+        headerTr.className = 'month-section-row';
+        headerTr.innerHTML = `
+          <td colspan="12">
+            <div class="month-section-bar">
+              <div class="month-section-left">
+                <span class="month-section-name">
+                  📅 ${formatMonthYearLabel(mKey)}
+                </span>
+                <span class="badge-month-pill badge-month-count" title="Total Bills in this month">
+                  📑 ${monthBills.length} Bill${monthBills.length > 1 ? 's' : ''}
+                </span>
+                <span class="badge-month-pill badge-month-amount" title="Gross Claim Amount for this month">
+                  💰 ₹ ${monthTotalAmount.toFixed(2)}
+                </span>
+                <span class="badge-month-pill badge-month-allocation" title="Railway Demand No. 11 Budget Allocation Breakdown">
+                  👥 Serving: ₹${servingAmount.toFixed(2)} (${servingCount}) | 🎖️ Pensioner: ₹${pensionerAmount.toFixed(2)} (${pensionerCount})
+                </span>
+                ${voucherSummary ? `
+                  <span class="badge-month-pill badge-month-vouchers" title="Monthly Voucher Sequence Range (Restarts each month at 00001)">
+                    🏷️ ${escapeHtml(voucherSummary)}
+                  </span>
+                ` : ''}
+              </div>
+              <div style="display: flex; gap: 6px; align-items: center;">
+                <button type="button" class="btn-action-sm" onclick="exportClaimSheetForMonth('${mKey}', 'csv')" title="Download editable CSV claim sheet for ${formatMonthYearLabel(mKey)}">
+                  📥 Month CSV
+                </button>
+                <button type="button" class="btn-action-sm" onclick="exportClaimSheetForMonth('${mKey}', 'word')" title="Download editable MS Word claim sheet for ${formatMonthYearLabel(mKey)}">
+                  📄 Month Word
+                </button>
+                <button type="button" class="btn-action-sm" onclick="selectMonthBillsOnly('${mKey}')" title="Select all bills in ${formatMonthYearLabel(mKey)} for bulk operations">
+                  ☑️ Select Month
+                </button>
               </div>
             </div>
           </td>
-          <td style="text-align: right;">
-            <input type="number" class="inrow-input inrow-rate" value="${b.totalAmount || 0}" step="1" onchange="updateArchiveAmount('${b.id}', this.value)">
-          </td>
-          <td class="row-actions-cell">
-            <button type="button" class="btn-row-action" title="Load into Registration Form" onclick="loadBillIntoForm('${b.id}')">✏️ Edit</button>
-            <button type="button" class="btn-row-action" title="Print Triple Receipt" onclick="printVoucherFromArchive('${b.id}')">🖨️</button>
-            <button type="button" class="btn-row-action delete" title="Delete Bill" onclick="deleteArchiveBill('${b.id}')">🗑️</button>
-          </td>
         `;
+        tbody.appendChild(headerTr);
 
-        tbody.appendChild(tr);
+        // Render individual bill rows for this month
+        monthBills.forEach((b, mIdx) => {
+          overallIdx++;
+          const tr = document.createElement('tr');
+          tr.id = `arch-row-${b.id}`;
+
+          const isChecked = selectedBillIds.has(b.id);
+          const isDup = dupIds.has(b.id);
+          const isInactive = !!(b.isDeleted || b.status === 'inactive');
+
+          if (isInactive) {
+            tr.classList.add('row-inactive');
+          } else if (isDup) {
+            tr.style.backgroundColor = 'rgba(254, 242, 242, 0.65)';
+          }
+
+          let itemsHtml = (b.items || []).map((it, itemIdx) => `
+            <div class="archive-item-pill">
+              <input type="text" class="inrow-input inv-code" style="width: 75px; font-family: monospace; font-size: 10px; font-weight: 700; color: #0369a1;" value="${escapeHtml(it.code || '')}" onchange="updateArchiveItemField('${b.id}', ${itemIdx}, 'code', this.value)" title="CGHS Code">
+              <input type="text" class="inrow-input inv-name" style="flex: 1; min-width: 120px; font-size: 11px;" value="${escapeHtml(it.name || '')}" onchange="updateArchiveItemField('${b.id}', ${itemIdx}, 'name', this.value)" title="Investigation Name">
+              <div style="display: flex; align-items: center; gap: 2px;">
+                <span style="font-size: 10px; font-weight: 700; color: #475569;">₹</span>
+                <input type="number" class="inrow-input inv-rate" style="width: 58px; font-size: 10.5px; font-weight: 700; text-align: right;" value="${it.rate || 0}" onchange="updateArchiveItemField('${b.id}', ${itemIdx}, 'rate', this.value)" title="CGHS Rate">
+              </div>
+              ${(b.items || []).length > 1 ? `<button type="button" class="btn-action-sm" style="padding: 1px 4px; font-size: 10px; color: #ef4444;" onclick="removeArchiveItem('${b.id}', ${itemIdx})" title="Remove test from bill">✕</button>` : ''}
+            </div>
+          `).join('');
+
+          tr.innerHTML = `
+            <td style="text-align: center;">
+              <input type="checkbox" class="bill-row-checkbox" ${isChecked ? 'checked' : ''} onchange="onBillSelectionChange('${b.id}', this.checked)">
+            </td>
+            <td style="text-align: center; font-weight: 700; color: #64748b;">
+              <span title="Overall S.N. ${overallIdx} | ${formatMonthYearLabel(mKey)} #${monthBills.length - mIdx}">${monthBills.length - mIdx}</span>
+            </td>
+            <td>
+              <input type="text" class="inrow-input" value="${escapeHtml(b.billNo)}" onchange="updateArchiveField('${b.id}', 'billNo', this.value)" style="font-weight: 700; font-family: monospace;">
+              ${isInactive ? `<span class="badge-inactive-pill" title="Soft-deleted record flagged as inactive. Excluded from active claims.">⚠️ Inactive</span>` : ''}
+              ${isDup ? (subDupIds.has(b.id) ? `<div class="badge-duplicate-tag" style="margin-top: 3px; font-size: 10px; background:#fee2e2; color:#dc2626; border:1px solid #f87171;" title="Subsequent identical entry — candidate for removal">⚠️ Subsequent Duplicate</div>` : `<div class="badge-duplicate-tag" style="margin-top: 3px; font-size: 10px; background:#dcfce7; color:#166534; border:1px solid #86efac;" title="First original record — remains untouched">✅ Original Record</div>`) : ''}
+            </td>
+            <td>
+              <input type="date" class="inrow-input" value="${b.date || ''}" onchange="updateArchiveField('${b.id}', 'date', this.value)" style="font-size: 11px;">
+            </td>
+            <td>
+              <input type="text" class="inrow-input" value="${escapeHtml(b.umidId)}" onchange="updateArchiveField('${b.id}', 'umidId', this.value)" style="font-family: monospace; font-weight: 600;">
+            </td>
+            <td>
+              <input type="text" class="inrow-input" value="${escapeHtml(b.patientName)}" onchange="updateArchiveField('${b.id}', 'patientName', this.value)" style="font-weight: 600;">
+            </td>
+            <td>
+              <div style="display: flex; gap: 4px;">
+                <input type="text" class="inrow-input" value="${escapeHtml(b.age || '')}" placeholder="Age" onchange="updateArchiveField('${b.id}', 'age', this.value)" style="width: 48px;">
+                <input type="text" class="inrow-input" value="${escapeHtml(b.sex || '')}" placeholder="Sex" onchange="updateArchiveField('${b.id}', 'sex', this.value)" style="width: 36px;">
+              </div>
+            </td>
+            <td>
+              <input type="text" class="inrow-input" value="${escapeHtml(b.beneficiaryType || '')}" onchange="updateArchiveField('${b.id}', 'beneficiaryType', this.value)">
+            </td>
+            <td>
+              <input type="text" class="inrow-input" value="${escapeHtml(b.referredBy || '')}" onchange="updateArchiveField('${b.id}', 'referredBy', this.value)">
+            </td>
+            <td>
+              <div class="archive-items-breakdown">
+                ${itemsHtml}
+                <div style="margin-top: 3px;">
+                  <button type="button" class="btn-action-sm" style="font-size: 9.5px; padding: 1px 6px;" onclick="addArchiveItemPrompt('${b.id}')">➕ Add Test</button>
+                </div>
+              </div>
+            </td>
+            <td style="text-align: right;">
+              <input type="number" class="inrow-input inrow-rate" value="${b.totalAmount || 0}" step="1" onchange="updateArchiveAmount('${b.id}', this.value)">
+            </td>
+            <td class="row-actions-cell">
+              ${isInactive ? `
+                <button type="button" class="btn-row-action restore" title="Restore this record back to Active status" onclick="restoreArchiveBill('${b.id}')">♻️ Restore</button>
+                <button type="button" class="btn-row-action hard-delete" title="Hard Delete: Permanently remove from database & all storage" onclick="hardDeleteArchiveBill('${b.id}')">💥 Hard Delete</button>
+              ` : `
+                <button type="button" class="btn-row-action" title="Load into Registration Form" onclick="loadBillIntoForm('${b.id}')">✏️ Edit</button>
+                <button type="button" class="btn-row-action" title="Print Triple Receipt" onclick="printVoucherFromArchive('${b.id}')">🖨️</button>
+                <button type="button" class="btn-row-action soft-delete" title="Soft Delete: Flag record as inactive (hidden from active claims, restorable anytime)" onclick="softDeleteArchiveBill('${b.id}')">⚠️ Inactivate</button>
+                <button type="button" class="btn-row-action hard-delete" title="Hard Delete: Permanently remove from database & all storage" onclick="hardDeleteArchiveBill('${b.id}')">💥 Hard Delete</button>
+              `}
+            </td>
+          `;
+
+          tbody.appendChild(tr);
+        });
       });
 
       updateArchiveSelectionSummary();
@@ -6081,26 +6800,9 @@
       showToast(`✏️ Loaded Bill #${item.billNo} for ${item.patientName} into registration form.`, "success");
     }
 
-    async function deleteArchiveBill(billId) {
-      const bill = billArchive.find(b => b.id === billId);
-      const billDesc = bill ? `Bill #${bill.billNo} (${bill.patientName || 'Patient'})` : 'this record';
-      if (!confirm(`⚠️ PERMANENT DELETION WARNING:\n\nAre you sure you want to permanently delete ${billDesc}?\n\nThis record will be permanently erased from local storage, IndexedDB, LAN server, and Cloud sync. It CANNOT be undone and CANNOT be restored.`)) return;
-
-      if (window.syncManager) {
-        await syncManager.deleteBill(billId);
-        billArchive = syncManager.getBills();
-      } else {
-        billArchive = billArchive.filter(b => b.id !== billId);
-        saveAppData();
-      }
-      selectedBillIds.delete(billId);
-      if (currentEditingBillId === billId) {
-        resetPatientForm();
-      }
-      renderArchiveTable();
-      renderRegistrationPatientList();
-      checkDuplicatePatientLive();
-      showToast("Record permanently deleted from all storage.", "info");
+    // Delegated to two-tier hardDeleteArchiveBill
+    function deleteArchiveBill(billId) {
+      return hardDeleteArchiveBill(billId);
     }
 
     function clearArchiveFilters() {
@@ -6280,7 +6982,10 @@
 
     // 1. Export CSV
     function exportClaimSheetCsv() {
-      const selectedBills = getSelectedArchiveBills();
+      let selectedBills = getSelectedArchiveBills();
+      if (currentPeriodFilter !== 'INACTIVE') {
+        selectedBills = selectedBills.filter(b => !b.isDeleted && b.status !== 'inactive');
+      }
       if (selectedBills.length === 0) {
         showToast("No bills selected or found to export.", "error");
         return;
@@ -6347,8 +7052,9 @@
       const url = URL.createObjectURL(csvBlob);
       const a = document.createElement('a');
       const dateStr = new Date().toISOString().slice(0, 10);
+      const fileDate = (currentPeriodFilter === 'CUSTOM_MONTH' && currentPeriodValue) ? currentPeriodValue : dateStr;
       a.href = url;
-      a.download = `NWR_Monthly_Claim_Sheet_NonNABL_${dateStr}.csv`;
+      a.download = `NWR_Monthly_Claim_Sheet_NonNABL_${fileDate}.csv`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -6363,7 +7069,10 @@
 
     // 2. Export MS Word (.doc)
     function exportClaimSheetDoc() {
-      const selectedBills = getSelectedArchiveBills();
+      let selectedBills = getSelectedArchiveBills();
+      if (currentPeriodFilter !== 'INACTIVE') {
+        selectedBills = selectedBills.filter(b => !b.isDeleted && b.status !== 'inactive');
+      }
       if (selectedBills.length === 0) {
         showToast("No bills selected or found to export.", "error");
         return;
@@ -6532,8 +7241,9 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       const dateStr = new Date().toISOString().slice(0, 10);
+      const fileDate = (currentPeriodFilter === 'CUSTOM_MONTH' && currentPeriodValue) ? currentPeriodValue : dateStr;
       a.href = url;
-      a.download = `NWR_Monthly_Claim_Sheet_NonNABL_${dateStr}.doc`;
+      a.download = `NWR_Monthly_Claim_Sheet_NonNABL_${fileDate}.doc`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -6541,9 +7251,71 @@
       showToast("Downloaded Editable MS Word Claim Sheet (.doc)", "success");
     }
 
+    /* ========================================================================
+       MONTH-SPECIFIC CLAIM ACTIONS (1-CLICK MONTHLY EXPORT & NAVIGATION)
+       ======================================================================== */
+    function exportClaimSheetForMonth(monthKey, format = 'csv') {
+      if (!monthKey || monthKey === 'Undated') {
+        showToast("Please choose a valid month to export.", "warning");
+        return;
+      }
+      setArchivePeriodFilter('CUSTOM_MONTH', monthKey);
+      const picker = document.getElementById('archiveMonthPicker');
+      if (picker) picker.value = monthKey;
+
+      switchTab('tab-archive');
+
+      // Select all bills for this month
+      selectedBillIds.clear();
+      billArchive.forEach(b => {
+        const m = (b.date || '').slice(0, 7);
+        if (m === monthKey && !b.isDeleted && b.status !== 'inactive') {
+          selectedBillIds.add(b.id);
+        }
+      });
+      renderArchiveTable();
+
+      if (format === 'word' || format === 'doc') {
+        exportClaimSheetDoc();
+      } else {
+        exportClaimSheetCsv();
+      }
+    }
+    window.exportClaimSheetForMonth = exportClaimSheetForMonth;
+
+    function viewMonthInArchive(monthKey) {
+      if (!monthKey || monthKey === 'Undated') {
+        setArchivePeriodFilter('ALL');
+      } else {
+        setArchivePeriodFilter('CUSTOM_MONTH', monthKey);
+        const picker = document.getElementById('archiveMonthPicker');
+        if (picker) picker.value = monthKey;
+      }
+      switchTab('tab-archive');
+      const container = document.getElementById('archiveTableBody');
+      if (container) container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    window.viewMonthInArchive = viewMonthInArchive;
+
+    function selectMonthBillsOnly(monthKey) {
+      selectedBillIds.clear();
+      billArchive.forEach(b => {
+        const m = (b.date || '').slice(0, 7);
+        if (m === monthKey && !b.isDeleted && b.status !== 'inactive') {
+          selectedBillIds.add(b.id);
+        }
+      });
+      renderArchiveTable();
+      showToast(`Selected all bills for ${formatMonthYearLabel(monthKey)}`, "info");
+    }
+    window.selectMonthBillsOnly = selectMonthBillsOnly;
+
     // 3. Google Docs Compatible HTML / 1-Click Copy
     function copyClaimSheetForGoogleDocs() {
-      const selectedBills = getSelectedArchiveBills();
+      let selectedBills = getSelectedArchiveBills();
+      if (currentPeriodFilter !== 'INACTIVE') {
+        selectedBills = selectedBills.filter(b => !b.isDeleted && b.status !== 'inactive');
+      }
       if (selectedBills.length === 0) {
         showToast("No bills selected or found to copy.", "error");
         return;
@@ -6760,12 +7532,17 @@
     function generateClaimSheetHtml(bills, isPreview = false) {
       const editAttr = isPreview ? ' contenteditable="true" spellcheck="false" class="preview-editable"' : '';
 
+      // Strictly exclude soft-deleted/inactive bills from official NWR claim sheet unless explicitly viewing inactive archive
+      const activeOnlyBills = (currentPeriodFilter === 'INACTIVE')
+        ? (bills || [])
+        : (bills || []).filter(b => !b.isDeleted && b.status !== 'inactive');
+
       let totalClaim = 0;
       let servingAmount = 0;
       let retiredAmount = 0;
       let rowsHtml = "";
 
-      bills.forEach((b, idx) => {
+      activeOnlyBills.forEach((b, idx) => {
         const bAmt = (parseFloat(b.totalAmount) || 0);
         totalClaim += bAmt;
 
@@ -7369,80 +8146,36 @@
        BACKUP & SEED DATA HELPERS
        ======================================================================== */
     function seedSampleRailwayData(silent = false) {
-      const sampleBills = [
+      let sampleBills = [];
+      if (typeof OFFICIAL_NWR_BILLS_2026 !== 'undefined' && Array.isArray(OFFICIAL_NWR_BILLS_2026) && OFFICIAL_NWR_BILLS_2026.length > 0) {
+        sampleBills = JSON.parse(JSON.stringify(OFFICIAL_NWR_BILLS_2026));
+      } else {
+        sampleBills = [
         {
-          id: 'seed_1',
-          billNo: "NWR/2026-27/00140",
-          date: "2026-10-18",
-          time: "09:30",
-          umidId: "UMID-NWR-98214532",
-          patientName: "Ramswaroop Meena",
-          phone: "9829012345",
-          age: "52 Yrs",
-          sex: "Male",
-          beneficiaryType: "Serving Railway Employee",
-          referredBy: "Railway Health Unit (RHU), Phulera",
-          memoNo: "RHU/PHU/2026/OPD-4910",
-          billingScheme: "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
-          items: [
-            { code: "RI020", name: "USG Whole Abdomen Including Pelvis and post Void urine", category: "Radiological Investigation", rate: 544 },
-            { code: "RI034", name: "X Ray Chest PA /AP/ Oblique view (one film)", category: "Radiological Investigation", rate: 156 }
-          ],
-          totalAmount: 700,
-          cashReceived: 0,
-          patientBalance: 0,
-          billedToNwr: 700,
-          createdAt: new Date().toISOString()
-        },
-        {
-          id: 'seed_2',
-          billNo: "NWR/2026-27/00141",
-          date: "2026-10-18",
-          time: "11:15",
-          umidId: "UMID-NWR-77341920",
-          patientName: "Shanti Devi Sharma",
-          phone: "9414056789",
-          age: "47 Yrs",
+          id: 'bill_2026_10_00001',
+          billNo: "NWR/2026-27/00001",
+          date: "2026-10-01",
+          time: "10:15",
+          umidId: "123456789012",
+          patientName: "VENU SAINI",
+          phone: "9829000001",
+          age: "42 Yrs",
           sex: "Female",
-          beneficiaryType: "Dependent Family Member",
-          referredBy: "Railway Health Unit (RHU), Phulera",
-          memoNo: "RHU/PHU/2026/OPD-4918",
+          beneficiaryType: "Railway Beneficiary",
+          referredBy: "Railway Health Unit, Phulera",
+          memoNo: "RHU/PHU/2026/01",
           billingScheme: "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
           items: [
-            { code: "RI021", name: "Pelvic USG (gynae, infertility, prostate , KUB with post- void residual (PVR) etc ).", category: "Radiological Investigation", rate: 340 },
-            { code: "LB012", name: "Complete Haemogram/CBC, Hb,RBC Count and Indices,TLC, DLC, Platelet, ESR, Peripheral Smear Examination)", category: "Laboratory Investigation", rate: 204 }
+            { code: "RI020", name: "USG Whole Abdomen Including Pelvis and post Void urine", category: "Radiological Investigation", rate: 544 }
           ],
           totalAmount: 544,
           cashReceived: 0,
           patientBalance: 0,
           billedToNwr: 544,
-          createdAt: new Date().toISOString()
-        },
-        {
-          id: 'seed_3',
-          billNo: "NWR/2026-27/00142",
-          date: "2026-10-18",
-          time: "14:45",
-          umidId: "UMID-NWR-65129844",
-          patientName: "Gajendra Singh Rathore",
-          phone: "9887112233",
-          age: "64 Yrs",
-          sex: "Male",
-          beneficiaryType: "Retired Railway Employee / Pensioner",
-          referredBy: "Railway Health Unit (RHU), Phulera",
-          memoNo: "RHU/PHU/2026/OPD-4925",
-          billingScheme: "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
-          items: [
-            { code: "RI029", name: "Arterial Colour Doppler Bilateral", category: "Radiological Investigation", rate: 680 },
-            { code: "CI001", name: "Electrocardiogram (ECG)", category: "Cardiology Investigation", rate: 119 }
-          ],
-          totalAmount: 799,
-          cashReceived: 0,
-          patientBalance: 0,
-          billedToNwr: 799,
-          createdAt: new Date().toISOString()
+          createdAt: "2026-10-01T10:15:00.000Z"
         }
       ];
+      }
 
       billArchive = sampleBills;
       if (window.syncManager) {
@@ -7452,7 +8185,8 @@
       }
       renderArchiveTable();
       renderRegistrationPatientList();
-      if (!silent) showToast("Loaded sample North Western Railway bills.", "success");
+      if (!silent) showToast(`Loaded ${sampleBills.length} official North Western Railway claim bills.`, "success");
+    }
     }
 
     function exportArchiveBackupJson() {

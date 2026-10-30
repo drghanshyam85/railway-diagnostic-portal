@@ -1,253 +1,14 @@
 /**
  * SHIV SONOGRAPHY & DIAGNOSTIC CENTRE
- * Official North Western Railway Uploaded Monthly Claim Bills Archive (53 Bills)
+ * Official North Western Railway Uploaded Monthly Claim Bills Archive (55 Bills)
+ * Empanelled with North Western Railway (NWR) | Non-NABL Z-Tier CGHS
+ * Parsed and Verified from Official Claim Vouchers NWR/2026-27/00001 to NWR/2026-27/00055
  */
 
-window.OFFICIAL_NWR_BILLS_2026 = [
+const OFFICIAL_NWR_BILLS_2026 = [
   {
-    "id": "bill_1792600000000_001",
+    "id": "bill_2026_10_00001",
     "billNo": "NWR/2026-27/00001",
-    "date": "2026-09-28",
-    "time": "11:21",
-    "umidId": "36478230544B",
-    "patientName": "PINKI KUMARI VERMA",
-    "phone": "6367722959",
-    "age": "35",
-    "sex": "Female",
-    "beneficiaryType": "Dependent Family Member",
-    "referredBy": "Railway Health Unit (RHU), Phulera",
-    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
-    "items": [
-      {
-        "code": "LB124",
-        "name": "Liver Function Test (LFT)",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 340
-      },
-      {
-        "code": "LB123",
-        "name": "Kidney Function Test (KFT)- (Sr.Creatinine,Blood Urea,BUN,Sr.Uric Acid,Sr.Sodium,Sr.Potassium,Urine R/E)",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 340
-      },
-      {
-        "code": "LB125",
-        "name": "Lipid Profile (Total cholesterol ,Triglycerides, LDL, HDL,VLDL)",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 333
-      },
-      {
-        "code": "LB012",
-        "name": "Complete Haemogram/CBC, Hb,RBC Count and Indices,TLC, DLC, Platelet, ESR, Peripheral Smear Examination)",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 204
-      },
-      {
-        "code": "LB160",
-        "name": "T3, T4, TSH -Thyroid Function Test (TFT)",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 306
-      },
-      {
-        "code": "LB154",
-        "name": "Calcidiol / 25-hydroxycholecalciferol / Vitamin D3 assay (Vit D3)",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 680
-      },
-      {
-        "code": "LB127",
-        "name": "Vitamin B12 Assay.",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 408
-      },
-      {
-        "code": "RI020",
-        "name": "USG Whole Abdomen Including Pelvis and post Void urine",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 544
-      }
-    ],
-    "totalAmount": 3155,
-    "cashReceived": 0,
-    "patientBalance": 0,
-    "billedToNwr": 3155,
-    "createdAt": "2026-09-28T11:21:00.000Z",
-    "updatedAt": "2026-09-28T11:21:00.000Z",
-    "workstationId": "PC-859"
-  },
-  {
-    "id": "bill_1792600000000_002",
-    "billNo": "NWR/2026-27/00002",
-    "date": "2026-09-29",
-    "time": "13:44",
-    "umidId": "36239591500C",
-    "patientName": "RAJESH DEVI",
-    "phone": "9887150552",
-    "age": "66",
-    "sex": "Female",
-    "beneficiaryType": "Dependent Family Member",
-    "referredBy": "Railway Health Unit (RHU), Phulera",
-    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
-    "items": [
-      {
-        "code": "LB012",
-        "name": "Complete Haemogram/CBC, Hb,RBC Count and Indices,TLC, DLC, Platelet, ESR, Peripheral Smear Examination)",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 204
-      },
-      {
-        "code": "LB124",
-        "name": "Liver Function Test (LFT)",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 340
-      },
-      {
-        "code": "LB058",
-        "name": "Serum Creatinine",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 68
-      },
-      {
-        "code": "LB057",
-        "name": "Blood Urea Nitrogen (BUN) / Urea",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 68
-      }
-    ],
-    "totalAmount": 680,
-    "cashReceived": 0,
-    "patientBalance": 0,
-    "billedToNwr": 680,
-    "createdAt": "2026-09-29T13:44:00.000Z",
-    "updatedAt": "2026-09-29T13:44:00.000Z",
-    "workstationId": "PC-859"
-  },
-  {
-    "id": "bill_1792600000000_003",
-    "billNo": "NWR/2026-27/00003",
-    "date": "2026-09-29",
-    "time": "14:26",
-    "umidId": "36473014395Z",
-    "patientName": "DEVENDRA KUMAR SHARMA",
-    "phone": "9887150552",
-    "age": "67",
-    "sex": "Male",
-    "beneficiaryType": "Retired Railway Employee / Pensioner",
-    "referredBy": "Railway Health Unit (RHU), Phulera",
-    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
-    "items": [
-      {
-        "code": "LB142",
-        "name": "Prostate Specific Antigen (PSA)- Total",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 323
-      }
-    ],
-    "totalAmount": 323,
-    "cashReceived": 0,
-    "patientBalance": 0,
-    "billedToNwr": 323,
-    "createdAt": "2026-09-29T14:26:00.000Z",
-    "updatedAt": "2026-09-29T14:26:00.000Z",
-    "workstationId": "PC-859"
-  },
-  {
-    "id": "bill_1792600000000_004",
-    "billNo": "NWR/2026-27/00004",
-    "date": "2026-09-30",
-    "time": "13:14",
-    "umidId": "36355765620B",
-    "patientName": "MONU KUMHAR",
-    "phone": "9887150552",
-    "age": "36",
-    "sex": "Female",
-    "beneficiaryType": "Dependent Family Member",
-    "referredBy": "Railway Health Unit (RHU), Phulera",
-    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
-    "items": [
-      {
-        "code": "RI030",
-        "name": "Venous Colour Doppler Bilateral",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 680
-      },
-      {
-        "code": "RI029",
-        "name": "Arterial Colour Doppler Bilateral",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 680
-      },
-      {
-        "code": "LB154",
-        "name": "Calcidiol / 25-hydroxycholecalciferol / Vitamin D3 assay (Vit D3)",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 680
-      },
-      {
-        "code": "LB012",
-        "name": "Complete Haemogram/CBC, Hb,RBC Count and Indices,TLC, DLC, Platelet, ESR, Peripheral Smear Examination)",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 204
-      }
-    ],
-    "totalAmount": 2244,
-    "cashReceived": 0,
-    "patientBalance": 0,
-    "billedToNwr": 2244,
-    "createdAt": "2026-09-30T13:14:00.000Z",
-    "updatedAt": "2026-09-30T13:14:00.000Z",
-    "workstationId": "PC-859"
-  },
-  {
-    "id": "bill_1792600000000_005",
-    "billNo": "NWR/2026-27/00005",
-    "date": "2026-09-30",
-    "time": "15:37",
-    "umidId": "36248561200B",
-    "patientName": "NATASHA",
-    "phone": "9887150552",
-    "age": "7",
-    "sex": "Female",
-    "beneficiaryType": "Dependent Family Member",
-    "referredBy": "Railway Health Unit (RHU), Phulera",
-    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
-    "items": [
-      {
-        "code": "LB012",
-        "name": "Complete Haemogram/CBC, Hb,RBC Count and Indices,TLC, DLC, Platelet, ESR, Peripheral Smear Examination)",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 204
-      },
-      {
-        "code": "LB001",
-        "name": "Urine Routine- pH, Specific Gravity, Sugar, Protein and Microscopy",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 68
-      },
-      {
-        "code": "LB268",
-        "name": "Widal Test",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 48
-      },
-      {
-        "code": "LB026",
-        "name": "Rapid Test for Malaria (Card Test)/QBC Malaria Test",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 68
-      }
-    ],
-    "totalAmount": 388,
-    "cashReceived": 0,
-    "patientBalance": 0,
-    "billedToNwr": 388,
-    "createdAt": "2026-09-30T15:37:00.000Z",
-    "updatedAt": "2026-09-30T15:37:00.000Z",
-    "workstationId": "PC-859"
-  },
-  {
-    "id": "bill_1792600000000_006",
-    "billNo": "NWR/2026-27/00006",
     "date": "2026-10-01",
     "time": "11:08",
     "umidId": "36283748930B",
@@ -257,6 +18,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00001",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -287,8 +49,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_007",
-    "billNo": "NWR/2026-27/00007",
+    "id": "bill_2026_10_00002",
+    "billNo": "NWR/2026-27/00002",
     "date": "2026-10-01",
     "time": "15:41",
     "umidId": "33432541790B",
@@ -298,6 +60,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00002",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -316,8 +79,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_008",
-    "billNo": "NWR/2026-27/00008",
+    "id": "bill_2026_10_00003",
+    "billNo": "NWR/2026-27/00003",
     "date": "2026-10-01",
     "time": "17:57",
     "umidId": "36250269690Z",
@@ -327,6 +90,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Retired Railway Employee / Pensioner",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00003",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -345,8 +109,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_009",
-    "billNo": "NWR/2026-27/00009",
+    "id": "bill_2026_10_00004",
+    "billNo": "NWR/2026-27/00004",
     "date": "2026-10-02",
     "time": "09:50",
     "umidId": "36363435604B",
@@ -356,6 +120,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00004",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -374,8 +139,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_010",
-    "billNo": "NWR/2026-27/00010",
+    "id": "bill_2026_10_00005",
+    "billNo": "NWR/2026-27/00005",
     "date": "2026-10-02",
     "time": "11:05",
     "umidId": "36248561200B",
@@ -383,8 +148,9 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "phone": "9887150552",
     "age": "27",
     "sex": "Female",
-    "beneficiaryType": "Dependent Family Member",
+    "beneficiaryType": "Retired Railway Employee / Pensioner",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00005",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -409,8 +175,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_011",
-    "billNo": "NWR/2026-27/00011",
+    "id": "bill_2026_10_00006",
+    "billNo": "NWR/2026-27/00006",
     "date": "2026-10-02",
     "time": "10:00",
     "umidId": "36274739325A",
@@ -420,6 +186,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00006",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -438,17 +205,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_012",
-    "billNo": "NWR/2026-27/00012",
+    "id": "bill_2026_10_00007",
+    "billNo": "NWR/2026-27/00007",
     "date": "2026-10-03",
     "time": "11:31",
-    "umidId": "36283748930B",
+    "umidId": "06815832169C",
     "patientName": "HARSHIT SAINI",
     "phone": "9887150552",
     "age": "7",
     "sex": "Male",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00007",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -467,17 +235,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_013",
-    "billNo": "NWR/2026-27/00013",
+    "id": "bill_2026_10_00008",
+    "billNo": "NWR/2026-27/00008",
     "date": "2026-10-03",
     "time": "11:33",
-    "umidId": "364715832169B",
+    "umidId": "06815832169B",
     "patientName": "RADHA DEVI",
     "phone": "9887150552",
     "age": "35",
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00008",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -496,17 +265,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_014",
-    "billNo": "NWR/2026-27/00014",
+    "id": "bill_2026_10_00009",
+    "billNo": "NWR/2026-27/00009",
     "date": "2026-10-03",
     "time": "11:49",
-    "umidId": "36472287130B",
+    "umidId": "36265359350C",
     "patientName": "ASTHA SHARMA",
     "phone": "9887150552",
     "age": "18",
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00009",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -531,17 +301,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_015",
-    "billNo": "NWR/2026-27/00015",
+    "id": "bill_2026_10_00010",
+    "billNo": "NWR/2026-27/00010",
     "date": "2026-10-03",
     "time": "12:25",
-    "umidId": "36214603615Z",
+    "umidId": "36219806423Z",
     "patientName": "GANPAT LAL HATWAL",
     "phone": "9887150552",
     "age": "66",
     "sex": "Male",
     "beneficiaryType": "Retired Railway Employee / Pensioner",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00010",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -560,17 +331,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_016",
-    "billNo": "NWR/2026-27/00016",
+    "id": "bill_2026_10_00011",
+    "billNo": "NWR/2026-27/00011",
     "date": "2026-10-03",
     "time": "13:17",
-    "umidId": "36239455054B",
+    "umidId": "36239455850B",
     "patientName": "RASHIDA",
     "phone": "9887150552",
     "age": "33",
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00011",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -601,37 +373,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_017",
-    "billNo": "NWR/2026-27/00017",
-    "date": "2026-10-06",
-    "time": "10:00",
-    "umidId": "36274739325A",
-    "patientName": "NARENDRA SINGH",
-    "phone": "9887150552",
-    "age": "40",
-    "sex": "Male",
-    "beneficiaryType": "Serving Railway Employee",
-    "referredBy": "Railway Health Unit (RHU), Phulera",
-    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
-    "items": [
-      {
-        "code": "RI020",
-        "name": "USG Whole Abdomen Including Pelvis and post Void urine",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 544
-      }
-    ],
-    "totalAmount": 544,
-    "cashReceived": 0,
-    "patientBalance": 0,
-    "billedToNwr": 544,
-    "createdAt": "2026-10-06T10:00:00.000Z",
-    "updatedAt": "2026-10-06T10:00:00.000Z",
-    "workstationId": "PC-859"
-  },
-  {
-    "id": "bill_1792600000000_018",
-    "billNo": "NWR/2026-27/00018",
+    "id": "bill_2026_10_00012",
+    "billNo": "NWR/2026-27/00012",
     "date": "2026-10-05",
     "time": "10:42",
     "umidId": "36363435604B",
@@ -641,6 +384,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00012",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -659,17 +403,48 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_019",
-    "billNo": "NWR/2026-27/00019",
+    "id": "bill_2026_10_00013",
+    "billNo": "NWR/2026-27/00013",
+    "date": "2026-10-06",
+    "time": "10:00",
+    "umidId": "33427581207A",
+    "patientName": "NARENDRA SINGH",
+    "phone": "9887150552",
+    "age": "40",
+    "sex": "Male",
+    "beneficiaryType": "Serving Railway Employee",
+    "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00013",
+    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
+    "items": [
+      {
+        "code": "RI020",
+        "name": "USG Whole Abdomen Including Pelvis and post Void urine",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 544
+      }
+    ],
+    "totalAmount": 544,
+    "cashReceived": 0,
+    "patientBalance": 0,
+    "billedToNwr": 544,
+    "createdAt": "2026-10-06T10:00:00.000Z",
+    "updatedAt": "2026-10-06T10:00:00.000Z",
+    "workstationId": "PC-859"
+  },
+  {
+    "id": "bill_2026_10_00014",
+    "billNo": "NWR/2026-27/00014",
     "date": "2026-10-07",
     "time": "11:58",
-    "umidId": "36218732049Z",
+    "umidId": "36294860603Z",
     "patientName": "RAM LAL",
     "phone": "9887150552",
     "age": "66",
     "sex": "Male",
     "beneficiaryType": "Retired Railway Employee / Pensioner",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00014",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -688,17 +463,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_020",
-    "billNo": "NWR/2026-27/00020",
+    "id": "bill_2026_10_00015",
+    "billNo": "NWR/2026-27/00015",
     "date": "2026-10-07",
     "time": "12:40",
-    "umidId": "36214828104B",
+    "umidId": "3657894696B",
     "patientName": "POONAM BAI",
     "phone": "9887150552",
     "age": "28",
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00015",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -717,8 +493,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_021",
-    "billNo": "NWR/2026-27/00021",
+    "id": "bill_2026_10_00016",
+    "billNo": "NWR/2026-27/00016",
     "date": "2026-10-07",
     "time": "13:03",
     "umidId": "36234942542A",
@@ -728,6 +504,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00016",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -776,17 +553,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_022",
-    "billNo": "NWR/2026-27/00022",
+    "id": "bill_2026_10_00017",
+    "billNo": "NWR/2026-27/00017",
     "date": "2026-10-07",
     "time": "16:45",
-    "umidId": "36234942542B",
-    "patientName": "SAROJINI",
+    "umidId": "36292291933B",
+    "patientName": "SAROFINA",
     "phone": "9887150552",
     "age": "62",
     "sex": "Female",
-    "beneficiaryType": "Dependent Family Member",
+    "beneficiaryType": "Retired Railway Employee / Pensioner",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00017",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -805,8 +583,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_023",
-    "billNo": "NWR/2026-27/00023",
+    "id": "bill_2026_10_00018",
+    "billNo": "NWR/2026-27/00018",
     "date": "2026-10-08",
     "time": "16:20",
     "umidId": "36281983819B",
@@ -816,6 +594,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00018",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -870,8 +649,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_024",
-    "billNo": "NWR/2026-27/00024",
+    "id": "bill_2026_10_00019",
+    "billNo": "NWR/2026-27/00019",
     "date": "2026-10-09",
     "time": "10:25",
     "umidId": "363336704534B",
@@ -881,6 +660,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00019",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -899,17 +679,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_025",
-    "billNo": "NWR/2026-27/00025",
+    "id": "bill_2026_10_00020",
+    "billNo": "NWR/2026-27/00020",
     "date": "2026-10-11",
     "time": "08:34",
-    "umidId": "36235546983A",
+    "umidId": "36235546083A",
     "patientName": "LALIT KUMAR SHARMA",
     "phone": "9887076913",
     "age": "41",
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00020",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -946,17 +727,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_026",
-    "billNo": "NWR/2026-27/00026",
+    "id": "bill_2026_10_00021",
+    "billNo": "NWR/2026-27/00021",
     "date": "2026-10-12",
     "time": "10:28",
-    "umidId": "36235546983B",
+    "umidId": "36220146954B",
     "patientName": "SUNITA DEVI",
     "phone": "9887150552",
     "age": "39",
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00021",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -975,8 +757,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_027",
-    "billNo": "NWR/2026-27/00027",
+    "id": "bill_2026_10_00022",
+    "billNo": "NWR/2026-27/00022",
     "date": "2026-10-13",
     "time": "11:52",
     "umidId": "21760696239B",
@@ -986,6 +768,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00022",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1004,8 +787,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_028",
-    "billNo": "NWR/2026-27/00028",
+    "id": "bill_2026_10_00023",
+    "billNo": "NWR/2026-27/00023",
     "date": "2026-10-13",
     "time": "12:37",
     "umidId": "36336353879A",
@@ -1015,6 +798,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00023",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1033,8 +817,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_029",
-    "billNo": "NWR/2026-27/00029",
+    "id": "bill_2026_10_00024",
+    "billNo": "NWR/2026-27/00024",
     "date": "2026-10-13",
     "time": "13:13",
     "umidId": "36386422653B",
@@ -1044,6 +828,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00024",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1080,17 +865,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_030",
-    "billNo": "NWR/2026-27/00030",
+    "id": "bill_2026_10_00025",
+    "billNo": "NWR/2026-27/00025",
     "date": "2026-10-14",
     "time": "11:25",
-    "umidId": "36294823345A",
+    "umidId": "3651529529A",
     "patientName": "RAM KISHOR MEENA",
     "phone": "9571064582",
     "age": "32",
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00025",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1109,17 +895,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_031",
-    "billNo": "NWR/2026-27/00031",
+    "id": "bill_2026_10_00026",
+    "billNo": "NWR/2026-27/00026",
     "date": "2026-10-14",
     "time": "11:51",
-    "umidId": "36976596490A",
+    "umidId": "36976596049A",
     "patientName": "RAGHUNANDAN PARIHAR",
     "phone": "9983309693",
     "age": "51",
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00026",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1138,17 +925,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_032",
-    "billNo": "NWR/2026-27/00032",
+    "id": "bill_2026_10_00027",
+    "billNo": "NWR/2026-27/00027",
     "date": "2026-10-14",
     "time": "15:17",
-    "umidId": "36215229150A",
-    "patientName": "RAMGIYAR",
+    "umidId": "36275229150A",
+    "patientName": "EAMGIYAR",
     "phone": "9887150552",
     "age": "35",
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00027",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1167,17 +955,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_033",
-    "billNo": "NWR/2026-27/00033",
+    "id": "bill_2026_10_00028",
+    "billNo": "NWR/2026-27/00028",
     "date": "2026-10-14",
     "time": "16:09",
-    "umidId": "36283748930B",
+    "umidId": "36253259198B",
     "patientName": "MAMTA VERMA",
     "phone": "7737283796",
     "age": "46",
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00028",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1196,8 +985,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_034",
-    "billNo": "NWR/2026-27/00034",
+    "id": "bill_2026_10_00029",
+    "billNo": "NWR/2026-27/00029",
     "date": "2026-10-15",
     "time": "12:19",
     "umidId": "36237104562B",
@@ -1207,6 +996,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00029",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1225,8 +1015,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_035",
-    "billNo": "NWR/2026-27/00035",
+    "id": "bill_2026_10_00030",
+    "billNo": "NWR/2026-27/00030",
     "date": "2026-10-16",
     "time": "11:36",
     "umidId": "36284035238Z",
@@ -1236,6 +1026,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Retired Railway Employee / Pensioner",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00030",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1254,8 +1045,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_036",
-    "billNo": "NWR/2026-27/00036",
+    "id": "bill_2026_10_00031",
+    "billNo": "NWR/2026-27/00031",
     "date": "2026-10-17",
     "time": "09:00",
     "umidId": "36228561110B",
@@ -1265,6 +1056,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00031",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1289,8 +1081,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_037",
-    "billNo": "NWR/2026-27/00037",
+    "id": "bill_2026_10_00032",
+    "billNo": "NWR/2026-27/00032",
     "date": "2026-10-17",
     "time": "09:42",
     "umidId": "36236395085B",
@@ -1300,6 +1092,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00032",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1318,8 +1111,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_038",
-    "billNo": "NWR/2026-27/00038",
+    "id": "bill_2026_10_00033",
+    "billNo": "NWR/2026-27/00033",
     "date": "2026-10-17",
     "time": "16:01",
     "umidId": "36220146954A",
@@ -1329,6 +1122,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00033",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1347,8 +1141,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_039",
-    "billNo": "NWR/2026-27/00039",
+    "id": "bill_2026_10_00034",
+    "billNo": "NWR/2026-27/00034",
     "date": "2026-10-19",
     "time": "10:54",
     "umidId": "36299534475A",
@@ -1358,6 +1152,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00034",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1388,17 +1183,18 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_040",
-    "billNo": "NWR/2026-27/00040",
+    "id": "bill_2026_10_00035",
+    "billNo": "NWR/2026-27/00035",
     "date": "2026-10-19",
     "time": "12:46",
-    "umidId": "362128086100B",
+    "umidId": "36212808618D",
     "patientName": "MOHAMMAD SAHJAD",
     "phone": "9887150552",
     "age": "27",
     "sex": "Male",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00035",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1417,8 +1213,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_041",
-    "billNo": "NWR/2026-27/00041",
+    "id": "bill_2026_10_00036",
+    "billNo": "NWR/2026-27/00036",
     "date": "2026-10-19",
     "time": "13:11",
     "umidId": "36224401786Z",
@@ -1428,6 +1224,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Retired Railway Employee / Pensioner",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00036",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1446,8 +1243,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_042",
-    "billNo": "NWR/2026-27/00042",
+    "id": "bill_2026_10_00037",
+    "billNo": "NWR/2026-27/00037",
     "date": "2026-10-19",
     "time": "14:44",
     "umidId": "36217772945A",
@@ -1457,6 +1254,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00037",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1487,8 +1285,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_043",
-    "billNo": "NWR/2026-27/00043",
+    "id": "bill_2026_10_00038",
+    "billNo": "NWR/2026-27/00038",
     "date": "2026-10-20",
     "time": "10:55",
     "umidId": "36261363902A",
@@ -1498,6 +1296,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00038",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1516,8 +1315,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_044",
-    "billNo": "NWR/2026-27/00044",
+    "id": "bill_2026_10_00039",
+    "billNo": "NWR/2026-27/00039",
     "date": "2026-10-21",
     "time": "11:12",
     "umidId": "36265866414Z",
@@ -1527,6 +1326,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Retired Railway Employee / Pensioner",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00039",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1545,8 +1345,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_045",
-    "billNo": "NWR/2026-27/00045",
+    "id": "bill_2026_10_00040",
+    "billNo": "NWR/2026-27/00040",
     "date": "2026-10-22",
     "time": "09:11",
     "umidId": "36272112565A",
@@ -1556,6 +1356,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00040",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1574,8 +1375,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_046",
-    "billNo": "NWR/2026-27/00046",
+    "id": "bill_2026_10_00041",
+    "billNo": "NWR/2026-27/00041",
     "date": "2026-10-22",
     "time": "10:55",
     "umidId": "36228551424B",
@@ -1585,6 +1386,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Retired Railway Employee / Pensioner",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00041",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1621,8 +1423,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_047",
-    "billNo": "NWR/2026-27/00047",
+    "id": "bill_2026_10_00042",
+    "billNo": "NWR/2026-27/00042",
     "date": "2026-10-22",
     "time": "11:47",
     "umidId": "36237004218A",
@@ -1632,6 +1434,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00042",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1650,8 +1453,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_048",
-    "billNo": "NWR/2026-27/00048",
+    "id": "bill_2026_10_00043",
+    "billNo": "NWR/2026-27/00043",
     "date": "2026-10-22",
     "time": "13:20",
     "umidId": "36393427743A",
@@ -1661,6 +1464,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00043",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1679,8 +1483,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_049",
-    "billNo": "NWR/2026-27/00049",
+    "id": "bill_2026_10_00044",
+    "billNo": "NWR/2026-27/00044",
     "date": "2026-10-23",
     "time": "09:53",
     "umidId": "36288216548B",
@@ -1690,6 +1494,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Female",
     "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00044",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1708,8 +1513,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_050",
-    "billNo": "NWR/2026-27/00050",
+    "id": "bill_2026_10_00045",
+    "billNo": "NWR/2026-27/00045",
     "date": "2026-10-23",
     "time": "11:52",
     "umidId": "36277953393A",
@@ -1719,6 +1524,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00045",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1737,8 +1543,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_051",
-    "billNo": "NWR/2026-27/00051",
+    "id": "bill_2026_10_00046",
+    "billNo": "NWR/2026-27/00046",
     "date": "2026-10-23",
     "time": "12:11",
     "umidId": "36243237348B",
@@ -1746,8 +1552,9 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "phone": "9983640092",
     "age": "61",
     "sex": "Female",
-    "beneficiaryType": "Dependent Family Member",
+    "beneficiaryType": "Retired Railway Employee / Pensioner",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00046",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1796,8 +1603,8 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_052",
-    "billNo": "NWR/2026-27/00052",
+    "id": "bill_2026_10_00047",
+    "billNo": "NWR/2026-27/00047",
     "date": "2026-10-23",
     "time": "12:23",
     "umidId": "36292129208A",
@@ -1807,6 +1614,7 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "sex": "Male",
     "beneficiaryType": "Serving Railway Employee",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00047",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
@@ -1825,38 +1633,310 @@ window.OFFICIAL_NWR_BILLS_2026 = [
     "workstationId": "PC-859"
   },
   {
-    "id": "bill_1792600000000_053",
-    "billNo": "NWR/2026-27/00053",
-    "date": "2026-09-29",
-    "time": "12:02",
-    "umidId": "36294823345A",
-    "patientName": "VED PRAKASH BAIRWA",
-    "phone": "9610226161",
-    "age": "45",
+    "id": "bill_2026_10_00048",
+    "billNo": "NWR/2026-27/00048",
+    "date": "2026-10-26",
+    "time": "12:44",
+    "umidId": "36277926868D",
+    "patientName": "HIMANSHU PUURI",
+    "phone": "9799482424",
+    "age": "11",
     "sex": "Male",
-    "beneficiaryType": "Serving Railway Employee",
+    "beneficiaryType": "Dependent Family Member",
     "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00048",
     "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
     "items": [
       {
-        "code": "RI030",
-        "name": "Venous Colour Doppler Bilateral",
+        "code": "RI020",
+        "name": "USG Whole Abdomen Including Pelvis and post Void urine",
         "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 680
-      },
-      {
-        "code": "RI029",
-        "name": "Arterial Colour Doppler Bilateral",
-        "category": "Non-NABL Z-Tier CGHS (Phulera)",
-        "rate": 680
+        "rate": 544
       }
     ],
-    "totalAmount": 1360,
+    "totalAmount": 544,
     "cashReceived": 0,
     "patientBalance": 0,
-    "billedToNwr": 1360,
-    "createdAt": "2026-09-29T12:02:00.000Z",
-    "updatedAt": "2026-09-29T12:02:00.000Z",
+    "billedToNwr": 544,
+    "createdAt": "2026-10-26T12:44:00.000Z",
+    "updatedAt": "2026-10-26T12:44:00.000Z",
+    "workstationId": "PC-859"
+  },
+  {
+    "id": "bill_2026_10_00049",
+    "billNo": "NWR/2026-27/00049",
+    "date": "2026-10-27",
+    "time": "08:26",
+    "umidId": "36272590281Z",
+    "patientName": "MANGI LAL",
+    "phone": "9887150552",
+    "age": "66",
+    "sex": "Male",
+    "beneficiaryType": "Retired Railway Employee / Pensioner",
+    "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00049",
+    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
+    "items": [
+      {
+        "code": "RI020",
+        "name": "USG Whole Abdomen Including Pelvis and post Void urine",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 544
+      }
+    ],
+    "totalAmount": 544,
+    "cashReceived": 0,
+    "patientBalance": 0,
+    "billedToNwr": 544,
+    "createdAt": "2026-10-27T08:26:00.000Z",
+    "updatedAt": "2026-10-27T08:26:00.000Z",
+    "workstationId": "PC-859"
+  },
+  {
+    "id": "bill_2026_10_00050",
+    "billNo": "NWR/2026-27/00050",
+    "date": "2026-10-27",
+    "time": "10:57",
+    "umidId": "36326368399B",
+    "patientName": "HANSA DEVI YADAV",
+    "phone": "7891141314",
+    "age": "30",
+    "sex": "Female",
+    "beneficiaryType": "Dependent Family Member",
+    "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00050",
+    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
+    "items": [
+      {
+        "code": "RI016",
+        "name": "1st trimester scan-dating scan/NT scan/Early pregnancy scan",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 476
+      },
+      {
+        "code": "LB019",
+        "name": "Bleeding Time",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 34
+      },
+      {
+        "code": "LB020",
+        "name": "Clotting Time",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 34
+      }
+    ],
+    "totalAmount": 544,
+    "cashReceived": 0,
+    "patientBalance": 0,
+    "billedToNwr": 544,
+    "createdAt": "2026-10-27T10:57:00.000Z",
+    "updatedAt": "2026-10-27T10:57:00.000Z",
+    "workstationId": "PC-859"
+  },
+  {
+    "id": "bill_2026_10_00051",
+    "billNo": "NWR/2026-27/00051",
+    "date": "2026-10-27",
+    "time": "12:02",
+    "umidId": "36215854858B",
+    "patientName": "RADHA DEVI",
+    "phone": "9414593219",
+    "age": "69",
+    "sex": "Female",
+    "beneficiaryType": "Retired Railway Employee / Pensioner",
+    "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00051",
+    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
+    "items": [
+      {
+        "code": "RI020",
+        "name": "USG Whole Abdomen Including Pelvis and post Void urine",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 544
+      },
+      {
+        "code": "LB160",
+        "name": "T3, T4, TSH -Thyroid Function Test (TFT)",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 306
+      }
+    ],
+    "totalAmount": 850,
+    "cashReceived": 0,
+    "patientBalance": 0,
+    "billedToNwr": 850,
+    "createdAt": "2026-10-27T12:02:00.000Z",
+    "updatedAt": "2026-10-27T12:02:00.000Z",
+    "workstationId": "PC-859"
+  },
+  {
+    "id": "bill_2026_10_00052",
+    "billNo": "NWR/2026-27/00052",
+    "date": "2026-10-27",
+    "time": "12:25",
+    "umidId": "36215854858B",
+    "patientName": "RADHA DEVI",
+    "phone": "9414593219",
+    "age": "69",
+    "sex": "Female",
+    "beneficiaryType": "Retired Railway Employee / Pensioner",
+    "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00052",
+    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
+    "items": [
+      {
+        "code": "LB125",
+        "name": "Lipid Profile (Total cholesterol ,Triglycerides, LDL, HDL,VLDL)",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 333
+      }
+    ],
+    "totalAmount": 333,
+    "cashReceived": 0,
+    "patientBalance": 0,
+    "billedToNwr": 333,
+    "createdAt": "2026-10-27T12:25:00.000Z",
+    "updatedAt": "2026-10-27T12:25:00.000Z",
+    "workstationId": "PC-859"
+  },
+  {
+    "id": "bill_2026_10_00053",
+    "billNo": "NWR/2026-27/00053",
+    "date": "2026-10-27",
+    "time": "12:11",
+    "umidId": "36234612786A",
+    "patientName": "RAM KISHOR VERMA",
+    "phone": "7615938672",
+    "age": "38",
+    "sex": "Male",
+    "beneficiaryType": "Serving Railway Employee",
+    "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00053",
+    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
+    "items": [
+      {
+        "code": "LB125",
+        "name": "Lipid Profile (Total cholesterol ,Triglycerides, LDL, HDL,VLDL)",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 333
+      },
+      {
+        "code": "LB123",
+        "name": "Kidney Function Test (KFT)- (Sr.Creatinine,Blood Urea,BUN,Sr.Uric Acid,Sr.Sodium,Sr.Potassium,Urine R/E)",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 340
+      },
+      {
+        "code": "RI020",
+        "name": "USG Whole Abdomen Including Pelvis and post Void urine",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 544
+      },
+      {
+        "code": "LB124",
+        "name": "Liver Function Test (LFT)",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 340
+      }
+    ],
+    "totalAmount": 1557,
+    "cashReceived": 0,
+    "patientBalance": 0,
+    "billedToNwr": 1557,
+    "createdAt": "2026-10-27T12:11:00.000Z",
+    "updatedAt": "2026-10-27T12:11:00.000Z",
+    "workstationId": "PC-859"
+  },
+  {
+    "id": "bill_2026_10_00054",
+    "billNo": "NWR/2026-27/00054",
+    "date": "2026-10-27",
+    "time": "12:24",
+    "umidId": "36260295657A",
+    "patientName": "BHAVYA",
+    "phone": "9887150552",
+    "age": "38",
+    "sex": "Male",
+    "beneficiaryType": "Serving Railway Employee",
+    "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00054",
+    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
+    "items": [
+      {
+        "code": "LB125",
+        "name": "Lipid Profile (Total cholesterol ,Triglycerides, LDL, HDL,VLDL)",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 333
+      },
+      {
+        "code": "LB124",
+        "name": "Liver Function Test (LFT)",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 340
+      },
+      {
+        "code": "LB122",
+        "name": "Glycosylated Haemoglobin (HbA1c)",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 204
+      }
+    ],
+    "totalAmount": 877,
+    "cashReceived": 0,
+    "patientBalance": 0,
+    "billedToNwr": 877,
+    "createdAt": "2026-10-27T12:24:00.000Z",
+    "updatedAt": "2026-10-27T12:24:00.000Z",
+    "workstationId": "PC-859"
+  },
+  {
+    "id": "bill_2026_10_00055",
+    "billNo": "NWR/2026-27/00055",
+    "date": "2026-10-28",
+    "time": "09:19",
+    "umidId": "36273252551E",
+    "patientName": "PALAK KUMAWAT",
+    "phone": "9680802318",
+    "age": "31",
+    "sex": "Female",
+    "beneficiaryType": "Dependent Family Member",
+    "referredBy": "Railway Health Unit (RHU), Phulera",
+    "memoNo": "RHU/PHU/2026/OPD-00055",
+    "billingScheme": "100% Cashless Bilateral MOU - Bill to North Western Railway (Non-NABL Z-Tier CGHS)",
+    "items": [
+      {
+        "code": "RI019",
+        "name": "USG Obstetrics for Anomalies scan",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 1360
+      },
+      {
+        "code": "LB160",
+        "name": "T3, T4, TSH -Thyroid Function Test (TFT)",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 306
+      },
+      {
+        "code": "LB001",
+        "name": "Urine Routine- pH, Specific Gravity, Sugar, Protein and Microscopy",
+        "category": "Non-NABL Z-Tier CGHS (Phulera)",
+        "rate": 68
+      }
+    ],
+    "totalAmount": 1734,
+    "cashReceived": 0,
+    "patientBalance": 0,
+    "billedToNwr": 1734,
+    "createdAt": "2026-10-28T09:19:00.000Z",
+    "updatedAt": "2026-10-28T09:19:00.000Z",
     "workstationId": "PC-859"
   }
 ];
+
+if (typeof window !== 'undefined') {
+  window.OFFICIAL_NWR_BILLS_2026 = OFFICIAL_NWR_BILLS_2026;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = OFFICIAL_NWR_BILLS_2026;
+}
