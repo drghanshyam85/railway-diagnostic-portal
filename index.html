@@ -1337,6 +1337,201 @@
       cursor: pointer;
     }
 
+    /* ================= SINGLE BUTTON FOR ALL DUPLICATE DELETE ================= */
+    .btn-delete-duplicates {
+      background: #fef2f2 !important;
+      color: #b91c1c !important;
+      border: 1px solid #f87171 !important;
+      font-weight: 700 !important;
+      transition: all 0.15s ease-in-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn-delete-duplicates:hover {
+      background: #dc2626 !important;
+      color: #ffffff !important;
+      border-color: #b91c1c !important;
+      box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+    }
+
+    .btn-dup-delete-all {
+      background: #dc2626;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: background 0.15s;
+    }
+
+    .btn-dup-delete-all:hover {
+      background: #b91c1c;
+    }
+
+    /* ================= AUTO-SAVE TOGGLE & STATUS STYLES ================= */
+    .autosave-switch-wrapper {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      padding: 3px 10px;
+      border-radius: 20px;
+      user-select: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .autosave-switch-wrapper:hover {
+      background: #f1f5f9;
+      border-color: #94a3b8;
+    }
+
+    .switch-toggle {
+      position: relative;
+      display: inline-block;
+      width: 34px;
+      height: 18px;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .switch-toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .switch-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #cbd5e1;
+      transition: .2s;
+      border-radius: 18px;
+    }
+
+    .switch-slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      transition: .2s;
+      border-radius: 50%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    }
+
+    .switch-toggle input:checked + .switch-slider {
+      background-color: #10b981;
+    }
+
+    .switch-toggle input:checked + .switch-slider:before {
+      transform: translateX(16px);
+    }
+
+    .autosave-label-text {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #334155;
+    }
+
+    .badge-autosave {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 7px;
+      border-radius: 12px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      transition: all 0.2s ease;
+    }
+
+    .badge-autosave.ready {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+
+    .badge-autosave.typing {
+      background: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+
+    .badge-autosave.saving {
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+      animation: pulse 1s infinite;
+    }
+
+    .badge-autosave.saved {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+    }
+
+    .badge-autosave.disabled {
+      background: #f1f5f9;
+      color: #64748b;
+      border: 1px solid #e2e8f0;
+    }
+
+    .badge-autosave.warning {
+      background: #fef2f2;
+      color: #b91c1c;
+      border: 1px solid #fecaca;
+    }
+
+    .autosave-status-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #15803d;
+      transition: all 0.2s ease;
+    }
+
+    .autosave-indicator-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      display: inline-block;
+    }
+
+    .autosave-indicator-dot.saving {
+      background: #0284c7;
+      animation: pulse 0.8s infinite;
+    }
+
+    .autosave-indicator-dot.typing {
+      background: #f59e0b;
+    }
+
+    .autosave-indicator-dot.disabled {
+      background: #94a3b8;
+    }
+
     .active-edit-banner {
       display: none;
       background: #eff6ff;
@@ -2496,10 +2691,19 @@
           <div class="card-title">
             <span>👤</span> UMID Registration & Beneficiary Verification Details
           </div>
-          <div style="display: flex; gap: 8px;">
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <!-- Auto-Save Option Toggle -->
+            <div class="autosave-switch-wrapper" title="Automatically save patient records as you type details and add tests, without needing to click Save">
+              <label class="switch-toggle" title="Toggle Auto-Save On / Off">
+                <input type="checkbox" id="toggleAutoSave" checked onchange="toggleAutoSaveOption(this.checked)">
+                <span class="switch-slider"></span>
+              </label>
+              <span class="autosave-label-text">⚡ Auto-Save</span>
+              <span id="autoSaveStatusBadge" class="badge-autosave ready">Active</span>
+            </div>
             <button class="btn-action-sm" onclick="autoFillCurrentTime()">🕒 Set Current Time</button>
             <button class="btn-action-sm" onclick="generateNextBillNumber()">🔢 Next Bill No</button>
-            <button class="btn-action-sm" onclick="resetPatientForm()">🔄 Reset Form</button>
+            <button class="btn-action-sm" onclick="resetPatientForm()">➕ New Patient / Reset</button>
           </div>
         </div>
         <div class="card-body">
@@ -2533,6 +2737,7 @@
                 <div class="duplicate-alert-actions">
                   <button type="button" class="btn-dup-load" id="btnDupLoadExisting" onclick="loadDuplicateRecord()">✏️ Open & Edit Existing Bill</button>
                   <button type="button" class="btn-dup-print" id="btnDupPrintExisting" onclick="printDuplicateRecord()">🖨️ Print Existing Slip</button>
+                  <button type="button" class="btn-dup-delete-all" onclick="deleteAllDuplicateEntries()" title="Single-click button to permanently delete all duplicate patient entries across the system">🗑️ Delete All Duplicates</button>
                 </div>
               </div>
             </div>
@@ -2798,16 +3003,24 @@
                 📑 3 Separate Pages (1 per Voucher)
               </button>
             </div>
+            <!-- Real-Time Auto-Save Action Indicator -->
+            <div class="autosave-status-box" id="autoSaveActionStatusBox" title="Patient records automatically save in real-time as details are typed and tests are selected">
+              <span class="autosave-indicator-dot ready" id="autoSaveDot"></span>
+              <span id="autoSaveActionStatusText">⚡ Auto-Save Active</span>
+            </div>
           </div>
           <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button type="button" class="btn-lg btn-outline-primary" onclick="resetPatientForm()" title="Clear form to begin registering a new patient (all previous entries are already saved)">
+              ➕ New Patient Entry
+            </button>
             <button type="button" class="btn-lg btn-primary-save" id="btnSavePatientRecord" onclick="saveCurrentBillToArchive(false)" title="Save patient registration and automatically clear form for next entry">
-              💾 Save Patient Record
+              💾 Save &amp; Next Patient
             </button>
             <button type="button" class="btn-lg btn-outline-primary" onclick="previewTripleReceipt()">
               👁️ Preview Triple Receipt
             </button>
             <button type="button" class="btn-lg btn-save-print" onclick="saveAndPrintTripleReceipt()" title="Save record, print 3-in-1 receipt and automatically clear form for next entry">
-              🖨️ Save & Print Triple Receipt
+              🖨️ Save &amp; Print Triple Receipt
             </button>
           </div>
         </div>
@@ -2820,6 +3033,10 @@
             <span>👥</span> Saved Patient Records
             <span class="badge-count" id="regPatientCountBadge">0</span>
             <span class="badge-dup-counter" id="regPatientDupBadge" style="display:none;" onclick="filterToDuplicates()" title="Click to view duplicate patient entries on same day">⚠️ 0 Duplicates</span>
+            <!-- Single Button for All Duplicate Entry Delete Option -->
+            <button type="button" class="btn-action-sm btn-delete-duplicates" id="btnDeleteAllDuplicatesReg" onclick="deleteAllDuplicateEntries()" title="Single-click button to scan, find and permanently delete all duplicate patient entries on the same day">
+              🗑️ Delete All Duplicates
+            </button>
           </div>
           <div class="saved-patients-header-actions">
             <input type="text" id="regPatientSearchInput" class="input-control" style="max-width: 280px;" placeholder="🔍 Search saved patients by Name, UMID, Bill..." oninput="renderRegistrationPatientList()">
@@ -2923,6 +3140,9 @@
             <input type="date" id="archiveDateFilter" class="input-control" style="max-width: 135px; padding: 4px 8px; font-size: 11px;" onchange="setArchivePeriodFilter('CUSTOM_DATE', this.value)" title="Filter by specific Date">
           </div>
           <button type="button" class="btn-action-sm" onclick="clearArchiveFilters()">Reset Filters</button>
+          <button type="button" class="btn-action-sm btn-delete-duplicates" onclick="deleteAllDuplicateEntries()" title="Single-click button to scan, find and permanently delete all duplicate patient entries on the same day">
+            🗑️ Delete All Duplicates
+          </button>
         </div>
 
         <div class="export-buttons-group">
@@ -3635,7 +3855,8 @@
       allocationServingCode: "11024326",
       allocationRetiredTitle: "ALLOCATION: Retired Employee / Dependent",
       allocationRetiredCode: "11024426",
-      allocationGrossTitle: "GROSS TOTAL (Gross Amount of Both Allocations):"
+      allocationGrossTitle: "GROSS TOTAL (Gross Amount of Both Allocations):",
+      autoSave: true
     };
 
     // Official CGHS Non-NABL Z-Tier / Z-City (Phulera, Rajasthan) Approved Rate Master Schedule
@@ -3675,6 +3896,7 @@
       try {
         const savedConfig = localStorage.getItem('shiv_railway_config');
         if (savedConfig) appConfig = Object.assign({}, DEFAULT_CONFIG, JSON.parse(savedConfig));
+        if (typeof appConfig.autoSave === 'undefined') appConfig.autoSave = true;
 
         const savedCatalog = localStorage.getItem('shiv_railway_catalog');
         if (savedCatalog) {
@@ -3811,22 +4033,39 @@
         }
       }
 
-      // Attach real-time duplicate patient detection listeners
-      const umidInput = document.getElementById('regUmidId');
-      const nameInput = document.getElementById('regPatientName');
-      const dateInput = document.getElementById('regDate');
+      // Attach real-time duplicate detection & automatic entry save listeners to all form fields
+      const regInputIds = [
+        'regBillNo', 'regDate', 'regTime', 'regUmidId', 'regPatientName',
+        'regPhone', 'regAge', 'regSex', 'regBeneficiaryType', 'regReferredBy', 'regBillingScheme'
+      ];
+      regInputIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('input', () => {
+            checkDuplicatePatientLive();
+            scheduleAutoSave();
+          });
+          el.addEventListener('change', () => {
+            checkDuplicatePatientLive();
+            scheduleAutoSave();
+          });
+        }
+      });
 
-      if (umidInput) {
-        umidInput.addEventListener('input', checkDuplicatePatientLive);
-        umidInput.addEventListener('change', checkDuplicatePatientLive);
+      const invTableBody = document.getElementById('investigationsTableBody');
+      if (invTableBody) {
+        invTableBody.addEventListener('input', () => {
+          recalculateFormTotals();
+          scheduleAutoSave();
+        });
+        invTableBody.addEventListener('change', () => {
+          recalculateFormTotals();
+          scheduleAutoSave();
+        });
       }
-      if (nameInput) {
-        nameInput.addEventListener('input', checkDuplicatePatientLive);
-        nameInput.addEventListener('change', checkDuplicatePatientLive);
-      }
-      if (dateInput) {
-        dateInput.addEventListener('change', checkDuplicatePatientLive);
-      }
+
+      // Initialize auto-save UI state
+      updateAutoSaveStatus(isAutoSaveEnabled() ? 'ready' : 'disabled');
     });
 
     function switchTab(tabId) {
@@ -3866,6 +4105,7 @@
       document.getElementById('archiveCountBadge').innerText = billArchive.length;
 
       setPrintPageMode(appConfig.printPageMode || 'single', false);
+      updateAutoSaveStatus(isAutoSaveEnabled() ? 'ready' : 'disabled');
     }
 
     function autoFillCurrentTime() {
@@ -3920,9 +4160,14 @@
     }
 
     async function resetPatientForm(notify = true) {
+      if (typeof autoSaveTimer !== 'undefined' && autoSaveTimer) {
+        clearTimeout(autoSaveTimer);
+        autoSaveTimer = null;
+      }
       currentEditingBillId = null;
       hideActiveEditBanner();
       hideDuplicateAlertBanner();
+      if (typeof updateAutoSaveStatus === 'function') updateAutoSaveStatus('ready');
 
       document.getElementById('regUmidId').value = "";
       document.getElementById('regPatientName').value = "";
@@ -4399,6 +4644,357 @@
     }
 
     /* ========================================================================
+       AUTOMATIC REAL-TIME PATIENT RECORD SAVE ENGINE
+       ======================================================================== */
+    let autoSaveTimer = null;
+    let isAutoSaving = false;
+
+    function isAutoSaveEnabled() {
+      return appConfig && appConfig.autoSave !== false;
+    }
+
+    function toggleAutoSaveOption(enabled) {
+      appConfig.autoSave = !!enabled;
+      saveAppData();
+      updateAutoSaveStatus(enabled ? 'ready' : 'disabled');
+      if (enabled) {
+        showToast("⚡ Auto-Save Enabled: Patient records will automatically save as details and tests are entered.", "success");
+        scheduleAutoSave(200);
+      } else {
+        showToast("Auto-Save Disabled: Records will only be saved when you click Save.", "info");
+      }
+    }
+
+    function updateAutoSaveStatus(state, customText = '') {
+      const badge = document.getElementById('autoSaveStatusBadge');
+      const actionText = document.getElementById('autoSaveActionStatusText');
+      const actionDot = document.getElementById('autoSaveDot');
+      const toggle = document.getElementById('toggleAutoSave');
+
+      const enabled = isAutoSaveEnabled();
+
+      if (toggle && toggle.checked !== enabled) {
+        toggle.checked = enabled;
+      }
+
+      if (!enabled) {
+        if (badge) {
+          badge.className = 'badge-autosave disabled';
+          badge.innerText = 'Off';
+        }
+        if (actionText) {
+          actionText.innerText = '⚡ Auto-Save Off';
+          actionText.style.color = '#64748b';
+        }
+        if (actionDot) {
+          actionDot.className = 'autosave-indicator-dot disabled';
+        }
+        return;
+      }
+
+      if (state === 'typing') {
+        if (badge) {
+          badge.className = 'badge-autosave typing';
+          badge.innerText = 'Typing...';
+        }
+        if (actionText) {
+          actionText.innerText = '✏️ Entering details...';
+          actionText.style.color = '#b45309';
+        }
+        if (actionDot) {
+          actionDot.className = 'autosave-indicator-dot typing';
+        }
+      } else if (state === 'saving') {
+        if (badge) {
+          badge.className = 'badge-autosave saving';
+          badge.innerText = '💾 Saving...';
+        }
+        if (actionText) {
+          actionText.innerText = '💾 Auto-saving record...';
+          actionText.style.color = '#0284c7';
+        }
+        if (actionDot) {
+          actionDot.className = 'autosave-indicator-dot saving';
+        }
+      } else if (state === 'saved') {
+        if (badge) {
+          badge.className = 'badge-autosave saved';
+          badge.innerText = customText || '✓ Auto-Saved';
+        }
+        if (actionText) {
+          actionText.innerText = customText || '✓ Auto-Saved';
+          actionText.style.color = '#15803d';
+        }
+        if (actionDot) {
+          actionDot.className = 'autosave-indicator-dot ready';
+        }
+        setTimeout(() => {
+          if (isAutoSaveEnabled()) {
+            if (badge && badge.classList.contains('saved')) {
+              badge.className = 'badge-autosave ready';
+              badge.innerText = 'Active';
+            }
+            if (actionText && actionText.innerText.includes('Auto-Saved')) {
+              actionText.innerText = '⚡ Auto-Save Active';
+              actionText.style.color = '#15803d';
+            }
+          }
+        }, 3000);
+      } else if (state === 'warning') {
+        if (badge) {
+          badge.className = 'badge-autosave warning';
+          badge.innerText = customText || '⚠️ Duplicate Blocked';
+        }
+        if (actionText) {
+          actionText.innerText = customText || '⚠️ Duplicate Blocked';
+          actionText.style.color = '#b91c1c';
+        }
+        if (actionDot) {
+          actionDot.className = 'autosave-indicator-dot typing';
+        }
+      } else {
+        if (badge) {
+          badge.className = 'badge-autosave ready';
+          badge.innerText = 'Active';
+        }
+        if (actionText) {
+          actionText.innerText = '⚡ Auto-Save Active';
+          actionText.style.color = '#15803d';
+        }
+        if (actionDot) {
+          actionDot.className = 'autosave-indicator-dot ready';
+        }
+      }
+    }
+
+    function scheduleAutoSave(delay = 1000) {
+      if (!isAutoSaveEnabled()) return;
+      if (autoSaveTimer) clearTimeout(autoSaveTimer);
+
+      updateAutoSaveStatus('typing');
+
+      autoSaveTimer = setTimeout(async () => {
+        await performAutoSave();
+      }, delay);
+    }
+
+    async function performAutoSave() {
+      if (!isAutoSaveEnabled()) return;
+      if (isAutoSaving) return;
+
+      const record = gatherCurrentFormData();
+
+      const patientName = (record.patientName || '').trim();
+      const umidId = (record.umidId || '').trim();
+
+      // Don't auto-save if patient name and UMID are both empty or too short (< 2 characters)
+      if (patientName.length < 2 && umidId.length < 2) {
+        updateAutoSaveStatus('ready');
+        return;
+      }
+
+      // Must have at least one investigation item with name or code
+      const validItems = (record.items || []).filter(it => (it.name || '').trim() || (it.code || '').trim());
+      if (validItems.length === 0) {
+        updateAutoSaveStatus('ready');
+        return;
+      }
+
+      // Ensure bill number exists
+      if (!record.billNo) {
+        await generateNextBillNumber(true);
+        record.billNo = document.getElementById('regBillNo').value.trim();
+        if (!record.billNo) {
+          updateAutoSaveStatus('ready');
+          return;
+        }
+      }
+
+      // Strict same-day duplicate prevention
+      const duplicate = findDuplicatePatientEntry(record);
+      if (duplicate) {
+        showDuplicateAlertBanner(duplicate);
+        updateAutoSaveStatus('warning', '⚠️ Duplicate on Same Day');
+        return;
+      } else {
+        hideDuplicateAlertBanner();
+      }
+
+      // Preserve ID if editing existing bill or previously auto-saved
+      if (currentEditingBillId) {
+        record.id = currentEditingBillId;
+      } else {
+        const existing = billArchive.find(b => b.billNo === record.billNo);
+        if (existing && existing.id) {
+          record.id = existing.id;
+        } else {
+          record.id = 'bill_' + Date.now() + '_' + Math.floor(Math.random() * 1000);
+        }
+        // Bind to current editing ID so subsequent keystrokes/test additions update this same record
+        currentEditingBillId = record.id;
+      }
+
+      isAutoSaving = true;
+      updateAutoSaveStatus('saving');
+
+      try {
+        if (window.syncManager) {
+          await syncManager.saveBill(record);
+          billArchive = syncManager.getBills();
+        } else {
+          const idx = billArchive.findIndex(b => b.id === record.id || b.billNo === record.billNo);
+          if (idx >= 0) {
+            billArchive[idx] = record;
+          } else {
+            billArchive.unshift(record);
+          }
+          saveAppData();
+        }
+
+        showActiveEditBanner(record);
+        renderArchiveTable();
+        renderRegistrationPatientList();
+        highlightSavedPatientRow(record.id);
+
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        updateAutoSaveStatus('saved', `Auto-Saved (${timeStr})`);
+      } catch (err) {
+        console.error("Auto-save failed:", err);
+        updateAutoSaveStatus('warning', 'Auto-save failed');
+      } finally {
+        isAutoSaving = false;
+      }
+    }
+
+    /* ========================================================================
+       SINGLE BUTTON FOR ALL DUPLICATE ENTRY DELETE OPTION
+       ======================================================================== */
+    async function deleteAllDuplicateEntries() {
+      const currentArchive = (window.syncManager && window.syncManager.getBills)
+        ? window.syncManager.getBills()
+        : (billArchive || []);
+
+      if (!currentArchive || currentArchive.length === 0) {
+        showToast("No records in archive to scan.", "info");
+        return;
+      }
+
+      // Group bills by date + patient identifier (normalized UMID or normalized patientName)
+      const groups = new Map();
+
+      currentArchive.forEach(bill => {
+        if (!bill) return;
+        const date = String(bill.date || '').trim();
+        if (!date) return;
+
+        const umid = normalizeUmid(bill.umidId);
+        const name = normalizeName(bill.patientName);
+        if (!umid && !name) return;
+
+        const key = date + '___' + (umid ? ('UMID:' + umid) : ('NAME:' + name));
+        if (!groups.has(key)) {
+          groups.set(key, []);
+        }
+        groups.get(key).push(bill);
+      });
+
+      const duplicateGroups = [];
+      const billsToDelete = [];
+
+      groups.forEach((bills, key) => {
+        if (bills.length > 1) {
+          // Sort to pick the BEST / PRIMARY record to KEEP:
+          // 1. Most items / tests first
+          // 2. Highest total amount
+          // 3. Earliest registered / created
+          bills.sort((a, b) => {
+            const testsA = Array.isArray(a.items) ? a.items.length : 0;
+            const testsB = Array.isArray(b.items) ? b.items.length : 0;
+            if (testsB !== testsA) return testsB - testsA;
+
+            const amtA = parseFloat(a.totalAmount || a.billedToNwr || 0);
+            const amtB = parseFloat(b.totalAmount || b.billedToNwr || 0);
+            if (amtB !== amtA) return amtB - amtA;
+
+            const timeA = new Date(a.createdAt || (a.date ? `${a.date}T${a.time || '00:00'}` : 0)).getTime();
+            const timeB = new Date(b.createdAt || (b.date ? `${b.date}T${b.time || '00:00'}` : 0)).getTime();
+            return timeA - timeB;
+          });
+
+          const primary = bills[0]; // RETAIN THIS PRIMARY RECORD
+          const duplicates = bills.slice(1); // PERMANENTLY REMOVE THESE REDUNDANT COPIES
+
+          duplicateGroups.push({
+            primary,
+            duplicates,
+            count: duplicates.length
+          });
+
+          duplicates.forEach(d => billsToDelete.push(d));
+        }
+      });
+
+      if (billsToDelete.length === 0) {
+        showToast("✅ Zero duplicates found! All saved patient records are unique.", "success");
+        return;
+      }
+
+      const totalDupes = billsToDelete.length;
+      const patientCount = duplicateGroups.length;
+
+      const sampleList = duplicateGroups.slice(0, 4).map(g => {
+        const dupNos = g.duplicates.map(d => '#' + (d.billNo || d.id)).join(', ');
+        return `• Patient: ${g.primary.patientName} (${g.primary.date})\n   ↳ Keeping Primary: #${g.primary.billNo} (${(g.primary.items || []).length} tests - ₹${(parseFloat(g.primary.totalAmount) || 0).toFixed(2)})\n   ↳ Deleting Duplicate(s): ${dupNos}`;
+      }).join('\n\n');
+
+      const moreText = patientCount > 4 ? `\n\n...plus ${patientCount - 4} more duplicate patient group(s).` : '';
+
+      const confirmMsg = `⚠️ DELETE ALL DUPLICATE PATIENT ENTRIES?\n\n` +
+        `Found ${totalDupes} duplicate record(s) across ${patientCount} patient registration(s) on the same day.\n\n` +
+        `Action Summary:\n${sampleList}${moreText}\n\n` +
+        `For each patient, the primary voucher with the most prescribed tests will be preserved, and the ${totalDupes} redundant duplicate record(s) will be PERMANENTLY deleted from local storage, IndexedDB, and LAN sync servers.\n\n` +
+        `Do you want to permanently delete all ${totalDupes} duplicate entries now?`;
+
+      if (!confirm(confirmMsg)) {
+        return;
+      }
+
+      // Delete all duplicate records
+      let successCount = 0;
+      for (const dup of billsToDelete) {
+        try {
+          if (window.syncManager) {
+            await syncManager.deleteBill(dup.id);
+          } else {
+            billArchive = billArchive.filter(b => b.id !== dup.id && b.billNo !== dup.billNo);
+          }
+          if (currentEditingBillId === dup.id) {
+            currentEditingBillId = null;
+            resetPatientForm(false);
+          }
+          successCount++;
+        } catch (err) {
+          console.error("Error deleting duplicate bill:", dup.id, err);
+        }
+      }
+
+      if (window.syncManager) {
+        billArchive = syncManager.getBills();
+      } else {
+        saveAppData();
+      }
+
+      hideDuplicateAlertBanner();
+      renderArchiveTable();
+      renderRegistrationPatientList();
+      checkDuplicatePatientLive();
+
+      showToast(`🗑️ Removed ${successCount} duplicate entries! All records are now clean & unique.`, "success");
+    }
+    window.deleteAllDuplicateEntries = deleteAllDuplicateEntries;
+
+    /* ========================================================================
        SAVE BILL & LOCAL STORAGE ARCHIVE
        ======================================================================== */
     function gatherCurrentFormData() {
@@ -4452,6 +5048,10 @@
     }
 
     async function saveCurrentBillToArchive(silent = false) {
+      if (typeof autoSaveTimer !== 'undefined' && autoSaveTimer) {
+        clearTimeout(autoSaveTimer);
+        autoSaveTimer = null;
+      }
       const record = gatherCurrentFormData();
 
       if (!record.billNo) {
@@ -4968,14 +5568,22 @@
 
       const dupIds = getSameDayDuplicateBillIds();
 
-      // Update duplicate counter badge
+      // Update duplicate counter badge and single delete button
       const dupBadge = document.getElementById('regPatientDupBadge');
+      const btnDelDupesReg = document.getElementById('btnDeleteAllDuplicatesReg');
       if (dupBadge) {
         if (dupIds.size > 0) {
           dupBadge.style.display = 'inline-flex';
           dupBadge.innerText = `⚠️ ${dupIds.size} Duplicate${dupIds.size > 1 ? 's' : ''}`;
         } else {
           dupBadge.style.display = 'none';
+        }
+      }
+      if (btnDelDupesReg) {
+        if (dupIds.size > 0) {
+          btnDelDupesReg.innerHTML = `🗑️ Delete All Duplicates (${dupIds.size})`;
+        } else {
+          btnDelDupesReg.innerHTML = `🗑️ Delete All Duplicates`;
         }
       }
 
